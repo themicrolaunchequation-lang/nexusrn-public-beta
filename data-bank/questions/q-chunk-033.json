@@ -1,0 +1,2397 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 33,
+  "count": 7,
+  "sourceStartIndex": 1650,
+  "questions": [
+    {
+      "id": "nexus_gen_evaluate_outcomes_1776452730467_339_vcwm3",
+      "format": "multiple-choice",
+      "cjmm_step": "Evaluate Outcomes",
+      "difficulty": "Moderate",
+      "clinical_focus": "Chronic Kidney Disease",
+      "client_needs": "Safe and Effective Care Environment: Management of Care",
+      "patient": {
+        "name": "James Whitfield",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Trauma Unit",
+        "age_value": 33,
+        "allergies": "NKDA",
+        "weight_kg": "72",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.9"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - Client ambulated 50 ft with walker, reported pain 3/10 after medication. Client continues to be monitored for signs of clinical deterioration or improvement."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with renal failure. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "pain": "3/10",
+            "time": "Baseline",
+            "note": "Pain Score: 3/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "08:00",
+            "pain": "3/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, SpO₂: 98%, Weight: 78 kg, Height: 175 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "BUN",
+            "result": "45 mg/dL",
+            "reference_range": "7-20 mg/dL",
+            "flag": "High",
+            "clinical_relevance": "Renal function"
+          },
+          {
+            "time": "08:00",
+            "test": "Creatinine",
+            "result": "2.8 mg/dL",
+            "reference_range": "0.6-1.2 mg/dL",
+            "flag": "High",
+            "clinical_relevance": "Renal function"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Vital signs every 4 hours",
+            "status": "Active",
+            "safety_note": "Report abnormalities to provider"
+          },
+          {
+            "time": "08:00",
+            "order": "Continuous telemetry monitoring",
+            "status": "Active",
+            "safety_note": "Maintain lead placement"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Post-op total hip arthroplasty",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with renal failure. HPI: Client presents with findings described in the current scenario: The 33-year-old male client in the Trauma Unit is ... Relevant History: History significant for renal failure-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. Client underwent right total hip arthroplasty two days ago. Pain managed with oral analgesics. Ambulation progressing. Post-op total hip arthroplasty Client underwent right total hip arthroplasty two days ago. Pain managed with oral analgesics. Ambulation progressing."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - Client ambulated 50 ft with walker, reported pain 3/10 after medication."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Post-op total hip arthroplasty",
+          "hpi": "Client underwent right total hip arthroplasty two days ago. Pain managed with oral analgesics. Ambulation progressing."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "3/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+      "structure": {
+        "stem": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+        "prompt": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Client reports pain level of 6/10 at rest."
+          },
+          {
+            "id": "B",
+            "text": "Client demonstrates proper use of abductor pillow while in bed."
+          },
+          {
+            "id": "C",
+            "text": "Client's surgical incision site is red and warm to touch."
+          },
+          {
+            "id": "D",
+            "text": "Client's affected leg shows slight external rotation when supine."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Focusing on pain without considering critical safety measures.",
+        "golden_rule": "Prioritize safety and prevention of critical complications.",
+        "core_concept": "Post-operative complication prevention",
+        "answer_analysis": "Using an abductor pillow correctly shows client understanding and compliance with post-op precautions, preventing dislocation. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for renal failure."
+      },
+      "mnemonic": {
+        "title": "HIP Precautions",
+        "content": "No Adduction, No Internal Rotation, No Flexion >90 degrees."
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "f0066d924818",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "PASS_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Chronic Kidney Disease",
+          "cjmmStep": "Evaluate Outcomes",
+          "clientNeeds": "Safe and Effective Care Environment: Management of Care",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": null,
+          "clinicalFocusEvidenceScore": 0,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+      "v242nReputationStatus": "PASS_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 33,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Trauma Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Using an abductor pillow correctly shows client understanding and compliance with post-op precautions, preventing dislocation.",
+        "clinicalPrinciple": "Prioritize safety and prevention of critical complications.",
+        "trapToAvoid": "Focusing on pain without considering critical safety measures.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": null,
+      "v242pClinicalFocusEvidenceScore": 0,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 33-year-old male client in the Trauma Unit is being evaluated for Chronic Kidney Disease. Current chart cue: vital signs show pain 3/10 Select the finding that would show the client is responding as expected.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "nexus_gen_evaluate_outcomes_1776452726935_255_0vg22",
+      "format": "multiple-choice",
+      "cjmm_step": "Evaluate Outcomes",
+      "difficulty": "Moderate",
+      "clinical_focus": "COPD Exacerbation",
+      "client_needs": "Safe and Effective Care Environment: Management of Care",
+      "patient": {
+        "name": "Barbara Mensah",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Psychiatric Unit",
+        "age_value": "44",
+        "allergies": "NKDA",
+        "weight_kg": "72",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.9"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - Reports pain 4/10 after medication. Ambulated to bathroom with assistance. Client continues to be monitored for signs of clinical deterioration or improvement."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with respiratory distress. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "pain": "4/10",
+            "time": "Baseline",
+            "note": "Pain Score: 4/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "08:00",
+            "pain": "4/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 92, RR: 22, BP: 118/76, Weight: 65 kg, Height: 163 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "pCO2",
+            "result": "55 mmHg",
+            "reference_range": "35-45 mmHg",
+            "flag": "High",
+            "clinical_relevance": "Ventilation"
+          },
+          {
+            "time": "08:00",
+            "test": "pO2",
+            "result": "68 mmHg",
+            "reference_range": "80-100 mmHg",
+            "flag": "Low",
+            "clinical_relevance": "Oxygenation"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Vital signs every 4 hours",
+            "status": "Active",
+            "safety_note": "Report abnormalities to provider"
+          },
+          {
+            "time": "08:00",
+            "order": "Continuous telemetry monitoring",
+            "status": "Active",
+            "safety_note": "Maintain lead placement"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Post-operative pain and limited mobility",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with respiratory distress. HPI: Client presents with findings described in the current scenario: The 44-year-old female client in the Psychiatric U... Relevant History: History significant for respiratory distress-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. Client underwent an open cholecystectomy 2 days ago. Experiencing incisional pain, limiting ambulation and deep breathing. Post-operative pain and limited mobility Client underwent an open cholecystectomy 2 days ago. Experiencing incisional pain, limiting ambulation and deep breathing."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - Reports pain 4/10 after medication. Ambulated to bathroom with assistance."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Post-operative pain and limited mobility",
+          "hpi": "Client underwent an open cholecystectomy 2 days ago. Experiencing incisional pain, limiting ambulation and deep breathing."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "22",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "4/10",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+      "structure": {
+        "stem": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+        "prompt": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Client reports pain level of 6 out of 10 after ambulation."
+          },
+          {
+            "id": "B",
+            "text": "Client ambulates 20 feet in the hallway with minimal assistance."
+          },
+          {
+            "id": "C",
+            "text": "Client denies pain while resting in bed."
+          },
+          {
+            "id": "D",
+            "text": "Client's surgical incision site is clean, dry, and intact."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Focusing solely on pain reduction at rest, or incision status, over functional improvement.",
+        "golden_rule": "Functionality is a key indicator of post-operative recovery.",
+        "core_concept": "Post-operative outcome evaluation",
+        "answer_analysis": "Ambulation with minimal assistance signifies both pain control and improved physical function, which are key post-op goals. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for respiratory distress."
+      },
+      "mnemonic": {
+        "title": "POST-OP GOALS",
+        "content": "P - Pain controlled, O - Out of bed, S - Stable vitals, T - Tolerating diet"
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "0304bdbf7c22",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "PASS_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "COPD Exacerbation",
+          "cjmmStep": "Evaluate Outcomes",
+          "clientNeeds": "Safe and Effective Care Environment: Management of Care",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": null,
+          "clinicalFocusEvidenceScore": 0,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+      "v242nReputationStatus": "PASS_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "44",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Psychiatric Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Ambulation with minimal assistance signifies both pain control and improved physical function, which are key post-op goals.",
+        "clinicalPrinciple": "Functionality is a key indicator of post-operative recovery.",
+        "trapToAvoid": "Focusing solely on pain reduction at rest, or incision status, over functional improvement.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": null,
+      "v242pClinicalFocusEvidenceScore": 0,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 44-year-old female client in the Psychiatric Unit is being evaluated for COPD Exacerbation. Current chart cue: vital signs show pain 4/10 Select the finding that would show the client is responding as expected.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "nexus_clinical_judgment_1776516472358_273_ibef",
+      "format": "multiple-choice",
+      "cjmm_step": "Take Action",
+      "difficulty": "Moderate",
+      "clinical_focus": "Acute Coronary Syndrome / MI",
+      "client_needs": "Physiological Integrity: Basic Care and Comfort",
+      "patient": {
+        "name": "Patricia Nguyen",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Nephrology Unit",
+        "age_value": 66,
+        "allergies": "NKDA",
+        "weight_kg": "70",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.2"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Pt 1-day post-op TKA. Reports pain 6/10. Received opioid 1 hr ago. Needs ambulation help."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with post-operative care. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "pain": "6/10",
+            "time": "Baseline",
+            "note": "Pain Score: 6/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "08:00",
+            "pain": "6/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 20, BP: 128/78, SpO₂: 95%, Weight: 62 kg, Height: 160 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "Comprehensive Metabolic Panel",
+            "result": "Pending",
+            "reference_range": "Various",
+            "flag": "N/A",
+            "clinical_relevance": "Routine screening"
+          },
+          {
+            "time": "08:00",
+            "test": "Complete Blood Count",
+            "result": "Pending",
+            "reference_range": "Various",
+            "flag": "N/A",
+            "clinical_relevance": "Routine screening"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Vital signs every 4 hours",
+            "status": "Active",
+            "safety_note": "Report abnormalities to provider"
+          },
+          {
+            "time": "08:00",
+            "order": "Continuous telemetry monitoring",
+            "status": "Active",
+            "safety_note": "Maintain lead placement"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Postoperative left knee pain.",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with post-operative care. HPI: Client presents with findings described in the current scenario: The nurse is caring for a 66-year-old female clien... Relevant History: History significant for post-operative care-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. 66 yo female post-TKA. Reports increasing left knee pain after opioid. Postoperative left knee pain. 66 yo female post-TKA. Reports increasing left knee pain after opioid."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Pt 1-day post-op TKA. Reports pain 6/10. Received opioid 1 hr ago. Needs ambulation help."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Postoperative left knee pain.",
+          "hpi": "66 yo female post-TKA. Reports increasing left knee pain after opioid."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "6/10",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. Clinical focus: Postoperative pain management and mobility.. Which nursing intervention is most appropriate?",
+      "structure": {
+        "stem": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. Clinical focus: Postoperative pain management and mobility.. Which nursing intervention is most appropriate?",
+        "prompt": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. Clinical focus: Postoperative pain management and mobility.. Which nursing intervention is most appropriate?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Administer another opioid dose immediately."
+          },
+          {
+            "id": "B",
+            "text": "Assist repositioning, apply cold compress to knee."
+          },
+          {
+            "id": "C",
+            "text": "Notify surgeon about patient's unrelieved pain."
+          },
+          {
+            "id": "D",
+            "text": "Encourage patient to ambulate independently."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Focusing only on medication, ignoring basic comfort measures first.",
+        "golden_rule": "Implement basic comfort measures before escalating to more aggressive interventions.",
+        "core_concept": "Basic comfort measures and pain management post-surgery.",
+        "answer_analysis": "Option B uses non-pharmacological methods for pain and comfort after medication. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for post-operative care."
+      },
+      "mnemonic": {
+        "title": "RICE for Post-Op Comfort",
+        "content": "Rest, Ice, Compression, Elevation. Apply cold, reposition, elevate limb for pain."
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v76_prompt_polish": "short_or_non_question_prompt_rewritten",
+        "v76_original_prompt": "Postoperative pain management and mobility.",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "cjmm_step_normalized",
+            "display_stem_cleaned"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Acute Coronary Syndrome / MI",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Basic Care and Comfort",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. Clinical focus: Postoperative pain management and mobility.. Which nursing intervention is most appropriate?",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. . Which nursing intervention is most appropriate?",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "cjmm_step_normalized",
+        "display_stem_cleaned"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 66,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Nephrology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Option B uses non-pharmacological methods for pain and comfort after medication.",
+        "clinicalPrinciple": "Implement basic comfort measures before escalating to more aggressive interventions.",
+        "trapToAvoid": "Focusing only on medication, ignoring basic comfort measures first.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. . Which nursing intervention is most appropriate?",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The nurse is caring for a 66-year-old female client with Acute Coronary Syndrome / MI in the Nephrology Unit. . Which nursing intervention is most appropriate?",
+      "v242oReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "nexus_generate_solutions_1776514568713_154_pxvn",
+      "format": "multiple-choice",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Moderate",
+      "clinical_focus": "Post-op Hip Replacement",
+      "client_needs": "Physiological Integrity",
+      "patient": {
+        "name": "Karen Johansson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Renal Unit",
+        "age_value": 68,
+        "allergies": "NKDA",
+        "weight_kg": "70",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.2"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Patient with pneumonia. Dyspnea, cough with green sputum. On 2L O2. Lungs: crackles bilateral. Client continues to be monitored for signs of clinical deterioration or improvement."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with pneumonia. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 92, RR: 22, BP: 128/78, Pain: 0/10, Weight: 62 kg, Height: 160 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "Comprehensive Metabolic Panel",
+            "result": "Pending",
+            "reference_range": "Various",
+            "flag": "N/A",
+            "clinical_relevance": "Routine screening"
+          },
+          {
+            "time": "08:00",
+            "test": "Complete Blood Count",
+            "result": "Pending",
+            "reference_range": "Various",
+            "flag": "N/A",
+            "clinical_relevance": "Routine screening"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Ceftriaxone 1g IV daily",
+            "status": "Active",
+            "safety_note": "Verify allergies"
+          },
+          {
+            "time": "08:00",
+            "order": "Supplemental oxygen to maintain SpO2 > 92%",
+            "status": "Active",
+            "safety_note": "Titrate to effect"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Shortness of breath",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with pneumonia. HPI: Client presents with findings described in the current scenario: The nurse is caring for a 68-year-old female clien... Relevant History: History significant for pneumonia-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. 45F, 3-day history worsening cough, dyspnea, fever, chills, productive green sputum. Shortness of breath 45F, 3-day history worsening cough, dyspnea, fever, chills, productive green sputum. The clinical presentation involves key indicators relevant to the pneumonia scenario described. Further assessment and continuous monitoring are required to track disease progression and response to current interventions. The care team will follow evidence-based protocols for this specific patient population."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Patient with pneumonia. Dyspnea, cough with green sputum. On 2L O2. Lungs: crackles bilateral."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Shortness of breath",
+          "hpi": "45F, 3-day history worsening cough, dyspnea, fever, chills, productive green sputum."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "22",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Clinical focus: Pneumonia, hypoxia management. Which nursing intervention is most appropriate?",
+      "structure": {
+        "stem": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Clinical focus: Pneumonia, hypoxia management. Which nursing intervention is most appropriate?",
+        "prompt": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Clinical focus: Pneumonia, hypoxia management. Which nursing intervention is most appropriate?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Administer ordered PRN opioid for chest pain."
+          },
+          {
+            "id": "B",
+            "text": "Increase oxygen to 4L via nasal cannula and reassess."
+          },
+          {
+            "id": "C",
+            "text": "Encourage patient to ambulate in the hallway."
+          },
+          {
+            "id": "D",
+            "text": "Document findings and notify the healthcare provider."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": "media/internal/cxr_pneumonia.png",
+      "rationale": {
+        "trap": "Not taking immediate action for hypoxia, or choosing less urgent interventions.",
+        "golden_rule": "Prioritize ABCs. Address immediate threats to life first.",
+        "core_concept": "Prioritization of ABCs. Immediate intervention for hypoxia.",
+        "answer_analysis": "Option B addresses immediate need for oxygenation. Others are not priority. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for pneumonia. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for pneumonia."
+      },
+      "mnemonic": {
+        "title": "O2 STAT",
+        "content": "Oxygenate, Stay, Treat, Alert, Timely reassessment."
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v76_prompt_polish": "short_or_non_question_prompt_rewritten",
+        "v76_original_prompt": "Pneumonia, hypoxia management",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "display_stem_cleaned"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Post-op Hip Replacement",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Clinical focus: Pneumonia, hypoxia management. Which nursing intervention is most appropriate?",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Which nursing intervention is most appropriate?",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "display_stem_cleaned"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 68,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Renal Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Option B addresses immediate need for oxygenation. Others are not priority.",
+        "clinicalPrinciple": "Prioritize ABCs. Address immediate threats to life first.",
+        "trapToAvoid": "Not taking immediate action for hypoxia, or choosing less urgent interventions.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Which nursing intervention is most appropriate?",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The nurse is caring for a 68-year-old female client with Post-op Hip Replacement in the Renal Unit. Which nursing intervention is most appropriate?",
+      "v242oReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "nexus_generate_solutions_1776514768926_350_uttd",
+      "format": "multiple-choice",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Moderate",
+      "clinical_focus": "Heart Failure",
+      "client_needs": "Physiological Integrity",
+      "patient": {
+        "name": "Aisha Patel",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Oncology Unit",
+        "age_value": 61,
+        "allergies": "NKDA",
+        "weight_kg": "70",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.2"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Client continues to be monitored for signs of clinical deterioration or improvement."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with heart failure. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 20, BP: 118/76, SpO₂: 95%, Pain: 0/10, Weight: 65 kg, Height: 163 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "BNP",
+            "result": "850 pg/mL",
+            "reference_range": "< 100 pg/mL",
+            "flag": "High",
+            "clinical_relevance": "Heart failure exacerbation"
+          },
+          {
+            "time": "08:00",
+            "test": "Potassium",
+            "result": "3.8 mEq/L",
+            "reference_range": "3.5-5.0 mEq/L",
+            "flag": "Normal",
+            "clinical_relevance": "Diuretic monitoring"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Furosemide 40mg IV push daily",
+            "status": "Active",
+            "safety_note": "Monitor potassium levels"
+          },
+          {
+            "time": "08:00",
+            "order": "Strict intake and output monitoring",
+            "status": "Active",
+            "safety_note": "Daily weights"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Nausea and vomiting",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with heart failure. HPI: Client presents with findings described in the current scenario: The 61-year-old female client in the Oncology Unit... Relevant History: History significant for heart failure-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. 61 year old female with severe dehydration from gastroenteritis. Dizziness. IVF started. Nausea and vomiting 61 year old female with severe dehydration from gastroenteritis. Dizziness. IVF started."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Nausea and vomiting",
+          "hpi": "61 year old female with severe dehydration from gastroenteritis. Dizziness. IVF started."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the intervention that addresses the priority risk shown in the chart.",
+      "structure": {
+        "stem": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the intervention that addresses the priority risk shown in the chart.",
+        "prompt": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the intervention that addresses the priority risk shown in the chart.",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Administer oral antiemetic now."
+          },
+          {
+            "id": "B",
+            "text": "Assess IV site for infiltration and patency."
+          },
+          {
+            "id": "C",
+            "text": "Increase IV fluid rate per order."
+          },
+          {
+            "id": "D",
+            "text": "Document urine output every 8 hours."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Distractors focus on symptoms or later steps. Immediate access safety is paramount.",
+        "golden_rule": "Always verify IV access patency before administering any fluids or meds.",
+        "core_concept": "IV fluid administration safety",
+        "answer_analysis": "Option B is priority for safe IV fluid delivery. Other actions follow. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for heart failure."
+      },
+      "mnemonic": {
+        "title": "IV Site Check",
+        "content": "Inspect, Verify, Secure."
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v76_prompt_polish": "short_or_non_question_prompt_rewritten",
+        "v76_original_prompt": "Priority nursing action",
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "43a9b5b9ec51",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "PASS_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Heart Failure",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "The nurse is caring for a 61-year-old female client with Heart Failure in the Oncology Unit. Clinical focus: Priority nursing action. Which nursing action should the nurse prioritize?",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the interventio…",
+      "v242nReputationStatus": "PASS_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 61,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Oncology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Option B is priority for safe IV fluid delivery. Other actions follow.",
+        "clinicalPrinciple": "Always verify IV access patency before administering any fluids or meds.",
+        "trapToAvoid": "Distractors focus on symptoms or later steps. Immediate access safety is paramount.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the interventio…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 61-year-old female client in the Oncology Unit is being evaluated for Heart Failure. Current chart cue: Patient reports nausea/vomiting. Poor oral intake. Decreased skin turgor. IVF initiated. Select the interventio…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "743aa156-e4bf-4ce6-b030-58ee66efa978",
+      "format": "extended-multiple-response",
+      "cjmm_step": "Take Action",
+      "difficulty": "Easy",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Steven Adebayo",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Infectious Disease Unit",
+        "age_value": 47,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 92, RR: 22, BP: 118/76, Pain: 0/10, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "22",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffuse urticaria, inspiratory stridor, and significant angioedema of the lips and tongue.",
+      "structure": {
+        "scenario": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffuse urticaria, inspiratory stridor, and significant angioedema of the lips and tongue.",
+        "stem": "The nurse is caring for a client experiencing an acute allergic reaction. Which immediate actions should the nurse implement? Select all that apply.",
+        "prompt": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffuse urticaria, inspiratory stridor, and significant angioedema of the lips and tongue.",
+        "type": "extended-multiple-response",
+        "options": [
+          {
+            "id": "A",
+            "text": "Administer intramuscular epinephrine 0.3 mg into the vastus lateralis."
+          },
+          {
+            "id": "B",
+            "text": "Apply oxygen via a non-rebreather mask at 10-15 L/min."
+          },
+          {
+            "id": "C",
+            "text": "Establish intravenous access and initiate a rapid infusion of normal saline."
+          },
+          {
+            "id": "D",
+            "text": "Assist the client to a high-Fowler's position."
+          },
+          {
+            "id": "E",
+            "text": "Administer oral diphenhydramine 50 mg immediately."
+          },
+          {
+            "id": "F",
+            "text": "Prepare to administer intravenous hydrocortisone 100 mg."
+          },
+          {
+            "id": "G",
+            "text": "Obtain a detailed history about potential allergens and past reactions."
+          },
+          {
+            "id": "H",
+            "text": "Administer albuterol via nebulizer."
+          }
+        ],
+        "correct": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must immediately assess and secure the client's airway due to angioedema and stridor, while preparing for rapid administration of epinephrine to reverse the severe allergic reaction.",
+        "core_concept": null,
+        "answer_analysis": "The client is experiencing anaphylactic shock with severe airway compromise (stridor, angioedema) and respiratory distress (shortness of breath). Immediate actions prioritize airway, breathing, and circulation (ABCs) and the definitive treatment for anaphylaxis. Correct Options: - Administer intramuscular epinephrine 0.3 mg into the vastus lateralis: Epinephrine is the first-line, life-saving medication for anaphylaxis. It acts as a vasoconstrictor, bronchodilator, and reduces angioedema. The vastus lateralis is the preferred site for rapid absorption. - Apply oxygen via a non-rebreather mask at 10-15 L/min: High-flow oxygen is essential to address hypoxemia resulting from bronchospasm and airway swelling, improving oxygenation. - Establish intravenous access and initiate a rapid infusion of normal saline: IV access is crucial for administering medications and fluids. Rapid fluid resuscitation with normal saline helps manage hypotension caused by vasodilation and capillary leak in anaphylactic shock. - Assist the client to a high-Fowler's position: This position optimizes lung expansion, eases breathing efforts, and helps reduce pressure on the diaphragm, which is especially important with airway swelling and respiratory distress. It also helps prevent aspiration if vomiting occurs. Incorrect Options: - Administer oral diphenhydramine 50 mg immediately: While diphenhydramine (an antihistamine) is part of anaphylaxis treatment, the oral route is too slow for acute, life-threatening symptoms. IV or IM administration would be appropriate after epinephrine, but not as the initial immediate action. - Prepare to administer intravenous hydrocortisone 100 mg: Corticosteroids like hydrocortisone are typically administered to prevent biphasic reactions (recurrence of symptoms hours after initial resolution) and reduce inflammation. However, they are not immediate, life-saving treatments for acute anaphylaxis and come secondary to epinephrine. - Obtain a detailed history about potential allergens and past reactions: While important for preventing future episodes, this assessment takes a backseat to life-saving interventions when the client is acutely decompensating. The nurse's priority is to stabilize the client first. - Administer albuterol via nebulizer: Albuterol is a bronchodilator that helps with bronchospasm. While some clients with anaphylaxis experience bronchospasm, epinephrine addresses this more comprehensively and is the primary treatment for the entire systemic reaction. Administering albuterol alone is insufficient and delays definitive treatment for the systemic reaction."
+      },
+      "mnemonic": {
+        "title": "Anaphylaxis: Airway Priority",
+        "content": null
+      },
+      "answerKey": {
+        "type": "extended-multiple-response",
+        "correctIds": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctSet": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "maxScore": 4,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Bowel Obstruction",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Deep Vein Thrombosis / PE",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffus…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 47,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Infectious Disease Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The client is experiencing anaphylactic shock with severe airway compromise (stridor, angioedema) and respiratory distress (shortness of breath). Immediate actions prioritize airway, breathing, and circulation (ABCs) and the definitive treatment for anaphylaxis. Correct Options: - Administer intramuscular epinephrine 0.3 mg into the vastus lateralis: Epinephrine is the first-line, life-saving medication for anaphylaxis. It acts as a vasoconstrictor, bronchodilator, and reduces angioedema. The vastus lateralis is the preferred site for rapid absorption. - Apply oxygen via a non-rebreather mask at 10-15 L/min: High-flow oxygen is essential to address hypoxemia resulting from bronchospasm and airway swelling, improving oxygenation. - Establish intravenous access and initiate a rapid infusion of normal saline: IV access is crucial for administering medications and fluids. Rapid fluid resuscitation with normal saline helps manage hypotension caused by vasodilation and capillary leak in anaphylactic shock. - Assist the client to a high-Fowler's position: This position optimizes lung expansion, eases breathing efforts, and helps reduce pressure on the diaphragm, which is especially important with airway swelling and respiratory distress. It also helps prevent aspiration if vomiting occurs. Incorrect Options: - Administer oral diphenhydramine 50 mg immediately: While diphenhydramine (an antihistamine) is part of anaphylaxis treatment, the oral route is too slow for acute, life-threatening symptoms. IV or IM administration would be appropriate after epinephrine, but not as the initial immediate action. - Prepare to administer intravenous hydrocortisone 100 mg: Corticosteroids like hydrocortisone are typically administered to prevent biphasic reactions (recurrence of symptoms hours after initial resolution) and reduce inflammation. However, they are not immediate, life-saving treatments for acute anaphylaxis and come secondary to epinephrine. - Obtain a detailed history about potential allergens and past reactions: While important for preventing future episodes, this assessment takes a backseat to life-saving interventions when the client is acutely decompensating. The nurse's priority is to stabilize the client first. - Administer albuterol via nebulizer: Albuterol is a bronchodilator that helps with bronchospasm. While some clients with anaphylaxis experience bronchospasm, epinephrine addresses this more comprehensively and is the primary treatment for the entire systemic reaction. Administering albuterol alone is insufficient and delays definitive treatment for the systemic reaction.",
+        "clinicalPrinciple": "The nurse must immediately assess and secure the client's airway due to angioedema and stridor, while preparing for rapid administration of epinephrine to reverse the severe allergic reaction.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffus…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 47 year old client presents to the urgent care clinic complaining of sudden shortness of breath and throat tightness after eating a restaurant meal. The client's face is flushed, and physical assessment reveals diffus…",
+      "v242oReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "nexus_clinical_judgment_1776516594357_398_pcbi",
+      "format": "multiple-choice",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Moderate",
+      "clinical_focus": "Heart Failure",
+      "client_needs": "Physiological Integrity: Basic Care and Comfort",
+      "patient": {
+        "name": "Samuel Osei",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Geriatric Unit",
+        "age_value": 78,
+        "allergies": "NKDA",
+        "weight_kg": "70",
+        "code_status": "Full Code",
+        "display_name": "Client",
+        "height_cm": "170",
+        "bmi": "24.2"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Sarah, 45, post-colostomy day 2. Mild pain 2/10. Stoma pink, moist, output. Needs ostomy care teaching."
+          },
+          {
+            "type": "Nurse Note",
+            "time": "08:00",
+            "note": "Initial assessment reveals client reporting symptoms consistent with heart failure. Prompt interventions initiated per unit protocol."
+          }
+        ],
+        "vitals": [
+          {
+            "pain": "2/10",
+            "time": "Baseline",
+            "note": "Pain Score: 2/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "08:00",
+            "pain": "2/10",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 20, BP: 128/78, SpO₂: 95%, Weight: 75 kg, Height: 172 cm",
+            "temp": "37.0°C",
+            "hr": 80,
+            "rr": 16,
+            "bp": "120/80",
+            "spo2": "98%",
+            "pain": "0/10"
+          }
+        ],
+        "labs": [
+          {
+            "time": "08:00",
+            "test": "BNP",
+            "result": "850 pg/mL",
+            "reference_range": "< 100 pg/mL",
+            "flag": "High",
+            "clinical_relevance": "Heart failure exacerbation"
+          },
+          {
+            "time": "08:00",
+            "test": "Potassium",
+            "result": "3.8 mEq/L",
+            "reference_range": "3.5-5.0 mEq/L",
+            "flag": "Normal",
+            "clinical_relevance": "Diuretic monitoring"
+          }
+        ],
+        "orders": [
+          {
+            "time": "08:00",
+            "order": "Furosemide 40mg IV push daily",
+            "status": "Active",
+            "safety_note": "Monitor potassium levels"
+          },
+          {
+            "time": "08:00",
+            "order": "Strict intake and output monitoring",
+            "status": "Active",
+            "safety_note": "Daily weights"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Needs teaching on colostomy care.",
+          "hpi": "Chief Complaint: Evaluation for symptoms consistent with heart failure. HPI: Client presents with findings described in the current scenario: The nurse is caring for a 78-year-old male client ... Relevant History: History significant for heart failure-related risk factors. Home Medications: Standard home regimen, no recent changes noted. Baseline Assessment: Initial findings as detailed in the clinical presentation. Patient underwent colostomy formation 2 days ago. Stable. Expresses anxiety about managing stoma. Needs teaching on colostomy care. Patient underwent colostomy formation 2 days ago. Stable. Expresses anxiety about managing stoma."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "Sarah, 45, post-colostomy day 2. Mild pain 2/10. Stoma pink, moist, output. Needs ostomy care teaching."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Needs teaching on colostomy care.",
+          "hpi": "Patient underwent colostomy formation 2 days ago. Stable. Expresses anxiety about managing stoma."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "2/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. Clinical focus: A patient with a new colostomy needs teaching on ostomy care.. Which teaching point or nursing response is most appropriate?",
+      "structure": {
+        "stem": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. Clinical focus: A patient with a new colostomy needs teaching on ostomy care.. Which teaching point or nursing response is most appropriate?",
+        "prompt": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. Clinical focus: A patient with a new colostomy needs teaching on ostomy care.. Which teaching point or nursing response is most appropriate?",
+        "type": "multiple-choice",
+        "options": [
+          {
+            "id": "A",
+            "text": "Instruct patient to change the pouch daily."
+          },
+          {
+            "id": "B",
+            "text": "Teach patient to empty the pouch when it is one-third full."
+          },
+          {
+            "id": "C",
+            "text": "Advise patient to irrigate the stoma routinely."
+          },
+          {
+            "id": "D",
+            "text": "Recommend using adhesive remover with each pouch change."
+          }
+        ],
+        "correct": [
+          "B"
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Distractors provide plausible but incorrect or non-universal ostomy care instructions.",
+        "golden_rule": "Prioritize patient safety and proper technique in ostomy management.",
+        "core_concept": "Ostomy care and patient education.",
+        "answer_analysis": "Option B ensures proper ostomy management, preventing complications. Others are incorrect or not universal. The provided clinical data supports this decision by ensuring patient safety and adherence to nursing guidelines for heart failure."
+      },
+      "mnemonic": {
+        "title": "OSTOMY CARE",
+        "content": "O-Observe skin; S-Size stoma; T-Teach emptying; O-Odor control; M-Maintain hydration; Y-Yield to questions."
+      },
+      "answerKey": {
+        "type": "multiple-choice",
+        "correctIds": [
+          "B"
+        ],
+        "correctSet": [
+          "B"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v76_prompt_polish": "short_or_non_question_prompt_rewritten",
+        "v76_original_prompt": "A patient with a new colostomy needs teaching on ostomy care.",
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "cjmm_step_normalized",
+            "display_stem_cleaned"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Heart Failure",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity: Basic Care and Comfort",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. Clinical focus: A patient with a new colostomy needs teaching on ostomy care.. Which teaching point or nursing response is most appropriate?",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. . Which teaching point or nursing response is most…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "cjmm_step_normalized",
+        "display_stem_cleaned"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 78,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Geriatric Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Option B ensures proper ostomy management, preventing complications. Others are incorrect or not universal.",
+        "clinicalPrinciple": "Prioritize patient safety and proper technique in ostomy management.",
+        "trapToAvoid": "Distractors provide plausible but incorrect or non-universal ostomy care instructions.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. . Which teaching point or nursing response is most…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The nurse is caring for a 78-year-old male client with Heart Failure in the Geriatric Unit. . Which teaching point or nursing response is most…",
+      "v242oReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    }
+  ]
+}

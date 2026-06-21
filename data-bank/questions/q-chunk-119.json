@@ -1,0 +1,395 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 119,
+  "count": 1,
+  "sourceStartIndex": 5950,
+  "questions": [
+    {
+      "id": "nexus_multip_highligh_1aed",
+      "format": "highlight",
+      "cjmm_step": "Prioritize Hypotheses",
+      "difficulty": "Hard",
+      "clinical_focus": "Neuroleptic Malignant Syndrome (NMS)",
+      "client_needs": "Safe and Effective Care Environment: Safety and Infection Control",
+      "patient": {
+        "name": "Margaret Thompson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Emergency Department",
+        "age_value": "38",
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "72",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client, 38-year-old female, presented to Emergency Department via ambulance with chief complaints of high fever, muscle stiffness, and confusion. Family reports recent initiation of haloperidol for acute psychosis. Initial assessment revealed temperature 40.1°C (104.2°F), heart rate 128 bpm, respiratory rate 28 bpm, blood pressure 160/95 mmHg, SpO2 94% on room air. Client is diaphoretic with severe generalized muscle rigidity noted in all four extremities. Client is disoriented to person, place, and time, responding to verbal stimuli with mumbled words. Pupils equal, round, and reactive to light. Skin warm and flushed."
+          },
+          {
+            "type": "Nurse note",
+            "note": "Client remains hyperthermic with temperature 40.0°C (104.0°F). Heart rate 132 bpm, blood pressure 110/60 mmHg, respiratory rate 30 bpm, SpO2 93% on room air. Muscle rigidity persists. Client appears to have increased work of breathing."
+          },
+          {
+            "type": "Nurse note",
+            "note": "Temperature 39.8°C (103.6°F), heart rate 120 bpm, blood pressure 145/88 mmHg, respiratory rate 26 bpm, SpO2 95% on 2L O2. Muscle rigidity unchanged. Client remains disoriented and minimally responsive to verbal stimuli."
+          }
+        ],
+        "vitals": [
+          {
+            "bp": "160/95",
+            "hr": "128",
+            "rr": "28",
+            "spo2": "94%",
+            "temp": "40.1°C (104.2°F)",
+            "time": "Baseline"
+          },
+          {
+            "bp": "110/60",
+            "hr": "132",
+            "rr": "30",
+            "spo2": "93%",
+            "temp": "40.0°C (104.0°F)",
+            "time": "Baseline"
+          },
+          {
+            "bp": "145/88",
+            "hr": "120",
+            "rr": "26",
+            "spo2": "95%",
+            "temp": "39.8°C (103.6°F)",
+            "time": "Baseline"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "Pain: 0/10, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {
+          "chief_complaint": "Client's family reports: 'My body feels like it's locked up, and I can't think straight. I'm so hot.' (Client unable to provide coherent history due to altered mental status)",
+          "hpi": "Client is a 38-year-old female with a recent diagnosis of acute psychosis. She was started on haloperidol 5 mg orally twice daily approximately 72 hours prior to presentation. Over the past 24 hours, family reports progressive onset of high fever, severe generalized muscle rigidity, profuse sweating (diaphoresis), and rapidly worsening altered mental status, including disorientation and decreased responsiveness. She has had difficulty swallowing and has not eaten or drunk much in the last 12 hours. Client presented to the Emergency Department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status, and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure).",
+          "pmh": "Acute psychosis (diagnosed recently). No other significant medical history reported. No known allergies.",
+          "physical_examination": {
+            "respiratory": "Tachypneic, shallow respirations, bilateral breath sounds clear but diminished. Increased work of breathing noted.",
+            "neurological": "Altered mental status, unable to follow commands consistently. Glasgow Coma Scale (GCS) estimated at 10 (E3 V3 M4). Severe generalized 'lead-pipe' muscle rigidity noted in all extremities. Deep tendon reflexes hyperreflexic. No focal neurological deficits observed.",
+            "integumentary": "Skin hot, flushed, and profusely diaphoretic. No rashes or lesions. Poor skin turgor noted.",
+            "cardiovascular": "Tachycardic, S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses palpable but weak. Capillary refill >3 seconds.",
+            "musculoskeletal": "Severe generalized muscle rigidity, especially prominent in the neck and limbs. Client resists passive range of motion.",
+            "gastrointestinal": "Abdomen soft, non-tender, bowel sounds present but hypoactive.",
+            "general_appearance": "Appears acutely ill, diaphoretic, restless, and disoriented. Client is lying rigidly in bed."
+          },
+          "social_history": "Client lives in a single-room occupancy hotel and has limited access to consistent primary care. She recently lost her job, leading to increased stress and difficulty affording her medications, though haloperidol was provided by the hospital upon discharge. She relies on public transportation, which can be a barrier to follow-up appointments and consistent healthcare access.",
+          "patient_demographics": {
+            "age": "38 years",
+            "gender": "Female"
+          },
+          "past_medical_history": "Acute psychosis (diagnosed recently). No other significant medical history reported. No known allergies.",
+          "history_of_present_illness": "Client is a 38-year-old female with a recent diagnosis of acute psychosis. She was started on haloperidol 5 mg orally twice daily approximately 72 hours prior to presentation. Over the past 24 hours, family reports progressive onset of high fever, severe generalized muscle rigidity, profuse sweating (diaphoresis), and rapidly worsening altered mental status, including disorientation and decreased responsiveness. She has had difficulty swallowing and has not eaten or drunk much in the last 12 hours. Client presented to the Emergency Department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status, and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure)."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client, 38-year-old female, presented to Emergency Department via ambulance with chief complaints of high fever, muscle stiffness, and confusion. Family reports recent initiation of haloperidol for acute psychosis. Initial assessment revealed temperature 40.1°C (104.2°F), heart rate 128 bpm, respiratory rate 28 bpm, blood pressure 160/95 mmHg, SpO2 94% on room air. Client is diaphoretic with severe generalized muscle rigidity noted in all four extremities. Client is disoriented to person, place, and time, responding to verbal stimuli with mumbled words. Pupils equal, round, and reactive to light. Skin warm and flushed."
+          },
+          {
+            "type": "Nurse note",
+            "note": "Client remains hyperthermic with temperature 40.0°C (104.0°F). Heart rate 132 bpm, blood pressure 110/60 mmHg, respiratory rate 30 bpm, SpO2 93% on room air. Muscle rigidity persists. Client appears to have increased work of breathing."
+          },
+          {
+            "type": "Nurse note",
+            "note": "Temperature 39.8°C (103.6°F), heart rate 120 bpm, blood pressure 145/88 mmHg, respiratory rate 26 bpm, SpO2 95% on 2L O2. Muscle rigidity unchanged. Client remains disoriented and minimally responsive to verbal stimuli."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Client's family reports: 'My body feels like it's locked up, and I can't think straight. I'm so hot.' (Client unable to provide coherent history due to altered mental status)",
+          "hpi": "Client is a 38-year-old female with a recent diagnosis of acute psychosis. She was started on haloperidol 5 mg orally twice daily approximately 72 hours prior to presentation. Over the past 24 hours, family reports progressive onset of high fever, severe generalized muscle rigidity, profuse sweating (diaphoresis), and rapidly worsening altered mental status, including disorientation and decreased responsiveness. She has had difficulty swallowing and has not eaten or drunk much in the last 12 hours. Client presented to the Emergency Department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status, and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure).",
+          "pmh": "Acute psychosis (diagnosed recently). No other significant medical history reported. No known allergies.",
+          "physical_examination": {
+            "respiratory": "Tachypneic, shallow respirations, bilateral breath sounds clear but diminished. Increased work of breathing noted.",
+            "neurological": "Altered mental status, unable to follow commands consistently. Glasgow Coma Scale (GCS) estimated at 10 (E3 V3 M4). Severe generalized 'lead-pipe' muscle rigidity noted in all extremities. Deep tendon reflexes hyperreflexic. No focal neurological deficits observed.",
+            "integumentary": "Skin hot, flushed, and profusely diaphoretic. No rashes or lesions. Poor skin turgor noted.",
+            "cardiovascular": "Tachycardic, S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses palpable but weak. Capillary refill >3 seconds.",
+            "musculoskeletal": "Severe generalized muscle rigidity, especially prominent in the neck and limbs. Client resists passive range of motion.",
+            "gastrointestinal": "Abdomen soft, non-tender, bowel sounds present but hypoactive.",
+            "general_appearance": "Appears acutely ill, diaphoretic, restless, and disoriented. Client is lying rigidly in bed."
+          },
+          "social_history": "Client lives in a single-room occupancy hotel and has limited access to consistent primary care. She recently lost her job, leading to increased stress and difficulty affording her medications, though haloperidol was provided by the hospital upon discharge. She relies on public transportation, which can be a barrier to follow-up appointments and consistent healthcare access.",
+          "patient_demographics": {
+            "age": "38 years",
+            "gender": "Female"
+          },
+          "past_medical_history": "Acute psychosis (diagnosed recently). No other significant medical history reported. No known allergies.",
+          "history_of_present_illness": "Client is a 38-year-old female with a recent diagnosis of acute psychosis. She was started on haloperidol 5 mg orally twice daily approximately 72 hours prior to presentation. Over the past 24 hours, family reports progressive onset of high fever, severe generalized muscle rigidity, profuse sweating (diaphoresis), and rapidly worsening altered mental status, including disorientation and decreased responsiveness. She has had difficulty swallowing and has not eaten or drunk much in the last 12 hours. Client presented to the Emergency Department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status, and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure)."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "39.8°F / 4.3°C",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "120",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "26",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "145/88",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "107 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 145/88",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "structure": {
+        "type": "highlight",
+        "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+        "passage": "A 38-year-old female client, recently started on haloperidol for acute psychosis, presents to the emergency department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status, and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure). Her creatine kinase (CK) level is significantly elevated. Which immediate action should the nurse prioritize?",
+        "tokens": [
+          {
+            "id": "h0",
+            "text": "A 38-year-old female client, recently started on haloperidol for acute psychosis, presents to the emergency department with a temperature of 104.2°F (40.1°C), severe muscle rigidity, altered mental status,",
+            "isHighlightable": true
+          },
+          {
+            "id": "h1",
+            "text": "and autonomic dysfunction (tachycardia, diaphoresis, labile blood pressure).",
+            "isHighlightable": true
+          },
+          {
+            "id": "h2",
+            "text": "Her creatine kinase (CK) level is significantly elevated.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h3",
+            "text": "Which immediate action should the nurse prioritize?",
+            "isHighlightable": true
+          }
+        ],
+        "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up."
+      },
+      "media": [],
+      "rationale": {
+        "core_concept": "Neuroleptic Malignant Syndrome (NMS)",
+        "answer_analysis": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "golden_rule": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trap": "Treating background history and acute deterioration cues as equally urgent."
+      },
+      "mnemonic": {
+        "title": "NMS: FEVER-RIGID",
+        "content": "F - Fever (High, often >103°F/39.4°C)\nE - Encephalopathy (Altered mental status)\nV - Vitals Unstable (Autonomic instability: tachycardia, labile BP, diaphoresis)\nE - Elevated Enzymes (CK, LDH from rhabdomyolysis)\nR - Rigidity (Severe muscle rigidity, 'lead-pipe')"
+      },
+      "answerKey": {
+        "type": "highlight",
+        "correctIds": [
+          "h0",
+          "h1"
+        ],
+        "correctSet": [
+          "h0",
+          "h1"
+        ],
+        "maxScore": 2,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "QUARANTINE_REPUTATION_RISK",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [
+            "clinical_focus_not_supported_by_prompt"
+          ],
+          "reviewFlags": [],
+          "clinicalFocus": "Neuroleptic Malignant Syndrome (NMS)",
+          "cjmmStep": "Prioritize Hypotheses",
+          "clientNeeds": "Safe and Effective Care Environment: Safety and Infection Control",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "QUARANTINE_REPUTATION_RISK_P242",
+          "learnerReady": false,
+          "hardBlockers": [
+            "clinical_focus_not_supported_by_prompt"
+          ],
+          "reviewFlags": [
+            "clinical_focus_still_not_supported_by_prompt"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": null,
+          "clinicalFocusEvidenceScore": 0,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "source_derivation": "v70_highlight_rebuilt_from_scenario",
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242nReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "38",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Emergency Department"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "clinicalPrinciple": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trapToAvoid": "Treating background history and acute deterioration cues as equally urgent.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "QUARANTINE_REPUTATION_RISK_P242",
+      "v242pLearnerReady": false,
+      "v242pDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242pHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242pReviewFlags": [
+        "clinical_focus_still_not_supported_by_prompt"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": null,
+      "v242pClinicalFocusEvidenceScore": 0,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242oReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "STRUCTURAL_HOLD"
+    }
+  ]
+}

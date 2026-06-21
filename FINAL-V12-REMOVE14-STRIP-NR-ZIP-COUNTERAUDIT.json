@@ -1,0 +1,15 @@
+{
+  "zipPath": "e:\\NexusRN-v243I-asset-rendering-sandbox-phase-8-of-8\\CLEAN_APP_V12_REMOVE14_STRIP_NR_FINAL.zip",
+  "passed": true,
+  "details": {
+    "backslash_paths_count": 0,
+    "standalone_active_count": 5086,
+    "bad_14_active_count": 0,
+    "clean_14_active_count": 0,
+    "highlight_140_missing_count": 0,
+    "nr_marker_hits": 0,
+    "unfolding_cases_count": 1056,
+    "unfolding_children_count": 6336,
+    "missing_zip_audits": []
+  }
+}

@@ -1,0 +1,560 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 123,
+  "count": 1,
+  "sourceStartIndex": 6150,
+  "questions": [
+    {
+      "id": "nexus_drag_new_bfd0",
+      "format": "ordered-response",
+      "cjmm_step": "Take Action",
+      "difficulty": "Very Hard",
+      "clinical_focus": "Acute Ischemic Stroke",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Alex Johnson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": 68,
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "75",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00 AM | Oct-14-2026",
+            "type": "Data",
+            "note": "Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband reports sudden onset of right-sided weakness, facial droop, and slurred speech approximately 30 minutes prior to arrival. Client is alert but appears distressed. Speech is dysarthric and difficult to understand. Right facial droop observed. Right upper and lower extremities demonstrate decreased movement."
+          },
+          {
+            "time": "08:05 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Initial vital signs obtained. Oxygen saturation noted at 92% on room air. Oxygen initiated via nasal cannula at 2 liters per minute. Client placed on cardiac monitor. Head of bed elevated to 30 degrees."
+          },
+          {
+            "time": "08:10 AM | Oct-14-2026",
+            "type": "Data",
+            "note": "Rapid neurological assessment initiated. Client able to follow simple commands. Right upper extremity strength 2/5, right lower extremity strength 2/5. Left-sided strength 5/5. NIH Stroke Scale score assessed at 10. Pupils equal, round, reactive to light. No nuchal rigidity noted."
+          },
+          {
+            "time": "08:15 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Two large-bore intravenous access lines established in the left antecubital fossa. Blood samples drawn for complete blood count, basic metabolic panel, coagulation studies (prothrombin time, international normalized ratio, activated partial thromboplastin time), and blood glucose. Results pending."
+          },
+          {
+            "time": "08:20 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Client prepared for emergent non-contrast computed tomography scan of the head. Transport team notified. Family updated on plan of care."
+          },
+          {
+            "time": "08:25 AM | Oct-14-2026",
+            "type": "Response",
+            "note": "Client tolerated oxygen therapy well, oxygen saturation improved to 96%. Remains anxious but cooperative. Awaiting computed tomography scan results to determine definitive treatment."
+          }
+        ],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 20, BP: 128/78, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Oxygen therapy via nasal cannula at 2 L/min, titrate to maintain SpO2 >94%."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Nebulized Albuterol 2.5 mg/3 mL every 20 minutes for 3 doses, then every 4 hours as needed."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Dexamethasone 6 mg PO once daily."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Continuous pulse oximetry monitoring."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Establish IV access, Saline Lock."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Monitor respiratory status, work of breathing, and breath sounds every 15-30 minutes during acute phase, then every 2 hours."
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Sudden onset of right-sided weakness, facial droop, and slurred speech.",
+          "hpi": "Client is a 68-year-old female presenting to the emergency department with acute onset of neurological deficits. Her husband reports that approximately 30 minutes prior to arrival, she suddenly developed weakness on her right side, a noticeable droop on the right side of her face, and difficulty speaking clearly. There was no preceding trauma, headache, or seizure activity. Symptoms have been constant since onset. Last known well time was approximately 30 minutes prior to symptom onset.",
+          "pmh": [
+            "Hypertension (diagnosed 10 years ago)",
+            "Hyperlipidemia (diagnosed 5 years ago)"
+          ],
+          "medications": [
+            "Lisinopril 10 mg daily",
+            "Atorvastatin 20 mg daily"
+          ],
+          "allergies": "No known drug allergies (NKDA)",
+          "physical_examination": {
+            "respiratory": "Lungs clear to auscultation bilaterally, no adventitious sounds. Respirations unlabored.",
+            "neurological": {
+              "gait": "Unable to assess due to motor weakness.",
+              "motor": "Right upper extremity strength 2/5, right lower extremity strength 2/5. Left upper and lower extremity strength 5/5. No pronator drift on the left. Right pronator drift present.",
+              "sensory": "Sensation intact to light touch and pinprick bilaterally.",
+              "reflexes": "Deep tendon reflexes 2+ bilaterally, except right upper and lower extremities 3+ (hyperreflexia). Babinski reflex negative.",
+              "nihss_score": "10 (initial assessment)",
+              "coordination": "Unable to assess due to motor weakness.",
+              "mental_status": "Alert, oriented x3. Follows commands. Speech slurred (dysarthria).",
+              "cranial_nerves": "CN VII: Right facial droop. Other cranial nerves grossly intact."
+            },
+            "cardiovascular": "Regular rate and rhythm, S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses 2+ bilaterally.",
+            "general_appearance": "Alert and oriented to person, place, and time. Appears anxious and distressed. Speech is dysarthric.",
+            "head_eyes_ears_nose_throat": "Right facial droop present. Pupils equal, round, and reactive to light (PERRLA). Extraocular movements intact. Oral mucosa moist."
+          },
+          "social_history": {
+            "occupation": "Retired teacher",
+            "alcohol_use": "Occasional social alcohol use (1-2 drinks per week)",
+            "smoking_status": "Non-smoker",
+            "living_situation": "Lives with husband in a rural area, approximately 45 minutes from the nearest comprehensive stroke center. Limited access to specialized healthcare facilities nearby."
+          },
+          "review_of_systems": {
+            "general": "No fever, chills, or weight changes reported.",
+            "respiratory": "No shortness of breath or cough.",
+            "neurological": "Sudden onset right-sided weakness, facial droop, slurred speech. No headache, dizziness, visual changes, or seizures reported.",
+            "cardiovascular": "No chest pain or palpitations."
+          },
+          "patient_demographics": {
+            "age": "68 years",
+            "gender": "Female"
+          },
+          "family_history": {
+            "father": "History of ischemic stroke at age 75",
+            "mother": "History of hypertension and type 2 diabetes"
+          },
+          "past_medical_history": [
+            "Hypertension (diagnosed 10 years ago)",
+            "Hyperlipidemia (diagnosed 5 years ago)"
+          ],
+          "history_of_present_illness": "Client is a 68-year-old female presenting to the emergency department with acute onset of neurological deficits. Her husband reports that approximately 30 minutes prior to arrival, she suddenly developed weakness on her right side, a noticeable droop on the right side of her face, and difficulty speaking clearly. There was no preceding trauma, headache, or seizure activity. Symptoms have been constant since onset. Last known well time was approximately 30 minutes prior to symptom onset."
+        },
+        "imaging": [
+          {
+            "time": "Baseline",
+            "type": "Radiology Report",
+            "note": "Head CT (Non-contrast): Reveals no acute intracranial hemorrhage, mass effect, or midline shift. Ventricles and sulci are prominent, consistent with age-related changes. There is no evidence of territorial ischemia or acute fracture."
+          }
+        ],
+        "nurses_notes": [
+          {
+            "time": "08:00 AM | Oct-14-2026",
+            "type": "Data",
+            "note": "Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband reports sudden onset of right-sided weakness, facial droop, and slurred speech approximately 30 minutes prior to arrival. Client is alert but appears distressed. Speech is dysarthric and difficult to understand. Right facial droop observed. Right upper and lower extremities demonstrate decreased movement."
+          },
+          {
+            "time": "08:05 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Initial vital signs obtained. Oxygen saturation noted at 92% on room air. Oxygen initiated via nasal cannula at 2 liters per minute. Client placed on cardiac monitor. Head of bed elevated to 30 degrees."
+          },
+          {
+            "time": "08:10 AM | Oct-14-2026",
+            "type": "Data",
+            "note": "Rapid neurological assessment initiated. Client able to follow simple commands. Right upper extremity strength 2/5, right lower extremity strength 2/5. Left-sided strength 5/5. NIH Stroke Scale score assessed at 10. Pupils equal, round, reactive to light. No nuchal rigidity noted."
+          },
+          {
+            "time": "08:15 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Two large-bore intravenous access lines established in the left antecubital fossa. Blood samples drawn for complete blood count, basic metabolic panel, coagulation studies (prothrombin time, international normalized ratio, activated partial thromboplastin time), and blood glucose. Results pending."
+          },
+          {
+            "time": "08:20 AM | Oct-14-2026",
+            "type": "Action",
+            "note": "Client prepared for emergent non-contrast computed tomography scan of the head. Transport team notified. Family updated on plan of care."
+          },
+          {
+            "time": "08:25 AM | Oct-14-2026",
+            "type": "Response",
+            "note": "Client tolerated oxygen therapy well, oxygen saturation improved to 96%. Remains anxious but cooperative. Awaiting computed tomography scan results to determine definitive treatment."
+          }
+        ],
+        "providerOrders": [
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Oxygen therapy via nasal cannula at 2 L/min, titrate to maintain SpO2 >94%."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Nebulized Albuterol 2.5 mg/3 mL every 20 minutes for 3 doses, then every 4 hours as needed."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Dexamethasone 6 mg PO once daily."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Continuous pulse oximetry monitoring."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Establish IV access, Saline Lock."
+          },
+          {
+            "time": "08:05",
+            "type": "Active",
+            "text": "Monitor respiratory status, work of breathing, and breath sounds every 15-30 minutes during acute phase, then every 2 hours."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Sudden onset of right-sided weakness, facial droop, and slurred speech.",
+          "hpi": "Client is a 68-year-old female presenting to the emergency department with acute onset of neurological deficits. Her husband reports that approximately 30 minutes prior to arrival, she suddenly developed weakness on her right side, a noticeable droop on the right side of her face, and difficulty speaking clearly. There was no preceding trauma, headache, or seizure activity. Symptoms have been constant since onset. Last known well time was approximately 30 minutes prior to symptom onset.",
+          "pmh": [
+            "Hypertension (diagnosed 10 years ago)",
+            "Hyperlipidemia (diagnosed 5 years ago)"
+          ],
+          "medications": [
+            "Lisinopril 10 mg daily",
+            "Atorvastatin 20 mg daily"
+          ],
+          "allergies": "No known drug allergies (NKDA)",
+          "physical_examination": {
+            "respiratory": "Lungs clear to auscultation bilaterally, no adventitious sounds. Respirations unlabored.",
+            "neurological": {
+              "gait": "Unable to assess due to motor weakness.",
+              "motor": "Right upper extremity strength 2/5, right lower extremity strength 2/5. Left upper and lower extremity strength 5/5. No pronator drift on the left. Right pronator drift present.",
+              "sensory": "Sensation intact to light touch and pinprick bilaterally.",
+              "reflexes": "Deep tendon reflexes 2+ bilaterally, except right upper and lower extremities 3+ (hyperreflexia). Babinski reflex negative.",
+              "nihss_score": "10 (initial assessment)",
+              "coordination": "Unable to assess due to motor weakness.",
+              "mental_status": "Alert, oriented x3. Follows commands. Speech slurred (dysarthria).",
+              "cranial_nerves": "CN VII: Right facial droop. Other cranial nerves grossly intact."
+            },
+            "cardiovascular": "Regular rate and rhythm, S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses 2+ bilaterally.",
+            "general_appearance": "Alert and oriented to person, place, and time. Appears anxious and distressed. Speech is dysarthric.",
+            "head_eyes_ears_nose_throat": "Right facial droop present. Pupils equal, round, and reactive to light (PERRLA). Extraocular movements intact. Oral mucosa moist."
+          },
+          "social_history": {
+            "occupation": "Retired teacher",
+            "alcohol_use": "Occasional social alcohol use (1-2 drinks per week)",
+            "smoking_status": "Non-smoker",
+            "living_situation": "Lives with husband in a rural area, approximately 45 minutes from the nearest comprehensive stroke center. Limited access to specialized healthcare facilities nearby."
+          },
+          "review_of_systems": {
+            "general": "No fever, chills, or weight changes reported.",
+            "respiratory": "No shortness of breath or cough.",
+            "neurological": "Sudden onset right-sided weakness, facial droop, slurred speech. No headache, dizziness, visual changes, or seizures reported.",
+            "cardiovascular": "No chest pain or palpitations."
+          },
+          "patient_demographics": {
+            "age": "68 years",
+            "gender": "Female"
+          },
+          "family_history": {
+            "father": "History of ischemic stroke at age 75",
+            "mother": "History of hypertension and type 2 diabetes"
+          },
+          "past_medical_history": [
+            "Hypertension (diagnosed 10 years ago)",
+            "Hyperlipidemia (diagnosed 5 years ago)"
+          ],
+          "history_of_present_illness": "Client is a 68-year-old female presenting to the emergency department with acute onset of neurological deficits. Her husband reports that approximately 30 minutes prior to arrival, she suddenly developed weakness on her right side, a noticeable droop on the right side of her face, and difficulty speaking clearly. There was no preceding trauma, headache, or seizure activity. Symptoms have been constant since onset. Last known well time was approximately 30 minutes prior to symptom onset."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband reports sudden onset of right-sided weakness, facial droop, and slurred speech… Select the action the nurse should implement now based on the documented cues.",
+      "structure": {
+        "type": "ordered-response",
+        "scenario": "The nurse is caring for a 68 year old female client who presents to the emergency department with sudden onset of right-sided weakness, facial droop, and slurred speech. Her husband states the symptoms started approximately 30 minutes ago. Which immediate actions should the nurse prioritize?",
+        "prompt": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband reports sudden onset of right-sided weakness, facial droop, and slurred speech… Select the action the nurse should implement now based on the documented cues.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Ensure Airway, Breathing, and Circulation (ABCs)"
+          },
+          {
+            "id": "B",
+            "text": "Rapid Neurological Assessment"
+          },
+          {
+            "id": "C",
+            "text": "Establish IV Access and Obtain Blood Samples"
+          },
+          {
+            "id": "D",
+            "text": "Prepare for Emergent Non-Contrast CT Scan of the Head"
+          },
+          {
+            "id": "E",
+            "text": "Monitor Blood Pressure"
+          }
+        ],
+        "correct_order": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "stem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband reports sudden onset of right-sided weakness, facial droop, and slurred speech… Select the action the nurse should implement now based on the documented cues."
+      },
+      "media": [],
+      "rationale": {
+        "trap": "Selecting antibiotics is incorrect as they are ineffective against asthma, a condition of airway inflammation and constriction, not bacterial infection.",
+        "golden_rule": "Prioritize patient safety.",
+        "core_concept": "Clinical Judgment.",
+        "answer_analysis": "Acute ischemic stroke requires immediate and systematic intervention. The priority is to stabilize the client, establish a baseline, and prepare for definitive treatment. \n1.  **Ensure Airway, Breathing, and Circulation (ABCs):** Assess respiratory status and oxygen saturation. Administer oxygen if SpO2 is below 94% to prevent hypoxia, which can exacerbate brain injury. Prepare for intubation if airway compromise is evident.\n2.  **Rapid Neurological Assessment:** Perform a focused neurological assessment, including the National Institutes of Health Stroke Scale (NIHSS), to quantify the severity of the stroke and establish a baseline. This assessment is crucial for guiding treatment decisions and monitoring changes.\n3.  **Establish IV Access and Obtain Blood Samples:** Two large-bore IV lines should be started. Blood samples are needed for a complete blood count (CBC), basic metabolic panel (BMP), coagulation studies (PT/INR, aPTT), and blood glucose. Hypoglycemia can mimic stroke symptoms, and hyperglycemia can worsen stroke outcomes. Coagulation studies are essential before administering thrombolytics.\n4.  **Prepare for Emergent Non-Contrast CT Scan of the Head:** This is the most critical diagnostic step to differentiate between ischemic and hemorrhagic stroke. Thrombolytic therapy (e.g., alteplase) is contraindicated in hemorrhagic stroke. The CT scan must be performed as quickly as possible (ideally within 20 minutes of arrival) to determine eligibility for thrombolysis, which has a narrow therapeutic window (typically 3-4.5 hours from symptom onset).\n5.  **Monitor Blood Pressure:** While hypertension is common in acute stroke, aggressive lowering can worsen cerebral perfusion. The goal is to maintain blood pressure within parameters that allow for adequate cerebral blood flow but prevent further damage (e.g., <185/110 mmHg for thrombolysis candidates). Frequent monitoring is essential.\nThese actions align with stroke best practices and aim to minimize brain damage and optimize outcomes."
+      },
+      "mnemonic": {
+        "title": "FAST Stroke Recognition",
+        "content": "F - Face drooping (Is one side of the face numb or drooping? Ask the person to smile.)\nA - Arm weakness (Is one arm weak or numb? Ask the person to raise both arms.)\nS - Speech difficulty (Is speech slurred, or is the person unable to speak? Ask them to repeat a simple sentence.)\nT - Time to call 911 (If any of these signs are present, call emergency services immediately, even if symptoms disappear.)"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [
+          "missing_options",
+          "missing_order"
+        ],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "e68eff8e8170",
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "ordered_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Acute Ischemic Stroke",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Stroke / CVA",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "answerKey": {
+        "type": "ordered-response",
+        "correctOrder": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctIds": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "maxScore": 5,
+        "scoring": "ordered"
+      },
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband report…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 68,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Acute ischemic stroke requires immediate and systematic intervention. The priority is to stabilize the client, establish a baseline, and prepare for definitive treatment. \n1.  **Ensure Airway, Breathing, and Circulation (ABCs):** Assess respiratory status and oxygen saturation. Administer oxygen if SpO2 is below 94% to prevent hypoxia, which can exacerbate brain injury. Prepare for intubation if airway compromise is evident.\n2.  **Rapid Neurological Assessment:** Perform a focused neurological assessment, including the National Institutes of Health Stroke Scale (NIHSS), to quantify the severity of the stroke and establish a baseline. This assessment is crucial for guiding treatment decisions and monitoring changes.\n3.  **Establish IV Access and Obtain Blood Samples:** Two large-bore IV lines should be started. Blood samples are needed for a complete blood count (CBC), basic metabolic panel (BMP), coagulation studies (PT/INR, aPTT), and blood glucose. Hypoglycemia can mimic stroke symptoms, and hyperglycemia can worsen stroke outcomes. Coagulation studies are essential before administering thrombolytics.\n4.  **Prepare for Emergent Non-Contrast CT Scan of the Head:** This is the most critical diagnostic step to differentiate between ischemic and hemorrhagic stroke. Thrombolytic therapy (e.g., alteplase) is contraindicated in hemorrhagic stroke. The CT scan must be performed as quickly as possible (ideally within 20 minutes of arrival) to determine eligibility for thrombolysis, which has a narrow therapeutic window (typically 3-4.5 hours from symptom onset).\n5.  **Monitor Blood Pressure:** While hypertension is common in acute stroke, aggressive lowering can worsen cerebral perfusion. The goal is to maintain blood pressure within parameters that allow for adequate cerebral blood flow but prevent further damage (e.g., <185/110 mmHg for thrombolysis candidates). Frequent monitoring is essential.\nThese actions align with stroke best practices and aim to minimize brain damage and optimize outcomes.",
+        "clinicalPrinciple": "Prioritize patient safety.",
+        "trapToAvoid": "Selecting antibiotics is incorrect as they are ineffective against asthma, a condition of airway inflammation and constriction, not bacterial infection.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband report…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Stroke / CVA",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Acute Ischemic Stroke. Current chart cue: Client, a 68-year-old female, arrived in the emergency department via ambulance. Husband report…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

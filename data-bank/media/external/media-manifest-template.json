@@ -1,0 +1,26 @@
+{
+  "version": "NexusRN-external-media-manifest-template-v1",
+  "generatedBy": "external-agent",
+  "notes": "Replace sample assets with generated files. Keep assets local. Do not add clinical facts not documented by NexusRN item evidence.",
+  "assets": [
+    {
+      "assetId": "ecg-afib-template-001",
+      "kind": "ecg",
+      "templateId": "ecg-afib-irregularly-irregular",
+      "assetPath": "media/external/ecg-afib-template-001.svg",
+      "altText": "Reusable ECG rhythm strip template showing an irregularly irregular rhythm without visible P waves for atrial fibrillation education.",
+      "caption": "Atrial fibrillation ECG template for items that explicitly document atrial fibrillation.",
+      "allowedUse": "Reusable template only when the item evidence explicitly states atrial fibrillation or AFib.",
+      "sourcePolicy": "Template mapping must match documented item evidence; no new clinical facts are added.",
+      "status": "draft-ready-for-review",
+      "noPatientIdentifiers": true,
+      "usedForScoring": false,
+      "itemIds": [],
+      "evidenceTerms": [
+        "atrial fibrillation",
+        "AFib",
+        "irregularly irregular"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1505 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 96,
+  "count": 4,
+  "sourceStartIndex": 4800,
+  "questions": [
+    {
+      "id": "4e6bab7d-c5b9-4d3f-94bc-4c20c9111855",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Prioritize Hypotheses",
+      "difficulty": "Easy",
+      "clinical_focus": "UTI / Urosepsis",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Samuel Osei",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Geriatric Unit",
+        "age_value": 58,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, BP: 118/76, Pain: 0/10, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [
+          {
+            "time": "Baseline",
+            "type": "Radiology Report",
+            "note": "Diagnostic CT/Radiography Report: Demonstrates mild post-operative edema and localized tissue swelling consistent with the clinical history. No signs of active hemorrhage, gross fluid collections, or major structural disruption."
+          }
+        ],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "RR not charted. This value was not provided in the item."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high fraction of inspired oxygen, the client's SpO2 remains 85% and PaO2 is 55 mmHg. Chest X-ray shows diffuse bilateral infiltrates.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high fraction of inspired oxygen, the client's SpO2 remains 85% and PaO2 is 55 mmHg. Chest X-ray shows diffuse bilateral infiltrates.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Pneumothorax"
+          },
+          {
+            "id": "B",
+            "text": "Hypoglycemia"
+          },
+          {
+            "id": "C",
+            "text": "Ventilator-associated pneumonia (VAP)"
+          },
+          {
+            "id": "D",
+            "text": "Acute kidney injury (AKI)"
+          },
+          {
+            "id": "E",
+            "text": "Increased intracranial pressure (ICP)"
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Most Likely/Life-Threatening Complication"
+          },
+          {
+            "id": "B",
+            "text": "Less Likely/Less Life-Threatening Complication"
+          }
+        ],
+        "correct_answers": {
+          "Hypoglycemia": "Less Likely/Less Life-Threatening Complication",
+          "Pneumothorax": "Most Likely/Life-Threatening Complication",
+          "Acute kidney injury (AKI)": "Most Likely/Life-Threatening Complication",
+          "Increased intracranial pressure (ICP)": "Less Likely/Less Life-Threatening Complication",
+          "Ventilator-associated pneumonia (VAP)": "Most Likely/Life-Threatening Complication"
+        },
+        "stem": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high fraction of inspired oxygen, the client's SpO2 remains 85% and PaO2 is 55 mmHg. Chest X-ray shows diffuse bilateral infiltrates."
+      },
+      "media": "media/internal/cxr_pneumonia.png",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must recognize refractory hypoxemia as a hallmark of ARDS, indicating severe lung injury unresponsive to conventional oxygen therapy and requiring advanced interventions.",
+        "core_concept": null,
+        "answer_analysis": "1. **Pneumothorax:** ARDS often requires mechanical ventilation with high positive end-expiratory pressure (PEEP) due to severe lung stiffness. The rigid lungs in ARDS are highly susceptible to barotrauma and volutrauma, making pneumothorax a frequent and life-threatening complication. 2. **Hypoglycemia:** While possible in any critically ill client due to various factors, hypoglycemia is not a primary or most likely complication directly associated with ARDS pathophysiology or its common treatments. Hyperglycemia is often more prevalent in septic states. 3. **Ventilator-associated pneumonia (VAP):** Prolonged mechanical ventilation, impaired cough reflex, aspiration risk, and underlying immune compromise (due to sepsis) in an ARDS client create a high-risk environment for VAP, which is a common, severe, and life-threatening complication. 4. **Acute kidney injury (AKI):** Severe sepsis, often the precursor to ARDS, frequently leads to acute kidney injury. Additionally, the severe hypoxemia, systemic inflammation, and potential hemodynamic instability associated with ARDS can further contribute to renal dysfunction, making AKI a common and life-threatening complication of multi-organ dysfunction syndrome. 5. **Increased intracranial pressure (ICP):** While severe hypoxemia or hypercapnia (if ventilation is inadequate) can indirectly impact cerebral blood flow and ICP, it is not a primary or most likely direct complication of ARDS itself compared to issues like barotrauma, infection, or other major organ failures related to critical illness and sepsis."
+      },
+      "mnemonic": {
+        "title": "ARDS: Unresponsive Lungs",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Hypoglycemia": "Less Likely/Less Life-Threatening Complication",
+          "Pneumothorax": "Most Likely/Life-Threatening Complication",
+          "Acute kidney injury (AKI)": "Most Likely/Life-Threatening Complication",
+          "Increased intracranial pressure (ICP)": "Less Likely/Less Life-Threatening Complication",
+          "Ventilator-associated pneumonia (VAP)": "Most Likely/Life-Threatening Complication"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:sepsis,infection control"
+          ],
+          "clinicalFocus": "UTI / Urosepsis",
+          "cjmmStep": "Prioritize Hypotheses",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:sepsis,infection control"
+          ],
+          "guidelineSensitiveBuckets": [
+            "infection control",
+            "sepsis"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Sepsis / Septic Shock",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "infection control",
+            "sepsis"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high frac…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:sepsis,infection control"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "sepsis",
+        "infection control"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 58,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Geriatric Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "1. **Pneumothorax:** ARDS often requires mechanical ventilation with high positive end-expiratory pressure (PEEP) due to severe lung stiffness. The rigid lungs in ARDS are highly susceptible to barotrauma and volutrauma, making pneumothorax a frequent and life-threatening complication. 2. **Hypoglycemia:** While possible in any critically ill client due to various factors, hypoglycemia is not a primary or most likely complication directly associated with ARDS pathophysiology or its common treatments. Hyperglycemia is often more prevalent in septic states. 3. **Ventilator-associated pneumonia (VAP):** Prolonged mechanical ventilation, impaired cough reflex, aspiration risk, and underlying immune compromise (due to sepsis) in an ARDS client create a high-risk environment for VAP, which is a common, severe, and life-threatening complication. 4. **Acute kidney injury (AKI):** Severe sepsis, often the precursor to ARDS, frequently leads to acute kidney injury. Additionally, the severe hypoxemia, systemic inflammation, and potential hemodynamic instability associated with ARDS can further contribute to renal dysfunction, making AKI a common and life-threatening complication of multi-organ dysfunction syndrome. 5. **Increased intracranial pressure (ICP):** While severe hypoxemia or hypercapnia (if ventilation is inadequate) can indirectly impact cerebral blood flow and ICP, it is not a primary or most likely direct complication of ARDS itself compared to issues like barotrauma, infection, or other major organ failures related to critical illness and sepsis.",
+        "clinicalPrinciple": "The nurse must recognize refractory hypoxemia as a hallmark of ARDS, indicating severe lung injury unresponsive to conventional oxygen therapy and requiring advanced interventions.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high frac…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Sepsis / Septic Shock",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 58-year-old client with a history of sepsis secondary to a complicated appendectomy is admitted to the ICU with acute respiratory distress syndrome (ARDS). Despite mechanical ventilation with high PEEP and a high frac…",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:sepsis,infection control"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "sepsis",
+        "infection control"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "infection control",
+        "sepsis"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "infection control",
+        "sepsis"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen."
+    },
+    {
+      "id": "28bc5801-622a-4d26-aee3-26da1c89d489",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Take Action",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Mr. John Doe",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Obstetrics Unit",
+        "age_value": "37",
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "99.8°F / 37.7°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "105",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "158/96",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "117 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 158/96",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse tremors in his hands. His vital signs are T 99.8°F (37.7°C), HR 105 bpm, RR 20 breaths/min, BP 158/96 mmHg.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse tremors in his hands. His vital signs are T 99.8°F (37.7°C), HR 105 bpm, RR 20 breaths/min, BP 158/96 mmHg.",
+        "text_with_blanks": "The nurse notes the client is exhibiting signs consistent with early alcohol withdrawal, including [BLANK_1]. The priority immediate nursing action is to [BLANK_2]. The nurse anticipates the provider will order [BLANK_3] to manage these symptoms. The nurse will continue to closely monitor the client for the development of [BLANK_4] over the next 24-72 hours.",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "fine motor tremors, diaphoresis, and elevated heart rate",
+            "options": [
+              "delirium tremens and visual hallucinations",
+              "fine motor tremors, diaphoresis, and elevated heart rate",
+              "severe confusion, nystagmus, and ataxia",
+              "hypothermia, bradycardia, and hypotension"
+            ]
+          },
+          "BLANK_2": {
+            "correct": "administer the Clinical Institute Withdrawal Assessment for Alcohol (CIWA-Ar) scale",
+            "options": [
+              "encourage increased fluid intake and ambulation",
+              "administer the Clinical Institute Withdrawal Assessment for Alcohol (CIWA-Ar) scale",
+              "prepare the client for immediate discharge home",
+              "initiate seizure precautions and apply wrist restraints"
+            ]
+          },
+          "BLANK_3": {
+            "correct": "intravenous benzodiazepine (e.g., lorazepam)",
+            "options": [
+              "intravenous thiamine and folic acid",
+              "oral naltrexone",
+              "intravenous benzodiazepine (e.g., lorazepam)",
+              "high-dose opioid analgesics"
+            ]
+          },
+          "BLANK_4": {
+            "correct": "delirium tremens (DTs)",
+            "options": [
+              "hypoglycemia",
+              "Wernicke-Korsakoff syndrome",
+              "delirium tremens (DTs)",
+              "pancreatitis"
+            ]
+          }
+        },
+        "scenario": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse tremors in his hands. His vital signs are T 99.8°F (37.7°C), HR 105 bpm, RR 20 breaths/min, BP 158/96 mmHg.",
+        "stem": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse tremors in his hands. His vital signs are T 99.8°F (37.7°C), HR 105 bpm, RR 20 breaths/min, BP 158/96 mmHg.",
+        "correctMap": {
+          "BLANK_1": "fine motor tremors, diaphoresis, and elevated heart rate",
+          "BLANK_2": "administer the Clinical Institute Withdrawal Assessment for Alcohol (CIWA-Ar) scale",
+          "BLANK_3": "intravenous benzodiazepine (e.g., lorazepam)",
+          "BLANK_4": "delirium tremens (DTs)"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "delirium tremens and visual hallucinations",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "fine motor tremors, diaphoresis, and elevated heart rate",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "severe confusion, nystagmus, and ataxia",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "hypothermia, bradycardia, and hypotension",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "encourage increased fluid intake and ambulation",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "administer the Clinical Institute Withdrawal Assessment for Alcohol (CIWA-Ar) scale",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "prepare the client for immediate discharge home",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "initiate seizure precautions and apply wrist restraints",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "intravenous thiamine and folic acid",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "oral naltrexone",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "intravenous benzodiazepine (e.g., lorazepam)",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "high-dose opioid analgesics",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "hypoglycemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "Wernicke-Korsakoff syndrome",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "delirium tremens (DTs)",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "pancreatitis",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": "media/internal/cxr_pneumonia.png",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must assess for escalating symptoms of alcohol withdrawal and implement seizure precautions to ensure client safety.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, early signs of alcohol withdrawal, typically starting 6-12 hours after the last drink, include tremors, anxiety, diaphoresis, nausea, and elevated vital signs such as heart rate and blood pressure. Delirium tremens and hallucinations occur later (48-72+ hours). Severe confusion, nystagmus, and ataxia are signs of Wernicke encephalopathy. Hypothermia, bradycardia, and hypotension are not typical for alcohol withdrawal. For BLANK_2, the priority immediate nursing action when alcohol withdrawal is suspected is to use a standardized assessment tool like the CIWA-Ar scale. This tool helps quantify the severity of withdrawal symptoms and guides treatment decisions, including the need for medication. While seizure precautions might be indicated based on the CIWA-Ar score, assessment is the initial step. Restraints are typically a last resort for safety, and discharge is inappropriate. For BLANK_3, benzodiazepines (e.g., lorazepam, diazepam, chlordiazepoxide) are the mainstay of treatment for acute alcohol withdrawal due to their ability to reduce central nervous system hyperexcitability, thereby alleviating symptoms and preventing progression to more severe stages like seizures or DTs. Thiamine and folic acid are essential nutritional supplements for clients with alcohol use disorder but are not the primary medications for acute withdrawal symptom management. Naltrexone is used for relapse prevention, and opioid analgesics are not indicated for alcohol withdrawal. For BLANK_4, delirium tremens (DTs) are a severe, life-threatening complication of alcohol withdrawal, typically occurring 48-72 hours or more after the last drink. Given the client's current symptoms, monitoring for this progression is crucial. Wernicke-Korsakoff syndrome is a chronic neurological condition due to thiamine deficiency, not an acute stage of withdrawal. Hypoglycemia and pancreatitis are possible complications associated with chronic alcohol use but are not the most critical acute withdrawal progression to monitor for in this context."
+      },
+      "mnemonic": {
+        "title": "AWS: Tremors Tachycardia",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "fine motor tremors, diaphoresis, and elevated heart rate",
+          "BLANK_2": "administer the Clinical Institute Withdrawal Assessment for Alcohol (CIWA-Ar) scale",
+          "BLANK_3": "intravenous benzodiazepine (e.g., lorazepam)",
+          "BLANK_4": "delirium tremens (DTs)"
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "COPD Exacerbation",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "37",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Obstetrics Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, early signs of alcohol withdrawal, typically starting 6-12 hours after the last drink, include tremors, anxiety, diaphoresis, nausea, and elevated vital signs such as heart rate and blood pressure. Delirium tremens and hallucinations occur later (48-72+ hours). Severe confusion, nystagmus, and ataxia are signs of Wernicke encephalopathy. Hypothermia, bradycardia, and hypotension are not typical for alcohol withdrawal. For BLANK_2, the priority immediate nursing action when alcohol withdrawal is suspected is to use a standardized assessment tool like the CIWA-Ar scale. This tool helps quantify the severity of withdrawal symptoms and guides treatment decisions, including the need for medication. While seizure precautions might be indicated based on the CIWA-Ar score, assessment is the initial step. Restraints are typically a last resort for safety, and discharge is inappropriate. For BLANK_3, benzodiazepines (e.g., lorazepam, diazepam, chlordiazepoxide) are the mainstay of treatment for acute alcohol withdrawal due to their ability to reduce central nervous system hyperexcitability, thereby alleviating symptoms and preventing progression to more severe stages like seizures or DTs. Thiamine and folic acid are essential nutritional supplements for clients with alcohol use disorder but are not the primary medications for acute withdrawal symptom management. Naltrexone is used for relapse prevention, and opioid analgesics are not indicated for alcohol withdrawal. For BLANK_4, delirium tremens (DTs) are a severe, life-threatening complication of alcohol withdrawal, typically occurring 48-72 hours or more after the last drink. Given the client's current symptoms, monitoring for this progression is crucial. Wernicke-Korsakoff syndrome is a chronic neurological condition due to thiamine deficiency, not an acute stage of withdrawal. Hypoglycemia and pancreatitis are possible complications associated with chronic alcohol use but are not the most critical acute withdrawal progression to monitor for in this context.",
+        "clinicalPrinciple": "The nurse must assess for escalating symptoms of alcohol withdrawal and implement seizure precautions to ensure client safety.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Mr. John Doe, a 37 year old male admitted to the medical-surgical unit for community-acquired pneumonia, reports not having had a drink in about 10 hours. The nurse observes him to be anxious, restless, and notes coarse…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "b2ff2ca4-42a8-4572-b36b-b234eaf84f48",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Burn Injury / Fluid Resuscitation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Samuel Osei",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Geriatric Unit",
+        "age_value": 78,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 16, BP: 128/78, SpO₂: 97%, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 35,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "09:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 42,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "10:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 45,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "11:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 48,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "12:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 52,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "13:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 55,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "14:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 58,
+            "outputRoute": "Urine Output (Foley)"
+          },
+          {
+            "time": "15:00",
+            "intake": 650,
+            "intakeRoute": "IV Lactated Ringer's",
+            "output": 60,
+            "outputRoute": "Urine Output (Foley)"
+          }
+        ]
+      },
+      "prompt": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Inspiratory stridor and singed nasal hairs."
+          },
+          {
+            "id": "B",
+            "text": "Urine output consistently 45 mL/hour after 6 hours of aggressive fluid resuscitation."
+          },
+          {
+            "id": "C",
+            "text": "Diminished radial pulse in the left arm, which has circumferential full-thickness burns."
+          },
+          {
+            "id": "D",
+            "text": "Burn wound on the chest appears white, dry, and leathery, with no pain sensation when touched."
+          },
+          {
+            "id": "E",
+            "text": "Temperature of 38.9°C (102°F) with purulent drainage and foul odor from a burn wound on day 4 post-burn."
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "Inspiratory stridor and singed nasal hairs.": "Unexpected Finding",
+          "Urine output consistently 45 mL/hour after 6 hours of aggressive fluid resuscitation.": "Expected Finding",
+          "Diminished radial pulse in the left arm, which has circumferential full-thickness burns.": "Unexpected Finding",
+          "Burn wound on the chest appears white, dry, and leathery, with no pain sensation when touched.": "Expected Finding",
+          "Temperature of 38.9°C (102°F) with purulent drainage and foul odor from a burn wound on day 4 post-burn.": "Unexpected Finding"
+        },
+        "stem": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face."
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "Priority is to assess and secure the airway in clients with facial burns or suspected inhalation injury, as edema can rapidly compromise breathing.",
+        "core_concept": null,
+        "answer_analysis": "1. **Inspiratory stridor and singed nasal hairs:** These are critical signs of an inhalation injury, a life-threatening complication in burn clients, especially from fires in enclosed spaces. This requires immediate airway intervention and is an unexpected, adverse finding. 2. **Urine output consistently 45 mL/hour after 6 hours of aggressive fluid resuscitation:** For adults with major burns, the target urine output during fluid resuscitation is typically 30-50 mL/hour. Achieving this indicates that fluid resuscitation is adequate to maintain renal perfusion and prevent hypovolemic shock. Therefore, it is an expected and desired finding. 3. **Diminished radial pulse in the left arm, which has circumferential full-thickness burns:** Circumferential full-thickness burns can lead to the formation of a tight, inelastic eschar. As edema forms beneath the eschar, it can constrict circulation to the distal extremity, leading to compartment syndrome. A diminished or absent pulse is an unexpected and dangerous finding, indicating the need for an escharotomy to restore blood flow. 4. **Burn wound on the chest appears white, dry, and leathery, with no pain sensation when touched:** These are classic characteristics of a full-thickness (third-degree) burn. Nerve endings are destroyed, leading to a lack of sensation, and the tissue appears white, dry, or leathery. While a serious injury, these are the expected physical findings for this burn depth. 5. **Temperature of 38.9°C (102°F) with purulent drainage and foul odor from a burn wound on day 4 post-burn:** While a low-grade fever can be present in burn clients due to hypermetabolic state, a temperature of 38.9°C accompanied by purulent drainage and a foul odor strongly indicates a burn wound infection, a serious complication. This is an unexpected and concerning finding that requires immediate intervention."
+      },
+      "mnemonic": {
+        "title": "Burn Airway Priority",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Inspiratory stridor and singed nasal hairs.": "Unexpected Finding",
+          "Urine output consistently 45 mL/hour after 6 hours of aggressive fluid resuscitation.": "Expected Finding",
+          "Diminished radial pulse in the left arm, which has circumferential full-thickness burns.": "Unexpected Finding",
+          "Burn wound on the chest appears white, dry, and leathery, with no pain sensation when touched.": "Expected Finding",
+          "Temperature of 38.9°C (102°F) with purulent drainage and foul odor from a burn wound on day 4 post-burn.": "Unexpected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "HIV / AIDS Complications",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Burn Injury / Fluid Resuscitation",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [
+            "resuscitation"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Burns",
+          "clinicalFocusEvidenceScore": 3,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "resuscitation"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face.",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 78,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Geriatric Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "1. **Inspiratory stridor and singed nasal hairs:** These are critical signs of an inhalation injury, a life-threatening complication in burn clients, especially from fires in enclosed spaces. This requires immediate airway intervention and is an unexpected, adverse finding. 2. **Urine output consistently 45 mL/hour after 6 hours of aggressive fluid resuscitation:** For adults with major burns, the target urine output during fluid resuscitation is typically 30-50 mL/hour. Achieving this indicates that fluid resuscitation is adequate to maintain renal perfusion and prevent hypovolemic shock. Therefore, it is an expected and desired finding. 3. **Diminished radial pulse in the left arm, which has circumferential full-thickness burns:** Circumferential full-thickness burns can lead to the formation of a tight, inelastic eschar. As edema forms beneath the eschar, it can constrict circulation to the distal extremity, leading to compartment syndrome. A diminished or absent pulse is an unexpected and dangerous finding, indicating the need for an escharotomy to restore blood flow. 4. **Burn wound on the chest appears white, dry, and leathery, with no pain sensation when touched:** These are classic characteristics of a full-thickness (third-degree) burn. Nerve endings are destroyed, leading to a lack of sensation, and the tissue appears white, dry, or leathery. While a serious injury, these are the expected physical findings for this burn depth. 5. **Temperature of 38.9°C (102°F) with purulent drainage and foul odor from a burn wound on day 4 post-burn:** While a low-grade fever can be present in burn clients due to hypermetabolic state, a temperature of 38.9°C accompanied by purulent drainage and a foul odor strongly indicates a burn wound infection, a serious complication. This is an unexpected and concerning finding that requires immediate intervention.",
+        "clinicalPrinciple": "Priority is to assess and secure the airway in clients with facial burns or suspected inhalation injury, as edema can rapidly compromise breathing.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Burns",
+      "v242pClinicalFocusEvidenceScore": 3,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 78 year old client is admitted to the burn unit after sustaining full-thickness thermal burns to 30% TBSA from a kitchen fire. Initial assessment reveals burns to the bilateral arms, anterior trunk, and face.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "resuscitation"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "resuscitation"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen."
+    },
+    {
+      "id": "f1343d86-2f70-4003-aea9-80eaeaa4c479",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Evaluate Outcomes",
+      "difficulty": "Easy",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Thomas Okonkwo",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": "70",
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 16, BP: 128/78, SpO₂: 97%, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nurse is assessing his response to therapy.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nurse is assessing his response to therapy.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Reduction in pain and circumference of the affected leg"
+          },
+          {
+            "id": "B",
+            "text": "Presence of dark, tarry stools"
+          },
+          {
+            "id": "C",
+            "text": "International Normalized Ratio (INR) of 2.5"
+          },
+          {
+            "id": "D",
+            "text": "New onset of sudden shortness of breath and chest pain"
+          },
+          {
+            "id": "E",
+            "text": "Occasional minor epistaxis easily stopped with pressure"
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "Presence of dark, tarry stools": "Unexpected Finding",
+          "International Normalized Ratio (INR) of 2.5": "Expected Finding",
+          "New onset of sudden shortness of breath and chest pain": "Unexpected Finding",
+          "Occasional minor epistaxis easily stopped with pressure": "Expected Finding",
+          "Reduction in pain and circumference of the affected leg": "Expected Finding"
+        },
+        "stem": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nurse is assessing his response to therapy."
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must ensure both heparin and warfarin are administered until the INR is within the therapeutic range, typically 2.0-3.0, to prevent DVT recurrence.",
+        "core_concept": null,
+        "answer_analysis": "1. Reduction in pain and circumference of the affected leg: This indicates a therapeutic response, as the anticoagulation is helping to prevent further clot growth and allow the body to resolve the existing DVT, leading to decreased inflammation and edema. 2. Presence of dark, tarry stools: This is a sign of gastrointestinal bleeding (melena), a serious adverse effect of anticoagulation therapy that requires immediate intervention. 3. International Normalized Ratio (INR) of 2.5: For DVT treatment, a therapeutic INR range is typically 2.0-3.0. An INR of 2.5 indicates that the warfarin is within the desired therapeutic range, effectively thinning the blood to prevent further clot formation without excessive bleeding risk. 4. New onset of sudden shortness of breath and chest pain: These symptoms are highly suggestive of a pulmonary embolism (PE), a life-threatening complication of DVT where a clot travels to the lungs. This indicates a failure of therapy or worsening condition despite treatment. 5. Occasional minor epistaxis easily stopped with pressure: While any bleeding should be monitored, minor nosebleeds that are easily controlled are a relatively common and expected finding with therapeutic anticoagulation and do not necessarily indicate excessive anticoagulation or a major bleeding event."
+      },
+      "mnemonic": {
+        "title": "Anticoagulant Overlap Rule",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Presence of dark, tarry stools": "Unexpected Finding",
+          "International Normalized Ratio (INR) of 2.5": "Expected Finding",
+          "New onset of sudden shortness of breath and chest pain": "Unexpected Finding",
+          "Occasional minor epistaxis easily stopped with pressure": "Expected Finding",
+          "Reduction in pain and circumference of the affected leg": "Expected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Multiple Sclerosis",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:high-alert medication"
+          ],
+          "clinicalFocus": "Deep Vein Thrombosis / PE",
+          "cjmmStep": "Evaluate Outcomes",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:high-alert medication"
+          ],
+          "guidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Deep Vein Thrombosis / PE",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nur…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:high-alert medication"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "70",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "1. Reduction in pain and circumference of the affected leg: This indicates a therapeutic response, as the anticoagulation is helping to prevent further clot growth and allow the body to resolve the existing DVT, leading to decreased inflammation and edema. 2. Presence of dark, tarry stools: This is a sign of gastrointestinal bleeding (melena), a serious adverse effect of anticoagulation therapy that requires immediate intervention. 3. International Normalized Ratio (INR) of 2.5: For DVT treatment, a therapeutic INR range is typically 2.0-3.0. An INR of 2.5 indicates that the warfarin is within the desired therapeutic range, effectively thinning the blood to prevent further clot formation without excessive bleeding risk. 4. New onset of sudden shortness of breath and chest pain: These symptoms are highly suggestive of a pulmonary embolism (PE), a life-threatening complication of DVT where a clot travels to the lungs. This indicates a failure of therapy or worsening condition despite treatment. 5. Occasional minor epistaxis easily stopped with pressure: While any bleeding should be monitored, minor nosebleeds that are easily controlled are a relatively common and expected finding with therapeutic anticoagulation and do not necessarily indicate excessive anticoagulation or a major bleeding event.",
+        "clinicalPrinciple": "The nurse must ensure both heparin and warfarin are administered until the INR is within the therapeutic range, typically 2.0-3.0, to prevent DVT recurrence.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nur…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Deep Vein Thrombosis / PE",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 70 year old male was admitted with a deep vein thrombosis (DVT) and started on IV heparin. He is now being transitioned to oral warfarin therapy, with both medications overlapping until his INR is therapeutic. The nur…",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:high-alert medication"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen."
+    }
+  ]
+}

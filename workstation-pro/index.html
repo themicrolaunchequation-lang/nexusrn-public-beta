@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="nexusrn-build" content="v243I-asset-rendering-sandbox-phase-8-of-8" />
+  <title>NexusRN · Workstation Pro</title>
+  <link rel="stylesheet" href="../assets/css/nexusrn-workstation-pro-v242w.css" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-vitals-strip-micro-polish-07c-lite.css" data-batch="07C-LITE" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-matrix-micro-polish.css" data-batch="07D-MATRIX" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-worldclass-polish.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../assets/js/nexusrn-supabase-auth.js"></script>
+  <script id="nexus-fixed12-workstation-auth-gate">
+  (function(){
+    var q=new URLSearchParams(location.search||'');
+    var isPublicDemo=q.get('publicDemo')==='1' || /publicDemo=1/i.test(location.search);
+    var isLocal=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname||'');
+    var isBetaTest=q.get('betaTestAccess')==='1';
+    if(isPublicDemo) return;
+    if(isLocal && !isBetaTest) return; // allow local QA full-route testing without pretending production authorization
+    function safeRedirect(path){ location.href=path; }
+    window.addEventListener('DOMContentLoaded', async function(){
+      try{
+        if(!window.NEXUSRN_SUPABASE){ return; }
+        var session=await window.NEXUSRN_SUPABASE.getSession();
+        if(!session || !session.user){ safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search)); return; }
+        if(isBetaTest){
+          var test=window.NEXUSRN_SUPABASE.activeTestAccessForSession(session);
+          if(!test){ safeRedirect('../beta-test-access.html'); }
+        }
+      }catch(e){
+        if(!isLocal) safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search));
+      }
+    });
+  })();
+  </script>
+</head>
+<body>
+  <a class="ws-skip-link" href="#questionRenderer">Skip to question</a>
+  <a class="ws-skip-link" href="#chartContent">Skip to client chart</a>
+  <div id="wsRoot" class="ws-app" aria-live="polite" data-phase="5-6-of-8">
+    <header class="ws-topbar">
+      <a href="../index.html" class="ws-brand" style="text-decoration: none; color: inherit;">
+        <span class="ws-logo animated-logo">N</span>
+        <span class="ws-brand-text">NexusRN · RN Workstation <span class="ws-pro-badge">PRO</span></span>
+      </a>
+      <nav class="ws-mode-pills" aria-label="Learning modes"></nav>
+      <div class="ws-mode-summary">
+        <span id="wsModeSummaryText">Practice · Ready</span>
+        <button id="wsModeEdit" class="ws-mode-action" type="button">Edit</button>
+        <button id="wsModeStart" class="ws-mode-action ws-mode-start" type="button">Start</button>
+      </div>
+    </header>
+
+    <section class="ws-safe-banner" role="status">
+      <b>Public Preview Mode. This workspace loads only curated guided preview samples.</b></section>
+
+    <section class="ws-control-deck">
+      <div class="ws-control-info-panel">
+        <div class="ws-info-header">
+          <div class="ws-label">Question source</div>
+          <div class="ws-title">Distribution-aware learner-ready pool</div>
+        </div>
+        <div class="ws-metrics-divider"></div>
+        <div class="ws-metrics" id="wsMetrics">
+          <span>Loading bank…</span>
+        </div>
+      </div>
+      <div class="ws-selectors">
+        <label>Mode
+          <select id="modeSelect">
+            <option value="standalone">Standalone</option>
+            <option value="unfolding-6q">Unfolding 6Q Clinical Cases</option>
+          </select>
+        </label>
+        <label>Item type <select id="typeSelect"></select></label>
+        <label>Difficulty
+          <select id="difficultySelect">
+            <option value="all">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Hard">Hard</option>
+            <option value="Very Hard">Very Hard</option>
+          </select>
+        </label>
+        <label>CJMM Step
+          <select id="cjmmSelect">
+            <option value="all">All CJMM Steps</option>
+            <option value="Recognize Cues">Recognize Cues</option>
+            <option value="Analyze Cues">Analyze Cues</option>
+            <option value="Prioritize Hypotheses">Prioritize Hypotheses</option>
+            <option value="Generate Solutions">Generate Solutions</option>
+            <option value="Take Action">Take Action</option>
+            <option value="Evaluate Outcomes">Evaluate Outcomes</option>
+          </select>
+        </label>
+        <label>Item <select id="itemSelect"></select></label>
+        <button id="randomBtn" type="button" style="display: none !important;">Random safe item</button>
+        <button id="auditBtn" type="button" style="display: none !important;">Run audit</button>
+      </div>
+    </section>
+
+    <main class="ws-shell" id="workstationShell" role="main" aria-label="Workstation Pro answer engine candidate">
+      <aside class="ws-patient-rail" id="patientRail">
+        <div class="ws-avatar">--</div>
+        <div class="ws-mini-name">Loading…</div>
+        <div class="ws-mini-meta">Chunked DB</div>
+        <div class="ws-rail-icons" aria-label="Chart areas" role="tablist" aria-orientation="vertical">
+          <button type="button" data-tab="overview" class="active" title="Overview (snap)">📋</button>
+          <button type="button" data-tab="history" title="History &amp; Physical">📜</button>
+          <button type="button" data-tab="notes" title="Nursing Notes">📝</button>
+          <button type="button" data-tab="vitals" title="Vitals">❤️</button>
+          <button type="button" data-tab="labs" title="Laboratory Results">🧪</button>
+          <button type="button" data-tab="io" title="Intake &amp; Output">💧</button>
+          <button type="button" data-tab="radiology" title="Radiology (Imaging)">☢️</button>
+          <button type="button" data-tab="orders" title="Provider Orders">🩺</button>
+        </div>
+      </aside>
+
+      <section class="ws-clinical-stage">
+        <section class="ws-storyboard" id="storyboard"></section>
+
+        <section class="ws-main-grid">
+          <article class="ws-chart-pane">
+            <div class="ws-tabs" id="chartTabs" role="tablist" aria-label="Patient information tabs">
+              <button type="button" data-tab="overview" class="active">Overview</button>
+              <button type="button" data-tab="history">History &amp; Physical</button>
+              <button type="button" data-tab="notes">Nursing Notes</button>
+              <button type="button" data-tab="vitals">Vitals</button>
+              <button type="button" data-tab="labs">Labs</button>
+              <button type="button" data-tab="io">I&amp;O</button>
+              <button type="button" data-tab="radiology">Radiology</button>
+              <button type="button" data-tab="orders">Orders</button>
+              <button type="button" data-tab="raw">Data View</button>
+            </div>
+            <div id="chartContent" class="ws-chart-content" role="tabpanel" tabindex="0" aria-label="Patient information panel"></div>
+          </article>
+          <div class="ws-resizer" id="wsResizer"></div>
+          <article class="ws-question-pane">
+            <div class="ws-question-head">
+              <div>
+                <div class="ws-label">Clinical judgment task</div>
+                <h1 id="itemTitle">Loading item…</h1>
+              </div>
+              <div class="ws-badges" id="itemBadges"></div>
+            </div>
+            <div id="questionRenderer" class="ws-question-renderer" role="group" aria-labelledby="itemTitle" tabindex="-1"></div>
+            <div class="ws-actionbar">
+              <button id="checkBtn" type="button" class="primary">Check / Score in Lab</button>
+              <button id="resetBtn" type="button">Reset Item</button>
+              <a id="nativeLink" href="../index.html">Back to Landing Page</a>
+            </div>
+            <div id="scorePanel" class="ws-score-panel" hidden role="status" aria-live="polite" aria-atomic="true"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="ws-statusbar">
+      <span id="statusLeft">Initializing v243B performance/mobile beta renderer…</span>
+      <span id="statusRight">Native viewer preserved · no MutationObserver modal skin</span>
+      <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div>
+</footer>
+  </div>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-pro-v242w.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-parity-v242y.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-production-v242z.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-accessibility-v243a.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-performance-beta-v243b.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-public-demo-v243d.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-production-candidate-v243e.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-mode-pills.js"></script>
+</body>
+</html>

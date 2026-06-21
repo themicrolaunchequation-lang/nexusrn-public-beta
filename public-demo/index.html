@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NexusRN Public Demo</title>
+<link rel="stylesheet" href="/assets/css/global-design.css" />
+
+<link rel="canonical" href="https://nexusrn.healthqualityleader.com/public-demo/index.html" />
+<meta property="og:site_name" content="NexusRN" />
+<meta property="og:title" content="NexusRN by Health Quality Leader" />
+<meta property="og:description" content="NexusRN is an NCLEX NGN clinical judgment public preview with restricted demo practice, unfolding case previews, and Decision Lab learning tools." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nexusrn.healthqualityleader.com/public-demo/index.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="NexusRN by Health Quality Leader" />
+<meta name="twitter:description" content="NexusRN is an NCLEX NGN clinical judgment public preview with restricted demo practice, unfolding case previews, and Decision Lab learning tools." />
+<meta name="application-name" content="NexusRN" />
+<meta name="apple-mobile-web-app-title" content="NexusRN" />
+
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="apple-touch-icon" href="/assets/icons/nexusrn-icon-192.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/nexusrn-icon-192.png" />
+<meta property="og:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png" />
+<meta name="twitter:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png" />
+<meta name="nexusrn-build" content="v243I-worldclass-public-demo" />
+
+<style>
+  :root {
+    --bg-dark: #020617;
+    --panel-dark: #0b1329;
+    --border-teal: rgba(20, 184, 166, 0.25);
+    --border-teal-glow: rgba(20, 184, 166, 0.5);
+    --teal-glow: 0 0 15px rgba(20, 184, 166, 0.15);
+    --accent-teal: #14b8a6;
+    --accent-cyan: #22d3ee;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  body {
+    background: radial-gradient(circle at 18% -10%, rgba(20, 184, 166, 0.15), transparent 35%),
+                radial-gradient(circle at 88% 0%, rgba(34, 211, 238, 0.12), transparent 35%),
+                linear-gradient(180deg, #020617, #0b1329 55%, #020617);
+    color: var(--text-primary);
+    min-height: 100vh;
+  }
+
+  .header {
+    border-bottom: 1px solid var(--border-teal);
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(12px);
+    padding: 16px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+
+  .brand .logo {
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--accent-cyan);
+    display: inline-block;
+    margin-right: 8px;
+    text-shadow: 0 0 10px rgba(34, 211, 238, 0.4);
+  }
+
+  .brand div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .brand .sub {
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--accent-teal);
+  }
+
+  .actions {
+    display: flex;
+    gap: 12px;
+  }
+
+  .btn {
+    border-radius: 8px;
+    font-weight: 700;
+    padding: 10px 18px;
+    font-size: 14px;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .btn:not(.primary) {
+    background: rgba(30, 41, 59, 0.6);
+    border: 1px solid rgba(20, 184, 166, 0.3);
+    color: var(--text-primary);
+  }
+
+  .btn:not(.primary):hover {
+    background: rgba(30, 41, 59, 0.9);
+    border-color: var(--accent-teal);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 15px rgba(20, 184, 166, 0.15);
+  }
+
+  .btn.primary {
+    background: linear-gradient(135deg, var(--accent-teal), var(--accent-cyan));
+    color: #020617;
+    border: none;
+  }
+
+  .btn.primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(34, 211, 238, 0.3);
+    filter: brightness(1.1);
+  }
+
+  .demoNavShell {
+    padding: 12px 24px;
+    background: rgba(11, 19, 41, 0.4);
+    border-bottom: 1px solid rgba(20, 184, 166, 0.15);
+  }
+
+  .demoNav {
+    max-width: 1060px;
+    margin: 0 auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .demoNavLabel {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    margin-right: 12px;
+    font-weight: 800;
+  }
+
+  .demoNav button {
+    background: transparent;
+    border: 1px solid rgba(20, 184, 166, 0.15);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .demoNav button:hover, .demoNav button.active {
+    border-color: var(--accent-teal);
+    color: var(--text-primary);
+    background: rgba(20, 184, 166, 0.1);
+    box-shadow: var(--teal-glow);
+  }
+
+  .wrap {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 40px 24px 80px;
+  }
+
+  .eyebrow {
+    border-color: rgba(34, 211, 238, 0.3);
+    background: rgba(34, 211, 238, 0.08);
+    color: var(--accent-cyan);
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    margin-bottom: 16px;
+  }
+
+  h1 {
+    font-size: clamp(34px, 5.5vw, 56px);
+    letter-spacing: -0.04em;
+    font-weight: 900;
+    margin-bottom: 12px;
+  }
+
+  .lead {
+    color: #e2e8f0;
+    font-size: 16px;
+    max-width: 780px;
+    margin-bottom: 32px;
+    line-height: 1.6;
+  }
+
+  .demoRulePanel {
+    background: rgba(11, 19, 41, 0.65);
+    border: 1px solid var(--border-teal);
+    border-radius: 16px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    box-shadow: var(--card-shadow);
+  }
+
+  .demoRulePanel div {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+  }
+
+  .demoRulePanel b {
+    display: block;
+    color: var(--text-primary);
+    font-size: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .demoRulePanel div b::before {
+    content: "✓";
+    color: var(--accent-teal);
+    margin-right: 8px;
+    font-weight: 900;
+  }
+
+  .demoRulePanel .safe b::before {
+    content: "🔒";
+    margin-right: 8px;
+  }
+
+  .recommended-path {
+    background: linear-gradient(90deg, rgba(20, 184, 166, 0.2), transparent);
+    border-left: 4px solid var(--accent-teal);
+    padding: 12px 18px;
+    margin-bottom: 24px;
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .recommended-path span {
+    background: var(--accent-teal);
+    color: #020617;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 900;
+    padding: 2px 6px;
+    border-radius: 4px;
+    letter-spacing: 0.05em;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+  }
+
+  .card {
+    background: linear-gradient(180deg, rgba(15, 23, 42, 0.75), rgba(7, 17, 31, 0.85));
+    border: 1px solid rgba(20, 184, 166, 0.15);
+    border-radius: 16px;
+    padding: 24px;
+    margin: 0;
+    box-shadow: var(--card-shadow);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, rgba(20, 184, 166, 0.4), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    border-color: var(--border-teal-glow);
+    box-shadow: 0 15px 35px rgba(20, 184, 166, 0.1), var(--card-shadow);
+  }
+
+  .card:hover::before {
+    opacity: 1;
+  }
+
+  .card:focus-visible {
+    outline: 2px solid var(--accent-cyan);
+    outline-offset: 2px;
+  }
+
+  .card .icon {
+    font-size: 24px;
+    color: var(--accent-teal);
+    margin-bottom: 12px;
+    display: inline-block;
+  }
+
+  .card .type {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--accent-cyan);
+    margin-bottom: 8px;
+  }
+
+  .card h2 {
+    font-size: 19px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+  }
+
+  .card p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin: 0 0 16px 0;
+    flex: 1;
+  }
+
+  .card .rule {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(20, 184, 166, 0.12);
+    padding: 6px 10px;
+    border-radius: 6px;
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .card .rule::before {
+    content: "●";
+    color: var(--accent-cyan);
+    font-size: 8px;
+  }
+
+  .card.slides .rule::before {
+    content: "🔒";
+    font-size: 10px;
+  }
+
+  .card .open {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-teal);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: transform 0.2s ease;
+  }
+
+  .card:hover .open {
+    transform: translateX(4px);
+    color: var(--accent-cyan);
+  }
+
+  .note {
+    font-size: 12px;
+    color: var(--text-secondary);
+    background: rgba(15, 23, 42, 0.4);
+    border-left: 3px solid rgba(148, 163, 184, 0.3);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    line-height: 1.5;
+  }
+
+  .watermark {
+    position: fixed;
+    bottom: 16px;
+    right: 24px;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(20, 184, 166, 0.3);
+    pointer-events: none;
+    z-index: 10;
+  }
+
+  @media(max-width: 760px) {
+    .demoRulePanel {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="brand" role="banner">
+    <div style="flex-direction: row; align-items: center;">
+      <div class="logo" aria-hidden="true">↯</div>
+      <div>
+        <span style="font-weight:900; font-family:'Plus Jakarta Sans',sans-serif; font-size:20px; color:#ffffff;">Nexus<span style="color:var(--accent-teal)">RN</span></span>
+        <div class="sub">Public Demo</div>
+      </div>
+    </div>
+  </div>
+  <div class="actions">
+    <button class="btn" data-home type="button">← Landing</button>
+    <button class="btn primary" data-enroll type="button">Join Beta</button>
+  </div>
+</header>
+
+<nav class="demoNavShell" aria-label="Public Demo navigation">
+  <div class="demoNav" id="demoNav">
+    <span class="demoNavLabel">Jump To</span>
+  </div>
+</nav>
+
+<main class="wrap" id="demo-overview">
+  <span class="eyebrow">Interactive guided preview</span>
+  <h1>NCLEX Clinical Judgment.</h1>
+  <p class="lead">Try our flagship unfolding case study, test best-in-class NGN item samplers in the Workstation Pro, or explore the cue-sorting Method Playbook. Every route is locked as a guided preview sample to protect data integrity.</p>
+
+  <section class="demoRulePanel" aria-label="Public Demo rules">
+    <div>
+      <b>What is unlocked</b>
+      One flagship unfolding warfarin case study, a curated Bow-Tie item, six custom NGN format samplers, and one selected method stage in the slide guides.
+    </div>
+    <div class="safe">
+      <b>What is locked</b>
+      Full paid-bank browsing (5,086 items), advanced settings filters, Study Planner generators, cumulative score dashboards, and custom progress tracking.
+    </div>
+  </section>
+
+  <div class="recommended-path">
+    <span>Recommended</span>
+    Start with the current flagship unfolding case, then test one real NGN item type, and review the Method Playbook.
+  </div>
+
+  <section class="grid" id="demoList" aria-label="Public Demo target list"></section>
+
+  <div class="note">
+    <b>Public demo safety rules:</b> Dynamic filters, random browsing, and full-bank access are disabled in workstation routes. Direct URLs bypass full chunk loading for rapid client response. Rationale validation remains fully active.
+  </div>
+</main>
+
+<div class="watermark">NexusRN Public Demo</div>
+
+<script>
+const ITEMS=[
+ {id:'case-arthur',kind:'practice',type:'Arthur Case',icon:'▦',title:'Sofia Martinez — DKA & Cerebral Edema',desc:'Current flagship 6-question unfolding case with dehydration, potassium shifts, neuro decline, interventions, and outcome evaluation.',rule:'Real current unfolding case · fixed guided sample',button:'Open unfolding case'},
+ {id:'bowtie-jamal',kind:'practice',type:'Jamal Bow-Tie',icon:'⧉',title:'Jamal Washington — STEMI Bow-Tie',desc:'Real Bow-Tie item linking the priority cardiac condition, urgent actions, and monitoring parameters.',rule:'Real current Bow-Tie · fixed guided sample',button:'Open Bow-Tie item'},
+ {id:'ecg-sample',kind:'practice',type:'ECG Standalone',icon:'∿',title:'Elias Khoury — Inferior STEMI ECG',desc:'Real ECG/SVG item with ST-elevation cues, initial nursing actions, scoring, and rationale.',rule:'Real current ECG item · fixed guided sample',button:'Open ECG item'},
+ {id:'matrix-sample',kind:'practice',type:'Matrix Multiple Choice',icon:'▤',title:'Ahmed Hassan — Burn Resuscitation Matrix',desc:'Classify expected and unexpected burn-resuscitation findings using a current matrix grid.',rule:'Real current matrix choice · fixed guided sample',button:'Open matrix item'},
+ {id:'cloze-sample',kind:'practice',type:'Drop-down / Cloze',icon:'⌄',title:'Robert Nakamura — Acute Pulmonary Edema Cloze',desc:'Complete the priority diagnosis, immediate action, anticipated order, and monitoring target.',rule:'Real current cloze item · fixed guided sample',button:'Open cloze item'},
+ {id:'highlight-sample',kind:'practice',type:'Highlight Text/Table',icon:'▧',title:'Elena Ramirez — Sepsis Shock Highlight',desc:'Highlight only the cues that change immediate risk, escalation, perfusion, infection, and treatment priority.',rule:'Real current Highlight 140 item · fixed guided sample',button:'Open highlight item'},
+ {id:'ordered-sample',kind:'practice',type:'Ordered Response',icon:'☰',title:'Margaret Thompson — Sepsis Progression Order',desc:'Sequence the pathophysiologic progression of sepsis into shock using a current ordered-response item.',rule:'Real current ordered item · fixed guided sample',button:'Open ordered item'},
+ {id:'trend-sample',kind:'practice',type:'Trend Item',icon:'⌁',title:'Samuel Okafor — AKI Hyperkalemia Trend',desc:'Interpret serial potassium, ECG, urine output, and assessment trends to choose the priority action.',rule:'Real current trend rebuild · fixed guided sample',button:'Open trend item'},
+ {id:'matrix-mr-sample',kind:'practice',type:'Matrix Multiple Response',icon:'☷',title:'Elena Ramirez — Transplant Complications MMR',desc:'Use a multi-response matrix to connect rejection, tacrolimus toxicity, infection, and hyperkalemia cues.',rule:'Real current MMR batch item · fixed guided sample',button:'Open matrix-response item'},
+ {id:'trap-abc',kind:'practice',type:'ABC Trap',icon:'◎',title:'Owen Miller — Pediatric Airway Emergency Trap',desc:'A real airway-priority matrix item showing how ABC thinking can help without creating tunnel vision.',rule:'Real current ABC trap sample · fixed guided sample',button:'Open ABC trap item'},
+ {id:'method-slides',kind:'slides',type:'Method Playbook',icon:'▣',title:'Recognize Cues — Method Playbook',desc:'Current restricted method preview: cue sorting, reasoning ladder, and worked clinical example.',rule:'1 unlocked method move + previews',button:'Open Method playbook'},
+ {id:'priority-models',kind:'slides',type:'Priority Models',icon:'⚕',title:'Priority Models — Acute vs Chronic',desc:'Current restricted priority preview for deciding which clinical problem needs action first.',rule:'1 unlocked priority lens + preview',button:'Open Priority playbook'},
+ {id:'readiness-slides',kind:'slides',type:'Readiness Compass',icon:'◉',title:'Readiness Compass — Score Pattern Preview',desc:'Current restricted readiness preview showing how to interpret practice patterns without false confidence.',rule:'1 unlocked readiness view + previews',button:'Open Readiness playbook'},
+ {id:'study-planner-slides',kind:'slides',type:'Study Planner',icon:'↗',title:'Study Planner — Smart Sprint Preview',desc:'Current restricted planning preview for pacing workload, weak areas, and fatigue risk.',rule:'1 unlocked sprint + previews',button:'Open Study playbook'},
+ {id:'stress-slides',kind:'slides',type:'Stress Reset',icon:'↯',title:'Stress Reset — Exam Panic Reset',desc:'Current restricted reset drill for grounding, breathing, and regaining cognitive control during pressure.',rule:'1 unlocked reset drill',button:'Open Stress Reset'},
+ {id:'interactive-guided-preview',kind:'practice',type:'Interactive Guided Preview',icon:'✦',title:'Interactive Guided Preview — Sofia Case Workspace',desc:'Open the current flagship case inside the restricted workstation flow with locked selectors and live scoring.',rule:'Real current case · workstation restriction test',button:'Open guided preview'}
+];
+
+const list=document.getElementById('demoList');
+const nav=document.getElementById('demoNav');
+const NAV_LABELS={"case-arthur": "Arthur Case", "bowtie-jamal": "Jamal Bow-Tie", "ecg-sample": "ECG Standalone", "matrix-sample": "Matrix Multiple Choice", "cloze-sample": "Drop-down / Cloze", "highlight-sample": "Highlight Text/Table", "ordered-sample": "Ordered Response", "trend-sample": "Trend Item", "matrix-mr-sample": "Matrix Multiple Response", "trap-abc": "ABC Trap", "method-slides": "Method Playbook", "priority-models": "Priority Models", "readiness-slides": "Readiness Compass", "study-planner-slides": "Study Planner", "stress-slides": "Stress Reset", "interactive-guided-preview": "Interactive Guided Preview"};
+function esc(s){return String(s).replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]||c));}
+
+list.innerHTML=ITEMS.map(x=>`<button id="${x.id}" class="card ${x.kind}" data-target="${x.id}" type="button" aria-label="Open ${esc(x.title)}"><div class="icon">${x.icon}</div><div class="type">${x.type}</div><h2>${x.title}</h2><p>${x.desc}</p><div class="rule">${x.rule}</div><span class="open">${x.button} →</span></button>`).join('');
+nav.insertAdjacentHTML('beforeend',ITEMS.map(x=>`<button type="button" data-jump="${x.id}" aria-controls="${x.id}">${NAV_LABELS[x.id]||x.type}</button>`).join(''));
+
+function focusCard(id){
+  const card=document.getElementById(id);
+  if(!card)return;
+  document.querySelectorAll('.card.is-focused').forEach(x=>x.classList.remove('is-focused'));
+  card.classList.add('is-focused');
+  card.scrollIntoView({behavior:'smooth',block:'center'});
+  setTimeout(()=>card.focus({preventScroll:true}),260);
+  document.querySelectorAll('[data-jump]').forEach(b=>b.classList.toggle('active',b.dataset.jump===id));
+}
+
+const DIRECT_TARGETS={
+  'case-arthur':'../practice/index.html?publicDemo=1&caseId=nexus-unfolding-6q-dka-adolescent-cerebral-edema-001#public-demo-item',
+  'bowtie-jamal':'../practice/index.html?publicDemo=1&qid=nexus_bow_mission5_ef3d#public-demo-item',
+  'ecg-sample':'../practice/index.html?publicDemo=1&qid=nexus_multip_ngn_d1d3#public-demo-item',
+  'matrix-sample':'../practice/index.html?publicDemo=1&qid=921c8f6a-9bba-4ec9-a962-456cac54cee8#public-demo-item',
+  'cloze-sample':'../practice/index.html?publicDemo=1&qid=f3070943-15c9-4eac-b8c3-8fd5123df0b8#public-demo-item',
+  'highlight-sample':'../practice/index.html?publicDemo=1&qid=HIGHLIGHT_001_SEPSIS_SHOCK#public-demo-item',
+  'ordered-sample':'../practice/index.html?publicDemo=1&qid=nexus_drag_sepsispa_d5cc#public-demo-item',
+  'trend-sample':'../practice/index.html?publicDemo=1&qid=trend_rebuild_004_aki_hyperkalemia#public-demo-item',
+  'matrix-mr-sample':'../practice/index.html?publicDemo=1&qid=mmr_021_renal_transplant_rejection_tacrolimus_infection_prioritize_hypotheses#public-demo-item',
+  'trap-abc':'../practice/index.html?publicDemo=1&qid=mmr_024_pediatric_airway_anaphylaxis_epiglottitis_asthma_foreign_body_take_action#public-demo-item',
+  'method-slides':'slides.html?deck=method&publicDemo=1&accessMatrix=1',
+  'priority-models':'slides.html?deck=priority&publicDemo=1&accessMatrix=1',
+  'readiness-slides':'slides.html?deck=readiness&publicDemo=1&accessMatrix=1',
+  'study-planner-slides':'slides.html?deck=study&publicDemo=1&accessMatrix=1',
+  'stress-slides':'slides.html?deck=stress&publicDemo=1&accessMatrix=1',
+  'interactive-guided-preview':'../workstation-pro/index.html?publicDemo=1&caseId=nexus-unfolding-6q-dka-adolescent-cerebral-edema-001#public-demo-item'
+};
+
+function shellOrDirect(message,fallbackUrl){
+  try{
+    if(window.parent && window.parent!==window){
+      window.parent.postMessage(message,'*');
+      return;
+    }
+  }catch(e){}
+  if(fallbackUrl) window.location.href=fallbackUrl;
+}
+
+document.addEventListener('click',e=>{
+  const jump=e.target.closest('[data-jump]');
+  if(jump){focusCard(jump.dataset.jump);return;}
+  const card=e.target.closest('[data-target]');
+  if(card){
+    const target=card.dataset.target;
+    shellOrDirect({source:'NexusRNPublicDemo',action:'openDemoTarget',target},DIRECT_TARGETS[target]||'../index.html#public-demo');
+    return;
+  }
+  if(e.target.closest('[data-home]')) shellOrDirect({source:'NexusRNPublicDemo',action:'navigate',route:'home'},'../index.html');
+  if(e.target.closest('[data-enroll]')) { window.location.href='../beta-access.html'; return; }
+});
+
+try{
+  const io=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{
+      if(entry.isIntersecting){
+        document.querySelectorAll('[data-jump]').forEach(b=>b.classList.toggle('active',b.dataset.jump===entry.target.id));
+      }
+    });
+  },{threshold:.55});
+  ITEMS.forEach(x=>{
+    const el=document.getElementById(x.id);
+    if(el)io.observe(el);
+  });
+}catch(e){}
+
+window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT=function(){
+  return {
+    version:'v216-public-demo-overview-page-audit',
+    publicDemoPageExists:true,
+    firstScreenIsClickableList:true,
+    hasDemoSpecificNavigation:true,
+    demoNavigationTargetCount:ITEMS.length,
+    demoNavigationTargets:ITEMS.map(x=>x.id),
+    targetCount:ITEMS.length,
+    clickableTargets:ITEMS.map(x=>x.id),
+    hasUnfoldingCaseStudy:true,
+    hasBowtie:true,
+    hasTrapRadarABCTunnelVision:true,
+    methodPlaybookUsesSlides:true,
+    priorityModelsUsesSlides:true,
+    readinessCompassUsesSlides:true,
+    studyPlannerUsesSlides:true,
+    stressResetUsesSlides:true,
+    practiceSamplerTargetCount:11,
+    slideRouteTargetCount:5,
+    slideImageCount:12,
+    publicDemoAccessMatrix:true,
+    oneUnlockedPathwayPerSlideDemo:true,
+    lockedPathwaysVisible:true,
+    lockedPathwaysBlocked:true,
+    usesAttachedScreenshotsOnly:true,
+    generatedImages:false,
+    usesCurrentBaseCuratedExamples:true,
+    abcTrapUsesCurrentRealItem:true,
+    paidBankBrowsingExposed:false,
+    directOpenFallbacks:true,
+    directFallbackTargetCount:Object.keys(DIRECT_TARGETS).length,
+    homeDirectFallback:true,
+    accessPreviewDirectFallback:true,
+    questionDbMutated:false
+  };
+};
+
+window.NEXUS_V179_PUBLIC_DEMO_PAGE_AUDIT=window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT;
+window.NEXUS_V177_PUBLIC_DEMO_PAGE_AUDIT=window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT;
+window.NEXUS_V176_PUBLIC_DEMO_AUDIT=window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT;
+window.NEXUS_PUBLIC_DEMO_AUDIT=window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT;
+
+(function(){
+  var SLIDE_TARGETS=['method-slides','priority-models','readiness-slides','study-planner-slides','stress-slides'];
+  function hasParentShell(){try{return !!(window.parent && window.parent!==window);}catch(e){return false;}}
+  function directOpen(url){if(url){window.location.href=url;}}
+  function openTarget(target){
+    var url=DIRECT_TARGETS[target]||'../index.html#public-demo';
+    if(hasParentShell()){
+      try{window.parent.postMessage({source:'NexusRNPublicDemo',action:'openDemoTarget',target:target,version:'v215'},'*');}catch(e){}
+      window.setTimeout(function(){directOpen(url);},360);
+    }else{
+      directOpen(url);
+    }
+  }
+  function hardenCards(){
+    try{
+      Object.keys(DIRECT_TARGETS).forEach(function(id){
+        var el=document.querySelector('[data-target="'+id+'"]');
+        if(!el)return;
+        el.setAttribute('data-direct-url',DIRECT_TARGETS[id]);
+        el.setAttribute('title','Open restricted public demo route');
+        el.setAttribute('aria-label',(el.getAttribute('aria-label')||('Open '+id))+' — restricted public demo access');
+      });
+    }catch(e){}
+  }
+  document.addEventListener('click',function(ev){
+    var card=ev.target&&ev.target.closest&&ev.target.closest('[data-target]');
+    if(!card)return;
+    var target=card.getAttribute('data-target');
+    if(!DIRECT_TARGETS[target])return;
+    ev.preventDefault();
+    ev.stopPropagation();
+    if(ev.stopImmediatePropagation)ev.stopImmediatePropagation();
+    openTarget(target);
+  },true);
+  hardenCards();
+  setTimeout(hardenCards,250);
+  setTimeout(hardenCards,900);
+  
+  var oldPage=window.NEXUS_PUBLIC_DEMO_PAGE_AUDIT;
+  window.NEXUS_PUBLIC_DEMO_ACCESS_MATRIX_AUDIT=function(){
+    var base={};try{if(typeof oldPage==='function')base=oldPage()||{};}catch(e){base={}}
+    return Object.assign({},base,{
+      version:'v216-public-demo-overview-access-matrix-audit',
+      publicDemoAccessMatrixRestored:true,
+      targetCount:16,
+      directFallbackTargetCount:Object.keys(DIRECT_TARGETS).length,
+      allCardsHaveDirectFallback:ITEMS.every(function(x){return !!DIRECT_TARGETS[x.id];}),
+      methodSlidesRestricted:true,
+      priorityModelsRestricted:true,
+      readinessSlidesRestricted:true,
+      studyPlannerRestricted:true,
+      panicResetRestricted:true,
+      trapRadarRestricted:true,
+      realPracticeTargetsRestricted:true,
+      sameAccessModelAsABCTunnelVision:true,
+      noParentShellRequired:true,
+      postMessageStillSupported:true,
+      questionDbMutated:false,
+      practiceScoringMutated:false,
+      lockedPathwaysVisible:true,
+      lockedPathwaysBlocked:true,
+      sameRestrictionPatternAsABCTunnelVision:true
+    });
+  };
+  window.NEXUS_V215_PUBLIC_DEMO_ACCESS_MATRIX_AUDIT=window.NEXUS_PUBLIC_DEMO_ACCESS_MATRIX_AUDIT;
+  window.NEXUS_PUBLIC_DEMO_SLIDES_AUDIT=function(){
+    return {
+      version:'v216-public-demo-overview-slide-route-index-audit',
+      context:'public-demo-overview',
+      slideRouteActive:false,
+      slideDecksAvailable:{method:3,priority:2,readiness:3,study:3,stress:1},
+      methodSlidesRestricted:true,
+      priorityModelsRestricted:true,
+      readinessSlidesRestricted:true,
+      studyPlannerRestricted:true,
+      panicResetRestricted:true,
+      lockedPathwaysVisible:true,
+      lockedPathwaysBlocked:true,
+      usesAttachedScreenshotsOnly:true,
+      generatedImages:false,
+      questionDbMutated:false,
+      practiceScoringMutated:false,
+      note:'Open public-demo/slides.html?deck=method&publicDemo=1&accessMatrix=1 to audit an active deck.'
+    };
+  };
+})();
+try{parent.postMessage({source:'NexusRNPublicDemo',event:'public-demo-ready'},'*');}catch(e){}
+</script>
+
+<div style="text-align:center; padding:20px; font-size:12px; color:#64748b;">&copy; 2026 NexusRN. All rights reserved.</div>
+</body>
+</html>

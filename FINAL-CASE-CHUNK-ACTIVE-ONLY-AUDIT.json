@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "expectedUniqueCaseCount": 1056,
+  "actualUniqueCaseCount": 1056,
+  "totalCaseOccurrences": 1056,
+  "duplicateCaseOccurrences": 0,
+  "retiredCasesFound": 0,
+  "chunksAuditedCount": 47
+}

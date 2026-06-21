@@ -1,0 +1,2968 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 94,
+  "count": 8,
+  "sourceStartIndex": 4700,
+  "questions": [
+    {
+      "id": "e262d6e9-e66c-41de-aef4-f5ad40a70c74",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Recognize Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Margaret Chen",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Cardiac ICU",
+        "age_value": 58,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, SpO₂: 98%, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [
+          {
+            "name": "Potassium",
+            "value": "6.5",
+            "reference": "3.5 - 5.0 mEq/L",
+            "time": "Baseline"
+          }
+        ],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Generalized muscle weakness in all four extremities"
+          },
+          {
+            "id": "B",
+            "text": "Tall, peaked T waves on the electrocardiogram (ECG)"
+          },
+          {
+            "id": "C",
+            "text": "Heart rate of 48 beats/minute with a regular rhythm"
+          },
+          {
+            "id": "D",
+            "text": "Presence of U waves on the ECG"
+          },
+          {
+            "id": "E",
+            "text": "Client reports feeling restless and anxious about hospitalization"
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "Presence of U waves on the ECG": "Unexpected Finding",
+          "Generalized muscle weakness in all four extremities": "Expected Finding",
+          "Heart rate of 48 beats/minute with a regular rhythm": "Unexpected Finding",
+          "Tall, peaked T waves on the electrocardiogram (ECG)": "Expected Finding",
+          "Client reports feeling restless and anxious about hospitalization": "Expected Finding"
+        },
+        "stem": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L."
+      },
+      "media": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 600 180\" width=\"100%\" class=\"ws-ecg-svg\" data-external-media=\"true\" style=\"background:#fff1f1; border: 2px solid #fda4af; border-radius: 14px; box-shadow: 0 8px 30px rgba(225, 29, 72, 0.08);\">\n      <defs>\n        <pattern id=\"ecgGridSmall_NSR\" width=\"4\" height=\"4\" patternUnits=\"userSpaceOnUse\">\n          <path d=\"M 4 0 L 0 0 0 4\" fill=\"none\" stroke=\"#fecdd3\" stroke-width=\"0.5\"/>\n        </pattern>\n        <pattern id=\"ecgGridLarge_NSR\" width=\"20\" height=\"20\" patternUnits=\"userSpaceOnUse\">\n          <rect width=\"20\" height=\"20\" fill=\"url(#ecgGridSmall_NSR)\"/>\n          <path d=\"M 20 0 L 0 0 0 20\" fill=\"none\" stroke=\"#fda4af\" stroke-width=\"1\"/>\n        </pattern>\n      </defs>\n      \n      <!-- Coordinate Grid -->\n      <rect width=\"100%\" height=\"100%\" fill=\"url(#ecgGridLarge_NSR)\"/>\n      \n      <!-- Lead II details -->\n      <text x=\"16\" y=\"28\" font-family=\"monospace\" font-size=\"14\" font-weight=\"bold\" fill=\"#be123c\">Lead II</text>\n      <text x=\"16\" y=\"44\" font-family=\"monospace\" font-size=\"11\" fill=\"#f43f5e\">42 bpm · NSR</text>\n      <text x=\"584\" y=\"28\" font-family=\"monospace\" font-size=\"10\" fill=\"#f43f5e\" text-anchor=\"end\">25 mm/s · 10 mm/mV</text>\n      \n      <!-- Waveform -->\n      <path d=\"M 0.0 90.0 L 1.0 90.0 L 2.0 90.0 L 3.0 90.0 L 4.0 90.0 L 5.0 90.0 L 6.0 90.0 L 7.0 90.0 L 8.0 90.0 L 9.0 90.0 L 10.0 90.0 L 11.0 90.0 L 12.0 90.0 L 13.0 90.0 L 14.0 90.0 L 15.0 90.0 L 16.0 90.0 L 17.0 90.0 L 18.0 90.0 L 19.0 87.9 L 20.0 86.0 L 21.0 84.3 L 22.0 83.1 L 23.0 82.3 L 24.0 82.0 L 25.0 82.3 L 26.0 83.1 L 27.0 84.3 L 28.0 86.0 L 29.0 87.9 L 30.0 90.0 L 31.0 90.0 L 32.0 90.0 L 33.0 90.0 L 34.0 90.0 L 35.0 90.0 L 36.0 90.0 L 37.0 90.0 L 38.0 90.0 L 39.0 90.0 L 40.0 90.0 L 41.0 90.0 L 42.0 90.0 L 43.0 91.7 L 44.0 93.3 L 45.0 35.0 L 46.0 49.0 L 47.0 63.0 L 48.0 77.0 L 49.0 91.0 L 50.0 105.0 L 51.0 98.0 L 52.0 96.2 L 53.0 94.4 L 54.0 92.7 L 55.0 90.9 L 56.0 90.0 L 57.0 90.0 L 58.0 90.0 L 59.0 90.0 L 60.0 90.0 L 61.0 90.0 L 62.0 90.0 L 63.0 90.0 L 64.0 90.0 L 65.0 90.0 L 66.0 90.0 L 67.0 90.0 L 68.0 90.0 L 69.0 90.0 L 70.0 90.0 L 71.0 90.0 L 72.0 90.0 L 73.0 90.0 L 74.0 90.8 L 75.0 92.3 L 76.0 93.9 L 77.0 95.3 L 78.0 96.7 L 79.0 97.9 L 80.0 99.0 L 81.0 100.0 L 82.0 100.8 L 83.0 101.4 L 84.0 101.8 L 85.0 102.0 L 86.0 102.0 L 87.0 101.8 L 88.0 101.4 L 89.0 100.8 L 90.0 100.0 L 91.0 99.0 L 92.0 97.9 L 93.0 96.7 L 94.0 95.3 L 95.0 93.9 L 96.0 92.3 L 97.0 90.8 L 98.0 90.0 L 99.0 90.0 L 100.0 90.0 L 101.0 90.0 L 102.0 90.0 L 103.0 90.0 L 104.0 90.0 L 105.0 90.0 L 106.0 90.0 L 107.0 90.0 L 108.0 90.0 L 109.0 90.0 L 110.0 90.0 L 111.0 90.0 L 112.0 90.0 L 113.0 90.0 L 114.0 90.0 L 115.0 90.0 L 116.0 90.0 L 117.0 90.0 L 118.0 90.0 L 119.0 90.0 L 120.0 90.0 L 121.0 90.0 L 122.0 90.0 L 123.0 90.0 L 124.0 90.0 L 125.0 90.0 L 126.0 90.0 L 127.0 90.0 L 128.0 90.0 L 129.0 90.0 L 130.0 90.0 L 131.0 90.0 L 132.0 90.0 L 133.0 90.0 L 134.0 90.0 L 135.0 90.0 L 136.0 90.0 L 137.0 90.0 L 138.0 90.0 L 139.0 90.0 L 140.0 90.0 L 141.0 90.0 L 142.0 90.0 L 143.0 90.0 L 144.0 90.0 L 145.0 90.0 L 146.0 90.0 L 147.0 90.0 L 148.0 90.0 L 149.0 90.0 L 150.0 90.0 L 151.0 90.0 L 152.0 90.0 L 153.0 90.0 L 154.0 90.0 L 155.0 90.0 L 156.0 90.0 L 157.0 90.0 L 158.0 90.0 L 159.0 90.0 L 160.0 90.0 L 161.0 90.0 L 162.0 90.0 L 163.0 90.0 L 164.0 90.0 L 165.0 90.0 L 166.0 90.0 L 167.0 90.0 L 168.0 90.0 L 169.0 87.9 L 170.0 86.0 L 171.0 84.3 L 172.0 83.1 L 173.0 82.3 L 174.0 82.0 L 175.0 82.3 L 176.0 83.1 L 177.0 84.3 L 178.0 86.0 L 179.0 87.9 L 180.0 90.0 L 181.0 90.0 L 182.0 90.0 L 183.0 90.0 L 184.0 90.0 L 185.0 90.0 L 186.0 90.0 L 187.0 90.0 L 188.0 90.0 L 189.0 90.0 L 190.0 90.0 L 191.0 90.0 L 192.0 90.0 L 193.0 91.7 L 194.0 93.3 L 195.0 35.0 L 196.0 49.0 L 197.0 63.0 L 198.0 77.0 L 199.0 91.0 L 200.0 105.0 L 201.0 98.0 L 202.0 96.2 L 203.0 94.4 L 204.0 92.7 L 205.0 90.9 L 206.0 90.0 L 207.0 90.0 L 208.0 90.0 L 209.0 90.0 L 210.0 90.0 L 211.0 90.0 L 212.0 90.0 L 213.0 90.0 L 214.0 90.0 L 215.0 90.0 L 216.0 90.0 L 217.0 90.0 L 218.0 90.0 L 219.0 90.0 L 220.0 90.0 L 221.0 90.0 L 222.0 90.0 L 223.0 90.0 L 224.0 90.8 L 225.0 92.3 L 226.0 93.9 L 227.0 95.3 L 228.0 96.7 L 229.0 97.9 L 230.0 99.0 L 231.0 100.0 L 232.0 100.8 L 233.0 101.4 L 234.0 101.8 L 235.0 102.0 L 236.0 102.0 L 237.0 101.8 L 238.0 101.4 L 239.0 100.8 L 240.0 100.0 L 241.0 99.0 L 242.0 97.9 L 243.0 96.7 L 244.0 95.3 L 245.0 93.9 L 246.0 92.3 L 247.0 90.8 L 248.0 90.0 L 249.0 90.0 L 250.0 90.0 L 251.0 90.0 L 252.0 90.0 L 253.0 90.0 L 254.0 90.0 L 255.0 90.0 L 256.0 90.0 L 257.0 90.0 L 258.0 90.0 L 259.0 90.0 L 260.0 90.0 L 261.0 90.0 L 262.0 90.0 L 263.0 90.0 L 264.0 90.0 L 265.0 90.0 L 266.0 90.0 L 267.0 90.0 L 268.0 90.0 L 269.0 90.0 L 270.0 90.0 L 271.0 90.0 L 272.0 90.0 L 273.0 90.0 L 274.0 90.0 L 275.0 90.0 L 276.0 90.0 L 277.0 90.0 L 278.0 90.0 L 279.0 90.0 L 280.0 90.0 L 281.0 90.0 L 282.0 90.0 L 283.0 90.0 L 284.0 90.0 L 285.0 90.0 L 286.0 90.0 L 287.0 90.0 L 288.0 90.0 L 289.0 90.0 L 290.0 90.0 L 291.0 90.0 L 292.0 90.0 L 293.0 90.0 L 294.0 90.0 L 295.0 90.0 L 296.0 90.0 L 297.0 90.0 L 298.0 90.0 L 299.0 90.0 L 300.0 90.0 L 301.0 90.0 L 302.0 90.0 L 303.0 90.0 L 304.0 90.0 L 305.0 90.0 L 306.0 90.0 L 307.0 90.0 L 308.0 90.0 L 309.0 90.0 L 310.0 90.0 L 311.0 90.0 L 312.0 90.0 L 313.0 90.0 L 314.0 90.0 L 315.0 90.0 L 316.0 90.0 L 317.0 90.0 L 318.0 90.0 L 319.0 87.9 L 320.0 86.0 L 321.0 84.3 L 322.0 83.1 L 323.0 82.3 L 324.0 82.0 L 325.0 82.3 L 326.0 83.1 L 327.0 84.3 L 328.0 86.0 L 329.0 87.9 L 330.0 90.0 L 331.0 90.0 L 332.0 90.0 L 333.0 90.0 L 334.0 90.0 L 335.0 90.0 L 336.0 90.0 L 337.0 90.0 L 338.0 90.0 L 339.0 90.0 L 340.0 90.0 L 341.0 90.0 L 342.0 90.0 L 343.0 91.7 L 344.0 93.3 L 345.0 35.0 L 346.0 49.0 L 347.0 63.0 L 348.0 77.0 L 349.0 91.0 L 350.0 105.0 L 351.0 98.0 L 352.0 96.2 L 353.0 94.4 L 354.0 92.7 L 355.0 90.9 L 356.0 90.0 L 357.0 90.0 L 358.0 90.0 L 359.0 90.0 L 360.0 90.0 L 361.0 90.0 L 362.0 90.0 L 363.0 90.0 L 364.0 90.0 L 365.0 90.0 L 366.0 90.0 L 367.0 90.0 L 368.0 90.0 L 369.0 90.0 L 370.0 90.0 L 371.0 90.0 L 372.0 90.0 L 373.0 90.0 L 374.0 90.8 L 375.0 92.3 L 376.0 93.9 L 377.0 95.3 L 378.0 96.7 L 379.0 97.9 L 380.0 99.0 L 381.0 100.0 L 382.0 100.8 L 383.0 101.4 L 384.0 101.8 L 385.0 102.0 L 386.0 102.0 L 387.0 101.8 L 388.0 101.4 L 389.0 100.8 L 390.0 100.0 L 391.0 99.0 L 392.0 97.9 L 393.0 96.7 L 394.0 95.3 L 395.0 93.9 L 396.0 92.3 L 397.0 90.8 L 398.0 90.0 L 399.0 90.0 L 400.0 90.0 L 401.0 90.0 L 402.0 90.0 L 403.0 90.0 L 404.0 90.0 L 405.0 90.0 L 406.0 90.0 L 407.0 90.0 L 408.0 90.0 L 409.0 90.0 L 410.0 90.0 L 411.0 90.0 L 412.0 90.0 L 413.0 90.0 L 414.0 90.0 L 415.0 90.0 L 416.0 90.0 L 417.0 90.0 L 418.0 90.0 L 419.0 90.0 L 420.0 90.0 L 421.0 90.0 L 422.0 90.0 L 423.0 90.0 L 424.0 90.0 L 425.0 90.0 L 426.0 90.0 L 427.0 90.0 L 428.0 90.0 L 429.0 90.0 L 430.0 90.0 L 431.0 90.0 L 432.0 90.0 L 433.0 90.0 L 434.0 90.0 L 435.0 90.0 L 436.0 90.0 L 437.0 90.0 L 438.0 90.0 L 439.0 90.0 L 440.0 90.0 L 441.0 90.0 L 442.0 90.0 L 443.0 90.0 L 444.0 90.0 L 445.0 90.0 L 446.0 90.0 L 447.0 90.0 L 448.0 90.0 L 449.0 90.0 L 450.0 90.0 L 451.0 90.0 L 452.0 90.0 L 453.0 90.0 L 454.0 90.0 L 455.0 90.0 L 456.0 90.0 L 457.0 90.0 L 458.0 90.0 L 459.0 90.0 L 460.0 90.0 L 461.0 90.0 L 462.0 90.0 L 463.0 90.0 L 464.0 90.0 L 465.0 90.0 L 466.0 90.0 L 467.0 90.0 L 468.0 90.0 L 469.0 87.9 L 470.0 86.0 L 471.0 84.3 L 472.0 83.1 L 473.0 82.3 L 474.0 82.0 L 475.0 82.3 L 476.0 83.1 L 477.0 84.3 L 478.0 86.0 L 479.0 87.9 L 480.0 90.0 L 481.0 90.0 L 482.0 90.0 L 483.0 90.0 L 484.0 90.0 L 485.0 90.0 L 486.0 90.0 L 487.0 90.0 L 488.0 90.0 L 489.0 90.0 L 490.0 90.0 L 491.0 90.0 L 492.0 90.0 L 493.0 91.7 L 494.0 93.3 L 495.0 35.0 L 496.0 49.0 L 497.0 63.0 L 498.0 77.0 L 499.0 91.0 L 500.0 105.0 L 501.0 98.0 L 502.0 96.2 L 503.0 94.4 L 504.0 92.7 L 505.0 90.9 L 506.0 90.0 L 507.0 90.0 L 508.0 90.0 L 509.0 90.0 L 510.0 90.0 L 511.0 90.0 L 512.0 90.0 L 513.0 90.0 L 514.0 90.0 L 515.0 90.0 L 516.0 90.0 L 517.0 90.0 L 518.0 90.0 L 519.0 90.0 L 520.0 90.0 L 521.0 90.0 L 522.0 90.0 L 523.0 90.0 L 524.0 90.8 L 525.0 92.3 L 526.0 93.9 L 527.0 95.3 L 528.0 96.7 L 529.0 97.9 L 530.0 99.0 L 531.0 100.0 L 532.0 100.8 L 533.0 101.4 L 534.0 101.8 L 535.0 102.0 L 536.0 102.0 L 537.0 101.8 L 538.0 101.4 L 539.0 100.8 L 540.0 100.0 L 541.0 99.0 L 542.0 97.9 L 543.0 96.7 L 544.0 95.3 L 545.0 93.9 L 546.0 92.3 L 547.0 90.8 L 548.0 90.0 L 549.0 90.0 L 550.0 90.0 L 551.0 90.0 L 552.0 90.0 L 553.0 90.0 L 554.0 90.0 L 555.0 90.0 L 556.0 90.0 L 557.0 90.0 L 558.0 90.0 L 559.0 90.0 L 560.0 90.0 L 561.0 90.0 L 562.0 90.0 L 563.0 90.0 L 564.0 90.0 L 565.0 90.0 L 566.0 90.0 L 567.0 90.0 L 568.0 90.0 L 569.0 90.0 L 570.0 90.0 L 571.0 90.0 L 572.0 90.0 L 573.0 90.0 L 574.0 90.0 L 575.0 90.0 L 576.0 90.0 L 577.0 90.0 L 578.0 90.0 L 579.0 90.0 L 580.0 90.0 L 581.0 90.0 L 582.0 90.0 L 583.0 90.0 L 584.0 90.0 L 585.0 90.0 L 586.0 90.0 L 587.0 90.0 L 588.0 90.0 L 589.0 90.0 L 590.0 90.0 L 591.0 90.0 L 592.0 90.0 L 593.0 90.0 L 594.0 90.0 L 595.0 90.0 L 596.0 90.0 L 597.0 90.0 L 598.0 90.0 L 599.0 90.0\" fill=\"none\" stroke=\"#0f172a\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/>\n    </svg>",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "Priority is to assess for signs of cardiac compromise and prepare for rapid-acting treatments to reduce serum potassium levels in ESRD patients.",
+        "core_concept": null,
+        "answer_analysis": "Generalized muscle weakness is a common symptom of hyperkalemia due to its effect on nerve and muscle cell excitability. Tall, peaked T waves are a classic and expected ECG change in hyperkalemia, reflecting rapid repolarization. Bradycardia (heart rate of 48 beats/minute) is a serious and potentially life-threatening cardiac effect of severe hyperkalemia, indicating significant cardiac compromise that requires immediate intervention and is therefore an unexpected and critical finding. U waves on the ECG are characteristic of hypokalemia, not hyperkalemia. Their presence in a client with confirmed hyperkalemia would be an unexpected and contradictory finding, requiring further investigation. Restlessness and anxiety are common psychological responses to illness and hospitalization, not specific to critical hyperkalemia, and thus would be an expected general finding in this clinical situation."
+      },
+      "mnemonic": {
+        "title": "ESRD K+ Emergency",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Presence of U waves on the ECG": "Unexpected Finding",
+          "Generalized muscle weakness in all four extremities": "Expected Finding",
+          "Heart rate of 48 beats/minute with a regular rhythm": "Unexpected Finding",
+          "Tall, peaked T waves on the electrocardiogram (ECG)": "Expected Finding",
+          "Client reports feeling restless and anxious about hospitalization": "Expected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Thyroid Storm",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Recognize Cues",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L.",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 58,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Cardiac ICU"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Generalized muscle weakness is a common symptom of hyperkalemia due to its effect on nerve and muscle cell excitability. Tall, peaked T waves are a classic and expected ECG change in hyperkalemia, reflecting rapid repolarization. Bradycardia (heart rate of 48 beats/minute) is a serious and potentially life-threatening cardiac effect of severe hyperkalemia, indicating significant cardiac compromise that requires immediate intervention and is therefore an unexpected and critical finding. U waves on the ECG are characteristic of hypokalemia, not hyperkalemia. Their presence in a client with confirmed hyperkalemia would be an unexpected and contradictory finding, requiring further investigation. Restlessness and anxiety are common psychological responses to illness and hospitalization, not specific to critical hyperkalemia, and thus would be an expected general finding in this clinical situation.",
+        "clinicalPrinciple": "Priority is to assess for signs of cardiac compromise and prepare for rapid-acting treatments to reduce serum potassium levels in ESRD patients.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 58 year old client with a history of end-stage renal disease is admitted to the medical-surgical unit complaining of generalized weakness and fatigue. The client’s morning potassium level is 6.5 mEq/L.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "27321b59-a92a-46ba-8c4a-eb843b479aec",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Recognize Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Edward Mbeki",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Surgical Unit",
+        "age_value": 60,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached their arms.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached their arms.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Bilateral absent patellar and Achilles reflexes"
+          },
+          {
+            "id": "B",
+            "text": "Shallow, rapid respirations with use of accessory muscles"
+          },
+          {
+            "id": "C",
+            "text": "Client reports tingling and numbness in hands and feet"
+          },
+          {
+            "id": "D",
+            "text": "SpO2 reading of 90% on room air"
+          },
+          {
+            "id": "E",
+            "text": "Client reports generalized muscle aches and cramping"
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "SpO2 reading of 90% on room air": "Unexpected Finding",
+          "Bilateral absent patellar and Achilles reflexes": "Expected Finding",
+          "Client reports generalized muscle aches and cramping": "Expected Finding",
+          "Client reports tingling and numbness in hands and feet": "Expected Finding",
+          "Shallow, rapid respirations with use of accessory muscles": "Unexpected Finding"
+        },
+        "stem": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached their arms."
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must closely monitor for the progression of ascending paralysis, especially assessing respiratory effort, as diaphragm involvement can lead to respiratory failure requiring ventilatory support.",
+        "core_concept": null,
+        "answer_analysis": "Bilateral absent reflexes (areflexia) are a hallmark diagnostic criterion for Guillain-Barre syndrome (GBS). Shallow, rapid respirations with accessory muscle use indicate respiratory muscle weakness and impending respiratory failure, which is a life-threatening complication of GBS and requires immediate intervention. Sensory symptoms like tingling and numbness (paresthesias) are common findings in GBS, often preceding or accompanying motor weakness. An SpO2 reading of 90% on room air indicates hypoxemia, which is an unexpected and critical finding requiring immediate assessment and intervention, as it suggests inadequate oxygenation due to respiratory compromise. Generalized muscle aches and cramping, often described as neuropathic pain, are common complaints in clients with GBS due to nerve inflammation and damage."
+      },
+      "mnemonic": {
+        "title": "GBS: Respiratory Watch",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "SpO2 reading of 90% on room air": "Unexpected Finding",
+          "Bilateral absent patellar and Achilles reflexes": "Expected Finding",
+          "Client reports generalized muscle aches and cramping": "Expected Finding",
+          "Client reports tingling and numbness in hands and feet": "Expected Finding",
+          "Shallow, rapid respirations with use of accessory muscles": "Unexpected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Heart Failure",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Recognize Cues",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached the…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 60,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Bilateral absent reflexes (areflexia) are a hallmark diagnostic criterion for Guillain-Barre syndrome (GBS). Shallow, rapid respirations with accessory muscle use indicate respiratory muscle weakness and impending respiratory failure, which is a life-threatening complication of GBS and requires immediate intervention. Sensory symptoms like tingling and numbness (paresthesias) are common findings in GBS, often preceding or accompanying motor weakness. An SpO2 reading of 90% on room air indicates hypoxemia, which is an unexpected and critical finding requiring immediate assessment and intervention, as it suggests inadequate oxygenation due to respiratory compromise. Generalized muscle aches and cramping, often described as neuropathic pain, are common complaints in clients with GBS due to nerve inflammation and damage.",
+        "clinicalPrinciple": "The nurse must closely monitor for the progression of ascending paralysis, especially assessing respiratory effort, as diaphragm involvement can lead to respiratory failure requiring ventilatory support.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached the…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 60 year old client is admitted to the medical-surgical unit with a diagnosis of Guillain-Barre syndrome following a recent GI viral illness. The client reports progressive weakness in the legs that has now reached the…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "2d1bb8c6-6477-4df3-957d-0fbc8c1a6d7b",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Recognize Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Judith Yamamoto",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Endocrinology Unit",
+        "age_value": 53,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, SpO₂: 98%, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Oral temperature of 100.8°F (38.2°C)"
+          },
+          {
+            "id": "B",
+            "text": "New onset of a grade II/VI systolic murmur"
+          },
+          {
+            "id": "C",
+            "text": "Client reports sudden, severe left flank pain and hematuria"
+          },
+          {
+            "id": "D",
+            "text": "Positive blood culture for Streptococcus viridans"
+          },
+          {
+            "id": "E",
+            "text": "New onset of slurred speech and right-sided facial droop"
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "Oral temperature of 100.8°F (38.2°C)": "Expected Finding",
+          "New onset of a grade II/VI systolic murmur": "Expected Finding",
+          "Positive blood culture for Streptococcus viridans": "Expected Finding",
+          "New onset of slurred speech and right-sided facial droop": "Unexpected Finding",
+          "Client reports sudden, severe left flank pain and hematuria": "Unexpected Finding"
+        },
+        "stem": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings."
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must meticulously monitor for changes in heart murmurs or new signs of heart failure, indicating potential valvular damage or worsening cardiac function.",
+        "core_concept": null,
+        "answer_analysis": "An oral temperature of 100.8°F (38.2°C) is a low-grade fever, which is a common symptom in clients with active infective endocarditis. A new or changed murmur is a hallmark of infective endocarditis due to valvular damage and is a key diagnostic criterion. Therefore, both are expected findings. Sudden, severe left flank pain accompanied by hematuria suggests a renal embolic event, which is a serious complication of infective endocarditis requiring immediate investigation. New onset of slurred speech and a right-sided facial droop indicate a potential cerebral embolic event (stroke), a life-threatening complication that requires immediate neurological assessment and intervention. Positive blood cultures for an organism like Streptococcus viridans are diagnostic for infective endocarditis, confirming the presence of the infection."
+      },
+      "mnemonic": {
+        "title": "IE: Listen to the Heart",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Oral temperature of 100.8°F (38.2°C)": "Expected Finding",
+          "New onset of a grade II/VI systolic murmur": "Expected Finding",
+          "Positive blood culture for Streptococcus viridans": "Expected Finding",
+          "New onset of slurred speech and right-sided facial droop": "Unexpected Finding",
+          "Client reports sudden, severe left flank pain and hematuria": "Unexpected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Wound Infection",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Recognize Cues",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings.",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 53,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Endocrinology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "An oral temperature of 100.8°F (38.2°C) is a low-grade fever, which is a common symptom in clients with active infective endocarditis. A new or changed murmur is a hallmark of infective endocarditis due to valvular damage and is a key diagnostic criterion. Therefore, both are expected findings. Sudden, severe left flank pain accompanied by hematuria suggests a renal embolic event, which is a serious complication of infective endocarditis requiring immediate investigation. New onset of slurred speech and a right-sided facial droop indicate a potential cerebral embolic event (stroke), a life-threatening complication that requires immediate neurological assessment and intervention. Positive blood cultures for an organism like Streptococcus viridans are diagnostic for infective endocarditis, confirming the presence of the infection.",
+        "clinicalPrinciple": "The nurse must meticulously monitor for changes in heart murmurs or new signs of heart failure, indicating potential valvular damage or worsening cardiac function.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 53 year old client is admitted to the medical-surgical unit with infective endocarditis, confirmed by positive blood cultures and a new murmur. The nurse is reviewing the client's recent assessment findings.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "d63e10eb-134a-41f7-8618-1f69ad78a4b3",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Easy",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Rosa Martinez",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": 72,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 92, RR: 22, BP: 128/78, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "time": "08:00",
+            "name": "Nursing",
+            "value": "Vital signs q4h and PRN",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:00",
+            "name": "Medication",
+            "value": "Acetaminophen 650 mg PO q6h PRN pain or fever >101°F",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Diet",
+            "value": "Regular diet as tolerated",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Activity",
+            "value": "Ad lib, activity as tolerated",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:10",
+            "name": "Laboratory",
+            "value": "Complete Blood Count (CBC) and Basic Metabolic Panel (BMP) in morning",
+            "source": "General Admission orders"
+          }
+        ],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "22",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expiratory flow rate has dropped significantly below their personal best.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expiratory flow rate has dropped significantly below their personal best.",
+        "text_with_blanks": "Upon assessment, the nurse notes the client has [BLANK_1]. The priority intervention is to [BLANK_2]. The nurse anticipates the provider will order [BLANK_3] if symptoms persist or worsen. The nurse will closely monitor the client for [BLANK_4].",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "audible inspiratory and expiratory wheezing with accessory muscle use.",
+            "options": [
+              "audible inspiratory and expiratory wheezing with accessory muscle use.",
+              "fine crackles at lung bases bilaterally.",
+              "a productive cough with thick, yellow sputum.",
+              "oxygen saturation of 98% on room air with a respiratory rate of 16 breaths/min."
+            ]
+          },
+          "BLANK_2": {
+            "correct": "administer a short-acting beta-agonist (SABA) nebulizer treatment.",
+            "options": [
+              "prepare for immediate endotracheal intubation.",
+              "administer a short-acting beta-agonist (SABA) nebulizer treatment.",
+              "initiate an intravenous fluid bolus.",
+              "obtain a sputum culture and sensitivity."
+            ]
+          },
+          "BLANK_3": {
+            "correct": "oral corticosteroids such as prednisone.",
+            "options": [
+              "oral corticosteroids such as prednisone.",
+              "a long-acting beta-agonist (LABA) for daily use.",
+              "a diuretic to reduce fluid volume.",
+              "prophylactic broad-spectrum antibiotics."
+            ]
+          },
+          "BLANK_4": {
+            "correct": "paradoxical breathing and diminishing wheezing leading to a 'silent chest'.",
+            "options": [
+              "decreased respiratory rate and improved SpO2.",
+              "development of dependent edema.",
+              "paradoxical breathing and diminishing wheezing leading to a 'silent chest'.",
+              "increased appetite and energy levels."
+            ]
+          }
+        },
+        "scenario": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expiratory flow rate has dropped significantly below their personal best.",
+        "stem": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expiratory flow rate has dropped significantly below their personal best.",
+        "correctMap": {
+          "BLANK_1": "audible inspiratory and expiratory wheezing with accessory muscle use.",
+          "BLANK_2": "administer a short-acting beta-agonist (SABA) nebulizer treatment.",
+          "BLANK_3": "oral corticosteroids such as prednisone.",
+          "BLANK_4": "paradoxical breathing and diminishing wheezing leading to a 'silent chest'."
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "audible inspiratory and expiratory wheezing with accessory muscle use.",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "fine crackles at lung bases bilaterally.",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "a productive cough with thick, yellow sputum.",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "oxygen saturation of 98% on room air with a respiratory rate of 16 breaths/min.",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "prepare for immediate endotracheal intubation.",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "administer a short-acting beta-agonist (SABA) nebulizer treatment.",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "initiate an intravenous fluid bolus.",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "obtain a sputum culture and sensitivity.",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "oral corticosteroids such as prednisone.",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "a long-acting beta-agonist (LABA) for daily use.",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "a diuretic to reduce fluid volume.",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "prophylactic broad-spectrum antibiotics.",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "decreased respiratory rate and improved SpO2.",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "development of dependent edema.",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "paradoxical breathing and diminishing wheezing leading to a 'silent chest'.",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "increased appetite and energy levels.",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "Priority is to assess respiratory effort and administer rapid-acting bronchodilators to restore airway patency and prevent further decline.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, audible wheezing and accessory muscle use are hallmark signs of an acute asthma exacerbation, indicating significant bronchoconstriction and increased work of breathing. For BLANK_2, a short-acting beta-agonist (SABA) like albuterol is the first-line rapid bronchodilator to relieve bronchospasm in acute asthma attacks. For BLANK_3, oral corticosteroids (e.g., prednisone) are often prescribed for moderate to severe asthma exacerbations to reduce airway inflammation, which contributes significantly to acute asthma symptoms. For BLANK_4, paradoxical breathing (chest wall moving inward on inspiration, abdomen moving outward) indicates severe respiratory muscle fatigue. A 'silent chest' (diminished or absent wheezing despite severe respiratory distress) is an ominous sign, indicating critically decreased airflow due to severe bronchoconstriction and impending respiratory failure."
+      },
+      "mnemonic": {
+        "title": "Asthma Flare-Up Plan",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "audible inspiratory and expiratory wheezing with accessory muscle use.",
+          "BLANK_2": "administer a short-acting beta-agonist (SABA) nebulizer treatment.",
+          "BLANK_3": "oral corticosteroids such as prednisone.",
+          "BLANK_4": "paradoxical breathing and diminishing wheezing leading to a 'silent chest'."
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Stroke / CVA",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Deep Vein Thrombosis / PE",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expirator…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 72,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, audible wheezing and accessory muscle use are hallmark signs of an acute asthma exacerbation, indicating significant bronchoconstriction and increased work of breathing. For BLANK_2, a short-acting beta-agonist (SABA) like albuterol is the first-line rapid bronchodilator to relieve bronchospasm in acute asthma attacks. For BLANK_3, oral corticosteroids (e.g., prednisone) are often prescribed for moderate to severe asthma exacerbations to reduce airway inflammation, which contributes significantly to acute asthma symptoms. For BLANK_4, paradoxical breathing (chest wall moving inward on inspiration, abdomen moving outward) indicates severe respiratory muscle fatigue. A 'silent chest' (diminished or absent wheezing despite severe respiratory distress) is an ominous sign, indicating critically decreased airflow due to severe bronchoconstriction and impending respiratory failure.",
+        "clinicalPrinciple": "Priority is to assess respiratory effort and administer rapid-acting bronchodilators to restore airway patency and prevent further decline.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expirator…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 72 year old client presents to the emergency department complaining of sudden shortness of breath and tightness in their chest. The client's guardian reports the client has a history of asthma and their peak expirator…",
+      "v242oReputationStatus": "REPAIRED_COHERENCE_READY",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "5c7f6eb3-e7d7-4927-9aa5-09c8f755b32d",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Take Action",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "George Petrov",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Neurology Unit",
+        "age_value": "58",
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 92, RR: 22, BP: 118/76, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "22",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxious, and diaphoretic.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxious, and diaphoretic.",
+        "text_with_blanks": "The nurse notes the client has [BLANK_1]. The priority intervention is to [BLANK_2]. The nurse anticipates the provider will order [BLANK_3]. The nurse will monitor for [BLANK_4].",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "mild tremors and diaphoresis",
+            "options": [
+              "mild tremors and diaphoresis",
+              "pinpoint pupils and shallow breathing",
+              "confusion and nuchal rigidity",
+              "Kussmaul respirations and fruity breath"
+            ]
+          },
+          "BLANK_2": {
+            "correct": "implement CIWA-Ar protocol and obtain vital signs",
+            "options": [
+              "administer naloxone per protocol",
+              "implement CIWA-Ar protocol and obtain vital signs",
+              "encourage increased oral fluid intake",
+              "prepare for immediate endotracheal intubation"
+            ]
+          },
+          "BLANK_3": {
+            "correct": "lorazepam 2 mg IV PRN for agitation/withdrawal symptoms",
+            "options": [
+              "lorazepam 2 mg IV PRN for agitation/withdrawal symptoms",
+              "naltrexone 50 mg PO daily",
+              "haloperidol 5 mg IM for psychotic symptoms",
+              "propranolol 10 mg PO BID"
+            ]
+          },
+          "BLANK_4": {
+            "correct": "delirium tremens, seizures, and hallucinations",
+            "options": [
+              "hypoglycemia",
+              "hypokalemia",
+              "delirium tremens, seizures, and hallucinations",
+              "respiratory depression"
+            ]
+          }
+        },
+        "scenario": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxious, and diaphoretic.",
+        "stem": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxious, and diaphoretic.",
+        "correctMap": {
+          "BLANK_1": "mild tremors and diaphoresis",
+          "BLANK_2": "implement CIWA-Ar protocol and obtain vital signs",
+          "BLANK_3": "lorazepam 2 mg IV PRN for agitation/withdrawal symptoms",
+          "BLANK_4": "delirium tremens, seizures, and hallucinations"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "mild tremors and diaphoresis",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "pinpoint pupils and shallow breathing",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "confusion and nuchal rigidity",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "Kussmaul respirations and fruity breath",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "administer naloxone per protocol",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "implement CIWA-Ar protocol and obtain vital signs",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "encourage increased oral fluid intake",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "prepare for immediate endotracheal intubation",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "lorazepam 2 mg IV PRN for agitation/withdrawal symptoms",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "naltrexone 50 mg PO daily",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "haloperidol 5 mg IM for psychotic symptoms",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "propranolol 10 mg PO BID",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "hypoglycemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "hypokalemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "delirium tremens, seizures, and hallucinations",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "respiratory depression",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": "media/internal/cxr_pneumonia.png",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must recognize early signs of alcohol withdrawal to prevent progression to severe complications like seizures or delirium tremens.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, mild tremors and diaphoresis are classic early signs of alcohol withdrawal, typically beginning 6-12 hours after the last drink. For BLANK_2, implementing the CIWA-Ar protocol and frequently monitoring vital signs are immediate priorities to assess the severity of withdrawal and guide treatment, ensuring client safety. For BLANK_3, benzodiazepines like lorazepam are the first-line treatment for alcohol withdrawal to prevent progression to more severe symptoms, seizures, and delirium tremens. For BLANK_4, delirium tremens, seizures, and hallucinations are the most severe and life-threatening complications of alcohol withdrawal, typically occurring 48-72 hours after the last drink, and continuous monitoring is crucial."
+      },
+      "mnemonic": {
+        "title": "AW: Early Recognition",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "mild tremors and diaphoresis",
+          "BLANK_2": "implement CIWA-Ar protocol and obtain vital signs",
+          "BLANK_3": "lorazepam 2 mg IV PRN for agitation/withdrawal symptoms",
+          "BLANK_4": "delirium tremens, seizures, and hallucinations"
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Medication Error / Overdose",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxiou…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "58",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Neurology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, mild tremors and diaphoresis are classic early signs of alcohol withdrawal, typically beginning 6-12 hours after the last drink. For BLANK_2, implementing the CIWA-Ar protocol and frequently monitoring vital signs are immediate priorities to assess the severity of withdrawal and guide treatment, ensuring client safety. For BLANK_3, benzodiazepines like lorazepam are the first-line treatment for alcohol withdrawal to prevent progression to more severe symptoms, seizures, and delirium tremens. For BLANK_4, delirium tremens, seizures, and hallucinations are the most severe and life-threatening complications of alcohol withdrawal, typically occurring 48-72 hours after the last drink, and continuous monitoring is crucial.",
+        "clinicalPrinciple": "The nurse must recognize early signs of alcohol withdrawal to prevent progression to severe complications like seizures or delirium tremens.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxiou…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 58-year-old male client is admitted to the medical-surgical unit for pneumonia. He has a history of heavy alcohol use and states his last drink was approximately 10 hours ago. The nurse observes he is restless, anxiou…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "39625fff-83e2-46fa-a5d3-652938917891",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Mrs. Evelyn Reed",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": 82,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, RR: 20, BP: 128/78, SpO₂: 95%, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "HR not charted. This value was not provided in the item."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish around the edges.\" Her apical pulse is 52 bpm.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish around the edges.\" Her apical pulse is 52 bpm.",
+        "text_with_blanks": "The nurse notes the client has [BLANK_1]. The priority intervention is to [BLANK_2]. The nurse anticipates the provider will order [BLANK_3]. The nurse will monitor for [BLANK_4].",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "Bradycardia, nausea, and visual disturbances",
+            "options": [
+              "Bradycardia, nausea, and visual disturbances",
+              "Tachycardia, diarrhea, and tinnitus",
+              "Shortness of breath, crackles, and peripheral edema",
+              "Elevated blood pressure, headache, and dizziness"
+            ]
+          },
+          "BLANK_2": {
+            "correct": "Hold the digoxin dose and notify the provider",
+            "options": [
+              "Administer the next scheduled dose of digoxin",
+              "Hold the digoxin dose and notify the provider",
+              "Increase the client's IV fluid rate",
+              "Administer an antiemetic medication"
+            ]
+          },
+          "BLANK_3": {
+            "correct": "Digoxin immune Fab (Digibind)",
+            "options": [
+              "Digoxin immune Fab (Digibind)",
+              "Furosemide 40 mg IV",
+              "Potassium chloride supplement",
+              "Metoprolol succinate"
+            ]
+          },
+          "BLANK_4": {
+            "correct": "Hypokalemia",
+            "options": [
+              "Hypernatremia",
+              "Hypercalcemia",
+              "Hypokalemia",
+              "Hyperglycemia"
+            ]
+          }
+        },
+        "scenario": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish around the edges.\" Her apical pulse is 52 bpm.",
+        "stem": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish around the edges.\" Her apical pulse is 52 bpm.",
+        "correctMap": {
+          "BLANK_1": "Bradycardia, nausea, and visual disturbances",
+          "BLANK_2": "Hold the digoxin dose and notify the provider",
+          "BLANK_3": "Digoxin immune Fab (Digibind)",
+          "BLANK_4": "Hypokalemia"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "Bradycardia, nausea, and visual disturbances",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "Tachycardia, diarrhea, and tinnitus",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "Shortness of breath, crackles, and peripheral edema",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "Elevated blood pressure, headache, and dizziness",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "Administer the next scheduled dose of digoxin",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "Hold the digoxin dose and notify the provider",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "Increase the client's IV fluid rate",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "Administer an antiemetic medication",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "Digoxin immune Fab (Digibind)",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "Furosemide 40 mg IV",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "Potassium chloride supplement",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "Metoprolol succinate",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "Hypernatremia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "Hypercalcemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "Hypokalemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "Hyperglycemia",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must promptly recognize the classic symptoms of digoxin toxicity, including bradycardia, nausea, and visual disturbances, to ensure client safety.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, the client's symptoms of bradycardia (apical pulse 52 bpm), nausea, fatigue, and visual disturbances (yellowish halos) are classic signs of digoxin toxicity. For BLANK_2, the priority nursing intervention when digoxin toxicity is suspected is to hold the next dose of digoxin and immediately notify the healthcare provider. For BLANK_3, Digoxin immune Fab (Digibind) is the specific antidote indicated for severe digoxin toxicity. For BLANK_4, hypokalemia significantly increases the risk and severity of digoxin toxicity, making it a critical electrolyte imbalance to monitor and correct."
+      },
+      "mnemonic": {
+        "title": "Digoxin Danger Signs",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "Bradycardia, nausea, and visual disturbances",
+          "BLANK_2": "Hold the digoxin dose and notify the provider",
+          "BLANK_3": "Digoxin immune Fab (Digibind)",
+          "BLANK_4": "Hypokalemia"
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242nOriginalClinicalFocus": "Pneumonia",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish arou…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 82,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, the client's symptoms of bradycardia (apical pulse 52 bpm), nausea, fatigue, and visual disturbances (yellowish halos) are classic signs of digoxin toxicity. For BLANK_2, the priority nursing intervention when digoxin toxicity is suspected is to hold the next dose of digoxin and immediately notify the healthcare provider. For BLANK_3, Digoxin immune Fab (Digibind) is the specific antidote indicated for severe digoxin toxicity. For BLANK_4, hypokalemia significantly increases the risk and severity of digoxin toxicity, making it a critical electrolyte imbalance to monitor and correct.",
+        "clinicalPrinciple": "The nurse must promptly recognize the classic symptoms of digoxin toxicity, including bradycardia, nausea, and visual disturbances, to ensure client safety.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish arou…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Mrs. Evelyn Reed, an 82-year-old client with a history of heart failure, is admitted to the medical-surgical unit. She reports feeling increasingly tired and nauseated, and states, \"Everything looks a bit yellowish arou…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "80ecf6bd-53d6-4197-a81d-1507bb39054c",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Heart Failure / Fluid Volume Excess",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Dorothy Obi",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": 72,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 92, RR: 20, BP: 128/78, SpO₂: 95%, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 100,
+            "intakeRoute": "IV Saline Lock",
+            "output": 25,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "09:00",
+            "intake": 80,
+            "intakeRoute": "Oral fluids",
+            "output": 20,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 50,
+            "intakeRoute": "IV Furosemide 40mg",
+            "output": 350,
+            "outputRoute": "Urine (Post-diuretic)"
+          },
+          {
+            "time": "11:00",
+            "intake": 50,
+            "intakeRoute": "Oral sips",
+            "output": 480,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 120,
+            "intakeRoute": "Lunch tray fluids",
+            "output": 320,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 50,
+            "intakeRoute": "IV Med flush",
+            "output": 220,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 150,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 110,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fields, S3 gallop, and significant peripheral edema.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fields, S3 gallop, and significant peripheral edema.",
+        "text_with_blanks": "Based on these findings, the nurse determines the client is experiencing [BLANK_1]. The immediate priority intervention is to [BLANK_2]. The nurse anticipates a provider's order for [BLANK_3] to help manage the client's condition. While caring for the client, the nurse will closely monitor for [BLANK_4].",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "Acute pulmonary edema",
+            "options": [
+              "Acute pulmonary edema",
+              "Pneumonia",
+              "Asthma exacerbation",
+              "Acute myocardial infarction"
+            ]
+          },
+          "BLANK_2": {
+            "correct": "Elevate the head of the bed to a high-Fowler's position",
+            "options": [
+              "Administer intravenous fluids",
+              "Elevate the head of the bed to a high-Fowler's position",
+              "Encourage the client to ambulate",
+              "Prepare for immediate endotracheal intubation"
+            ]
+          },
+          "BLANK_3": {
+            "correct": "Furosemide",
+            "options": [
+              "Furosemide",
+              "Albuterol nebulizer",
+              "Warfarin",
+              "Vancomycin"
+            ]
+          },
+          "BLANK_4": {
+            "correct": "Hypokalemia",
+            "options": [
+              "Resolution of S3 gallop",
+              "Hypokalemia",
+              "Increased blood pressure",
+              "Hyperglycemia"
+            ]
+          }
+        },
+        "scenario": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fields, S3 gallop, and significant peripheral edema.",
+        "stem": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fields, S3 gallop, and significant peripheral edema.",
+        "correctMap": {
+          "BLANK_1": "Acute pulmonary edema",
+          "BLANK_2": "Elevate the head of the bed to a high-Fowler's position",
+          "BLANK_3": "Furosemide",
+          "BLANK_4": "Hypokalemia"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "Acute pulmonary edema",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "Pneumonia",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "Asthma exacerbation",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "Acute myocardial infarction",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "Administer intravenous fluids",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "Elevate the head of the bed to a high-Fowler's position",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "Encourage the client to ambulate",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "Prepare for immediate endotracheal intubation",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "Furosemide",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "Albuterol nebulizer",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "Warfarin",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "Vancomycin",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "Resolution of S3 gallop",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "Hypokalemia",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "Increased blood pressure",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "Hyperglycemia",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": "media/internal/adult_lung_mix.mp3",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must immediately intervene to improve oxygenation and reduce fluid volume, which includes elevating the head of the bed and administering oxygen.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, the combination of severe dyspnea, frothy pink sputum, diffuse crackles, S3 gallop, and peripheral edema are classic signs of acute pulmonary edema, often a decompensation of heart failure. For BLANK_2, elevating the head of the bed to a high-Fowler's position is an immediate, nurse-initiated priority intervention to help reduce venous return to the heart, decrease preload, and improve lung expansion, thereby easing the client's breathing and reducing respiratory distress. Administering oxygen is also critical, but positioning is a key initial physical intervention. For BLANK_3, Furosemide is a potent loop diuretic that is typically ordered to reduce fluid overload in acute pulmonary edema by promoting rapid diuresis. For BLANK_4, loop diuretics like furosemide are known to cause electrolyte imbalances, particularly hypokalemia, due to increased excretion of potassium. Monitoring for this adverse effect is crucial."
+      },
+      "mnemonic": {
+        "title": "Pulmonary Edema: STAT",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "Acute pulmonary edema",
+          "BLANK_2": "Elevate the head of the bed to a high-Fowler's position",
+          "BLANK_3": "Furosemide",
+          "BLANK_4": "Hypokalemia"
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Postpartum Hemorrhage",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:maternal-newborn"
+          ],
+          "clinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fi…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:maternal-newborn"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "maternal-newborn"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 72,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, the combination of severe dyspnea, frothy pink sputum, diffuse crackles, S3 gallop, and peripheral edema are classic signs of acute pulmonary edema, often a decompensation of heart failure. For BLANK_2, elevating the head of the bed to a high-Fowler's position is an immediate, nurse-initiated priority intervention to help reduce venous return to the heart, decrease preload, and improve lung expansion, thereby easing the client's breathing and reducing respiratory distress. Administering oxygen is also critical, but positioning is a key initial physical intervention. For BLANK_3, Furosemide is a potent loop diuretic that is typically ordered to reduce fluid overload in acute pulmonary edema by promoting rapid diuresis. For BLANK_4, loop diuretics like furosemide are known to cause electrolyte imbalances, particularly hypokalemia, due to increased excretion of potassium. Monitoring for this adverse effect is crucial.",
+        "clinicalPrinciple": "The nurse must immediately intervene to improve oxygenation and reduce fluid volume, which includes elevating the head of the bed and administering oxygen.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fi…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 72-year-old client with a history of heart failure is admitted to the emergency department complaining of sudden onset severe shortness of breath. The nurse observes frothy pink sputum, crackles throughout all lung fi…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": []
+    },
+    {
+      "id": "3741ffbe-5c98-4916-9b21-0c1f9c58dde9",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Easy",
+      "clinical_focus": "Asthma / Bronchospasm",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Karen Johansson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Renal Unit",
+        "age_value": 28,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 92, BP: 118/76, Pain: 0/10, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [
+          {
+            "name": "pO2",
+            "value": "88 mmHg",
+            "reference": "80 - 100 mmHg",
+            "time": "06:37"
+          }
+        ],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "32",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "88%",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment, the client is tachypneic (RR 32), diaphoretic, using accessory muscles, and has an SpO2 of 88% on room air.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "prompt": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment, the client is tachypneic (RR 32), diaphoretic, using accessory muscles, and has an SpO2 of 88% on room air.",
+        "text_with_blanks": "The nurse notes the client's initial audible wheezing has now significantly decreased, and breath sounds are diminished throughout the lung fields, indicating a [BLANK_1]. The nurse's immediate priority intervention is to [BLANK_2]. The nurse anticipates the provider will order [BLANK_3] to target underlying airway inflammation. The nurse will closely monitor for improvement in the client's [BLANK_4] to evaluate the effectiveness of interventions.",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "Silent chest",
+            "options": [
+              "Silent chest",
+              "Resolving bronchospasm",
+              "Pleural effusion",
+              "Pulmonary embolism"
+            ]
+          },
+          "BLANK_2": {
+            "correct": "Initiate high-flow oxygen therapy via non-rebreather mask",
+            "options": [
+              "Administer nebulized albuterol and ipratropium",
+              "Position the client in high-Fowler's position",
+              "Initiate high-flow oxygen therapy via non-rebreather mask",
+              "Prepare for endotracheal intubation"
+            ]
+          },
+          "BLANK_3": {
+            "correct": "Systemic corticosteroids (e.g., IV methylprednisolone)",
+            "options": [
+              "Systemic corticosteroids (e.g., IV methylprednisolone)",
+              "Broad-spectrum antibiotics",
+              "Intravenous furosemide",
+              "Beta-blockers"
+            ]
+          },
+          "BLANK_4": {
+            "correct": "Peak expiratory flow rate (PEFR) and work of breathing",
+            "options": [
+              "Urine output and specific gravity",
+              "Level of consciousness and Glasgow Coma Scale",
+              "Peak expiratory flow rate (PEFR) and work of breathing",
+              "Capillary refill and peripheral pulses"
+            ]
+          }
+        },
+        "scenario": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment, the client is tachypneic (RR 32), diaphoretic, using accessory muscles, and has an SpO2 of 88% on room air.",
+        "stem": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment, the client is tachypneic (RR 32), diaphoretic, using accessory muscles, and has an SpO2 of 88% on room air.",
+        "correctMap": {
+          "BLANK_1": "Silent chest",
+          "BLANK_2": "Initiate high-flow oxygen therapy via non-rebreather mask",
+          "BLANK_3": "Systemic corticosteroids (e.g., IV methylprednisolone)",
+          "BLANK_4": "Peak expiratory flow rate (PEFR) and work of breathing"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "Silent chest",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "Resolving bronchospasm",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "Pleural effusion",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "Pulmonary embolism",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_2_1",
+            "text": "Administer nebulized albuterol and ipratropium",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_2",
+            "text": "Position the client in high-Fowler's position",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_3",
+            "text": "Initiate high-flow oxygen therapy via non-rebreather mask",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_2_4",
+            "text": "Prepare for endotracheal intubation",
+            "blank": "BLANK_2"
+          },
+          {
+            "id": "BLANK_3_1",
+            "text": "Systemic corticosteroids (e.g., IV methylprednisolone)",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_2",
+            "text": "Broad-spectrum antibiotics",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_3",
+            "text": "Intravenous furosemide",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_3_4",
+            "text": "Beta-blockers",
+            "blank": "BLANK_3"
+          },
+          {
+            "id": "BLANK_4_1",
+            "text": "Urine output and specific gravity",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_2",
+            "text": "Level of consciousness and Glasgow Coma Scale",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_3",
+            "text": "Peak expiratory flow rate (PEFR) and work of breathing",
+            "blank": "BLANK_4"
+          },
+          {
+            "id": "BLANK_4_4",
+            "text": "Capillary refill and peripheral pulses",
+            "blank": "BLANK_4"
+          }
+        ]
+      },
+      "media": "media/internal/adult_lung_mix.mp3",
+      "rationale": {
+        "trap": null,
+        "golden_rule": "Priority is to rapidly administer oxygen and multiple bronchodilators, assess for silent chest, and prepare for advanced airway management due to impending respiratory failure.",
+        "core_concept": null,
+        "answer_analysis": "For BLANK_1, 'Silent chest' is the correct option. A decrease in previously audible wheezing combined with diminished breath sounds in an acute asthma exacerbation is a critical sign of severe airway obstruction and impending respiratory failure, requiring immediate intervention. For BLANK_2, 'Initiate high-flow oxygen therapy via non-rebreather mask' is the immediate priority. With an SpO2 of 88% on room air, addressing hypoxemia is the most life-saving intervention. While nebulized bronchodilators are crucial, oxygen administration takes precedence in acute hypoxemia. For BLANK_3, 'Systemic corticosteroids (e.g., IV methylprednisolone)' are anticipated. Corticosteroids are essential in acute asthma exacerbations to reduce airway inflammation and prevent further deterioration. Other options are not primary treatments for acute asthma. For BLANK_4, 'Peak expiratory flow rate (PEFR) and work of breathing' are the most appropriate monitoring parameters. PEFR provides an objective measure of airway patency and response to treatment, while observing the client's work of breathing (e.g., accessory muscle use, respiratory rate) provides a subjective but vital assessment of their respiratory effort and comfort."
+      },
+      "mnemonic": {
+        "title": "Severe Asthma: Act Fast",
+        "content": null
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "Silent chest",
+          "BLANK_2": "Initiate high-flow oxygen therapy via non-rebreather mask",
+          "BLANK_3": "Systemic corticosteroids (e.g., IV methylprednisolone)",
+          "BLANK_4": "Peak expiratory flow rate (PEFR) and work of breathing"
+        },
+        "maxScore": 4,
+        "scoring": "partial"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Hypoglycemia",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:diabetes"
+          ],
+          "clinicalFocus": "Asthma / Bronchospasm",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:diabetes"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "diabetes"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 28,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Renal Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For BLANK_1, 'Silent chest' is the correct option. A decrease in previously audible wheezing combined with diminished breath sounds in an acute asthma exacerbation is a critical sign of severe airway obstruction and impending respiratory failure, requiring immediate intervention. For BLANK_2, 'Initiate high-flow oxygen therapy via non-rebreather mask' is the immediate priority. With an SpO2 of 88% on room air, addressing hypoxemia is the most life-saving intervention. While nebulized bronchodilators are crucial, oxygen administration takes precedence in acute hypoxemia. For BLANK_3, 'Systemic corticosteroids (e.g., IV methylprednisolone)' are anticipated. Corticosteroids are essential in acute asthma exacerbations to reduce airway inflammation and prevent further deterioration. Other options are not primary treatments for acute asthma. For BLANK_4, 'Peak expiratory flow rate (PEFR) and work of breathing' are the most appropriate monitoring parameters. PEFR provides an objective measure of airway patency and response to treatment, while observing the client's work of breathing (e.g., accessory muscle use, respiratory rate) provides a subjective but vital assessment of their respiratory effort and comfort.",
+        "clinicalPrinciple": "Priority is to rapidly administer oxygen and multiple bronchodilators, assess for silent chest, and prepare for advanced airway management due to impending respiratory failure.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 28-year-old client presents to the emergency department with severe shortness of breath, audible wheezing, and reports using their albuterol inhaler every 2 hours without relief for the past day. On initial assessment…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": []
+    }
+  ]
+}

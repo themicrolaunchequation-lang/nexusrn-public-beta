@@ -1,0 +1,549 @@
+/**
+ * NexusRN World-Class UI/UX Polish
+ * Enhances the Workstation Pro interface with premium, clinical aesthetics.
+ * Preserves all underlying layouts and functionality.
+ */
+
+:root {
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --color-teal-primary: #0f766e;
+  --color-teal-hover: #115e59;
+  --color-navy-dark: #0f172a;
+  --color-navy-bg: #1e293b;
+  --color-border-soft: #cbd5e1;
+  --color-surface: #ffffff;
+  --color-bg-soft: #f8fafc;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-float: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* 1. Typography & Hierarchy */
+body, .ws-app {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Top Header & Control Deck (De-cluttering) */
+.ws-control-deck {
+  padding: var(--space-md) var(--space-lg) !important;
+  border-radius: 16px !important;
+  border: 1px solid var(--color-border-soft) !important;
+  box-shadow: var(--shadow-md) !important;
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  gap: var(--space-lg) !important;
+}
+
+.ws-selectors select, .ws-selectors button {
+  border-radius: 8px !important;
+  border: 1px solid #94a3b8 !important;
+  background-color: var(--color-surface) !important;
+  transition: all 0.2s ease !important;
+  font-weight: 600 !important;
+  color: #334155 !important;
+}
+
+.ws-selectors select:hover, .ws-selectors select:focus {
+  border-color: var(--color-teal-primary) !important;
+  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.1) !important;
+  outline: none !important;
+}
+
+/* 3. Patient Rail & Vitals (Premium Feel) */
+.ws-patient-rail {
+  background: linear-gradient(180deg, #e2e8f0 0%, #cbd5e1 100%) !important;
+  border-right: 1px solid #94a3b8 !important;
+}
+
+.ws-avatar {
+  background: linear-gradient(135deg, #1e4266 0%, #0f766e 100%) !important;
+  box-shadow: var(--shadow-md) !important;
+  border: 2px solid #ffffff !important;
+}
+
+.ws-rail-icons button {
+  transition: all 0.2s ease !important;
+  border-radius: 10px !important;
+}
+
+.ws-rail-icons button:hover, .ws-rail-icons button.active {
+  background: var(--color-surface) !important;
+  box-shadow: var(--shadow-sm) !important;
+  transform: translateY(-1px) !important;
+  color: var(--color-teal-primary) !important;
+}
+
+/* 4. EHR Tabs (Cleanliness) */
+.ws-tabs {
+  background: transparent !important;
+  border-bottom: 2px solid #e2e8f0 !important;
+  padding-left: var(--space-md) !important;
+  gap: var(--space-xs) !important;
+  flex-wrap: wrap !important;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+.ws-tabs button {
+  border: none !important;
+  background: transparent !important;
+  color: #64748b !important;
+  font-weight: 600 !important;
+  position: relative !important;
+  transition: color 0.2s ease !important;
+  padding: 12px 16px !important;
+}
+
+.ws-tabs button:hover {
+  color: #0f172a !important;
+}
+
+.ws-tabs button.active {
+  color: var(--color-teal-primary) !important;
+  background: transparent !important;
+  border: none !important;
+}
+
+.ws-tabs button.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-teal-primary);
+  border-radius: 3px 3px 0 0;
+}
+
+/* 5. Question Panel (Scannability) */
+.ws-question-head h1 {
+  font-weight: 800 !important;
+  color: var(--color-navy-dark) !important;
+}
+
+.ws-stem {
+  background: #f0f9ff !important;
+  border: 1px solid #bae6fd !important;
+  border-left: 4px solid #0284c7 !important;
+  border-radius: 12px !important;
+  line-height: 1.6 !important;
+  font-size: 15px !important;
+  color: #0f172a !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.02) !important;
+}
+
+.ws-option {
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--color-border-soft) !important;
+}
+
+.ws-option:hover {
+  border-color: #38bdf8 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: var(--shadow-sm) !important;
+  background: #f8fafc !important;
+}
+
+.ws-option.selected {
+  border-color: var(--color-teal-primary) !important;
+  background: #f0fdfa !important;
+  box-shadow: 0 0 0 1px var(--color-teal-primary) !important;
+}
+
+.ws-matrix-head {
+  background: #f1f5f9 !important;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  color: #475569 !important;
+}
+
+.ws-matrix-row:hover {
+  background: #f8fafc !important;
+}
+
+/* 6. Button Styling & Hover States */
+.ws-actionbar button {
+  border-radius: 10px !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  padding: 10px 20px !important;
+}
+
+.ws-actionbar button.primary {
+  background: linear-gradient(180deg, var(--color-teal-primary) 0%, var(--color-teal-hover) 100%) !important;
+  border: 1px solid var(--color-teal-hover) !important;
+  box-shadow: 0 4px 6px -1px rgba(15, 118, 110, 0.2) !important;
+}
+
+.ws-actionbar button.primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 12px -2px rgba(15, 118, 110, 0.3) !important;
+}
+
+.ws-actionbar button.primary:active {
+  transform: translateY(0) !important;
+  box-shadow: 0 2px 4px -1px rgba(15, 118, 110, 0.2) !important;
+}
+
+.ws-actionbar button:not(.primary):hover {
+  background: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+}
+
+/* 7. Vitals/Cards Micro-polish */
+.ws-vital-tile {
+  background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border-color: #e2e8f0 !important;
+  transition: transform 0.2s ease !important;
+}
+
+.ws-vital-tile:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--shadow-md) !important;
+}
+
+/* 8. Spacing & General Grid Polish */
+.ws-main-grid {
+  gap: var(--space-sm) !important;
+  padding: var(--space-sm) !important;
+  background: #e2e8f0 !important; /* Soft backdrop for the split panes */
+}
+
+.ws-chart-pane, .ws-question-pane {
+  background: var(--color-surface) !important;
+  border-radius: 16px !important;
+  border: 1px solid #cbd5e1 !important;
+  box-shadow: var(--shadow-sm) !important;
+}
+
+/* 9. Scrollbar refinement */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* 10. Hide Data View Tab in Learner UI */
+.ws-app:not(.ws-public-demo-mode) button[data-tab="raw"] {
+  display: none !important;
+}
+
+/* 11. Patient Header Polish (Readable & Premium Clinical) */
+.ws-demographics-card {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--space-md) !important;
+  padding: 14px 18px !important;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%) !important;
+  color: #f8fafc !important;
+  border-bottom: 2px solid #0f766e !important;
+}
+
+.ws-patient-avatar {
+  width: 60px !important;
+  height: 60px !important;
+  flex-shrink: 0 !important;
+  border: 2px solid #38bdf8 !important;
+  border-radius: 50% !important;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.2) !important;
+}
+
+.ws-demographics-text {
+  flex: 1 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+}
+
+.ws-patient-header-row {
+  display: flex !important;
+  align-items: baseline !important;
+  gap: 12px !important;
+  min-width: 0 !important;
+}
+
+.ws-patient-name {
+  font-size: 22px !important;
+  font-weight: 900 !important;
+  color: #ffffff !important;
+  letter-spacing: -0.01em !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ws-patient-meta {
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #94a3b8 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  flex-shrink: 0 !important;
+}
+
+.ws-patient-dx-row {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+
+.ws-dx-label {
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  color: #2dd4bf !important;
+  letter-spacing: 0.05em !important;
+  background: rgba(45, 212, 191, 0.1) !important;
+  padding: 2px 6px !important;
+  border-radius: 4px !important;
+  border: 1px solid rgba(45, 212, 191, 0.2) !important;
+}
+
+.ws-dx-val {
+  font-size: 14px !important;
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+.ws-patient-infographics {
+  margin-top: 2px !important;
+  min-width: 0 !important;
+  max-width: 100% !important;
+  display: flex !important;
+}
+
+.ws-infographic-item.ws-info-mrn {
+  display: inline-flex !important;
+  align-items: center !important;
+  font-size: 11px !important;
+  color: #94a3b8 !important;
+  background: transparent !important;
+  padding: 0 !important;
+  border: none !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+}
+
+.ws-infographic-item.ws-info-mrn .ws-info-val {
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  display: inline-block !important;
+  vertical-align: middle !important;
+}
+
+.ws-demographics-side {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  align-items: flex-end !important;
+  padding-left: 20px !important;
+  border-left: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.ws-infographic-item.ws-info-allergies,
+.ws-infographic-item.ws-info-code {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 12px !important;
+  padding: 6px 12px !important;
+  border-radius: 6px !important;
+  background: rgba(15, 23, 42, 0.4) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #cbd5e1 !important;
+  min-width: 160px !important;
+}
+
+.ws-info-label {
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  font-size: 10px !important;
+  letter-spacing: 0.05em !important;
+  color: #94a3b8 !important;
+}
+
+.ws-info-val {
+  font-weight: 700 !important;
+  color: #f1f5f9 !important;
+}
+
+.ws-infographic-item.has-allergy {
+  background: rgba(159, 18, 57, 0.2) !important;
+  border-color: rgba(225, 29, 72, 0.3) !important;
+}
+
+.ws-infographic-item.has-allergy .ws-info-label {
+  color: #fda4af !important;
+}
+
+.ws-infographic-item.has-allergy .ws-info-val {
+  color: #fecdd3 !important;
+}
+
+/* Daily Pulse modal title styling improvement */
+
+/* Daily Pulse modal title styling improvement */
+.ws-modal-header h2 {
+  color: #0f172a !important; /* Near-black */
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.1) !important; /* Subtle professional shadow */
+}
+
+/* Accessibility support for Workstation Pro navigation pills tooltips */
+.ws-mode-pill-wrap:focus-within .ws-tooltip-card,
+.ws-preset-wrap:focus-within .ws-tooltip-card {
+  opacity: 1 !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Specific styling for the new tooltip structure */
+.ws-tt-desc {
+  font-size: 12px !important;
+  line-height: 1.45 !important;
+  color: #bfd3e7 !important;
+  text-align: left !important;
+  margin-top: 4px !important;
+}
+
+/* Workstation Pro logo/title redirect link */
+a.ws-brand {
+  text-decoration: none !important;
+  color: #ffffff !important;
+  cursor: pointer !important;
+}
+a.ws-brand:hover {
+  opacity: 0.9 !important;
+}
+
+/* Public Demo Gated Interface Locks & Badges */
+.ws-app.ws-public-demo-mode .ws-control-deck {
+  background: linear-gradient(180deg, #f0fdfa 0%, #f8fafc 100%) !important;
+  border-color: #99f6e4 !important;
+  padding: 18px 24px !important;
+}
+
+.ws-public-demo-badge-panel {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 4px !important;
+  padding: 2px 0 !important;
+}
+
+.ws-public-demo-badge {
+  font-weight: 800 !important;
+  color: #0f766e !important;
+  font-size: 15px !important;
+  letter-spacing: -0.01em !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+}
+
+.ws-public-demo-badge::before {
+  content: "🔒" !important;
+  font-size: 13px !important;
+}
+
+.ws-public-demo-badge-sub {
+  font-size: 12px !important;
+  color: #64748b !important;
+  font-weight: 500 !important;
+}
+
+.ws-back-to-demo-btn {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  padding: 10px 18px !important;
+  border-radius: 8px !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  background: #f8fafc !important;
+  color: #0f766e !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05) !important;
+  transition: all 0.2s ease !important;
+  cursor: pointer !important;
+}
+
+.ws-back-to-demo-btn:hover {
+  background: #f1f5f9 !important;
+  border-color: #0f766e !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 8px rgba(15, 118, 110, 0.15) !important;
+}
+
+/* Public Demo Tooltip Visibility and Dismissal */
+.ws-tooltip-card.ws-tooltip-visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+.ws-tooltip-card.ws-tooltip-dismissed {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  display: none !important;
+}
+
+/* Public Demo Pill Preview/Locked Styling */
+.ws-mode-pill-preview {
+  opacity: 0.75 !important;
+  border: 1px dashed rgba(20, 184, 166, 0.4) !important;
+  background: rgba(15, 23, 42, 0.2) !important;
+}
+.ws-mode-pill-preview:hover {
+  opacity: 1 !important;
+  border-color: #f59e0b !important;
+  background: rgba(245, 158, 11, 0.05) !important;
+}
+
+/* Hide Raw Tab button in Public Demo Mode */
+.ws-app.ws-public-demo-mode button[data-tab="raw"] {
+  display: none !important;
+}
+
+/* Public Demo Meta Bar styles */
+.ws-public-demo-meta-bar {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: rgba(15, 23, 42, 0.85) !important;
+  border: 1px solid rgba(20, 184, 166, 0.3) !important;
+  border-radius: 12px !important;
+  padding: 12px 20px !important;
+  margin-bottom: 16px !important;
+  width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+@media (max-width: 768px) {
+  .ws-public-demo-meta-bar {
+    flex-direction: column !important;
+    gap: 10px !important;
+    align-items: flex-start !important;
+  }
+}

@@ -1,0 +1,821 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 148,
+  "count": 2,
+  "sourceStartIndex": 7400,
+  "questions": [
+    {
+      "id": "nexus_drag_dndthera_4475",
+      "format": "ordered-response",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Very Hard",
+      "clinical_focus": "Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium, Low Phosphorus, Protein-Controlled)",
+      "client_needs": "Physiological Integrity: Reduction of Risk Potential",
+      "patient": {
+        "name": "Margaret Thompson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": "68",
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "75",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "10:30",
+            "type": "DAR",
+            "note": "D: Patient, a 68-year-old female, verbalized confusion regarding dietary restrictions for Chronic Kidney Disease (CKD), specifically stating, 'I understand I need to watch my sodium, but what about other foods? I'm so confused about what I can and cannot eat.' Patient observed to have mild bilateral lower extremity edema. A: Comprehensive discharge education provided regarding therapeutic renal diet for Stage 4 CKD. Instruction included detailed information on sodium, potassium, phosphorus, and protein control, as well as fluid management. Specific examples of foods to limit (e.g., bananas, processed foods, dairy products) and healthier alternatives were discussed. Patient provided with written dietary guidelines and contact information for renal dietitian. R: Patient verbalized understanding of the importance of restricting sodium, potassium, and phosphorus, and controlling protein intake. Patient demonstrated ability to identify several high-potassium and high-phosphorus foods to avoid. Patient expressed feeling less confused and more confident in managing dietary choices."
+          }
+        ],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 16, BP: 128/78, SpO₂: 97%, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "type": "Active",
+            "text": "Furosemide 20 mg IV push now, then 20 mg IV q12h IV STAT then q12h Fluid overload, Hypertension"
+          },
+          {
+            "type": "Active",
+            "text": "Strict Renal Diet 2-gram Sodium, 2-gram Potassium, 1.5 L/day Fluid Restriction PO Daily Renal insufficiency, Hyperkalemia, Fluid overload"
+          },
+          {
+            "type": "Active",
+            "text": "Monitor Intake and Output (I&O) Document all oral and IV intake and all output Observation q4h Fluid balance assessment"
+          },
+          {
+            "type": "Active",
+            "text": "Daily Weights Weigh patient every morning Observation Daily AM Fluid balance assessment"
+          },
+          {
+            "type": "Active",
+            "text": "Vital Signs BP, HR, RR, Temp, O2 sat Observation q4h and PRN Continuous monitoring"
+          },
+          {
+            "type": "Active",
+            "text": "Basic Metabolic Panel (BMP) Collect blood sample Lab Daily Electrolyte and renal function monitoring"
+          },
+          {
+            "type": "Active",
+            "text": "Consult Dietary For patient education Consultation Once Nutritional counseling for renal diet"
+          }
+        ],
+        "hp": {
+          "pmh": [
+            "Hypertension (long-standing, poorly controlled)",
+            "History of mild peripheral edema",
+            "Anemia of chronic disease"
+          ],
+          "physical_examination": {
+            "skin": "Dry, scattered excoriations noted on arms and legs consistent with pruritus.",
+            "extremities": "1+ pitting edema noted in bilateral lower extremities. Skin turgor fair.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No crackles or wheezes.",
+            "cardiovascular": "S1S2 regular, no murmurs, S3, or S4. Peripheral pulses 2+ bilaterally.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Bowel sounds present in all four quadrants.",
+            "general_appearance": "Alert and oriented x3, appears fatigued."
+          },
+          "patient_demographics": {
+            "age": "68 years",
+            "gender": "Female"
+          },
+          "medical_history": [
+            "Hypertension (long-standing, poorly controlled)",
+            "History of mild peripheral edema",
+            "Anemia of chronic disease"
+          ],
+          "current_symptoms": [
+            "Mild fatigue",
+            "Occasional generalized pruritus (itching)",
+            "Reported confusion regarding dietary restrictions for CKD",
+            "Decreased urine output (oliguria)"
+          ],
+          "primary_diagnosis": "Chronic Kidney Disease (CKD), Stage 4",
+          "medications_at_discharge": [
+            "Lisinopril 10 mg daily",
+            "Furosemide 40 mg daily",
+            "Calcium Acetate 667 mg with meals (phosphate binder)",
+            "Multivitamin (renal formula) daily"
+          ],
+          "social_determinants_of_health": "Patient resides in a low-income urban area with limited access to grocery stores offering fresh produce and lean protein options, making adherence to a complex renal diet challenging."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "10:30",
+            "type": "DAR",
+            "note": "D: Patient, a 68-year-old female, verbalized confusion regarding dietary restrictions for Chronic Kidney Disease (CKD), specifically stating, 'I understand I need to watch my sodium, but what about other foods? I'm so confused about what I can and cannot eat.' Patient observed to have mild bilateral lower extremity edema. A: Comprehensive discharge education provided regarding therapeutic renal diet for Stage 4 CKD. Instruction included detailed information on sodium, potassium, phosphorus, and protein control, as well as fluid management. Specific examples of foods to limit (e.g., bananas, processed foods, dairy products) and healthier alternatives were discussed. Patient provided with written dietary guidelines and contact information for renal dietitian. R: Patient verbalized understanding of the importance of restricting sodium, potassium, and phosphorus, and controlling protein intake. Patient demonstrated ability to identify several high-potassium and high-phosphorus foods to avoid. Patient expressed feeling less confused and more confident in managing dietary choices."
+          }
+        ],
+        "providerOrders": [
+          {
+            "type": "Active",
+            "text": "Furosemide 20 mg IV push now, then 20 mg IV q12h IV STAT then q12h Fluid overload, Hypertension"
+          },
+          {
+            "type": "Active",
+            "text": "Strict Renal Diet 2-gram Sodium, 2-gram Potassium, 1.5 L/day Fluid Restriction PO Daily Renal insufficiency, Hyperkalemia, Fluid overload"
+          },
+          {
+            "type": "Active",
+            "text": "Monitor Intake and Output (I&O) Document all oral and IV intake and all output Observation q4h Fluid balance assessment"
+          },
+          {
+            "type": "Active",
+            "text": "Daily Weights Weigh patient every morning Observation Daily AM Fluid balance assessment"
+          },
+          {
+            "type": "Active",
+            "text": "Vital Signs BP, HR, RR, Temp, O2 sat Observation q4h and PRN Continuous monitoring"
+          },
+          {
+            "type": "Active",
+            "text": "Basic Metabolic Panel (BMP) Collect blood sample Lab Daily Electrolyte and renal function monitoring"
+          },
+          {
+            "type": "Active",
+            "text": "Consult Dietary For patient education Consultation Once Nutritional counseling for renal diet"
+          }
+        ],
+        "history_physical": {
+          "pmh": [
+            "Hypertension (long-standing, poorly controlled)",
+            "History of mild peripheral edema",
+            "Anemia of chronic disease"
+          ],
+          "physical_examination": {
+            "skin": "Dry, scattered excoriations noted on arms and legs consistent with pruritus.",
+            "extremities": "1+ pitting edema noted in bilateral lower extremities. Skin turgor fair.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No crackles or wheezes.",
+            "cardiovascular": "S1S2 regular, no murmurs, S3, or S4. Peripheral pulses 2+ bilaterally.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Bowel sounds present in all four quadrants.",
+            "general_appearance": "Alert and oriented x3, appears fatigued."
+          },
+          "patient_demographics": {
+            "age": "68 years",
+            "gender": "Female"
+          },
+          "medical_history": [
+            "Hypertension (long-standing, poorly controlled)",
+            "History of mild peripheral edema",
+            "Anemia of chronic disease"
+          ],
+          "current_symptoms": [
+            "Mild fatigue",
+            "Occasional generalized pruritus (itching)",
+            "Reported confusion regarding dietary restrictions for CKD",
+            "Decreased urine output (oliguria)"
+          ],
+          "primary_diagnosis": "Chronic Kidney Disease (CKD), Stage 4",
+          "medications_at_discharge": [
+            "Lisinopril 10 mg daily",
+            "Furosemide 40 mg daily",
+            "Calcium Acetate 667 mg with meals (phosphate binder)",
+            "Multivitamin (renal formula) daily"
+          ],
+          "social_determinants_of_health": "Patient resides in a low-income urban area with limited access to grocery stores offering fresh produce and lean protein options, making adherence to a complex renal diet challenging."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W at 50 mL/h",
+            "output": 15,
+            "outputRoute": "Urine Output (Oliguria)"
+          },
+          {
+            "time": "09:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 18,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 30,
+            "intakeRoute": "Oral sips",
+            "output": 12,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "11:00",
+            "intake": 50,
+            "intakeRoute": "IV Med flush",
+            "output": 20,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 60,
+            "intakeRoute": "Lunch sips",
+            "output": 15,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 16,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 30,
+            "intakeRoute": "Oral fluids",
+            "output": 14,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 18,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, verbalized confusion regarding dietary restrictions for Chronic Kidney Disease (CKD), specifically stating, 'I understand I need to… Select the intervention that addresses the priority risk shown in the chart.",
+      "structure": {
+        "type": "ordered-response",
+        "scenario": "A 68-year-old female client with Stage 4 Chronic Kidney Disease (CKD) is receiving discharge education regarding her therapeutic diet. She states, 'I understand I need to watch my sodium, but what about other foods? I'm so confused about what I can and cannot eat.' Which comprehensive dietary instruction should the nurse prioritize to ensure the client understands the critical components of her renal diet?",
+        "prompt": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, verbalized confusion regarding dietary restrictions for Chronic Kidney Disease (CKD), specifically stating, 'I understand I need to… Select the intervention that addresses the priority risk shown in the chart.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Sodium Restriction"
+          },
+          {
+            "id": "B",
+            "text": "Potassium Restriction"
+          },
+          {
+            "id": "C",
+            "text": "Phosphorus Restriction"
+          },
+          {
+            "id": "D",
+            "text": "Protein Control"
+          },
+          {
+            "id": "E",
+            "text": "Fluid Management"
+          }
+        ],
+        "correct_order": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "stem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, verbalized confusion regarding dietary restrictions for Chronic Kidney Disease (CKD), specifically stating, 'I understand I need to… Select the intervention that addresses the priority risk shown in the chart."
+      },
+      "media": [],
+      "rationale": {
+        "trap": "Avoid providing fragmented dietary advice, as clients with CKD require a holistic understanding of multiple nutrient restrictions to prevent complications.",
+        "golden_rule": "Prioritize patient safety.",
+        "core_concept": "Clinical Judgment.",
+        "answer_analysis": "For a client with Stage 4 Chronic Kidney Disease (CKD), a comprehensive renal diet extends beyond simple sodium restriction and is critical for managing symptoms, preventing complications, and slowing disease progression. The nurse must educate the client on the importance of controlling intake of sodium, potassium, phosphorus, and protein, as well as monitoring fluid intake.\n\n1.  **Sodium Restriction:** Essential to manage hypertension and fluid retention, which can lead to edema, heart failure, and pulmonary edema. The kidneys' impaired ability to excrete sodium results in its accumulation. Clients should avoid processed foods, canned goods, cured meats, salty snacks, and excessive use of table salt.\n2.  **Potassium Restriction:** As kidney function declines, the ability to excrete potassium diminishes, leading to hyperkalemia. Severe hyperkalemia can cause life-threatening cardiac dysrhythmias. Clients must limit high-potassium foods such as bananas, oranges, potatoes, tomatoes, spinach, avocados, and certain salt substitutes.\n3.  **Phosphorus Restriction:** Impaired kidney function leads to hyperphosphatemia, which contributes to renal osteodystrophy (bone disease), vascular calcification, and itching. Clients should limit foods high in phosphorus, including dairy products (milk, cheese, yogurt), nuts, seeds, chocolate, dried beans, and colas. Phosphate binders may be prescribed to be taken with meals.\n4.  **Protein Control:** While protein is essential, excessive intake can increase the workload on the kidneys and accelerate the decline in renal function. For Stage 4 CKD, a controlled, moderate protein intake is typically recommended (e.g., 0.6-0.8 g/kg/day), focusing on high biological value proteins (e.g., lean meats, poultry, fish, eggs). The goal is to provide adequate nutrition without overburdening the kidneys.\n5.  **Fluid Management:** Fluid intake needs to be carefully monitored and often restricted based on urine output, edema, and weight changes to prevent fluid overload. The nurse should instruct the client to measure daily fluid intake and report significant changes in weight or swelling.\n\nProviding this comprehensive instruction empowers the client to make informed dietary choices, which is a cornerstone of CKD management."
+      },
+      "mnemonic": {
+        "title": "CKD Diet: S-P-P-P-F",
+        "content": "**S**odium: Avoid processed, canned, salty foods.\n**P**otassium: Limit high-K+ fruits/veg (bananas, oranges, potatoes).\n**P**hosphorus: Restrict dairy, nuts, chocolate, colas.\n**P**rotein: Controlled intake, often moderate, high biological value.\n**F**luid: Monitor intake based on output and edema."
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [
+          "missing_options",
+          "missing_order"
+        ],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "e68eff8e8170",
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "ordered_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium, Low Phosphorus, Protein-Controlled)",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity: Reduction of Risk Potential",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Renal / Fluid-Electrolyte Balance",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "answerKey": {
+        "type": "ordered-response",
+        "correctOrder": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "correctIds": [
+          "A",
+          "B",
+          "C",
+          "D",
+          "E"
+        ],
+        "maxScore": 5,
+        "scoring": "ordered"
+      },
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, ver…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "For a client with Stage 4 Chronic Kidney Disease (CKD), a comprehensive renal diet extends beyond simple sodium restriction and is critical for managing symptoms, preventing complications, and slowing disease progression. The nurse must educate the client on the importance of controlling intake of sodium, potassium, phosphorus, and protein, as well as monitoring fluid intake.\n\n1.  **Sodium Restriction:** Essential to manage hypertension and fluid retention, which can lead to edema, heart failure, and pulmonary edema. The kidneys' impaired ability to excrete sodium results in its accumulation. Clients should avoid processed foods, canned goods, cured meats, salty snacks, and excessive use of table salt.\n2.  **Potassium Restriction:** As kidney function declines, the ability to excrete potassium diminishes, leading to hyperkalemia. Severe hyperkalemia can cause life-threatening cardiac dysrhythmias. Clients must limit high-potassium foods such as bananas, oranges, potatoes, tomatoes, spinach, avocados, and certain salt substitutes.\n3.  **Phosphorus Restriction:** Impaired kidney function leads to hyperphosphatemia, which contributes to renal osteodystrophy (bone disease), vascular calcification, and itching. Clients should limit foods high in phosphorus, including dairy products (milk, cheese, yogurt), nuts, seeds, chocolate, dried beans, and colas. Phosphate binders may be prescribed to be taken with meals.\n4.  **Protein Control:** While protein is essential, excessive intake can increase the workload on the kidneys and accelerate the decline in renal function. For Stage 4 CKD, a controlled, moderate protein intake is typically recommended (e.g., 0.6-0.8 g/kg/day), focusing on high biological value proteins (e.g., lean meats, poultry, fish, eggs). The goal is to provide adequate nutrition without overburdening the kidneys.\n5.  **Fluid Management:** Fluid intake needs to be carefully monitored and often restricted based on urine output, edema, and weight changes to prevent fluid overload. The nurse should instruct the client to measure daily fluid intake and report significant changes in weight or swelling.\n\nProviding this comprehensive instruction empowers the client to make informed dietary choices, which is a cornerstone of CKD management.",
+        "clinicalPrinciple": "Prioritize patient safety.",
+        "trapToAvoid": "Avoid providing fragmented dietary advice, as clients with CKD require a holistic understanding of multiple nutrient restrictions to prevent complications.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, ver…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Renal / Fluid-Electrolyte Balance",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 68-year-old female client in the Medical-Surgical Unit is being evaluated for Chronic Kidney Disease (Stage 4), Therapeutic Diet (Low Sodium, Low Potassium,…. Current chart cue: D: Patient, a 68-year-old female, ver…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "ai_multip_620ed8a6",
+      "format": "multiple-response-sata",
+      "cjmm_step": "Take Action",
+      "difficulty": "Hard",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Reduction of Risk Potential",
+      "patient": {
+        "name": "Mr. John Smith",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Geriatric Unit",
+        "age_value": "68",
+        "allergies": "NKA",
+        "weight_kg": null,
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 20, BP: 128/78, SpO₂: 95%, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [
+          {
+            "time": "Baseline",
+            "type": "Radiology Report",
+            "note": "Diagnostic CT/Radiography Report: Demonstrates mild post-operative edema and localized tissue swelling consistent with the clinical history. No signs of active hemorrhage, gross fluid collections, or major structural disruption."
+          }
+        ],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurse notes unilateral edema and tenderness to palpation in the right calf.",
+      "structure": {
+        "stem": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurse notes unilateral edema and tenderness to palpation in the right calf.",
+        "prompt": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurse notes unilateral edema and tenderness to palpation in the right calf.",
+        "type": "multiple-response-sata",
+        "options": [
+          {
+            "id": "A",
+            "text": "Elevate the affected leg above heart level."
+          },
+          {
+            "id": "B",
+            "text": "Administer a prescribed anticoagulant medication, if ordered."
+          },
+          {
+            "id": "C",
+            "text": "Prepare the patient for a lower extremity venous Doppler ultrasound."
+          },
+          {
+            "id": "D",
+            "text": "Encourage frequent ambulation to promote circulation."
+          },
+          {
+            "id": "E",
+            "text": "Apply warm compresses to the calf to relieve discomfort."
+          }
+        ],
+        "correct": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": "A common trap is misinterpreting the need for activity or comfort measures that could worsen the condition or dislodge a clot.",
+        "golden_rule": "Prioritize interventions that prevent life-threatening complications while confirming diagnosis and alleviating symptoms in suspected DVT.",
+        "core_concept": "Deep vein thrombosis (DVT) management focuses on preventing clot propagation and pulmonary embolism while alleviating symptoms.",
+        "answer_analysis": "Elevating the leg (A) reduces edema and promotes venous return. Administering anticoagulants (B) is crucial to prevent clot enlargement and embolization, pending a physician's order. Preparing for a Doppler ultrasound (C) is essential for confirming the diagnosis. Ambulation (D) and warm compresses (E) are contraindicated due to the risk of dislodging the clot or increasing inflammation."
+      },
+      "mnemonic": {
+        "title": null,
+        "content": null
+      },
+      "answerKey": {
+        "type": "multiple-response-sata",
+        "correctIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctSet": [
+          "A",
+          "B",
+          "C"
+        ],
+        "maxScore": 3,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Major Depressive Disorder",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Deep Vein Thrombosis / PE",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Reduction of Risk Potential",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Deep Vein Thrombosis / PE",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurs…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Geriatric Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Elevating the leg (A) reduces edema and promotes venous return. Administering anticoagulants (B) is crucial to prevent clot enlargement and embolization, pending a physician's order. Preparing for a Doppler ultrasound (C) is essential for confirming the diagnosis. Ambulation (D) and warm compresses (E) are contraindicated due to the risk of dislodging the clot or increasing inflammation.",
+        "clinicalPrinciple": "Prioritize interventions that prevent life-threatening complications while confirming diagnosis and alleviating symptoms in suspected DVT.",
+        "trapToAvoid": "A common trap is misinterpreting the need for activity or comfort measures that could worsen the condition or dislodge a clot.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurs…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Deep Vein Thrombosis / PE",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Mr. John Smith, a 68-year-old male, presents to the emergency department reporting sudden onset of right calf pain, swelling, and warmth. He has a medical history of atrial fibrillation and recent knee surgery. The nurs…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

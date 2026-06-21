@@ -1,0 +1,687 @@
+/* nexusrn-vitals-strip-micro-polish-07c-lite.css (v4) - Premium Upgrades */
+
+.ws-vitals-grid .ws-vital {
+  background: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  /* 2. Micro-shadows & glass edge */
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.ws-vitals-grid .ws-vital:hover {
+  /* Elevated hover state */
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: #cbd5e1 !important;
+  transform: translateY(-1px);
+}
+
+.ws-vitals-grid .ws-vital b {
+  display: flex !important;
+  align-items: center;
+  gap: 4px;
+  color: #64748b !important;
+  letter-spacing: 0.03em !important;
+  font-size: 7.5px !important;
+  text-transform: uppercase !important;
+}
+
+.ws-vitals-grid .ws-vital b::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.ws-vitals-grid .ws-vital:hover b::before {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* 1. Typography & Contrast Polish */
+.ws-vitals-grid .ws-vital span {
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: -0.02em !important;
+  font-weight: 900 !important;
+  /* Dual-tone gradient trick over text */
+  background: linear-gradient(90deg, #0f172a 40%, #64748b 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+}
+
+/* 3. Alive Data Visualizations */
+.ws-vitals-grid .ws-vital svg {
+  opacity: 0.15 !important;
+  filter: drop-shadow(0px 2px 2px rgba(15, 23, 42, 0.15)) !important;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transform-origin: bottom right;
+}
+
+.ws-vitals-grid .ws-vital:hover svg {
+  opacity: 0.4 !important;
+  filter: drop-shadow(0px 3px 4px rgba(14, 165, 233, 0.25)) !important;
+  transform: scaleY(1.05) translateY(-1px);
+}
+
+/* 4. Semantic Color Hints (Bottom Gradient Wash) */
+/* 1. T */
+.ws-vitals-grid .ws-vital:nth-child(1) { background: linear-gradient(180deg, #ffffff 20%, #ffe4e6 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(1) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f43f5e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z'/%3E%3C/svg%3E"); }
+
+/* 2. HR */
+.ws-vitals-grid .ws-vital:nth-child(2) { background: linear-gradient(180deg, #ffffff 20%, #ffe4e6 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(2) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11d48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/%3E%3C/svg%3E"); }
+
+/* 3. RR */
+.ws-vitals-grid .ws-vital:nth-child(3) { background: linear-gradient(180deg, #ffffff 20%, #dcfce7 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(3) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2'/%3E%3C/svg%3E"); }
+
+/* 4. BP */
+.ws-vitals-grid .ws-vital:nth-child(4) { background: linear-gradient(180deg, #ffffff 20%, #ffe4e6 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(4) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11d48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E"); }
+
+/* 5. SpO2 */
+.ws-vitals-grid .ws-vital:nth-child(5) { background: linear-gradient(180deg, #ffffff 20%, #e0f2fe 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(5) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/%3E%3C/svg%3E"); }
+
+/* 6. MAP */
+.ws-vitals-grid .ws-vital:nth-child(6) { background: linear-gradient(180deg, #ffffff 20%, #e0f2fe 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(6) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3C/svg%3E"); }
+
+/* 7. Pain */
+.ws-vitals-grid .ws-vital:nth-child(7) { background: linear-gradient(180deg, #ffffff 20%, #fef3c7 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(7) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8.5 14.5A2.5 2.5 0 0 0 11 12c-3.9 0-3-4.5-3-4.5s4 1 5 4.5c.5-1.5 1.5-2.5 2.5-3.5C14 13 16 14.5 16 17a4 4 0 0 1-8 0z'/%3E%3C/svg%3E"); }
+
+/* 8. Weight */
+.ws-vitals-grid .ws-vital:nth-child(8) { background: linear-gradient(180deg, #ffffff 20%, #f1f5f9 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(8) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M9 12h6'/%3E%3Cpath d='M12 9v6'/%3E%3C/svg%3E"); }
+
+/* 9. Height */
+.ws-vitals-grid .ws-vital:nth-child(9) { background: linear-gradient(180deg, #ffffff 20%, #f1f5f9 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(9) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='6' width='18' height='12' rx='2' ry='2'/%3E%3Cline x1='7' y1='6' x2='7' y2='10'/%3E%3Cline x1='11' y1='6' x2='11' y2='8'/%3E%3C/svg%3E"); }
+
+/* 10. BMI */
+.ws-vitals-grid .ws-vital:nth-child(10) { background: linear-gradient(180deg, #ffffff 20%, #f1f5f9 100%) !important; }
+.ws-vitals-grid .ws-vital:nth-child(10) b::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='M5.5 21v-8a6.5 6.5 0 0 1 13 0v8'/%3E%3C/svg%3E"); }
+
+/* 5. Tooltip References (Hover Dropdown) for Dashboard Vitals */
+.ws-vital-dashboard-v243f1 .ws-vital-tile {
+  position: relative !important;
+  overflow: visible !important; /* Must be visible for tooltip to overflow */
+}
+
+/* Hide original inline references and turn them into tooltips */
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs {
+  position: absolute !important;
+  top: calc(100% + 5px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) translateY(-5px) !important;
+  width: 220px !important;
+  z-index: 1000 !important;
+  background: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.3) !important;
+  border: 1px solid #334155 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  max-height: none !important;
+  font-size: 11px !important;
+  line-height: 1.4 !important;
+  pointer-events: none !important;
+  white-space: pre-wrap !important;
+  margin-top: 0 !important;
+}
+
+/* Add a tooltip arrow */
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -5px !important;
+  left: 50% !important;
+  transform: translateX(-50%) rotate(45deg) !important;
+  width: 10px !important;
+  height: 10px !important;
+  background: #1e293b !important;
+  border-top: 1px solid #334155 !important;
+  border-left: 1px solid #334155 !important;
+}
+
+/* Brighten bold text inside the dark tooltip */
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs b {
+  color: #38bdf8 !important;
+  font-size: 11px !important;
+  margin-bottom: 4px !important;
+  display: block !important;
+}
+
+/* Show tooltip on hover */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:hover pre.ws-vital-refs {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(0) !important;
+}
+
+/* Add an icon to indicate hoverability to the tile since the text is hidden */
+.ws-vital-dashboard-v243f1 .ws-vital-tile::after {
+  content: 'ⓘ' !important;
+  position: absolute !important;
+  bottom: 8px !important;
+  right: 10px !important;
+  font-size: 12px !important;
+  color: #94a3b8 !important;
+  opacity: 0.5 !important;
+  transition: opacity 0.2s ease !important;
+  pointer-events: none !important;
+}
+
+.ws-vital-dashboard-v243f1 .ws-vital-tile:hover::after {
+  opacity: 1 !important;
+  color: #38bdf8 !important;
+}
+
+
+/* 6. Day Mode Reference Aesthetics (v243f1 Dashboard Tiles) */
+
+/* Typography and Layout Reset */
+.ws-vital-dashboard-v243f1 .ws-vital-tile {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+  padding: 16px !important;
+}
+
+/* Card Borders by Status */
+.ws-vital-dashboard-v243f1 .ws-vital-tile.warn { border-color: #fde047 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile.critical,
+.ws-vital-dashboard-v243f1 .ws-vital-tile.err { border-color: #fca5a5 !important; }
+
+/* Status Dot in Top Right */
+.ws-vital-dashboard-v243f1 .ws-vital-tile::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 16px !important;
+  right: 16px !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  background: #10b981 !important; /* normal green */
+  box-shadow: 0 0 8px rgba(16, 185, 129, 0.6) !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.warn::before {
+  background: #eab308 !important; /* warn orange */
+  box-shadow: 0 0 8px rgba(234, 179, 8, 0.6) !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.critical::before,
+.ws-vital-dashboard-v243f1 .ws-vital-tile.err::before {
+  background: #ef4444 !important; /* critical red */
+  box-shadow: 0 0 8px rgba(239, 68, 68, 0.6) !important;
+}
+
+/* Value Typography */
+.ws-vital-dashboard-v243f1 .ws-vital-tile b {
+  font-size: 26px !important;
+  font-weight: 900 !important;
+  letter-spacing: -0.03em !important;
+  color: #0f172a !important; /* normal color */
+  font-variant-numeric: tabular-nums !important;
+  margin-bottom: auto !important;
+  line-height: 1.1 !important;
+  margin-top: 6px !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.warn b { color: #b45309 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile.critical b,
+.ws-vital-dashboard-v243f1 .ws-vital-tile.err b { color: #b91c1c !important; }
+
+/* Status Badges */
+.ws-vital-dashboard-v243f1 .ws-vital-tile small {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 6px !important;
+  font-size: 10px !important;
+  color: #64748b !important;
+  margin-top: 12px !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile small::before {
+  content: 'NORMAL' !important;
+  display: inline-block !important;
+  padding: 3px 8px !important;
+  border: 1px solid #10b981 !important;
+  color: #047857 !important;
+  background: #ecfdf5 !important;
+  border-radius: 4px !important;
+  font-size: 9px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.warn small::before {
+  content: 'WARNING' !important;
+  border-color: #eab308 !important; color: #a16207 !important; background: #fefce8 !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.critical small::before,
+.ws-vital-dashboard-v243f1 .ws-vital-tile.err small::before {
+  content: 'CRITICAL' !important;
+  border-color: #ef4444 !important; color: #b91c1c !important; background: #fef2f2 !important;
+}
+
+/* Tooltip Alignment Fix (Prevents left clipping) */
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs {
+  left: 0 !important;
+  transform: translateX(0) translateY(-5px) !important;
+  width: 260px !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs::before {
+  left: 20px !important;
+  transform: rotate(45deg) !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile:hover pre.ws-vital-refs {
+  transform: translateX(0) translateY(0) !important;
+}
+
+/* Icons for the Titles */
+.ws-vital-dashboard-v243f1 .ws-vital-tile span {
+  display: flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 11px !important;
+  font-weight: 800 !important;
+  color: #475569 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile span::before {
+  content: '' !important;
+  display: inline-block !important;
+  width: 14px !important;
+  height: 14px !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+}
+/* 1. T */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(1) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f43f5e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z'/%3E%3C/svg%3E"); }
+/* 2. HR */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(2) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11d48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z'/%3E%3C/svg%3E"); }
+/* 3. RR */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(3) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310b981' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2'/%3E%3C/svg%3E"); }
+/* 4. BP */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(4) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e11d48' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='22 12 18 12 15 21 9 3 6 12 2 12'/%3E%3C/svg%3E"); }
+/* 5. SpO2 */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(5) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z'/%3E%3C/svg%3E"); }
+/* 6. MAP */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(6) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230ea5e9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='4'/%3E%3C/svg%3E"); }
+/* 7. Pain */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(7) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23f59e0b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M8.5 14.5A2.5 2.5 0 0 0 11 12c-3.9 0-3-4.5-3-4.5s4 1 5 4.5c.5-1.5 1.5-2.5 2.5-3.5C14 13 16 14.5 16 17a4 4 0 0 1-8 0z'/%3E%3C/svg%3E"); }
+/* 8. Weight */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(8) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Cpath d='M9 12h6'/%3E%3Cpath d='M12 9v6'/%3E%3C/svg%3E"); }
+/* 9. Height */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(9) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='6' width='18' height='12' rx='2' ry='2'/%3E%3Cline x1='7' y1='6' x2='7' y2='10'/%3E%3Cline x1='11' y1='6' x2='11' y2='8'/%3E%3C/svg%3E"); }
+/* 10. BMI */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(10) span::before { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='7' r='4'/%3E%3Cpath d='M5.5 21v-8a6.5 6.5 0 0 1 13 0v8'/%3E%3C/svg%3E"); }
+
+/* Subtle gradient bottom fill to simulate day-mode sparkline wash */
+.ws-vital-dashboard-v243f1 .ws-vital-tile {
+  background-image: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(241,245,249,0.5) 100%) !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.warn {
+  background-image: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(254,252,232,1) 100%) !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile.critical,
+.ws-vital-dashboard-v243f1 .ws-vital-tile.err {
+  background-image: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(254,242,242,1) 100%) !important;
+}
+
+
+/* 7. Patient Demographics Banner 3D Floating Effect */
+.ws-storyboard {
+  overflow: visible !important;
+}
+
+/* Main Banner Card 3D Setup */
+.ws-story-card.ws-demographics-card {
+  position: relative !important;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  border-radius: 12px !important;
+  box-shadow: 
+    0 4px 10px -2px rgba(0, 0, 0, 0.2), 
+    inset 0 1px 1px rgba(255, 255, 255, 0.15),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.2) !important;
+  transform-style: preserve-3d !important;
+  z-index: 10 !important;
+  /* Using a rich, deep marine gradient for depth */
+  background: linear-gradient(145deg, #1b3859, #122842) !important;
+  border: 1px solid #2a4b70 !important;
+}
+
+/* Float Animation on Hover */
+.ws-story-card.ws-demographics-card:hover {
+  transform: translateY(-3px) scale(1.005) !important;
+  box-shadow: 
+    0 22px 30px -8px rgba(0, 0, 0, 0.4), 
+    0 12px 14px -6px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.3) !important;
+  z-index: 20 !important;
+  border-color: #386494 !important;
+}
+
+/* Avatar 3D Pop & Glow */
+.ws-story-card.ws-demographics-card .ws-patient-avatar {
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+  filter: drop-shadow(0 4px 6px rgba(0,0,0,0.4)) !important;
+}
+
+.ws-story-card.ws-demographics-card:hover .ws-patient-avatar {
+  transform: scale(1.1) rotate(-4deg) translateZ(20px) !important;
+  filter: drop-shadow(0 8px 16px rgba(56, 189, 248, 0.5)) !important;
+}
+
+/* Inner Badge Depth Enhancements */
+.ws-story-card.ws-demographics-card .ws-infographic-item,
+.ws-story-card.ws-demographics-card .ws-patient-meta {
+  transition: all 0.3s ease !important;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.3), 0 1px 0 rgba(255,255,255,0.05) !important;
+}
+
+.ws-story-card.ws-demographics-card:hover .ws-infographic-item,
+.ws-story-card.ws-demographics-card:hover .ws-patient-meta {
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.2), 0 2px 6px rgba(0,0,0,0.2) !important;
+  background: rgba(30, 58, 95, 0.6) !important;
+  border-color: rgba(255, 255, 255, 0.15) !important;
+  transform: translateY(-1px) !important;
+}
+
+
+/* ==========================================================================
+   v243K Aesthetics Polish (Matrix, Icons, Bowtie)
+   ========================================================================== */
+
+/* 1. Matrix Finding/Action Enhancements */
+.ws-matrix-left {
+  font-size: 15.5px !important;
+  color: #0f172a !important; /* Slightly darker for better readability */
+  transition: color 0.2s ease !important;
+}
+
+.ws-matrix-row {
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  position: relative !important;
+}
+
+.ws-matrix-row:hover {
+  background-color: #ffffff !important;
+  transform: scale(1.008) translateY(-1px) !important;
+  box-shadow: 0 6px 12px -2px rgba(15, 23, 42, 0.08) !important;
+  z-index: 5 !important;
+  border-radius: 8px !important;
+}
+
+.ws-matrix-row:hover .ws-matrix-left {
+  color: #0284c7 !important; /* Gentle highlight on hover */
+}
+
+/* 2. Side Rail Icons Size Reduction (30% decrease from 20px -> ~14px) */
+.ws-rail-icons button {
+  font-size: 14px !important;
+}
+
+/* 3. Transparent Bowtie Background Watermark */
+.ws-bowtie {
+  position: relative !important;
+  z-index: 1 !important;
+}
+
+.ws-bowtie::before {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 300px !important;
+  height: 300px !important;
+  transform: translate(-50%, -50%) !important;
+  /* Very faint, elegant SVG of a bowtie */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394a3b8' stroke-width='0.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 6L14 12L22 18V6Z'/%3E%3Cpath d='M2 6L10 12L2 18V6Z'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  opacity: 0.1 !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+}
+
+
+/* 4. Formatting Fixes for Rationale and Bowtie Watermark Visibility */
+
+/* Make sure watermark sits ON TOP of bowtie columns but doesn't block clicks */
+.ws-bowtie::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  width: 500px !important;
+  height: 500px !important;
+  transform: translate(-50%, -50%) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23334155' stroke-width='0.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 6L14 12L22 18V6Z'/%3E%3Cpath d='M2 6L10 12L2 18V6Z'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3C/svg%3E") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  background-size: contain !important;
+  opacity: 0.025 !important;
+  z-index: 10 !important;
+  pointer-events: none !important;
+}
+
+/* Rationale Content Styling */
+.ws-rationale-list {
+  padding-left: 20px !important;
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+
+.ws-rationale-list li {
+  margin-bottom: 6px !important;
+  line-height: 1.5 !important;
+}
+
+.ws-bullet-list {
+  list-style-type: disc !important;
+}
+
+.ws-rat-body strong {
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+.ws-rat-body em {
+  font-style: italic !important;
+  color: #334155 !important;
+}
+
+
+/* ==========================================================================
+   v243K Aesthetics Polish (Score Breakdown Modal)
+   ========================================================================== */
+
+.ws-score-breakdown-btn {
+  background: linear-gradient(135deg, #0ea5e9, #0284c7) !important;
+  color: white !important;
+  border: none !important;
+  padding: 6px 16px !important;
+  border-radius: 99px !important;
+  font-weight: 700 !important;
+  font-size: 13.5px !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 10px rgba(2, 132, 199, 0.3), inset 0 1px 1px rgba(255,255,255,0.2) !important;
+  margin-left: 12px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.5px !important;
+}
+
+.ws-score-breakdown-btn:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 6px 14px rgba(2, 132, 199, 0.4), inset 0 1px 1px rgba(255,255,255,0.3) !important;
+}
+
+/* Modal Overlay & Glassmorphism */
+.ws-modal-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  background: rgba(15, 23, 42, 0.6) !important;
+  backdrop-filter: blur(8px) !important;
+  -webkit-backdrop-filter: blur(8px) !important;
+  z-index: 99999 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  animation: fadeIn 0.3s ease-out forwards !important;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.ws-glass-modal {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px !important;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  width: 90% !important;
+  max-width: 700px !important;
+  max-height: 85vh !important;
+  overflow-y: auto !important;
+  animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+  border: 1px solid rgba(226, 232, 240, 1) !important;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px) scale(0.98); opacity: 0; }
+  to { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.ws-modal-header {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 16px 24px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  background: #f8fafc !important;
+  border-radius: 16px 16px 0 0 !important;
+}
+
+.ws-modal-header h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  font-weight: 800 !important;
+  color: #0f172a !important;
+}
+
+.ws-modal-close {
+  background: transparent !important;
+  border: none !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  color: #64748b !important;
+  transition: color 0.2s !important;
+}
+
+.ws-modal-close:hover {
+  color: #ef4444 !important;
+}
+
+.ws-modal-body {
+  padding: 24px !important;
+}
+
+.ws-score-hero {
+  text-align: center !important;
+  font-size: 22px !important;
+  margin-bottom: 24px !important;
+  padding: 16px !important;
+  background: #f1f5f9 !important;
+  border-radius: 12px !important;
+  border: 1px solid #e2e8f0 !important;
+}
+
+.ws-score-hero .pass { color: #10b981 !important; font-weight: 900 !important; }
+.ws-score-hero .fail { color: #ef4444 !important; font-weight: 900 !important; }
+
+.ws-breakdown-table {
+  width: 100% !important;
+  border-collapse: collapse !important;
+  background: white !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important;
+}
+
+.ws-breakdown-table th {
+  background: #0f172a !important;
+  color: white !important;
+  padding: 12px !important;
+  text-align: left !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.ws-breakdown-table td {
+  padding: 14px 12px !important;
+  border-bottom: 1px solid #e2e8f0 !important;
+  color: #334155 !important;
+  font-size: 14px !important;
+}
+
+.ws-breakdown-table tr:last-child td {
+  border-bottom: none !important;
+}
+
+.ws-breakdown-table .ok-row {
+  background-color: rgba(16, 185, 129, 0.05) !important;
+}
+
+.ws-breakdown-table .err-row {
+  background-color: rgba(239, 68, 68, 0.05) !important;
+}
+
+.ws-breakdown-table .badge.ok-row {
+  background: #10b981 !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+}
+
+.ws-breakdown-table .badge.err-row {
+  background: #ef4444 !important;
+  color: white !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  text-decoration: line-through !important;
+}
+
+.ws-penalty-note {
+  color: #ef4444 !important;
+  font-weight: 700 !important;
+  background: #fef2f2 !important;
+  padding: 12px !important;
+  border-radius: 8px !important;
+  border: 1px solid #fecaca !important;
+  margin-bottom: 16px !important;
+}

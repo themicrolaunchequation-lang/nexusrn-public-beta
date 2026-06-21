@@ -1,0 +1,19 @@
+{
+  "pass": true,
+  "indexHasChunkProperty": true,
+  "isReadyPatched": true,
+  "staleV242QTextRemoved": true,
+  "undefinedRequestFixed": true,
+  "exactIdMatchingOnly": true,
+  "titleOrderChunkIndexFallbackDisabled": true,
+  "isolatedRendererLabelReplaced": true,
+  "labWarningRemoved": true,
+  "honestEngineLabel": "Production-Equivalent Static Workstation Pro",
+  "standaloneItemsInIndex": 5086,
+  "casesInIndex": 1056,
+  "unfoldingChildItemsInIndex": 6336,
+  "rationaleInjected": 876,
+  "rationalePreservedExisting": 4210,
+  "noVerifiedMatchFlagged": 0,
+  "finalPlaceholderCount": 0
+}

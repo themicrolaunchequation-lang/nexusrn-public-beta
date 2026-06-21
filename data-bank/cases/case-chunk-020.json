@@ -1,0 +1,8 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "case-chunk",
+  "chunk": 20,
+  "count": 0,
+  "sourceStartIndex": 500,
+  "cases": []
+}

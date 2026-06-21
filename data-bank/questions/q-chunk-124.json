@@ -1,0 +1,703 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 124,
+  "count": 2,
+  "sourceStartIndex": 6200,
+  "questions": [
+    {
+      "id": "ai_multip_cb2f89c7",
+      "format": "multiple-response-sata",
+      "cjmm_step": "Recognize Cues",
+      "difficulty": "Hard",
+      "clinical_focus": "Heart Failure / Fluid Volume Excess",
+      "client_needs": "Physiological Integrity: Reduction of Risk Potential",
+      "patient": {
+        "name": "Mrs. Eleanor Vance",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Renal Unit",
+        "age_value": "68",
+        "allergies": "NKA",
+        "weight_kg": null,
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 92, RR: 20, BP: 128/78, SpO₂: 95%, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 100,
+            "intakeRoute": "IV Saline Lock",
+            "output": 25,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "09:00",
+            "intake": 80,
+            "intakeRoute": "Oral fluids",
+            "output": 20,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 50,
+            "intakeRoute": "IV Furosemide 40mg",
+            "output": 350,
+            "outputRoute": "Urine (Post-diuretic)"
+          },
+          {
+            "time": "11:00",
+            "intake": 50,
+            "intakeRoute": "Oral sips",
+            "output": 480,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 120,
+            "intakeRoute": "Lunch tray fluids",
+            "output": 320,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 50,
+            "intakeRoute": "IV Med flush",
+            "output": 220,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 150,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 110,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she has not been adhering strictly to her low-sodium diet.",
+      "structure": {
+        "stem": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she has not been adhering strictly to her low-sodium diet.",
+        "prompt": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she has not been adhering strictly to her low-sodium diet.",
+        "type": "multiple-response-sata",
+        "options": [
+          {
+            "id": "A",
+            "text": "Bilateral crackles in lung bases"
+          },
+          {
+            "id": "B",
+            "text": "Weight gain of 2 kg (4.4 lbs) over 48 hours"
+          },
+          {
+            "id": "C",
+            "text": "Jugular venous distension (JVD) to the jawline"
+          },
+          {
+            "id": "D",
+            "text": "Capillary refill less than 3 seconds"
+          },
+          {
+            "id": "E",
+            "text": "Peripheral pulses +2 bilaterally"
+          },
+          {
+            "id": "F",
+            "text": "Urine output of 60 mL/hr"
+          }
+        ],
+        "correct": [
+          "A",
+          "B",
+          "C"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": "The trap is selecting normal or healthy findings, or findings that do not directly indicate decompensation in heart failure.",
+        "golden_rule": "Always prioritize assessment for fluid overload and signs of decreased perfusion in patients with heart failure.",
+        "core_concept": "Worsening heart failure is primarily characterized by signs and symptoms of fluid overload and decreased cardiac output.",
+        "answer_analysis": "Bilateral crackles, significant weight gain, and jugular venous distension are key indicators of fluid overload and worsening heart failure."
+      },
+      "mnemonic": {
+        "title": null,
+        "content": null
+      },
+      "answerKey": {
+        "type": "multiple-response-sata",
+        "correctIds": [
+          "A",
+          "B",
+          "C"
+        ],
+        "correctSet": [
+          "A",
+          "B",
+          "C"
+        ],
+        "maxScore": 3,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Trauma / Multiple Injuries",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "cjmmStep": "Recognize Cues",
+          "clientNeeds": "Physiological Integrity: Reduction of Risk Potential",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she …",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Renal Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Bilateral crackles, significant weight gain, and jugular venous distension are key indicators of fluid overload and worsening heart failure.",
+        "clinicalPrinciple": "Always prioritize assessment for fluid overload and signs of decreased perfusion in patients with heart failure.",
+        "trapToAvoid": "The trap is selecting normal or healthy findings, or findings that do not directly indicate decompensation in heart failure.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she …",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Mrs. Eleanor Vance, a 68 year old female with a history of chronic heart failure, presents to the emergency department reporting increased shortness of breath and fatigue over the past three days. Her family states she …",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "ai_calcul_bfd49873",
+      "format": "calculation",
+      "cjmm_step": "Take Action",
+      "difficulty": "Hard",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Mr. David Miller",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Step-Down Unit",
+        "age_value": 49,
+        "allergies": "NKA",
+        "weight_kg": null,
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, SpO₂: 98%, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "time": "08:00",
+            "name": "Nursing",
+            "value": "Vital signs q15min x4, q30min x2, q1h x4, then q4h",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:00",
+            "name": "Medication",
+            "value": "Morphine Sulfate 2 mg IV push q2h PRN severe pain (Pain scale 7-10)",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Medication",
+            "value": "Acetaminophen 650 mg PO q6h PRN mild to moderate pain (Pain scale 1-6)",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Intravenous",
+            "value": "0.9% Normal Saline with 20 mEq KCl at 100 mL/h IV",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:10",
+            "name": "Nursing",
+            "value": "Maintain Foley catheter to gravity drainage, notify provider if output <30 mL/h",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:10",
+            "name": "Activity",
+            "value": "Out of bed to chair this evening, ambulate in hallway tomorrow morning",
+            "source": "Standard Post-Op orders"
+          },
+          {
+            "time": "08:15",
+            "name": "Diet",
+            "value": "Clear liquid diet, advance as tolerated as bowel sounds return",
+            "source": "Standard Post-Op orders"
+          }
+        ],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Pain not assessed at this time to prevent assumption of normality."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse prepares to administer the infusion.",
+      "structure": {
+        "stem": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse prepares to administer the infusion.",
+        "prompt": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse prepares to administer the infusion.",
+        "type": "calculation",
+        "options": [
+          {
+            "id": "A",
+            "text": "600 mL"
+          },
+          {
+            "id": "B",
+            "text": "37.5 mL"
+          },
+          {
+            "id": "C",
+            "text": "154 mL"
+          },
+          {
+            "id": "D",
+            "text": "750 mL"
+          }
+        ],
+        "correct_answer": "600 mL",
+        "calculation_steps": [
+          "Identify the ordered infusion rate (150 mL/hour) and the duration of the infusion (4 hours).",
+          "Multiply the infusion rate by the duration to find the total volume.",
+          "150 mL/hour * 4 hours = 600 mL."
+        ],
+        "given_values": {
+          "Infusion Rate": "150 mL/hour",
+          "Duration": "4 hours"
+        }
+      },
+      "media": [],
+      "rationale": {
+        "trap": "A common trap is incorrectly dividing the rate by the duration or adding them, rather than multiplying, leading to an incorrect total volume calculation.",
+        "golden_rule": "Always double-check dosage calculations, especially for IV fluids, to prevent medication errors and ensure patient safety.",
+        "core_concept": "Accurate medication and fluid administration requires precise dosage calculations to ensure patient safety and therapeutic effect.",
+        "answer_analysis": "To determine the total volume, the nurse multiplies the infusion rate (mL/hour) by the total duration of the infusion (hours), yielding 150 mL/hour * 4 hours = 600 mL."
+      },
+      "mnemonic": {
+        "title": null,
+        "content": null
+      },
+      "answerKey": {
+        "type": "calculation",
+        "correctIds": [
+          "600 mL"
+        ],
+        "correctSet": [
+          "600 mL"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242nOriginalClinicalFocus": "Spinal Cord Injury",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse …",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 49,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Step-Down Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "To determine the total volume, the nurse multiplies the infusion rate (mL/hour) by the total duration of the infusion (hours), yielding 150 mL/hour * 4 hours = 600 mL.",
+        "clinicalPrinciple": "Always double-check dosage calculations, especially for IV fluids, to prevent medication errors and ensure patient safety.",
+        "trapToAvoid": "A common trap is incorrectly dividing the rate by the duration or adding them, rather than multiplying, leading to an incorrect total volume calculation.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse …",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 49 year old client, Mr. David Miller, is admitted to the medical-surgical unit with dehydration. The healthcare provider orders an intravenous fluid bolus of 0.9% sodium chloride at 150 mL/hour for 4 hours. The nurse …",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

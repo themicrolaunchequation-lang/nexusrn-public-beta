@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "learnerVisibleModes": [
+    "Standalone",
+    "Unfolding 6Q Clinical Cases"
+  ],
+  "legacyModeVisibleToLearner": false,
+  "unfoldingLearnerMode": "Unfolding 6Q Clinical Cases",
+  "casesIndexCount": 1056,
+  "childItemCount": 6336,
+  "allCasesExactly6Children": true
+}

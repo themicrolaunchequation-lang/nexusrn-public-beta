@@ -1,0 +1,9 @@
+{
+  "sourceMatrixMultipleResponseCount": 260,
+  "activeMatrixMultipleResponseCount": 240,
+  "recoveredMatrixMultipleResponseCount": 240,
+  "ifZeroReason": null,
+  "renderedDropdownLabel": "Matrix Multiple Response",
+  "scoringRendererVerified": true,
+  "reviewRendererVerified": true
+}

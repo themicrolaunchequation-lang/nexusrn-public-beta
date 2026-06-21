@@ -1,0 +1,9 @@
+{
+  "pass": true,
+  "smokeTestPort": 9008,
+  "smokeTestUrl": "http://127.0.0.1:9008/",
+  "landingPageLoadedSuccessfully": true,
+  "workstationProLoadedSuccessfully": true,
+  "verifiedBy": "Antigravity",
+  "verificationTimestamp": "2026-06-19T17:04:43.906Z"
+}

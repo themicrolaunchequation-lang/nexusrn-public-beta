@@ -1,0 +1,59 @@
+{
+  "decision": "CLEAN_APP_V12_REMOVE14_STRIP_NR_WORLDCLASS_READY_FIXED12_READY_FOR_HOSSAM_BROWSER_RETEST",
+  "created_at_utc": "2026-06-21T14:26:13.286354Z",
+  "supabase": {
+    "url_present": true,
+    "project_ref": "yzlrekjjvenxzpenyily",
+    "publishable_key_present": true,
+    "service_role_key_present": false,
+    "auth_method": "email/password",
+    "callback_route": "auth-callback.html",
+    "test_entitlement_hours": 48
+  },
+  "content_gates": {
+    "active_standalone": 5086,
+    "unique_standalone_ids": 5086,
+    "duplicate_active_ids": 0,
+    "highlight_items": 140,
+    "old_NR_HIGHLIGHT_active": 0,
+    "unfolding_cases": 1056,
+    "unfolding_children": 6336,
+    "data_bank_changed_vs_fixed11": 0
+  },
+  "technical_gates": {
+    "js_syntax_failures": 0,
+    "inline_script_syntax_failures": 0,
+    "public_dev_wording_hits": 0,
+    "required_auth_files_present": {
+      "assets/js/nexusrn-supabase-auth.js": true,
+      "auth-sign-up.html": true,
+      "auth-sign-in.html": true,
+      "auth-callback.html": true,
+      "account.html": true,
+      "beta-access.html": true,
+      "beta-test-access.html": true,
+      "beta-sign-in.html": true
+    }
+  },
+  "payment_auth_routes": {
+    "landing_join_beta": "beta-access.html",
+    "create_account": "auth-sign-up.html",
+    "sign_in": "auth-sign-in.html",
+    "beta_checkout_requires_session_client_side": true,
+    "one_dollar_test_requires_session_client_side": true,
+    "one_dollar_test_local_entitlement_key": "nexusrn_beta_test_access",
+    "one_dollar_test_local_entitlement_hours": 48,
+    "production_webhook_entitlement_present": false
+  },
+  "known_limitations": [
+    "Supabase Dashboard redirect URLs must be configured by the project owner.",
+    "Stripe webhook fulfillment and server-side entitlement tables are not implemented in this static ZIP.",
+    "Client-side route gating is useful for workflow testing but is not sufficient for production authorization."
+  ],
+  "failures": {
+    "js": [],
+    "inline": [],
+    "blocked_terms": [],
+    "data_bank_changed_examples": []
+  }
+}

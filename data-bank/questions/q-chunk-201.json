@@ -1,0 +1,397 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 201,
+  "count": 1,
+  "sourceStartIndex": 10050,
+  "questions": [
+    {
+      "id": "derived_mcq_to_cloze_nexus-gen-evaluate-outcomes-1776451945036-389-0fh3y",
+      "format": "cloze-dropdown",
+      "cjmm_step": "Evaluate Outcomes",
+      "difficulty": "Moderate",
+      "clinical_focus": "Heart Failure",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Edward Mbeki",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Surgical Unit",
+        "age_value": "60",
+        "allergies": "NKDA",
+        "weight_kg": "72",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids."
+          }
+        ],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 20, BP: 118/76, SpO₂: 95%, Pain: 0/10, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {
+          "chief_complaint": "Post-op recovery after hysterectomy",
+          "hpi": "Client underwent total abdominal hysterectomy yesterday. Received 2000mL IV fluids intra-op. Pain controlled with PCA."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "Nurse note",
+            "note": "08:00 - IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Post-op recovery after hysterectomy",
+          "hpi": "Client underwent total abdominal hysterectomy yesterday. Received 2000mL IV fluids intra-op. Pain controlled with PCA."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 100,
+            "intakeRoute": "IV Saline Lock",
+            "output": 25,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "09:00",
+            "intake": 80,
+            "intakeRoute": "Oral fluids",
+            "output": 20,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 50,
+            "intakeRoute": "IV Furosemide 40mg",
+            "output": 350,
+            "outputRoute": "Urine (Post-diuretic)"
+          },
+          {
+            "time": "11:00",
+            "intake": 50,
+            "intakeRoute": "Oral sips",
+            "output": 480,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 120,
+            "intakeRoute": "Lunch tray fluids",
+            "output": 320,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 50,
+            "intakeRoute": "IV Med flush",
+            "output": 220,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 150,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 50,
+            "intakeRoute": "Oral fluids",
+            "output": 110,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would show the client is responding as expected. Complete the sentence using the safest chart-supported choices.",
+      "structure": {
+        "type": "cloze-dropdown",
+        "scenario": "A 60 year old female underwent a total abdominal hysterectomy. On post-operative day 1, the nurse is evaluating the effectiveness of intravenous fluid therapy.",
+        "prompt": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would show the client is responding as expected. Complete the sentence using the safest chart-supported choices.",
+        "text_with_blanks": "Based on the client data, the nurse should select [BLANK_1] as the best response.",
+        "blanks": {
+          "BLANK_1": {
+            "correct": "Skin turgor brisk, mucous membranes moist",
+            "options": [
+              "Urine output 20 mL/hr for the last 4 hours",
+              "Skin turgor brisk, mucous membranes moist",
+              "Weight increased by 1 kg from admission",
+              "Serum sodium level 130 mEq/L"
+            ]
+          }
+        },
+        "stem": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would show the client is responding as expected. Complete the sentence using the safest chart-supported choices.",
+        "correctMap": {
+          "BLANK_1": "Skin turgor brisk, mucous membranes moist"
+        },
+        "options": [
+          {
+            "id": "BLANK_1_1",
+            "text": "Urine output 20 mL/hr for the last 4 hours",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_2",
+            "text": "Skin turgor brisk, mucous membranes moist",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_3",
+            "text": "Weight increased by 1 kg from admission",
+            "blank": "BLANK_1"
+          },
+          {
+            "id": "BLANK_1_4",
+            "text": "Serum sodium level 130 mEq/L",
+            "blank": "BLANK_1"
+          }
+        ]
+      },
+      "media": null,
+      "rationale": {
+        "trap": "Focusing on individual labs or output without full context.",
+        "golden_rule": "Assess multiple indicators for fluid status.",
+        "core_concept": "Fluid balance assessment",
+        "answer_analysis": "Brisk skin turgor and moist mucous membranes are direct indicators of adequate hydration."
+      },
+      "mnemonic": {
+        "title": "Fluid Check",
+        "content": "S-Skin Turgor, M-Mucous Membranes, U-Urine Output, L-Labs"
+      },
+      "answerKey": {
+        "type": "cloze-dropdown",
+        "correctMap": {
+          "BLANK_1": "Skin turgor brisk, mucous membranes moist"
+        },
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_derived": true,
+        "derivation_type": "mcq_to_cloze",
+        "source_item_id": "nexus_gen_evaluate_outcomes_1776451945036_389_0fh3y",
+        "safety_note": "Original MCQ remains unchanged; derived item uses the same safe answer key with a different interaction format.",
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "81178969601c",
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "cloze_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Heart Failure",
+          "cjmmStep": "Evaluate Outcomes",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "REPAIRED_COHERENCE_READY_P242",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would …",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "60",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Brisk skin turgor and moist mucous membranes are direct indicators of adequate hydration.",
+        "clinicalPrinciple": "Assess multiple indicators for fluid status.",
+        "trapToAvoid": "Focusing on individual labs or output without full context.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would …",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Heart Failure / Fluid Volume Excess",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 60-year-old female client in the Surgical Unit is being evaluated for Heart Failure. Current chart cue: IV fluids D5 1/2 NS at 100 mL/hr initiated per orders. Tolerating clear liquids. Select the finding that would …",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

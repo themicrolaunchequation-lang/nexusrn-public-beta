@@ -1,0 +1,1432 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 147,
+  "count": 3,
+  "sourceStartIndex": 7350,
+  "questions": [
+    {
+      "id": "nexus_drag_anticoag_47aa",
+      "format": "ordered-response",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Moderate",
+      "clinical_focus": "Anticoagulant Monitoring and Management",
+      "client_needs": "Physiological Integrity: Reduction of Risk Potential",
+      "patient": {
+        "name": "Margaret Thompson",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": "72",
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "68",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client, 72-year-old female, presents for routine follow-up for atrial fibrillation and warfarin management. Reports increased fatigue over the past week and states stools have been 'darker than usual' for several days. Denies acute bleeding (epistaxis, hematuria). Vital signs: BP 130/78 mmHg, HR 92 bpm (irregular). Latest laboratory results reviewed: INR 4.5, Hemoglobin 10.2 g/dL, Hematocrit 31.5%, Platelet Count 120,000/µL. Physical assessment reveals no overt petechiae or ecchymoses. Mucous membranes appear slightly pale."
+          }
+        ],
+        "vitals": [
+          {
+            "bp": "130/78",
+            "hr": "92",
+            "time": "Baseline"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, RR: 20, SpO₂: 95%, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [
+          {
+            "name": "Hemoglobin",
+            "value": "10.2",
+            "unit": "g/dL",
+            "reference": "12.0 - 17.5 g/dL",
+            "time": "08:00"
+          }
+        ],
+        "orders": [],
+        "hp": {
+          "chief_complaint": "Routine follow-up for atrial fibrillation and warfarin management.",
+          "pmh": [
+            "Atrial Fibrillation (diagnosed 3 years ago)",
+            "Hypertension",
+            "Osteoarthritis"
+          ],
+          "medications": [
+            "Warfarin 5mg daily",
+            "Metoprolol 25mg BID",
+            "Lisinopril 10mg daily",
+            "Acetaminophen PRN"
+          ],
+          "physical_examination": {
+            "skin": "Warm and dry. No petechiae, ecchymoses, or active bleeding noted. Mucous membranes slightly pale.",
+            "abdomen": "Soft, non-tender, non-distended. Bowel sounds present in all four quadrants. No hepatosplenomegaly.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No adventitious sounds.",
+            "neurological": "Cranial nerves intact. Strength 5/5 in all extremities. Sensation intact.",
+            "cardiovascular": "Irregularly irregular rhythm, S1S2 present, no murmurs. Capillary refill <3 seconds.",
+            "general_appearance": "Alert and oriented x4, appears fatigued."
+          },
+          "social_history": {
+            "alcohol_use": "Occasional social alcohol use",
+            "smoking_status": "Non-smoker",
+            "living_situation": "Lives alone in a rural area.",
+            "social_determinants_of_health": "Reports occasional difficulty accessing fresh produce due to limited local grocery options and transportation challenges, leading to inconsistent dietary Vitamin K intake."
+          },
+          "review_of_systems": {
+            "general": "Reports increased fatigue over the past week. Denies fever or chills.",
+            "hematologic": "Denies easy bruising, petechiae, or active bleeding (epistaxis, hematuria).",
+            "neurological": "Denies headache, dizziness, or changes in vision.",
+            "cardiovascular": "Denies chest pain, palpitations, or shortness of breath at rest.",
+            "gastrointestinal": "Reports stools have been 'darker than usual' for the past few days. Denies nausea, vomiting, or abdominal pain."
+          },
+          "patient_demographics": {
+            "age": "72 years",
+            "gender": "Female"
+          },
+          "physical_exam": {
+            "skin": "Warm and dry. No petechiae, ecchymoses, or active bleeding noted. Mucous membranes slightly pale.",
+            "abdomen": "Soft, non-tender, non-distended. Bowel sounds present in all four quadrants. No hepatosplenomegaly.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No adventitious sounds.",
+            "neurological": "Cranial nerves intact. Strength 5/5 in all extremities. Sensation intact.",
+            "cardiovascular": "Irregularly irregular rhythm, S1S2 present, no murmurs. Capillary refill <3 seconds.",
+            "general_appearance": "Alert and oriented x4, appears fatigued."
+          },
+          "current_medications": [
+            "Warfarin 5mg daily",
+            "Metoprolol 25mg BID",
+            "Lisinopril 10mg daily",
+            "Acetaminophen PRN"
+          ],
+          "past_medical_history": [
+            "Atrial Fibrillation (diagnosed 3 years ago)",
+            "Hypertension",
+            "Osteoarthritis"
+          ]
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client, 72-year-old female, presents for routine follow-up for atrial fibrillation and warfarin management. Reports increased fatigue over the past week and states stools have been 'darker than usual' for several days. Denies acute bleeding (epistaxis, hematuria). Vital signs: BP 130/78 mmHg, HR 92 bpm (irregular). Latest laboratory results reviewed: INR 4.5, Hemoglobin 10.2 g/dL, Hematocrit 31.5%, Platelet Count 120,000/µL. Physical assessment reveals no overt petechiae or ecchymoses. Mucous membranes appear slightly pale."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Routine follow-up for atrial fibrillation and warfarin management.",
+          "pmh": [
+            "Atrial Fibrillation (diagnosed 3 years ago)",
+            "Hypertension",
+            "Osteoarthritis"
+          ],
+          "medications": [
+            "Warfarin 5mg daily",
+            "Metoprolol 25mg BID",
+            "Lisinopril 10mg daily",
+            "Acetaminophen PRN"
+          ],
+          "physical_examination": {
+            "skin": "Warm and dry. No petechiae, ecchymoses, or active bleeding noted. Mucous membranes slightly pale.",
+            "abdomen": "Soft, non-tender, non-distended. Bowel sounds present in all four quadrants. No hepatosplenomegaly.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No adventitious sounds.",
+            "neurological": "Cranial nerves intact. Strength 5/5 in all extremities. Sensation intact.",
+            "cardiovascular": "Irregularly irregular rhythm, S1S2 present, no murmurs. Capillary refill <3 seconds.",
+            "general_appearance": "Alert and oriented x4, appears fatigued."
+          },
+          "social_history": {
+            "alcohol_use": "Occasional social alcohol use",
+            "smoking_status": "Non-smoker",
+            "living_situation": "Lives alone in a rural area.",
+            "social_determinants_of_health": "Reports occasional difficulty accessing fresh produce due to limited local grocery options and transportation challenges, leading to inconsistent dietary Vitamin K intake."
+          },
+          "review_of_systems": {
+            "general": "Reports increased fatigue over the past week. Denies fever or chills.",
+            "hematologic": "Denies easy bruising, petechiae, or active bleeding (epistaxis, hematuria).",
+            "neurological": "Denies headache, dizziness, or changes in vision.",
+            "cardiovascular": "Denies chest pain, palpitations, or shortness of breath at rest.",
+            "gastrointestinal": "Reports stools have been 'darker than usual' for the past few days. Denies nausea, vomiting, or abdominal pain."
+          },
+          "patient_demographics": {
+            "age": "72 years",
+            "gender": "Female"
+          },
+          "physical_exam": {
+            "skin": "Warm and dry. No petechiae, ecchymoses, or active bleeding noted. Mucous membranes slightly pale.",
+            "abdomen": "Soft, non-tender, non-distended. Bowel sounds present in all four quadrants. No hepatosplenomegaly.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No adventitious sounds.",
+            "neurological": "Cranial nerves intact. Strength 5/5 in all extremities. Sensation intact.",
+            "cardiovascular": "Irregularly irregular rhythm, S1S2 present, no murmurs. Capillary refill <3 seconds.",
+            "general_appearance": "Alert and oriented x4, appears fatigued."
+          },
+          "current_medications": [
+            "Warfarin 5mg daily",
+            "Metoprolol 25mg BID",
+            "Lisinopril 10mg daily",
+            "Acetaminophen PRN"
+          ],
+          "past_medical_history": [
+            "Atrial Fibrillation (diagnosed 3 years ago)",
+            "Hypertension",
+            "Osteoarthritis"
+          ]
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "20",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "130/78",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 130/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explains the client’s current change in condition.",
+      "structure": {
+        "type": "ordered-response",
+        "scenario": "A 72-year-old female client, diagnosed with atrial fibrillation and on warfarin therapy, presents for routine follow-up. The nurse reviews the client's most recent laboratory results. Drag the appropriate nursing action or interpretation from the 'Available Options' column to the 'Client Data' column for each lab value.",
+        "prompt": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explains the client’s current change in condition.",
+        "options": [
+          {
+            "id": "A",
+            "text": "INR (International Normalized Ratio)"
+          },
+          {
+            "id": "B",
+            "text": "aPTT (activated Partial Thromboplastin Time)"
+          },
+          {
+            "id": "C",
+            "text": "Platelet Count"
+          },
+          {
+            "id": "D",
+            "text": "Hemoglobin (Hgb) & Hematocrit (Hct)"
+          }
+        ],
+        "correct_order": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "stem": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explains the client’s current change in condition."
+      },
+      "media": [],
+      "rationale": {
+        "trap": "A common mistake is to interpret lab values in isolation without considering the client's clinical presentation, current medications, or the specific therapeutic goal for their condition.",
+        "golden_rule": "Prioritize patient safety.",
+        "core_concept": "Clinical Judgment.",
+        "answer_analysis": "Effective anticoagulant therapy requires careful monitoring of specific laboratory values to ensure therapeutic efficacy while minimizing the risk of adverse events, primarily bleeding. The nurse must analyze these cues to prioritize hypotheses and generate appropriate solutions.\n\n1.  **INR (International Normalized Ratio):** This test monitors the effectiveness of warfarin, a vitamin K antagonist. It reflects the extrinsic and common coagulation pathways. The typical therapeutic range for atrial fibrillation is 2.0-3.0.\n    *   **INR < 2.0 (Subtherapeutic):** Indicates an increased risk of thrombus formation. The nurse should assess for medication adherence, dietary changes (e.g., increased Vitamin K intake), and potential drug interactions that could decrease warfarin's effect. An increased warfarin dose may be anticipated.\n    *   **INR > 3.0 (Supratherapeutic):** Indicates an increased risk of bleeding. The nurse must immediately assess for signs of bleeding (e.g., petechiae, ecchymosis, hematuria, melena, epistaxis). Actions may include holding the next warfarin dose, anticipating a dose reduction, or administering Vitamin K (phytonadione) for significantly elevated INR or active bleeding.\n\n2.  **aPTT (activated Partial Thromboplastin Time):** This test monitors the effectiveness of unfractionated heparin. It reflects the intrinsic and common coagulation pathways. The therapeutic range is typically 1.5-2.5 times the control value, though specific institutional targets may vary.\n    *   **aPTT < Therapeutic Range (Subtherapeutic):** Indicates an increased risk of thrombus formation. The nurse should assess for factors affecting heparin's efficacy and anticipate an increase in the heparin infusion rate.\n    *   **aPTT > Therapeutic Range (Supratherapeutic):** Indicates an increased risk of bleeding. The nurse must assess for bleeding. Actions may include holding the heparin dose, anticipating a decrease in the infusion rate, or administering protamine sulfate for severe bleeding.\n\n3.  **Platelet Count:** Platelets are crucial for primary hemostasis. Monitoring platelet count is vital, especially with heparin therapy, due to the risk of Heparin-Induced Thrombocytopenia (HIT).\n    *   **Platelet Count < 100,000/µL or a significant drop (>50% from baseline) while on heparin:** Raises strong suspicion for HIT. The nurse must immediately notify the provider, discontinue all heparin products (including flushes), and anticipate initiation of an alternative anticoagulant (e.g., argatroban, bivalirudin). Platelet transfusions are generally avoided in HIT unless there is severe active bleeding.\n    *   **Low platelets from other causes:** Increases general bleeding risk. The nurse should implement bleeding precautions and assess for underlying causes.\n\n4.  **Hemoglobin (Hgb) & Hematocrit (Hct):** These values are crucial indicators for detecting blood loss.\n    *   **Decreased Hgb/Hct:** Suggests active or chronic bleeding. The nurse should assess for overt or occult bleeding, monitor vital signs for signs of hypovolemia (tachycardia, hypotension), notify the provider, and anticipate further diagnostic workup or blood product transfusion if severe."
+      },
+      "mnemonic": {
+        "title": "BLEEDING SIGNS",
+        "content": "B - Bruising easily\nL - Lethargy/Fatigue\nE - Epistaxis/Ecchymosis\nE - Excessive bleeding (gums, cuts)\nD - Dark/tarry stools (melena)\nI - Internal bleeding signs (abdominal pain, hypotension)\nN - New neurological changes (intracranial hemorrhage)\nG - Gastric upset/hematemesis"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [
+          "missing_options",
+          "missing_order"
+        ],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "e68eff8e8170",
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "ordered_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "clinicalFocus": "Anticoagulant Monitoring and Management",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Reduction of Risk Potential",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_COHERENCE_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "prior_sme_review_queue"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": null,
+          "clinicalFocusEvidenceScore": 0,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_COHERENCE_P242",
+          "originalGuidelineSensitiveBuckets": [],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": false
+        }
+      },
+      "validForPractice": true,
+      "answerKey": {
+        "type": "ordered-response",
+        "correctOrder": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctIds": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "maxScore": 4,
+        "scoring": "ordered"
+      },
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explain…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "72",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Effective anticoagulant therapy requires careful monitoring of specific laboratory values to ensure therapeutic efficacy while minimizing the risk of adverse events, primarily bleeding. The nurse must analyze these cues to prioritize hypotheses and generate appropriate solutions.\n\n1.  **INR (International Normalized Ratio):** This test monitors the effectiveness of warfarin, a vitamin K antagonist. It reflects the extrinsic and common coagulation pathways. The typical therapeutic range for atrial fibrillation is 2.0-3.0.\n    *   **INR < 2.0 (Subtherapeutic):** Indicates an increased risk of thrombus formation. The nurse should assess for medication adherence, dietary changes (e.g., increased Vitamin K intake), and potential drug interactions that could decrease warfarin's effect. An increased warfarin dose may be anticipated.\n    *   **INR > 3.0 (Supratherapeutic):** Indicates an increased risk of bleeding. The nurse must immediately assess for signs of bleeding (e.g., petechiae, ecchymosis, hematuria, melena, epistaxis). Actions may include holding the next warfarin dose, anticipating a dose reduction, or administering Vitamin K (phytonadione) for significantly elevated INR or active bleeding.\n\n2.  **aPTT (activated Partial Thromboplastin Time):** This test monitors the effectiveness of unfractionated heparin. It reflects the intrinsic and common coagulation pathways. The therapeutic range is typically 1.5-2.5 times the control value, though specific institutional targets may vary.\n    *   **aPTT < Therapeutic Range (Subtherapeutic):** Indicates an increased risk of thrombus formation. The nurse should assess for factors affecting heparin's efficacy and anticipate an increase in the heparin infusion rate.\n    *   **aPTT > Therapeutic Range (Supratherapeutic):** Indicates an increased risk of bleeding. The nurse must assess for bleeding. Actions may include holding the heparin dose, anticipating a decrease in the infusion rate, or administering protamine sulfate for severe bleeding.\n\n3.  **Platelet Count:** Platelets are crucial for primary hemostasis. Monitoring platelet count is vital, especially with heparin therapy, due to the risk of Heparin-Induced Thrombocytopenia (HIT).\n    *   **Platelet Count < 100,000/µL or a significant drop (>50% from baseline) while on heparin:** Raises strong suspicion for HIT. The nurse must immediately notify the provider, discontinue all heparin products (including flushes), and anticipate initiation of an alternative anticoagulant (e.g., argatroban, bivalirudin). Platelet transfusions are generally avoided in HIT unless there is severe active bleeding.\n    *   **Low platelets from other causes:** Increases general bleeding risk. The nurse should implement bleeding precautions and assess for underlying causes.\n\n4.  **Hemoglobin (Hgb) & Hematocrit (Hct):** These values are crucial indicators for detecting blood loss.\n    *   **Decreased Hgb/Hct:** Suggests active or chronic bleeding. The nurse should assess for overt or occult bleeding, monitor vital signs for signs of hypovolemia (tachycardia, hypotension), notify the provider, and anticipate further diagnostic workup or blood product transfusion if severe.",
+        "clinicalPrinciple": "Prioritize patient safety.",
+        "trapToAvoid": "A common mistake is to interpret lab values in isolation without considering the client's clinical presentation, current medications, or the specific therapeutic goal for their condition.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explain…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate"
+      ],
+      "v242pDetectedClinicalFocus": null,
+      "v242pClinicalFocusEvidenceScore": 0,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 72-year-old female client in the Medical-Surgical Unit is being evaluated for Anticoagulant Monitoring and Management. Current chart cue: vital signs show hr 92, bp 130/78 Select the interpretation that best explain…",
+      "v242oReputationStatus": "SME_REVIEW_COHERENCE",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "prior_sme_review_queue"
+      ],
+      "v242oGuidelineSensitiveBuckets": [],
+      "v242pOriginalGuidelineSensitiveBuckets": [],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_COHERENCE_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [],
+      "v242qNeedsHumanSmeSpotCheck": false,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "nexus_drag_therapeu_0db9",
+      "format": "ordered-response",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Hard",
+      "clinical_focus": "Therapeutic Drug Monitoring: Digoxin Toxicity",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Mrs. Vance",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Emergency Department",
+        "age_value": 68,
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "72",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "type": "Nurse note",
+            "note": "Patient, Mrs. Eleanor Vance, a 68-year-old female, reports 'feeling nauseated' and 'seeing yellowish halos around lights' since this morning. Denies chest pain or shortness of breath. Peripheral edema noted as 1+ in bilateral ankles, which is an improvement from 3+ on admission. Vital signs obtained: Heart Rate 58 bpm, Blood Pressure 128/76 mmHg, Respiratory Rate 16 breaths/min, Oxygen Saturation 97% on room air. Latest serum digoxin level reported as 2.8 ng/mL. Serum potassium 3.1 mEq/L. Serum creatinine 1.8 mg/dL."
+          }
+        ],
+        "vitals": [
+          {
+            "bp": "128/76",
+            "hr": "58",
+            "rr": "16",
+            "spo2": "97%",
+            "time": "Baseline"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, Pain: 0/10, Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [
+          {
+            "name": "Creatinine",
+            "value": "1.8",
+            "unit": "mg/dL",
+            "reference": "0.6 - 1.2 mg/dL",
+            "time": "06:00"
+          },
+          {
+            "name": "Potassium",
+            "value": "3.1",
+            "unit": "mEq/L",
+            "reference": "3.5 - 5.0 mEq/L",
+            "time": "06:00"
+          }
+        ],
+        "orders": [
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Admit to psychiatric unit."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Diagnosis: Bipolar I Disorder, acute manic episode."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Lithium carbonate 300 mg PO TID. Start today."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Obtain serum lithium level 12 hours after first dose and daily until stable, then weekly."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Monitor BUN, Creatinine, Electrolytes, TSH upon admission and periodically as indicated."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Vitals q4h and PRN for agitation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Daily weights."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Strict Intake and Output (I&O)."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Ensure adequate hydration (oral fluids encouraged)."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Safety precautions: close observation, remove potentially harmful objects."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Lorazepam 1 mg PO/IM q4h PRN for severe agitation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Consult Psychiatry for daily evaluation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Diet: Regular, encourage nutrient-dense foods."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Activity: Ad lib with supervision."
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Acute exacerbation of heart failure",
+          "hpi": "Mrs. Eleanor Vance, a 68-year-old female, is admitted for acute exacerbation of heart failure. She reports 'feeling nauseated' and 'seeing yellowish halos around lights' for approximately 24 hours prior to admission. She notes peripheral edema 1+ in bilateral ankles, which she states is an improvement from 3+ on admission. Patient is currently prescribed Digoxin 0.125 mg daily.",
+          "pmh": [
+            "Heart Failure (HF)",
+            "Hypertension"
+          ],
+          "medications": [
+            "Digoxin 0.125 mg daily",
+            "Furosemide 40 mg daily",
+            "Lisinopril 10 mg daily"
+          ],
+          "physical_examination": {
+            "extremities": "Peripheral edema 1+ in bilateral ankles, non-pitting. Capillary refill less than 3 seconds in all extremities.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No crackles, wheezes, or rhonchi. Respiratory effort unlabored.",
+            "neurological": "Cranial nerves intact. Motor and sensory functions grossly intact. Reports visual disturbance described as 'yellowish halos around lights'.",
+            "cardiovascular": "S1S2 regular rate and rhythm, no murmurs, rubs, or gallops. Apical pulse 58 bpm, regular.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Normoactive bowel sounds in all four quadrants. Reports subjective nausea.",
+            "general_appearance": "Alert and oriented to person, place, and time (A&Ox3). Appears fatigued but in no acute distress."
+          },
+          "age": "68 years",
+          "gender": "Female",
+          "patient_name": "Eleanor Vance",
+          "current_medications": [
+            "Digoxin 0.125 mg daily",
+            "Furosemide 40 mg daily",
+            "Lisinopril 10 mg daily"
+          ],
+          "past_medical_history": [
+            "Heart Failure (HF)",
+            "Hypertension"
+          ],
+          "history_of_present_illness": "Mrs. Eleanor Vance, a 68-year-old female, is admitted for acute exacerbation of heart failure. She reports 'feeling nauseated' and 'seeing yellowish halos around lights' for approximately 24 hours prior to admission. She notes peripheral edema 1+ in bilateral ankles, which she states is an improvement from 3+ on admission. Patient is currently prescribed Digoxin 0.125 mg daily.",
+          "social_determinants_of_health": "Patient lives alone in a rural area. She reports significant difficulty arranging reliable transportation for regular follow-up appointments and obtaining necessary medications due to limited public transport options and financial constraints, impacting continuity of care."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "type": "Nurse note",
+            "note": "Patient, Mrs. Eleanor Vance, a 68-year-old female, reports 'feeling nauseated' and 'seeing yellowish halos around lights' since this morning. Denies chest pain or shortness of breath. Peripheral edema noted as 1+ in bilateral ankles, which is an improvement from 3+ on admission. Vital signs obtained: Heart Rate 58 bpm, Blood Pressure 128/76 mmHg, Respiratory Rate 16 breaths/min, Oxygen Saturation 97% on room air. Latest serum digoxin level reported as 2.8 ng/mL. Serum potassium 3.1 mEq/L. Serum creatinine 1.8 mg/dL."
+          }
+        ],
+        "providerOrders": [
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Admit to psychiatric unit."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Diagnosis: Bipolar I Disorder, acute manic episode."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Lithium carbonate 300 mg PO TID. Start today."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Obtain serum lithium level 12 hours after first dose and daily until stable, then weekly."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Monitor BUN, Creatinine, Electrolytes, TSH upon admission and periodically as indicated."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Vitals q4h and PRN for agitation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Daily weights."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Strict Intake and Output (I&O)."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Ensure adequate hydration (oral fluids encouraged)."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Safety precautions: close observation, remove potentially harmful objects."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Lorazepam 1 mg PO/IM q4h PRN for severe agitation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Consult Psychiatry for daily evaluation."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Diet: Regular, encourage nutrient-dense foods."
+          },
+          {
+            "time": "14:30",
+            "type": "Order",
+            "text": "Activity: Ad lib with supervision."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Acute exacerbation of heart failure",
+          "hpi": "Mrs. Eleanor Vance, a 68-year-old female, is admitted for acute exacerbation of heart failure. She reports 'feeling nauseated' and 'seeing yellowish halos around lights' for approximately 24 hours prior to admission. She notes peripheral edema 1+ in bilateral ankles, which she states is an improvement from 3+ on admission. Patient is currently prescribed Digoxin 0.125 mg daily.",
+          "pmh": [
+            "Heart Failure (HF)",
+            "Hypertension"
+          ],
+          "medications": [
+            "Digoxin 0.125 mg daily",
+            "Furosemide 40 mg daily",
+            "Lisinopril 10 mg daily"
+          ],
+          "physical_examination": {
+            "extremities": "Peripheral edema 1+ in bilateral ankles, non-pitting. Capillary refill less than 3 seconds in all extremities.",
+            "respiratory": "Lungs clear to auscultation bilaterally. No crackles, wheezes, or rhonchi. Respiratory effort unlabored.",
+            "neurological": "Cranial nerves intact. Motor and sensory functions grossly intact. Reports visual disturbance described as 'yellowish halos around lights'.",
+            "cardiovascular": "S1S2 regular rate and rhythm, no murmurs, rubs, or gallops. Apical pulse 58 bpm, regular.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Normoactive bowel sounds in all four quadrants. Reports subjective nausea.",
+            "general_appearance": "Alert and oriented to person, place, and time (A&Ox3). Appears fatigued but in no acute distress."
+          },
+          "age": "68 years",
+          "gender": "Female",
+          "patient_name": "Eleanor Vance",
+          "current_medications": [
+            "Digoxin 0.125 mg daily",
+            "Furosemide 40 mg daily",
+            "Lisinopril 10 mg daily"
+          ],
+          "past_medical_history": [
+            "Heart Failure (HF)",
+            "Hypertension"
+          ],
+          "history_of_present_illness": "Mrs. Eleanor Vance, a 68-year-old female, is admitted for acute exacerbation of heart failure. She reports 'feeling nauseated' and 'seeing yellowish halos around lights' for approximately 24 hours prior to admission. She notes peripheral edema 1+ in bilateral ankles, which she states is an improvement from 3+ on admission. Patient is currently prescribed Digoxin 0.125 mg daily.",
+          "social_determinants_of_health": "Patient lives alone in a rural area. She reports significant difficulty arranging reliable transportation for regular follow-up appointments and obtaining necessary medications due to limited public transport options and financial constraints, impacting continuity of care."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "58",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "93 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpretation that best explains the client’s current change in condition.",
+      "structure": {
+        "type": "ordered-response",
+        "scenario": "Mrs. Eleanor Vance, a 68-year-old female, is admitted for acute exacerbation of heart failure and is currently on Digoxin 0.125 mg daily. The nurse reviews her assessment findings and laboratory results: * Heart rate: 58 bpm, regular * Blood pressure: 128/76 mmHg * Reports 'feeling nauseated' and 'seeing yellowish halos around lights' * Peripheral edema 1+ in bilateral ankles (improved from 3+ on admission) * Serum Digoxin level: 2.8 ng/mL (therapeutic range: 0.5-2.0 ng/mL) * Serum Potassium: 3.1 mEq/L (normal range: 3.5-5.0 mEq/L) * Creatinine: 1.8 mg/dL (normal range: 0.6-1.2 mg/dL) Categorize each of the following findings into one of three groups: **A) Expected Therapeutic Effect**, **B) Signs of Digoxin Toxicity**, or **C) Risk Factor for Digoxin Toxicity**. 1. Heart rate 58 bpm 2. Reports 'feeling nauseated' 3. Reports 'seeing yellowish halos around lights' 4. Peripheral edema 1+ in bilateral ankles (improved) 5. Serum Digoxin level: 2.8 ng/mL 6. Serum Potassium: 3.1 mEq/L 7. Creatinine: 1.8 mg/dL",
+        "prompt": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpretation that best explains the client’s current change in condition.",
+        "options": [
+          {
+            "id": "A",
+            "text": "Peripheral edema 1+ in bilateral ankles (improved)"
+          },
+          {
+            "id": "B",
+            "text": "Heart rate 58 bpm"
+          },
+          {
+            "id": "C",
+            "text": "Reports 'feeling nauseated'"
+          },
+          {
+            "id": "D",
+            "text": "Reports 'seeing yellowish halos around lights'"
+          }
+        ],
+        "correct_order": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "stem": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpretation that best explains the client’s current change in condition."
+      },
+      "media": [],
+      "rationale": {
+        "trap": "Avoid confusing therapeutic effects with early signs of toxicity, particularly regarding heart rate, and always consider predisposing risk factors like electrolyte imbalances and renal impairment.",
+        "golden_rule": "Prioritize patient safety.",
+        "core_concept": "Clinical Judgment.",
+        "answer_analysis": "Digoxin is a cardiac glycoside used to increase myocardial contractility (positive inotropic effect) and slow heart rate (negative chronotropic effect) in patients with heart failure. The therapeutic range for Digoxin is typically 0.5-2.0 ng/mL. Toxicity can manifest with various symptoms and is often exacerbated by electrolyte imbalances and renal impairment.\n\n**A) Expected Therapeutic Effect:**\n4.  **Peripheral edema 1+ in bilateral ankles (improved):** This indicates improved cardiac output and reduced fluid retention, which is a desired outcome of digoxin therapy in heart failure.\n\n**B) Signs of Digoxin Toxicity:**\n1.  **Heart rate 58 bpm:** While digoxin slows heart rate, bradycardia below 60 bpm, especially when accompanied by other symptoms of toxicity, is a common cardiac manifestation of digoxin toxicity.\n2.  **Reports 'feeling nauseated':** Gastrointestinal symptoms such as nausea, vomiting, and anorexia are among the earliest and most common signs of digoxin toxicity.\n3.  **Reports 'seeing yellowish halos around lights':** Visual disturbances, including blurred vision, yellow-green halos, and photophobia, are classic neurological/ocular signs of digoxin toxicity.\n5.  **Serum Digoxin level: 2.8 ng/mL:** This level is significantly above the therapeutic range (0.5-2.0 ng/mL), directly confirming digoxin toxicity.\n\n**C) Risk Factor for Digoxin Toxicity:**\n6.  **Serum Potassium: 3.1 mEq/L:** Hypokalemia (low potassium) is a major risk factor for digoxin toxicity. Digoxin and potassium compete for binding sites on the Na+/K+ ATPase pump in cardiac cells. When potassium levels are low, more digoxin can bind, increasing its effects and the risk of toxicity.\n7.  **Creatinine: 1.8 mg/dL:** Elevated creatinine indicates impaired renal function. Digoxin is primarily excreted by the kidneys, so renal impairment leads to decreased digoxin clearance, accumulation of the drug, and an increased risk of toxicity."
+      },
+      "mnemonic": {
+        "title": "DIGOXIN TOXICITY ALERTS",
+        "content": "D - Digoxin levels high\nI - Increased GI upset (nausea, vomiting, anorexia)\nG - Green/yellow halos (visual disturbances)\nO - Output decreased (renal impairment)\nX - eXtra beats (arrhythmias) or eXtreme bradycardia\nI - Irregular pulse\nN - Neurological changes (fatigue, confusion)"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [
+          "missing_options",
+          "missing_order"
+        ],
+        "v69_final_issues": [],
+        "v112_bulk_authenticity_cleanup": true,
+        "v112_original_prompt_hash": "e68eff8e8170",
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [
+          "ordered_answer_key_normalized"
+        ],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:high-alert medication"
+          ],
+          "clinicalFocus": "Therapeutic Drug Monitoring: Digoxin Toxicity",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:high-alert medication"
+          ],
+          "guidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "answerKey": {
+        "type": "ordered-response",
+        "correctOrder": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "correctIds": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
+        "maxScore": 4,
+        "scoring": "ordered"
+      },
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpreta…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:high-alert medication"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 68,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Emergency Department"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Digoxin is a cardiac glycoside used to increase myocardial contractility (positive inotropic effect) and slow heart rate (negative chronotropic effect) in patients with heart failure. The therapeutic range for Digoxin is typically 0.5-2.0 ng/mL. Toxicity can manifest with various symptoms and is often exacerbated by electrolyte imbalances and renal impairment.\n\n**A) Expected Therapeutic Effect:**\n4.  **Peripheral edema 1+ in bilateral ankles (improved):** This indicates improved cardiac output and reduced fluid retention, which is a desired outcome of digoxin therapy in heart failure.\n\n**B) Signs of Digoxin Toxicity:**\n1.  **Heart rate 58 bpm:** While digoxin slows heart rate, bradycardia below 60 bpm, especially when accompanied by other symptoms of toxicity, is a common cardiac manifestation of digoxin toxicity.\n2.  **Reports 'feeling nauseated':** Gastrointestinal symptoms such as nausea, vomiting, and anorexia are among the earliest and most common signs of digoxin toxicity.\n3.  **Reports 'seeing yellowish halos around lights':** Visual disturbances, including blurred vision, yellow-green halos, and photophobia, are classic neurological/ocular signs of digoxin toxicity.\n5.  **Serum Digoxin level: 2.8 ng/mL:** This level is significantly above the therapeutic range (0.5-2.0 ng/mL), directly confirming digoxin toxicity.\n\n**C) Risk Factor for Digoxin Toxicity:**\n6.  **Serum Potassium: 3.1 mEq/L:** Hypokalemia (low potassium) is a major risk factor for digoxin toxicity. Digoxin and potassium compete for binding sites on the Na+/K+ ATPase pump in cardiac cells. When potassium levels are low, more digoxin can bind, increasing its effects and the risk of toxicity.\n7.  **Creatinine: 1.8 mg/dL:** Elevated creatinine indicates impaired renal function. Digoxin is primarily excreted by the kidneys, so renal impairment leads to decreased digoxin clearance, accumulation of the drug, and an increased risk of toxicity.",
+        "clinicalPrinciple": "Prioritize patient safety.",
+        "trapToAvoid": "Avoid confusing therapeutic effects with early signs of toxicity, particularly regarding heart rate, and always consider predisposing risk factors like electrolyte imbalances and renal impairment.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpreta…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "The 68-year-old female client in the Emergency Department is being evaluated for Therapeutic Drug Monitoring: Digoxin Toxicity. Current chart cue: vital signs show hr 58, rr 16, bp 128/76, spo2 97% Select the interpreta…",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:high-alert medication"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "ai_calcul_56e89a7e",
+      "format": "calculation",
+      "cjmm_step": "Take Action",
+      "difficulty": "Hard",
+      "clinical_focus": "Postoperative Pain / Complication Evaluation",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Mr. John Doe",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Oncology Unit",
+        "age_value": "68",
+        "allergies": "NKA",
+        "weight_kg": null,
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, RR: 16, BP: 128/78, SpO₂: 97%, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "name": "Medications",
+            "value": "administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours",
+            "time": "08:15"
+          }
+        ],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": ""
+          },
+          {
+            "k": "HR",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "HR not charted in primary record."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": ""
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": ""
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": ""
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Pain level not assessed."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": ""
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": ""
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubing has a drop factor of 15 gtt/mL.",
+      "structure": {
+        "stem": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubing has a drop factor of 15 gtt/mL.",
+        "prompt": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubing has a drop factor of 15 gtt/mL.",
+        "type": "calculation",
+        "options": [
+          {
+            "id": "A",
+            "text": "31 gtt/min"
+          },
+          {
+            "id": "B",
+            "text": "125 gtt/min"
+          },
+          {
+            "id": "C",
+            "text": "63 gtt/min"
+          },
+          {
+            "id": "D",
+            "text": "21 gtt/min"
+          }
+        ],
+        "correct_answer": "31 gtt/min",
+        "calculation_steps": [
+          "Convert infusion time from hours to minutes: 8 hours * 60 min/hour = 480 minutes.",
+          "Calculate mL/minute: 1000 mL / 480 min = 2.0833 mL/min.",
+          "Calculate gtt/minute: 2.0833 mL/min * 15 gtt/mL = 31.25 gtt/min.",
+          "Round to the nearest whole number for gtt/min: 31 gtt/min."
+        ],
+        "given_values": {
+          "Total volume": "1000 mL",
+          "Infusion time": "8 hours",
+          "Drop factor": "15 gtt/mL"
+        }
+      },
+      "media": [],
+      "rationale": {
+        "trap": "Common traps include failing to convert hours to minutes, incorrectly applying the drop factor, or making mathematical errors during division or multiplication, leading to an incorrect drip rate.",
+        "golden_rule": "Always double-check medication calculations, especially for IV infusions, and have another qualified nurse verify critical drip rates before initiation to ensure patient safety and prevent medication errors.",
+        "core_concept": "Accurate calculation of IV drip rates is essential for safe medication administration and ensuring therapeutic outcomes.",
+        "answer_analysis": "The correct drip rate is calculated by dividing the total volume (1000 mL) by the total infusion time in minutes (8 hours x 60 min/hr = 480 min), then multiplying by the drop factor (15 gtt/mL), resulting in 31 gtt/min when rounded to the nearest whole number."
+      },
+      "mnemonic": {
+        "title": null,
+        "content": null
+      },
+      "answerKey": {
+        "type": "calculation",
+        "correctIds": [
+          "31 gtt/min"
+        ],
+        "correctSet": [
+          "31 gtt/min"
+        ],
+        "maxScore": 1,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "REVIEW_SME",
+          "firstClassReady": false,
+          "reviewFlags": [
+            "requires_sme_reputation_review"
+          ]
+        },
+        "v242nOriginalClinicalFocus": "Wound Infection",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:high-alert medication"
+          ],
+          "clinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "cjmmStep": "Take Action",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:high-alert medication"
+          ],
+          "guidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "REVIEW_SME",
+      "v242mFirstClassReady": false,
+      "v242mReviewFlags": [
+        "requires_sme_reputation_review"
+      ],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubi…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:high-alert medication"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Oncology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The correct drip rate is calculated by dividing the total volume (1000 mL) by the total infusion time in minutes (8 hours x 60 min/hr = 480 min), then multiplying by the drop factor (15 gtt/mL), resulting in 31 gtt/min when rounded to the nearest whole number.",
+        "clinicalPrinciple": "Always double-check medication calculations, especially for IV infusions, and have another qualified nurse verify critical drip rates before initiation to ensure patient safety and prevent medication errors.",
+        "trapToAvoid": "Common traps include failing to convert hours to minutes, incorrectly applying the drop factor, or making mathematical errors during division or multiplication, leading to an incorrect drip rate.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubi…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Postoperative Pain / Complication Evaluation",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 68-year-old male, Mr. John Doe, is admitted to the medical-surgical unit with dehydration and hypokalemia. The nurse receives an order to administer D5W 1000 mL with Potassium Chloride 20 mEq over 8 hours. The IV tubi…",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:high-alert medication"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

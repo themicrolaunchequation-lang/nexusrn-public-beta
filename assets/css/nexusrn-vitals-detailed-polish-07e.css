@@ -1,0 +1,164 @@
+/* nexusrn-vitals-detailed-polish-07e.css */
+/* Tab Bar Modernization */
+.ehr-tabs {
+  border-bottom: 2px solid #e2e8f0 !important;
+  display: flex !important;
+  gap: 16px !important;
+  padding: 0 16px !important;
+  background: #f8fafc !important;
+  backdrop-filter: none !important;
+}
+
+.etab {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 3px solid transparent !important;
+  padding: 12px 10px !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  color: #64748b !important;
+  letter-spacing: 0.02em !important;
+  border-radius: 0 !important;
+  transition: all 0.2s ease !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  cursor: pointer !important;
+}
+
+.etab:hover {
+  color: #0f172a !important;
+  background: rgba(15, 23, 42, 0.03) !important;
+}
+
+body.light .etab.on, .etab.on {
+  color: #0f766e !important;
+  font-weight: 800 !important;
+  border-bottom-color: #0d9488 !important;
+  background: rgba(13, 148, 136, 0.05) !important;
+  box-shadow: none !important;
+}
+
+/* Detailed Vitals Cards Grid */
+.ws-vital-dashboard-v243f1 {
+  gap: 12px !important;
+  padding-top: 16px !important;
+  position: relative !important;
+}
+/* Subtle Divider Line before the bottom row */
+.ws-vital-dashboard-v243f1::after {
+  content: '';
+  position: absolute;
+  top: 52%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #e2e8f0 20%, #e2e8f0 80%, transparent) !important;
+  pointer-events: none;
+}
+
+/* Detailed Vitals Card */
+.ws-vital-dashboard-v243f1 .ws-vital-tile {
+  background: #ffffff !important;
+  border: 1px solid #e2e8f0 !important;
+  border-radius: 16px !important;
+  padding: 18px !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03), inset 0 1px 0 rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  position: relative;
+  overflow: hidden;
+}
+
+.ws-vital-dashboard-v243f1 .ws-vital-tile:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06), inset 0 1px 0 rgba(255, 255, 255, 1) !important;
+  border-color: #cbd5e1 !important;
+}
+
+/* Header Badge */
+.ws-vital-dashboard-v243f1 .ws-vital-tile > span:first-child {
+  display: inline-block !important;
+  font-size: 10px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  background: #f1f5f9 !important;
+  padding: 4px 8px !important;
+  border-radius: 6px !important;
+  margin-bottom: 8px !important;
+  align-self: flex-start !important;
+}
+
+/* Value Emphasis */
+.ws-vital-dashboard-v243f1 .ws-vital-tile b {
+  font-size: 24px !important;
+  font-weight: 900 !important;
+  color: #0f172a !important;
+  font-variant-numeric: tabular-nums !important;
+  letter-spacing: -0.02em !important;
+  text-shadow: 0 1px 2px rgba(15, 23, 42, 0.05) !important;
+  margin-bottom: 12px !important;
+}
+
+/* Timestamp Styling */
+.ws-vital-dashboard-v243f1 .ws-vital-tile small {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+  font-size: 9.5px !important;
+  color: #64748b !important;
+  line-height: 1.4 !important;
+  opacity: 0.8 !important;
+  display: block !important;
+  position: relative !important;
+  padding-left: 14px !important;
+}
+.ws-vital-dashboard-v243f1 .ws-vital-tile small::before {
+  content: '⏱';
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* Reference Range Section */
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs {
+  margin-top: auto !important;
+  padding-top: 12px !important;
+  border-top: 1px dashed #cbd5e1 !important;
+  font-size: 8px !important;
+  line-height: 1.4 !important;
+  color: #64748b !important;
+  background: linear-gradient(180deg, rgba(248, 250, 252, 0) 0%, rgba(248, 250, 252, 0.5) 100%) !important;
+}
+
+.ws-vital-dashboard-v243f1 .ws-vital-tile pre.ws-vital-refs b {
+  font-size: 8px !important;
+  text-shadow: none !important;
+  margin: 0 !important;
+}
+
+/* Apply Semantic Border & Badge Colors */
+/* 1. T */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(1) { border-top: 3px solid #f43f5e !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(1) > span:first-child { background: #ffe4e6 !important; color: #be123c !important; }
+/* 2. HR */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(2) { border-top: 3px solid #e11d48 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(2) > span:first-child { background: #ffe4e6 !important; color: #be123c !important; }
+/* 3. RR */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(3) { border-top: 3px solid #10b981 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(3) > span:first-child { background: #dcfce7 !important; color: #166534 !important; }
+/* 4. BP */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(4) { border-top: 3px solid #e11d48 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(4) > span:first-child { background: #ffe4e6 !important; color: #be123c !important; }
+/* 5. SpO2 */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(5) { border-top: 3px solid #0ea5e9 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(5) > span:first-child { background: #e0f2fe !important; color: #0369a1 !important; }
+/* 6. MAP */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(6) { border-top: 3px solid #0ea5e9 !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(6) > span:first-child { background: #e0f2fe !important; color: #0369a1 !important; }
+/* 7. Pain */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(7) { border-top: 3px solid #f59e0b !important; }
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(7) > span:first-child { background: #fef3c7 !important; color: #b45309 !important; }
+
+/* 8. Weight, Height, BMI Default State (No bold colors, standard gray/slate) */
+.ws-vital-dashboard-v243f1 .ws-vital-tile:nth-child(n+8) { border-top: 3px solid #cbd5e1 !important; }

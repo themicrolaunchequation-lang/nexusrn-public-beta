@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Sign In | NexusRN Beta</title>
+<meta name="description" content="Sign in to NexusRN beta with Supabase email and password authentication."/>
+<meta name="theme-color" content="#020617"/>
+<link rel="canonical" href="https://nexusrn.healthqualityleader.com/auth-sign-in.html" />
+<style id="nexus-auth-css">
+  :root{--bg:#020617;--panel:#0b1329;--panel2:#0f172a;--text:#f8fafc;--muted:#94a3b8;--line:rgba(148,163,184,.22);--teal:#14b8a6;--cyan:#22d3ee;--amber:#fbbf24;--danger:#fb7185;--green:#34d399;}
+  *{box-sizing:border-box} body{margin:0;background:radial-gradient(circle at 20% 0%,rgba(20,184,166,.16),transparent 28%),linear-gradient(135deg,#020617,#081226 55%,#020617);color:var(--text);font-family:'Plus Jakarta Sans',Inter,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;min-height:100vh;} a{color:inherit}.nx-shell{max-width:1120px;margin:0 auto;padding:28px 18px 52px}.nx-top{display:flex;justify-content:space-between;gap:14px;align-items:center;margin-bottom:34px}.nx-brand{font-weight:950;font-size:22px;letter-spacing:-.04em}.nx-brand span{color:var(--teal)}.nx-sub{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:var(--muted);font-weight:800}.nx-nav{display:flex;gap:10px;flex-wrap:wrap}.nx-btn{display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--line);background:rgba(15,23,42,.72);color:var(--text);text-decoration:none;border-radius:999px;padding:11px 15px;font-weight:900;font-size:13px;cursor:pointer}.nx-btn.primary{background:linear-gradient(135deg,var(--teal),var(--cyan));color:#020617;border-color:transparent;box-shadow:0 14px 30px rgba(20,184,166,.22)}.nx-btn.warn{background:rgba(251,191,36,.12);border-color:rgba(251,191,36,.35);color:#fde68a}.nx-btn.danger{background:rgba(251,113,133,.12);border-color:rgba(251,113,133,.35);color:#fecdd3}.nx-btn[disabled],.nx-btn.disabled{opacity:.55;cursor:not-allowed}.nx-hero{display:grid;grid-template-columns:1.04fr .96fr;gap:26px;align-items:start}.nx-card{border:1px solid var(--line);background:linear-gradient(180deg,rgba(15,23,42,.92),rgba(2,6,23,.88));border-radius:28px;padding:30px;box-shadow:0 24px 70px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.04)}.nx-kicker{display:inline-flex;border:1px solid rgba(20,184,166,.36);background:rgba(20,184,166,.1);color:#67e8f9;border-radius:999px;padding:7px 10px;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:950}.nx-title{font-size:clamp(32px,5vw,60px);line-height:.98;margin:18px 0 14px;letter-spacing:-.06em}.nx-lead{color:#cbd5e1;font-size:17px;line-height:1.75}.nx-list{display:grid;gap:12px;margin:22px 0}.nx-list div{display:flex;gap:10px;align-items:flex-start;color:#dbeafe;font-size:14px;line-height:1.45}.nx-check{color:#2dd4bf;font-weight:950}.nx-form{display:grid;gap:14px;margin-top:18px}.nx-field label{display:block;font-size:12px;color:#cbd5e1;font-weight:900;margin:0 0 7px}.nx-input{width:100%;border:1px solid rgba(148,163,184,.28);background:rgba(2,6,23,.62);color:#fff;border-radius:15px;padding:14px 15px;font-size:15px;outline:none}.nx-input:focus{border-color:rgba(34,211,238,.75);box-shadow:0 0 0 3px rgba(34,211,238,.12)}.nx-status{border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.035);padding:14px;color:#cbd5e1;font-size:13px;line-height:1.55;white-space:pre-wrap}.nx-status.good{border-color:rgba(52,211,153,.34);background:rgba(52,211,153,.08);color:#d1fae5}.nx-status.bad{border-color:rgba(251,113,133,.34);background:rgba(251,113,133,.08);color:#fecdd3}.nx-note{font-size:12px;color:#94a3b8;line-height:1.55;margin-top:12px}.nx-price{font-size:64px;font-weight:950;letter-spacing:-.07em;line-height:1;margin:18px 0 2px}.nx-price small{font-size:20px;color:var(--muted);letter-spacing:0;font-weight:850}.nx-footer{border-top:1px solid var(--line);margin-top:38px;padding-top:20px;color:#64748b;font-size:12px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}.nx-footer a{color:#67e8f9;text-decoration:none}.nx-pill{display:inline-flex;border:1px solid rgba(148,163,184,.24);padding:7px 10px;border-radius:999px;background:rgba(15,23,42,.55);font-size:12px;font-weight:900;color:#cbd5e1}@media(max-width:860px){.nx-hero{grid-template-columns:1fr}.nx-top{align-items:flex-start;flex-direction:column}.nx-price{font-size:52px}}
+</style>
+
+</head>
+<body>
+<main class="nx-shell">
+  <header class="nx-top"><div><div class="nx-brand">Nexus<span>RN</span></div><div class="nx-sub">Beta Sign In</div></div><nav class="nx-nav"><a class="nx-btn" href="index.html">Landing</a><a class="nx-btn" href="public-demo/index.html">Public Demo</a><a class="nx-btn" href="auth-sign-up.html">Create Account</a></nav></header>
+  <section class="nx-hero">
+    <article class="nx-card">
+      <span class="nx-kicker">Account first</span>
+      <h1 class="nx-title">Sign in before beta checkout or access testing.</h1>
+      <p class="nx-lead">This uses Supabase email/password auth. The free Public Demo does not require sign-in; paid beta access should be tied to the same email used during checkout.</p>
+      <div class="nx-list">
+        <div><span class="nx-check">✓</span><span>Real Supabase session handling, not a fake static password form.</span></div>
+        <div><span class="nx-check">✓</span><span>$1 local test access is tied to your signed-in user for 24 hours.</span></div>
+        <div><span class="nx-check">✓</span><span>Production payment-to-access still needs a Stripe webhook entitlement table.</span></div>
+      </div>
+    </article>
+    <aside class="nx-card">
+      <span class="nx-kicker">Sign in</span>
+      <form class="nx-form" id="signin-form">
+        <div class="nx-field"><label for="email">Email</label><input class="nx-input" id="email" type="email" autocomplete="email" required placeholder="you@example.com"/></div>
+        <div class="nx-field"><label for="password">Password</label><input class="nx-input" id="password" type="password" autocomplete="current-password" required placeholder="Your password"/></div>
+        <button class="nx-btn primary" type="submit">Sign In</button>
+        <div class="nx-nav"><a class="nx-btn" href="auth-sign-up.html">Create Account</a><button class="nx-btn" type="button" id="reset-button">Reset Password</button></div>
+        <div class="nx-status" id="auth-status">Loading Supabase auth…</div>
+      </form>
+    </aside>
+  </section>
+  <footer class="nx-footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="beta-access.html">Join Beta</a><a href="contact.html">Contact</a></footer>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="assets/js/nexusrn-supabase-auth.js"></script>
+<script>
+(function(){
+  var params=new URLSearchParams(location.search||'');
+  var returnTo=params.get('returnTo')||'account.html';
+  var status=document.getElementById('auth-status');
+  var form=document.getElementById('signin-form');
+  var reset=document.getElementById('reset-button');
+  function setStatus(msg, cls){ status.textContent=msg; status.className='nx-status '+(cls||''); }
+  function safeReturn(){
+    if(/^https?:/i.test(returnTo)) return 'account.html';
+    return returnTo || 'account.html';
+  }
+  async function init(){
+    try{
+      var session=await NEXUSRN_SUPABASE.getSession();
+      if(session && session.user){ setStatus('Already signed in as '+session.user.email+'. Redirecting…','good'); setTimeout(function(){location.href=safeReturn();},650); return; }
+      setStatus('Ready. Sign in with your NexusRN beta account.','good');
+    }catch(e){ setStatus('Auth could not initialize: '+NEXUSRN_SUPABASE.statusText(e),'bad'); }
+  }
+  form.addEventListener('submit', async function(e){
+    e.preventDefault();
+    var email=document.getElementById('email').value.trim();
+    var password=document.getElementById('password').value;
+    setStatus('Signing in…');
+    try{
+      var res=await NEXUSRN_SUPABASE.signIn(email,password);
+      if(res.error){ setStatus(res.error.message,'bad'); return; }
+      setStatus('Signed in. Redirecting…','good');
+      setTimeout(function(){location.href=safeReturn();},700);
+    }catch(err){ setStatus('Sign-in failed: '+NEXUSRN_SUPABASE.statusText(err),'bad'); }
+  });
+  reset.addEventListener('click', async function(){
+    var email=document.getElementById('email').value.trim();
+    if(!email){ setStatus('Enter your email first, then click Reset Password.','bad'); return; }
+    setStatus('Sending reset email…');
+    try{ var res=await NEXUSRN_SUPABASE.resetPassword(email); if(res.error){setStatus(res.error.message,'bad');} else {setStatus('Password reset email sent if the account exists.','good');} }
+    catch(err){ setStatus('Reset failed: '+NEXUSRN_SUPABASE.statusText(err),'bad'); }
+  });
+  init();
+})();
+</script>
+</body>
+</html>

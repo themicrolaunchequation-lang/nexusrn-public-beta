@@ -1,0 +1,1487 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 153,
+  "count": 4,
+  "sourceStartIndex": 7650,
+  "questions": [
+    {
+      "id": "e5c53214-555a-4214-9a8b-f0fdc8e3b6f9",
+      "format": "extended-multiple-response",
+      "cjmm_step": "Prioritize Hypotheses",
+      "difficulty": "Easy",
+      "clinical_focus": "Renal / Fluid-Electrolyte Balance",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Linda Kowalski",
+        "gender": "F",
+        "age_unit": "years",
+        "location": "Step-Down Unit",
+        "age_value": 49,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 78, RR: 16, BP: 118/76, SpO₂: 98%, Pain: 0/10, Weight: 65 kg, Height: 163 cm"
+          }
+        ],
+        "labs": [
+          {
+            "test": "Glucose",
+            "value": "880 mg/dL",
+            "unit": "mg/dL",
+            "time": "08:00",
+            "referenceRange": "70 - 100 mg/dL"
+          }
+        ],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": ""
+          },
+          {
+            "k": "HR",
+            "v": "78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": ""
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": ""
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": ""
+          },
+          {
+            "k": "SpO₂",
+            "v": "98%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": ""
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": ""
+          },
+          {
+            "k": "Weight",
+            "v": "65 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": ""
+          },
+          {
+            "k": "Height",
+            "v": "163 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": ""
+          },
+          {
+            "k": "BMI",
+            "v": "24.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W at 50 mL/h",
+            "output": 15,
+            "outputRoute": "Urine Output (Oliguria)"
+          },
+          {
+            "time": "09:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 18,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 30,
+            "intakeRoute": "Oral sips",
+            "output": 12,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "11:00",
+            "intake": 50,
+            "intakeRoute": "IV Med flush",
+            "output": 20,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 60,
+            "intakeRoute": "Lunch sips",
+            "output": 15,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 16,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 30,
+            "intakeRoute": "Oral fluids",
+            "output": 14,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 50,
+            "intakeRoute": "IV D5W",
+            "output": 18,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of 880 mg/dL, serum osmolality of 360 mOsm/kg, and a pH of 7.42 with negative ketones.",
+      "structure": {
+        "scenario": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of 880 mg/dL, serum osmolality of 360 mOsm/kg, and a pH of 7.42 with negative ketones.",
+        "stem": "The nurse is caring for an 49 year old client from a long-term care facility who is admitted to the emergency department. Which potential complications are most likely or most life-threatening for this client? Select all that apply.",
+        "prompt": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of 880 mg/dL, serum osmolality of 360 mOsm/kg, and a pH of 7.42 with negative ketones.",
+        "type": "extended-multiple-response",
+        "options": [
+          {
+            "id": "A",
+            "text": "Hypovolemic shock"
+          },
+          {
+            "id": "B",
+            "text": "Diabetic ketoacidosis"
+          },
+          {
+            "id": "C",
+            "text": "Acute kidney injury"
+          },
+          {
+            "id": "D",
+            "text": "Hypoglycemia"
+          },
+          {
+            "id": "E",
+            "text": "Thromboembolic events"
+          },
+          {
+            "id": "F",
+            "text": "Aspiration pneumonia"
+          },
+          {
+            "id": "G",
+            "text": "Cerebral edema"
+          },
+          {
+            "id": "H",
+            "text": "Diabetic neuropathy exacerbation"
+          }
+        ],
+        "correct": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must prioritize rapid fluid resuscitation to correct severe dehydration and hyperosmolality, followed by insulin administration to gradually lower blood glucose levels.",
+        "core_concept": null,
+        "answer_analysis": "The client's presentation is consistent with Hyperosmolar Hyperglycemic State (HHS), characterized by extreme hyperglycemia, severe dehydration, elevated serum osmolality, and altered mental status, without significant ketoacidosis. **Hypovolemic shock** is a most likely and life-threatening complication due to profound fluid loss from osmotic diuresis. **Acute kidney injury** (AKI) is highly likely due to severe and prolonged hypovolemia leading to decreased renal perfusion. **Thromboembolic events** are a significant risk because the severe dehydration and hyperosmolarity increase blood viscosity and hemoconcentration, predisposing the client to conditions like DVT, PE, and arterial thrombosis. **Cerebral edema** is a severe, life-threatening complication that can occur during the treatment of HHS if plasma osmolality is corrected too rapidly, especially with hypotonic fluids, causing a rapid shift of water into brain cells. Diabetic ketoacidosis is incorrect as the client has a normal pH and negative ketones, which differentiates HHS from DKA. Hypoglycemia is a potential complication of treatment, not an initial complication of the hyperglycemic state itself. Aspiration pneumonia is a risk due to altered mental status but is a secondary complication rather than a direct metabolic or physiological consequence of the hyperosmolar state. Diabetic neuropathy exacerbation is a chronic complication and not an acute, life-threatening risk directly associated with the acute HHS episode."
+      },
+      "mnemonic": {
+        "title": "HHS: High Sugar, Dry",
+        "content": null
+      },
+      "answerKey": {
+        "type": "extended-multiple-response",
+        "correctIds": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ],
+        "correctSet": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ],
+        "maxScore": 4,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Bowel Obstruction",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:diabetes"
+          ],
+          "clinicalFocus": "Renal / Fluid-Electrolyte Balance",
+          "cjmmStep": "Prioritize Hypotheses",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:diabetes"
+          ],
+          "guidelineSensitiveBuckets": [
+            "diabetes"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Diabetes / Glycemic Management",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "diabetes"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of …",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:diabetes"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "diabetes"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 49,
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Step-Down Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The client's presentation is consistent with Hyperosmolar Hyperglycemic State (HHS), characterized by extreme hyperglycemia, severe dehydration, elevated serum osmolality, and altered mental status, without significant ketoacidosis. **Hypovolemic shock** is a most likely and life-threatening complication due to profound fluid loss from osmotic diuresis. **Acute kidney injury** (AKI) is highly likely due to severe and prolonged hypovolemia leading to decreased renal perfusion. **Thromboembolic events** are a significant risk because the severe dehydration and hyperosmolarity increase blood viscosity and hemoconcentration, predisposing the client to conditions like DVT, PE, and arterial thrombosis. **Cerebral edema** is a severe, life-threatening complication that can occur during the treatment of HHS if plasma osmolality is corrected too rapidly, especially with hypotonic fluids, causing a rapid shift of water into brain cells. Diabetic ketoacidosis is incorrect as the client has a normal pH and negative ketones, which differentiates HHS from DKA. Hypoglycemia is a potential complication of treatment, not an initial complication of the hyperglycemic state itself. Aspiration pneumonia is a risk due to altered mental status but is a secondary complication rather than a direct metabolic or physiological consequence of the hyperosmolar state. Diabetic neuropathy exacerbation is a chronic complication and not an acute, life-threatening risk directly associated with the acute HHS episode.",
+        "clinicalPrinciple": "The nurse must prioritize rapid fluid resuscitation to correct severe dehydration and hyperosmolality, followed by insulin administration to gradually lower blood glucose levels.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of …",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Diabetes / Glycemic Management",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "An 49 year old client from a long-term care facility is admitted to the emergency department with a 3-day history of increased lethargy, poor oral intake, and decreased urine output. Lab results show a blood glucose of …",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:diabetes"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "diabetes"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "diabetes"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "diabetes"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "00cfd567-6af3-4872-8892-daedf8786298",
+      "format": "matrix-multiple-choice",
+      "cjmm_step": "Evaluate Outcomes",
+      "difficulty": "Easy",
+      "clinical_focus": "Stroke / CVA",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "George Petrov",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Neurology Unit",
+        "age_value": "73",
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, HR: 74, RR: 16, BP: 128/78, SpO₂: 97%, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "74",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "128/78",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "95 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 128/78",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago.",
+      "structure": {
+        "type": "matrix-multiple-choice",
+        "prompt": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago.",
+        "rows": [
+          {
+            "id": "A",
+            "text": "Able to follow two-step commands with minimal difficulty."
+          },
+          {
+            "id": "B",
+            "text": "New onset of left pupil dilation with sluggish response to light."
+          },
+          {
+            "id": "C",
+            "text": "Facial droop significantly reduced, symmetrical smile observed."
+          },
+          {
+            "id": "D",
+            "text": "Blood pressure reading of 190/110 mmHg."
+          },
+          {
+            "id": "E",
+            "text": "Right arm strength improved to 3/5 from 1/5."
+          }
+        ],
+        "columns": [
+          {
+            "id": "A",
+            "text": "Expected Finding"
+          },
+          {
+            "id": "B",
+            "text": "Unexpected Finding"
+          }
+        ],
+        "correct_answers": {
+          "Blood pressure reading of 190/110 mmHg.": "Unexpected Finding",
+          "Right arm strength improved to 3/5 from 1/5.": "Expected Finding",
+          "Able to follow two-step commands with minimal difficulty.": "Expected Finding",
+          "Facial droop significantly reduced, symmetrical smile observed.": "Expected Finding",
+          "New onset of left pupil dilation with sluggish response to light.": "Unexpected Finding"
+        },
+        "stem": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago."
+      },
+      "media": [],
+      "rationale": {
+        "trap": "Learners may fail to prioritize the immediate recognition of subtle yet critical neurological changes or the strict blood pressure parameters required after tPA administration, potentially delaying life-saving interventions.",
+        "golden_rule": "Priority is continuous neurological assessment and vital sign monitoring to identify early signs of bleeding or adverse reactions following tPA administration.",
+        "core_concept": "Post-thrombolytic therapy for ischemic stroke requires vigilant monitoring for signs of neurological improvement and early detection of complications like hemorrhagic conversion or increased intracranial pressure.",
+        "answer_analysis": "Expected findings include improvements in neurological deficits such as the ability to follow commands, reduced facial droop, and increased motor strength, indicating a positive response to tPA and stroke recovery. Unexpected and critical findings include new onset of pupil dilation with sluggish response, which suggests worsening neurological status, potentially due to increased intracranial pressure or hemorrhagic conversion. A blood pressure of 190/110 mmHg is also unexpected and dangerous post-tPA, as strict blood pressure control (typically <185/110 mmHg) is essential to prevent intracranial hemorrhage."
+      },
+      "mnemonic": {
+        "title": "tPA Immediate Watch",
+        "content": null
+      },
+      "answerKey": {
+        "type": "matrix-multiple-choice",
+        "correctMap": {
+          "Blood pressure reading of 190/110 mmHg.": "Unexpected Finding",
+          "Right arm strength improved to 3/5 from 1/5.": "Expected Finding",
+          "Able to follow two-step commands with minimal difficulty.": "Expected Finding",
+          "Facial droop significantly reduced, symmetrical smile observed.": "Expected Finding",
+          "New onset of left pupil dilation with sluggish response to light.": "Unexpected Finding"
+        },
+        "maxScore": 5,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Bowel Obstruction",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Stroke / CVA",
+          "cjmmStep": "Evaluate Outcomes",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Stroke / CVA",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago.",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "73",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Neurology Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Expected findings include improvements in neurological deficits such as the ability to follow commands, reduced facial droop, and increased motor strength, indicating a positive response to tPA and stroke recovery. Unexpected and critical findings include new onset of pupil dilation with sluggish response, which suggests worsening neurological status, potentially due to increased intracranial pressure or hemorrhagic conversion. A blood pressure of 190/110 mmHg is also unexpected and dangerous post-tPA, as strict blood pressure control (typically <185/110 mmHg) is essential to prevent intracranial hemorrhage.",
+        "clinicalPrinciple": "Priority is continuous neurological assessment and vital sign monitoring to identify early signs of bleeding or adverse reactions following tPA administration.",
+        "trapToAvoid": "Learners may fail to prioritize the immediate recognition of subtle yet critical neurological changes or the strict blood pressure parameters required after tPA administration, potentially delaying life-saving interventions.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Stroke / CVA",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 73 year old male was admitted to the emergency department 2 hours ago with sudden onset right-sided weakness and expressive aphasia. He received intravenous alteplase (tPA) 30 minutes ago.",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "a9b67597-5873-46ca-9fa4-2df6689e47d6",
+      "format": "extended-multiple-response",
+      "cjmm_step": "Prioritize Hypotheses",
+      "difficulty": "Easy",
+      "clinical_focus": "Pneumonia / Oxygenation",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Ahmed Hassan",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Emergency Department",
+        "age_value": 28,
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.6°F, HR: 92, BP: 118/76, Pain: 0/10, Weight: 78 kg, Height: 175 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.6°F / 37.0°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n▸ Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n  Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "92",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n▸ Adult (18–64): 60–100/min\n  Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "38",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n▸ Adult (18–64): 12–20/min\n  Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "118/76",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n▸ Adult (18–64): 90/60–120/80 mmHg\n  Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "Not Assessed",
+            "abn": false,
+            "level": "missing",
+            "status": "not assessed",
+            "source": "not documented in item",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n▸ Adult (18–64): 95–100%\n  Older Adult (65+): 94–100%",
+            "message": "SpO₂ not charted. Do not assume normal oxygenation unless documented."
+          },
+          {
+            "k": "MAP",
+            "v": "90 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 118/76",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n▸ Adult (18–64): 70–105 mmHg\n  Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n▸ Adult (18–64): NRS 0–10\n  Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "78 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "175 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n▸ Adult (18–64): Patient-specific\n  Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.5",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n▸ Adult (18–64): 18.5–24.9\n  Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ],
+        "io": [
+          {
+            "time": "08:00",
+            "intake": 120,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 55,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "09:00",
+            "intake": 100,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 62,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "10:00",
+            "intake": 150,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 65,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "11:00",
+            "intake": 100,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 58,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "12:00",
+            "intake": 200,
+            "intakeRoute": "Lunch tray fluids",
+            "output": 75,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "13:00",
+            "intake": 100,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 68,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "14:00",
+            "intake": 100,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 60,
+            "outputRoute": "Urine Output"
+          },
+          {
+            "time": "15:00",
+            "intake": 120,
+            "intakeRoute": "Oral / IV fluid",
+            "output": 65,
+            "outputRoute": "Urine Output"
+          }
+        ]
+      },
+      "prompt": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallop, jugular venous distension, and pitting edema to the sacrum and bilateral lower extremities.",
+      "structure": {
+        "scenario": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallop, jugular venous distension, and pitting edema to the sacrum and bilateral lower extremities.",
+        "stem": "The nurse is caring for this client. Which potential complications are most likely or most life-threatening? Select all that apply.",
+        "prompt": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallop, jugular venous distension, and pitting edema to the sacrum and bilateral lower extremities.",
+        "type": "extended-multiple-response",
+        "options": [
+          {
+            "id": "A",
+            "text": "Respiratory failure"
+          },
+          {
+            "id": "B",
+            "text": "Deep vein thrombosis"
+          },
+          {
+            "id": "C",
+            "text": "Cardiogenic shock"
+          },
+          {
+            "id": "D",
+            "text": "Hyperglycemia"
+          },
+          {
+            "id": "E",
+            "text": "Acute kidney injury"
+          },
+          {
+            "id": "F",
+            "text": "Aspiration pneumonia"
+          },
+          {
+            "id": "G",
+            "text": "Life-threatening cardiac dysrhythmias"
+          },
+          {
+            "id": "H",
+            "text": "Hypovolemic shock"
+          }
+        ],
+        "correct": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must prioritize immediate interventions to improve oxygenation and reduce fluid overload, such as administering oxygen and diuretics, to prevent respiratory failure.",
+        "core_concept": null,
+        "answer_analysis": "Acute pulmonary edema is a severe medical emergency characterized by fluid accumulation in the lung's air sacs, typically due to heart failure. The client's symptoms (frothy pink sputum, severe dyspnea, extensive crackles, S3 gallop, severe fluid overload) indicate critical cardiovascular and respiratory compromise. * **Respiratory failure:** The severe dyspnea, frothy pink sputum (indicating fluid transudation into alveoli), and extensive crackles are direct manifestations of impaired gas exchange and impending or actual respiratory failure, which is immediately life-threatening. * **Cardiogenic shock:** Acute pulmonary edema often stems from severe left ventricular failure. This can rapidly progress to cardiogenic shock if the heart's pumping ability deteriorates further, leading to inadequate tissue perfusion to vital organs. Signs like an S3 gallop and severe fluid overload indicate significant cardiac compromise. * **Acute kidney injury:** The poor cardiac output, reduced renal perfusion, and the overall stress of severe fluid overload on the kidneys can lead to acute kidney injury. This is a common and serious complication in patients with severe heart failure and pulmonary edema. * **Life-threatening cardiac dysrhythmias:** Hypoxemia, electrolyte imbalances (often associated with fluid overload and diuretic use), and myocardial stretch due to increased preload can precipitate various cardiac dysrhythmias, some of which (e.g., ventricular tachycardia/fibrillation) are immediately life-threatening."
+      },
+      "mnemonic": {
+        "title": "Pulmonary Edema Alert",
+        "content": null
+      },
+      "answerKey": {
+        "type": "extended-multiple-response",
+        "correctIds": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ],
+        "correctSet": [
+          "A",
+          "C",
+          "E",
+          "G"
+        ],
+        "maxScore": 4,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Wound Infection",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "REPAIRED_FIRST_CLASS",
+          "learnerReady": true,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "clinicalFocus": "Pneumonia / Oxygenation",
+          "cjmmStep": "Prioritize Hypotheses",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "PASS_FIRST_CLASS_COHERENT",
+          "learnerReady": true,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": "Pneumonia / Oxygenation",
+          "clinicalFocusEvidenceScore": 3,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallo…",
+      "v242nReputationStatus": "REPAIRED_FIRST_CLASS",
+      "v242nLearnerReady": true,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": 28,
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Emergency Department"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Acute pulmonary edema is a severe medical emergency characterized by fluid accumulation in the lung's air sacs, typically due to heart failure. The client's symptoms (frothy pink sputum, severe dyspnea, extensive crackles, S3 gallop, severe fluid overload) indicate critical cardiovascular and respiratory compromise. * **Respiratory failure:** The severe dyspnea, frothy pink sputum (indicating fluid transudation into alveoli), and extensive crackles are direct manifestations of impaired gas exchange and impending or actual respiratory failure, which is immediately life-threatening. * **Cardiogenic shock:** Acute pulmonary edema often stems from severe left ventricular failure. This can rapidly progress to cardiogenic shock if the heart's pumping ability deteriorates further, leading to inadequate tissue perfusion to vital organs. Signs like an S3 gallop and severe fluid overload indicate significant cardiac compromise. * **Acute kidney injury:** The poor cardiac output, reduced renal perfusion, and the overall stress of severe fluid overload on the kidneys can lead to acute kidney injury. This is a common and serious complication in patients with severe heart failure and pulmonary edema. * **Life-threatening cardiac dysrhythmias:** Hypoxemia, electrolyte imbalances (often associated with fluid overload and diuretic use), and myocardial stretch due to increased preload can precipitate various cardiac dysrhythmias, some of which (e.g., ventricular tachycardia/fibrillation) are immediately life-threatening.",
+        "clinicalPrinciple": "The nurse must prioritize immediate interventions to improve oxygenation and reduce fluid overload, such as administering oxygen and diuretics, to prevent respiratory failure.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallo…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": "Pneumonia / Oxygenation",
+      "v242pClinicalFocusEvidenceScore": 3,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 28 year old client is admitted to the emergency department reporting sudden severe shortness of breath. Assessment reveals frothy pink sputum, respiratory rate 38, extensive crackles in all lung fields, a new S3 gallo…",
+      "v242oReputationStatus": "PASS_FIRST_CLASS_COHERENT",
+      "v242oLearnerReady": true,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    },
+    {
+      "id": "28423dcc-4302-46da-bf55-43e346b75e7a",
+      "format": "extended-multiple-response",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Easy",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+      "patient": {
+        "name": "Dorothy Obi",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": "76",
+        "allergies": null,
+        "weight_kg": null,
+        "code_status": null,
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [],
+        "vitals": [
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, RR: 16, SpO₂: 97%, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "time": "08:00",
+            "name": "Nursing",
+            "value": "Vital signs q4h and PRN",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:00",
+            "name": "Medication",
+            "value": "Acetaminophen 650 mg PO q6h PRN pain or fever >101°F",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Diet",
+            "value": "Regular diet as tolerated",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:05",
+            "name": "Activity",
+            "value": "Ad lib, activity as tolerated",
+            "source": "General Admission orders"
+          },
+          {
+            "time": "08:10",
+            "name": "Laboratory",
+            "value": "Complete Blood Count (CBC) and Basic Metabolic Panel (BMP) in morning",
+            "source": "General Admission orders"
+          }
+        ],
+        "hp": {},
+        "imaging": [],
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "110",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "16",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "100/60",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "97%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "73 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 100/60",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complications related to his anticoagulation therapy.",
+      "structure": {
+        "scenario": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complications related to his anticoagulation therapy.",
+        "stem": "The nurse is caring for a 76 year old male client prescribed warfarin. Which findings indicate a specific complication related to his anticoagulation therapy? Select all that apply.",
+        "prompt": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complications related to his anticoagulation therapy.",
+        "type": "extended-multiple-response",
+        "options": [
+          {
+            "id": "A",
+            "text": "Reports of dark, tarry stools for the past two days."
+          },
+          {
+            "id": "B",
+            "text": "Bruising noted on his right arm at the site of a recent blood draw."
+          },
+          {
+            "id": "C",
+            "text": "New onset severe headache accompanied by drowsiness."
+          },
+          {
+            "id": "D",
+            "text": "Urine described as dark amber and cloudy."
+          },
+          {
+            "id": "E",
+            "text": "Small petechiae noted on the client's chest and abdomen."
+          },
+          {
+            "id": "F",
+            "text": "Blood pressure 100/60 mmHg and heart rate 110 bpm, reporting dizziness upon standing."
+          },
+          {
+            "id": "G",
+            "text": "INR of 2.5."
+          },
+          {
+            "id": "H",
+            "text": "Complaint of continued mild aching in the affected leg."
+          }
+        ],
+        "correct": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ]
+      },
+      "media": [],
+      "rationale": {
+        "trap": null,
+        "golden_rule": "The nurse must educate clients on warfarin about signs of bleeding, the importance of regular INR monitoring, and potential drug-food interactions to prevent complications.",
+        "core_concept": null,
+        "answer_analysis": "Anticoagulation therapy carries a significant risk of bleeding. The nurse must be vigilant in identifying signs and symptoms of bleeding complications. Reports of dark, tarry stools (melena) are a classic sign of upper gastrointestinal bleeding. New onset severe headache accompanied by drowsiness suggests a potential intracranial hemorrhage, a life-threatening complication. Small petechiae indicate capillary bleeding into the skin, a general sign of increased bleeding tendency. Hypotension (BP 100/60 mmHg), tachycardia (HR 110 bpm), and orthostatic dizziness are signs of hypovolemia, which can result from significant internal or external blood loss. These four findings all indicate serious bleeding complications requiring immediate intervention. Bruising at a blood draw site is a common and expected finding, especially in an anticoagulated client, and does not typically signify a systemic bleeding complication. Dark amber and cloudy urine typically suggest dehydration or a urinary tract infection, not hematuria (which would be reddish, pink, or tea-colored). An INR of 2.5 is within the usual therapeutic range (2.0-3.0) for DVT treatment and, by itself, does not indicate a bleeding complication from excessive anticoagulation. Continued mild aching in the affected leg could be residual discomfort from the DVT or post-thrombotic syndrome, but it is not a direct sign of a bleeding complication."
+      },
+      "mnemonic": {
+        "title": "Warfarin Safety Watch",
+        "content": null
+      },
+      "answerKey": {
+        "type": "extended-multiple-response",
+        "correctIds": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ],
+        "correctSet": [
+          "A",
+          "C",
+          "E",
+          "F"
+        ],
+        "maxScore": 4,
+        "scoring": "plusMinus"
+      },
+      "metadata": {
+        "v69_repaired": false,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242nOriginalClinicalFocus": "Medication Error / Overdose",
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "SME_REVIEW_CURRENT_OR_PRIOR",
+          "learnerReady": false,
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_prompt"
+          ],
+          "hardBlockers": [],
+          "reviewFlags": [
+            "current_guideline_sensitive:high-alert medication"
+          ],
+          "clinicalFocus": "Deep Vein Thrombosis / PE",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Pharmacological and Parenteral Therapies",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [
+            "guideline_currentness_review:high-alert medication"
+          ],
+          "guidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "repairActions": [],
+          "detectedClinicalFocus": "Deep Vein Thrombosis / PE",
+          "clinicalFocusEvidenceScore": 2,
+          "noClinicalFactsInvented": true
+        },
+        "v242q": {
+          "version": "v242Q-distribution-balanced-5k-gate",
+          "sourceBaseline": "v242P-from-v242O-guideline-and-held-item-repair",
+          "learnerReady": true,
+          "status": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+          "originalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+          "originalGuidelineSensitiveBuckets": [
+            "high-alert medication"
+          ],
+          "selectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+          "mechanicalSafetyScreen": {
+            "v242kPracticeReady": true,
+            "noHardBlockers": true,
+            "answerIntegrity": true,
+            "rationalePresent": true,
+            "stemAdequate": true,
+            "genderContextScreen": true,
+            "noPlaceholderMedia": true,
+            "noClinicalFactsInvented": true
+          },
+          "needsHumanSmeSpotCheck": true
+        }
+      },
+      "validForPractice": true,
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complicat…",
+      "v242nReputationStatus": "SME_REVIEW_CURRENT_OR_PRIOR",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [
+        "clinical_focus_retagged_from_existing_prompt"
+      ],
+      "v242nHardBlockers": [],
+      "v242nReviewFlags": [
+        "current_guideline_sensitive:high-alert medication"
+      ],
+      "v242nGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "76",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "Anticoagulation therapy carries a significant risk of bleeding. The nurse must be vigilant in identifying signs and symptoms of bleeding complications. Reports of dark, tarry stools (melena) are a classic sign of upper gastrointestinal bleeding. New onset severe headache accompanied by drowsiness suggests a potential intracranial hemorrhage, a life-threatening complication. Small petechiae indicate capillary bleeding into the skin, a general sign of increased bleeding tendency. Hypotension (BP 100/60 mmHg), tachycardia (HR 110 bpm), and orthostatic dizziness are signs of hypovolemia, which can result from significant internal or external blood loss. These four findings all indicate serious bleeding complications requiring immediate intervention. Bruising at a blood draw site is a common and expected finding, especially in an anticoagulated client, and does not typically signify a systemic bleeding complication. Dark amber and cloudy urine typically suggest dehydration or a urinary tract infection, not hematuria (which would be reddish, pink, or tea-colored). An INR of 2.5 is within the usual therapeutic range (2.0-3.0) for DVT treatment and, by itself, does not indicate a bleeding complication from excessive anticoagulation. Continued mild aching in the affected leg could be residual discomfort from the DVT or post-thrombotic syndrome, but it is not a direct sign of a bleeding complication.",
+        "clinicalPrinciple": "The nurse must educate clients on warfarin about signs of bleeding, the importance of regular INR monitoring, and potential drug-food interactions to prevent complications.",
+        "trapToAvoid": "",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "REPAIRED_COHERENCE_READY_P242",
+      "v242pLearnerReady": true,
+      "v242pDisplayStem": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complicat…",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242pDetectedClinicalFocus": "Deep Vein Thrombosis / PE",
+      "v242pClinicalFocusEvidenceScore": 2,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "A 76 year old male client, recently discharged after a deep vein thrombosis (DVT), is prescribed warfarin 5 mg daily. He presents to the clinic for a routine follow-up. The nurse is assessing him for potential complicat…",
+      "v242oReputationStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [],
+      "v242oReviewFlags": [
+        "guideline_currentness_review:high-alert medication"
+      ],
+      "v242oGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242pOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qVersion": "v242Q-distribution-balanced-5k-gate",
+      "v242qLearnerReady": true,
+      "v242qReputationStatus": "REPAIRED_DISTRIBUTION_BALANCED_READY_P242Q",
+      "v242qOriginalV242pStatus": "SME_REVIEW_GUIDELINE_CURRENTNESS_P242",
+      "v242qOriginalGuidelineSensitiveBuckets": [
+        "high-alert medication"
+      ],
+      "v242qNeedsHumanSmeSpotCheck": true,
+      "v242qRepairActions": [
+        "v242q_distribution_balanced_promotion_after_mechanical_gate",
+        "guideline_sensitive_item_passed_low_risk_currentness_screen"
+      ],
+      "v242qSelectionReason": "Promoted from held pool to improve underrepresented difficulty, item-type, CJMM, and Client Needs coverage after automated mechanical safety screen.",
+      "activeStatus": false,
+      "holdStatus": "RESERVE_NON_COHORT"
+    }
+  ]
+}

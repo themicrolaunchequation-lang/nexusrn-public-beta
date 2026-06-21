@@ -1,0 +1,1036 @@
+{
+  "version": "v231-full-db-call-verified-chunk-loader",
+  "kind": "question-chunk",
+  "chunk": 122,
+  "count": 2,
+  "sourceStartIndex": 6100,
+  "questions": [
+    {
+      "id": "nexus_multip_cardiact_65aa",
+      "format": "highlight",
+      "cjmm_step": "Analyze Cues",
+      "difficulty": "Moderate",
+      "clinical_focus": "Cardiac Tamponade Recognition and Management",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Margaret Thompson",
+        "gender": "M",
+        "age_unit": "years",
+        "location": "Medical-Surgical Unit",
+        "age_value": "68",
+        "allergies": "NKA (No Known Allergies)",
+        "weight_kg": "85",
+        "code_status": "Full Code",
+        "display_name": "Client"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client reports increasing shortness of breath and mild chest discomfort. Expresses feeling 'a bit anxious.'"
+          },
+          {
+            "type": "Nurse note",
+            "note": "Client's condition rapidly deteriorating. Vital signs: BP 88/60 mmHg, HR 128 bpm, RR 28 breaths/min, SpO2 90% on 2L nasal cannula. Physical assessment reveals muffled heart sounds on auscultation, jugular venous distension (JVD) noted to the angle of the jaw, and peripheral pulses are weak and thready bilaterally. Telemetry monitor displays sinus tachycardia. Client appears pale and diaphoretic."
+          }
+        ],
+        "vitals": [
+          {
+            "bp": "88/60",
+            "hr": "128",
+            "rr": "28",
+            "spo2": "90%",
+            "time": "Baseline"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "T: 98.2°F, Pain: 0/10, Weight: 75 kg, Height: 172 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "type": "Medications",
+            "text": "Dopamine infusion to maintain SBP >90 mmHg, titrate per protocol."
+          },
+          {
+            "type": "Medications",
+            "text": "Norepinephrine infusion to maintain MAP >65 mmHg, titrate per protocol."
+          },
+          {
+            "type": "Interventions",
+            "text": "Notify Cardiothoracic Surgery STAT for suspected cardiac tamponade."
+          },
+          {
+            "type": "Interventions",
+            "text": "Prepare for pericardiocentesis: obtain informed consent, gather equipment (ultrasound, pericardiocentesis kit)."
+          },
+          {
+            "type": "Diagnostics",
+            "text": "STAT Echocardiogram to assess for pericardial effusion and cardiac function."
+          },
+          {
+            "type": "Diagnostics",
+            "text": "Continuous cardiac monitoring and arterial line monitoring."
+          },
+          {
+            "type": "Labs",
+            "text": "STAT CBC, BMP, Coagulation panel (PT/INR, PTT), Lactate."
+          },
+          {
+            "type": "Interventions",
+            "text": "Increase oxygen support as needed to maintain SpO2 >94%."
+          },
+          {
+            "type": "Interventions",
+            "text": "Ensure IV access with at least two large-bore IVs."
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Increasing shortness of breath and chest discomfort.",
+          "hpi": "Client is 3 days post-coronary artery bypass graft (CABG) surgery. Over the past few hours, he has experienced a progressive increase in shortness of breath and reports persistent chest discomfort. He also expresses significant anxiety regarding his condition.",
+          "pmh": [
+            "Coronary Artery Disease (CAD)",
+            "Hypertension",
+            "Hyperlipidemia",
+            "Status post CABG x 3 days"
+          ],
+          "physical_examination": {
+            "skin": "Cool and clammy.",
+            "respiratory": {
+              "effort": "Increased work of breathing, tachypneic.",
+              "breath_sounds": "Clear to auscultation bilaterally, but diminished air entry noted."
+            },
+            "neurological": "Alert and oriented x 4, but appears restless.",
+            "cardiovascular": {
+              "telemetry": "Sinus tachycardia.",
+              "heart_sounds": "Muffled on auscultation.",
+              "peripheral_pulses": "Weak and thready bilaterally in radial and pedal arteries.",
+              "jugular_venous_distension": "Noted to the angle of the jaw."
+            },
+            "general_appearance": "Appears anxious, pale, and diaphoretic."
+          },
+          "social_history": {
+            "living_situation": "Lives alone in a rural area.",
+            "social_determinant_of_health": "Limited access to public transportation, which occasionally impacts timely follow-up appointments."
+          },
+          "client_demographics": {
+            "age": "68 years",
+            "gender": "Male"
+          },
+          "past_medical_history": [
+            "Coronary Artery Disease (CAD)",
+            "Hypertension",
+            "Hyperlipidemia",
+            "Status post CABG x 3 days"
+          ],
+          "history_of_present_illness": "Client is 3 days post-coronary artery bypass graft (CABG) surgery. Over the past few hours, he has experienced a progressive increase in shortness of breath and reports persistent chest discomfort. He also expresses significant anxiety regarding his condition."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "type": "Nurse note",
+            "note": "Client reports increasing shortness of breath and mild chest discomfort. Expresses feeling 'a bit anxious.'"
+          },
+          {
+            "type": "Nurse note",
+            "note": "Client's condition rapidly deteriorating. Vital signs: BP 88/60 mmHg, HR 128 bpm, RR 28 breaths/min, SpO2 90% on 2L nasal cannula. Physical assessment reveals muffled heart sounds on auscultation, jugular venous distension (JVD) noted to the angle of the jaw, and peripheral pulses are weak and thready bilaterally. Telemetry monitor displays sinus tachycardia. Client appears pale and diaphoretic."
+          }
+        ],
+        "providerOrders": [
+          {
+            "type": "Medications",
+            "text": "Dopamine infusion to maintain SBP >90 mmHg, titrate per protocol."
+          },
+          {
+            "type": "Medications",
+            "text": "Norepinephrine infusion to maintain MAP >65 mmHg, titrate per protocol."
+          },
+          {
+            "type": "Interventions",
+            "text": "Notify Cardiothoracic Surgery STAT for suspected cardiac tamponade."
+          },
+          {
+            "type": "Interventions",
+            "text": "Prepare for pericardiocentesis: obtain informed consent, gather equipment (ultrasound, pericardiocentesis kit)."
+          },
+          {
+            "type": "Diagnostics",
+            "text": "STAT Echocardiogram to assess for pericardial effusion and cardiac function."
+          },
+          {
+            "type": "Diagnostics",
+            "text": "Continuous cardiac monitoring and arterial line monitoring."
+          },
+          {
+            "type": "Labs",
+            "text": "STAT CBC, BMP, Coagulation panel (PT/INR, PTT), Lactate."
+          },
+          {
+            "type": "Interventions",
+            "text": "Increase oxygen support as needed to maintain SpO2 >94%."
+          },
+          {
+            "type": "Interventions",
+            "text": "Ensure IV access with at least two large-bore IVs."
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Increasing shortness of breath and chest discomfort.",
+          "hpi": "Client is 3 days post-coronary artery bypass graft (CABG) surgery. Over the past few hours, he has experienced a progressive increase in shortness of breath and reports persistent chest discomfort. He also expresses significant anxiety regarding his condition.",
+          "pmh": [
+            "Coronary Artery Disease (CAD)",
+            "Hypertension",
+            "Hyperlipidemia",
+            "Status post CABG x 3 days"
+          ],
+          "physical_examination": {
+            "skin": "Cool and clammy.",
+            "respiratory": {
+              "effort": "Increased work of breathing, tachypneic.",
+              "breath_sounds": "Clear to auscultation bilaterally, but diminished air entry noted."
+            },
+            "neurological": "Alert and oriented x 4, but appears restless.",
+            "cardiovascular": {
+              "telemetry": "Sinus tachycardia.",
+              "heart_sounds": "Muffled on auscultation.",
+              "peripheral_pulses": "Weak and thready bilaterally in radial and pedal arteries.",
+              "jugular_venous_distension": "Noted to the angle of the jaw."
+            },
+            "general_appearance": "Appears anxious, pale, and diaphoretic."
+          },
+          "social_history": {
+            "living_situation": "Lives alone in a rural area.",
+            "social_determinant_of_health": "Limited access to public transportation, which occasionally impacts timely follow-up appointments."
+          },
+          "client_demographics": {
+            "age": "68 years",
+            "gender": "Male"
+          },
+          "past_medical_history": [
+            "Coronary Artery Disease (CAD)",
+            "Hypertension",
+            "Hyperlipidemia",
+            "Status post CABG x 3 days"
+          ],
+          "history_of_present_illness": "Client is 3 days post-coronary artery bypass graft (CABG) surgery. Over the past few hours, he has experienced a progressive increase in shortness of breath and reports persistent chest discomfort. He also expresses significant anxiety regarding his condition."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.2°F / 36.8°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "128",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "28",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "88/60",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "90%",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "69 mmHg",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "calculated from documented BP 88/60",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "0/10",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "75 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "172 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "25.4",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "structure": {
+        "type": "highlight",
+        "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+        "passage": "A 68 year old male client, 3 days post-coronary artery bypass graft (CABG) surgery, presents with increasing shortness of breath, chest discomfort, and anxiety. His vital signs are BP 88/60 mmHg, HR 128 bpm, RR 28 breaths/min, SpO2 90% on 2L nasal cannula. On assessment, the nurse notes muffled heart sounds, jugular venous distension (JVD) to the angle of the jaw, and weak, thready peripheral pulses. The telemetry monitor shows sinus tachycardia. Which finding is the MOST concerning and indicates a rapidly deteriorating condition?",
+        "tokens": [
+          {
+            "id": "h0",
+            "text": "A 68 year old male client, 3 days post-coronary artery bypass graft (CABG) surgery, presents with increasing shortness of breath, chest discomfort, and anxiety.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h1",
+            "text": "His vital signs are BP 88/60 mmHg, HR 128 bpm, RR 28 breaths/min, SpO2 90% on 2L nasal cannula.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h2",
+            "text": "On assessment, the nurse notes muffled heart sounds, jugular venous distension (JVD) to the angle of the jaw, and weak, thready peripheral pulses.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h3",
+            "text": "The telemetry monitor shows sinus tachycardia.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h4",
+            "text": "Which finding is the MOST concerning and indicates a rapidly deteriorating condition?",
+            "isHighlightable": true
+          }
+        ],
+        "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up."
+      },
+      "media": [],
+      "rationale": {
+        "core_concept": "Cardiac Tamponade Recognition and Management",
+        "answer_analysis": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "golden_rule": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trap": "Treating background history and acute deterioration cues as equally urgent."
+      },
+      "mnemonic": {
+        "title": "Beck's Triad",
+        "content": "B - Hypotension (Low Blood Pressure)\nE - Elevated JVP (Jugular Venous Pressure/Distension)\nC - Muffled Heart Sounds"
+      },
+      "answerKey": {
+        "type": "highlight",
+        "correctIds": [
+          "h0",
+          "h1",
+          "h3"
+        ],
+        "correctSet": [
+          "h0",
+          "h1",
+          "h3"
+        ],
+        "maxScore": 3,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "QUARANTINE_REPUTATION_RISK",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [
+            "clinical_focus_not_supported_by_prompt"
+          ],
+          "reviewFlags": [],
+          "clinicalFocus": "Cardiac Tamponade Recognition and Management",
+          "cjmmStep": "Analyze Cues",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "QUARANTINE_REPUTATION_RISK_P242",
+          "learnerReady": false,
+          "hardBlockers": [
+            "clinical_focus_not_supported_by_prompt"
+          ],
+          "reviewFlags": [
+            "clinical_focus_still_not_supported_by_prompt"
+          ],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [],
+          "detectedClinicalFocus": null,
+          "clinicalFocusEvidenceScore": 0,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "source_derivation": "v70_highlight_rebuilt_from_scenario",
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242nReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "M",
+        "location": "Medical-Surgical Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "clinicalPrinciple": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trapToAvoid": "Treating background history and acute deterioration cues as equally urgent.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "QUARANTINE_REPUTATION_RISK_P242",
+      "v242pLearnerReady": false,
+      "v242pDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242pHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242pReviewFlags": [
+        "clinical_focus_still_not_supported_by_prompt"
+      ],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [],
+      "v242pDetectedClinicalFocus": null,
+      "v242pClinicalFocusEvidenceScore": 0,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242oReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "activeStatus": false,
+      "holdStatus": "STRUCTURAL_HOLD"
+    },
+    {
+      "id": "nexus_multip_highligh_eada",
+      "format": "highlight",
+      "cjmm_step": "Generate Solutions",
+      "difficulty": "Very Hard",
+      "clinical_focus": "Deep Vein Thrombosis / PE",
+      "client_needs": "Physiological Integrity: Physiological Adaptation",
+      "patient": {
+        "name": "Margaret Thompson",
+        "age_value": "68",
+        "age_unit": "years",
+        "gender": "F",
+        "location": "Intensive Care Unit",
+        "allergies": "Penicillin (rash)"
+      },
+      "ehr": {
+        "notes": [
+          {
+            "time": "08:00",
+            "type": "DAR",
+            "note": "Data: Patient resting comfortably in bed. Denies pain or discomfort. Surgical dressing clean, dry, and intact. Peripheral pulses palpable, capillary refill <3 seconds. Action: Assisted patient with morning hygiene and repositioning. Administered prescribed oral analgesic. Response: Patient verbalized comfort and tolerance of activities. Oriented to person, place, and time."
+          },
+          {
+            "time": "09:00",
+            "type": "DAR",
+            "note": "Data: Patient suddenly developed severe dyspnea, sharp pleuritic chest pain rated 8/10, and verbalized a 'feeling of impending doom.' Observed to be anxious and diaphoretic. Vital signs obtained: Heart Rate 118 beats/minute, Respiratory Rate 32 breaths/minute, Blood Pressure 98/60 mmHg, Oxygen Saturation 88% on room air. Lung sounds clear bilaterally. Action: Assisted patient to high Fowler's position. Initiated rapid response protocol. Response: Patient remains anxious, struggling to catch breath."
+          },
+          {
+            "time": "09:05",
+            "type": "DAR",
+            "note": "Data: Oxygen saturation 88% on room air. Action: Administered high-flow oxygen via non-rebreather mask at 10 liters/minute as per protocol. Established intravenous access in left antecubital fossa with 18-gauge catheter. Prepared for potential medication administration. Response: Oxygen saturation increased to 94%. Patient reports slight decrease in dyspnea, still experiencing chest pain."
+          },
+          {
+            "time": "09:10",
+            "type": "SOAP",
+            "note": "Subjective: 'I feel a little better with the oxygen, but my chest still hurts a lot.' Objective: Patient remains tachypneic (RR 28), tachycardic (HR 112), and anxious. SpO2 94% on non-rebreather mask. Clear lung sounds. Assessment: Acute onset severe dyspnea and chest pain with hypoxemia and hypotension, highly suspicious for acute pulmonary embolism. Plan: Notified Dr. Smith of patient's acute change in condition and vital signs. Awaiting further orders for diagnostic imaging and definitive treatment. Continuous cardiac and pulse oximetry monitoring initiated. Prepared for anticoagulant administration."
+          },
+          {
+            "time": "09:30",
+            "type": "DAR",
+            "note": "Data: Patient's vital signs: Heart Rate 108 beats/minute, Respiratory Rate 26 breaths/minute, Blood Pressure 106/68 mmHg, Oxygen Saturation 95% on non-rebreather mask. Patient remains anxious but appears less distressed. Action: Continued close monitoring of respiratory effort, cardiac rhythm, and oxygenation. Provided emotional support. Response: Patient is more settled, able to answer questions in short sentences. Awaiting physician's arrival and orders."
+          }
+        ],
+        "vitals": [
+          {
+            "bp": "98/60",
+            "hr": "118",
+            "rr": "32",
+            "spo2": "88%",
+            "time": "Baseline",
+            "note": "Pain Score: 8/10"
+          },
+          {
+            "time": "09:00",
+            "bp": "98/60",
+            "hr": "118",
+            "rr": "32",
+            "spo2": "88%"
+          },
+          {
+            "time": "09:05",
+            "spo2": "88%"
+          },
+          {
+            "time": "09:10",
+            "hr": "112",
+            "rr": "28",
+            "spo2": "94%"
+          },
+          {
+            "time": "09:30",
+            "bp": "106/68",
+            "hr": "108",
+            "rr": "26",
+            "spo2": "95%"
+          },
+          {
+            "time": "Baseline",
+            "type": "Generated Standard Vitals",
+            "note": "Weight: 62 kg, Height: 160 cm"
+          }
+        ],
+        "labs": [],
+        "orders": [
+          {
+            "type": "Active",
+            "text": "Oxygen 2 L/min Nasal Cannula Continuous Hypoxemia"
+          },
+          {
+            "type": "Active",
+            "text": "Heparin 80 units/kg bolus, then 18 units/kg/hr IV drip Continuous Acute Pulmonary Embolism"
+          },
+          {
+            "type": "Active",
+            "text": "Morphine Sulfate 2 mg IV PRN every 4 hrs Severe chest pain"
+          },
+          {
+            "type": "Active",
+            "text": "0.9% Sodium Chloride 500 mL IV bolus Once Hypotension"
+          }
+        ],
+        "hp": {
+          "chief_complaint": "Sudden onset severe dyspnea, sharp pleuritic chest pain, and feeling of impending doom.",
+          "hpi": "Patient is a 68-year-old female, 3 days post-operative from an uncomplicated right total hip arthroplasty. This morning, while ambulating with assistance, she suddenly developed severe shortness of breath, sharp pain in her right chest that worsens with inspiration, and a profound sense of anxiety, stating 'I feel like something terrible is going to happen.' She became diaphoretic and required immediate assistance back to bed. Denies cough, fever, or chills. Pain is rated 8/10.",
+          "pmh": [
+            "Osteoarthritis (bilateral hips)",
+            "Hypertension (controlled with medication)",
+            "Hyperlipidemia",
+            "Previous Deep Vein Thrombosis (DVT) 5 years ago (left calf) - managed with anticoagulation for 6 months."
+          ],
+          "medications": [
+            "Lisinopril 10 mg PO daily",
+            "Atorvastatin 20 mg PO daily",
+            "Oxycodone 5 mg PO every 4-6 hours PRN pain",
+            "Enoxaparin 40 mg SubQ daily (DVT prophylaxis)"
+          ],
+          "allergies": "Penicillin (rash)",
+          "physical_examination": {
+            "heent": "Normocephalic, atraumatic. Pupils equal, round, reactive to light and accommodation. Mucous membranes moist. No jugular venous distension.",
+            "respiratory": "Tachypneic, shallow respirations. Clear to auscultation bilaterally, no adventitious sounds (crackles, wheezes, rhonchi). Increased work of breathing.",
+            "neurological": "Alert and oriented to person, place, and time. Follows commands. Cranial nerves II-XII intact. Motor strength 5/5 in all extremities. Sensory intact.",
+            "genitourinary": "No suprapubic tenderness. Foley catheter in place, clear yellow urine output.",
+            "cardiovascular": "Tachycardic, regular rhythm. S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses 2+ bilaterally in upper extremities. Lower extremity pulses 1+ in right foot, 2+ in left foot.",
+            "musculoskeletal": "Right hip incision site clean, dry, and intact, no erythema or drainage. Mild edema noted in right lower extremity, no warmth or tenderness to palpation in calves. Full range of motion in left lower extremity, limited by pain in right hip.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Normoactive bowel sounds in all four quadrants. No hepatosplenomegaly.",
+            "general_appearance": "68-year-old female, appears acutely distressed, anxious, and diaphoretic. Sitting upright, leaning forward, using accessory muscles to breathe.",
+            "vital_signs_on_presentation": "HR 118, RR 32, BP 98/60, SpO2 88% on room air, Temp 37.1°C, Pain 8/10."
+          },
+          "social_history": {
+            "drug_use": "Denied",
+            "occupation": "Retired teacher",
+            "alcohol_use": "Occasional social use",
+            "tobacco_use": "Denied",
+            "support_system": "Distant relatives, relies on friends for errands.",
+            "living_situation": "Lives alone in a second-floor apartment with no elevator access, which may pose challenges for post-operative mobility and follow-up care. Limited local family support."
+          },
+          "review_of_systems": {
+            "general": "Anxious, diaphoretic, feeling of impending doom.",
+            "respiratory": "Severe dyspnea, sharp pleuritic chest pain, no cough or sputum.",
+            "neurological": "Alert and oriented x3, no focal deficits, reports anxiety.",
+            "genitourinary": "Voiding without difficulty, clear urine.",
+            "cardiovascular": "Reports palpitations, no known history of arrhythmias.",
+            "musculoskeletal": "Right hip incision site pain, denies new pain in other joints.",
+            "gastrointestinal": "No nausea, vomiting, or diarrhea. Bowel sounds present."
+          },
+          "patient_demographics": {
+            "age": 68,
+            "gender": "Female",
+            "admission_date": "2023-10-23"
+          },
+          "impression": "Acute Pulmonary Embolism (PE) suspected, likely secondary to Deep Vein Thrombosis (DVT) post total hip arthroplasty.",
+          "family_history": {
+            "father": "Deceased, Stroke (age 78)",
+            "mother": "Deceased, Myocardial Infarction (age 72)",
+            "siblings": "One sister, alive, history of hypertension."
+          },
+          "surgical_history": [
+            "Right Total Hip Arthroplasty (3 days prior)",
+            "Appendectomy (age 25)"
+          ],
+          "past_medical_history": [
+            "Osteoarthritis (bilateral hips)",
+            "Hypertension (controlled with medication)",
+            "Hyperlipidemia",
+            "Previous Deep Vein Thrombosis (DVT) 5 years ago (left calf) - managed with anticoagulation for 6 months."
+          ],
+          "history_of_present_illness": "Patient is a 68-year-old female, 3 days post-operative from an uncomplicated right total hip arthroplasty. This morning, while ambulating with assistance, she suddenly developed severe shortness of breath, sharp pain in her right chest that worsens with inspiration, and a profound sense of anxiety, stating 'I feel like something terrible is going to happen.' She became diaphoretic and required immediate assistance back to bed. Denies cough, fever, or chills. Pain is rated 8/10."
+        },
+        "imaging": [],
+        "nurses_notes": [
+          {
+            "time": "08:00",
+            "type": "DAR",
+            "note": "Data: Patient resting comfortably in bed. Denies pain or discomfort. Surgical dressing clean, dry, and intact. Peripheral pulses palpable, capillary refill <3 seconds. Action: Assisted patient with morning hygiene and repositioning. Administered prescribed oral analgesic. Response: Patient verbalized comfort and tolerance of activities. Oriented to person, place, and time."
+          },
+          {
+            "time": "09:00",
+            "type": "DAR",
+            "note": "Data: Patient suddenly developed severe dyspnea, sharp pleuritic chest pain rated 8/10, and verbalized a 'feeling of impending doom.' Observed to be anxious and diaphoretic. Vital signs obtained: Heart Rate 118 beats/minute, Respiratory Rate 32 breaths/minute, Blood Pressure 98/60 mmHg, Oxygen Saturation 88% on room air. Lung sounds clear bilaterally. Action: Assisted patient to high Fowler's position. Initiated rapid response protocol. Response: Patient remains anxious, struggling to catch breath."
+          },
+          {
+            "time": "09:05",
+            "type": "DAR",
+            "note": "Data: Oxygen saturation 88% on room air. Action: Administered high-flow oxygen via non-rebreather mask at 10 liters/minute as per protocol. Established intravenous access in left antecubital fossa with 18-gauge catheter. Prepared for potential medication administration. Response: Oxygen saturation increased to 94%. Patient reports slight decrease in dyspnea, still experiencing chest pain."
+          },
+          {
+            "time": "09:10",
+            "type": "SOAP",
+            "note": "Subjective: 'I feel a little better with the oxygen, but my chest still hurts a lot.' Objective: Patient remains tachypneic (RR 28), tachycardic (HR 112), and anxious. SpO2 94% on non-rebreather mask. Clear lung sounds. Assessment: Acute onset severe dyspnea and chest pain with hypoxemia and hypotension, highly suspicious for acute pulmonary embolism. Plan: Notified Dr. Smith of patient's acute change in condition and vital signs. Awaiting further orders for diagnostic imaging and definitive treatment. Continuous cardiac and pulse oximetry monitoring initiated. Prepared for anticoagulant administration."
+          },
+          {
+            "time": "09:30",
+            "type": "DAR",
+            "note": "Data: Patient's vital signs: Heart Rate 108 beats/minute, Respiratory Rate 26 breaths/minute, Blood Pressure 106/68 mmHg, Oxygen Saturation 95% on non-rebreather mask. Patient remains anxious but appears less distressed. Action: Continued close monitoring of respiratory effort, cardiac rhythm, and oxygenation. Provided emotional support. Response: Patient is more settled, able to answer questions in short sentences. Awaiting physician's arrival and orders."
+          }
+        ],
+        "providerOrders": [
+          {
+            "type": "Active",
+            "text": "Oxygen 2 L/min Nasal Cannula Continuous Hypoxemia"
+          },
+          {
+            "type": "Active",
+            "text": "Heparin 80 units/kg bolus, then 18 units/kg/hr IV drip Continuous Acute Pulmonary Embolism"
+          },
+          {
+            "type": "Active",
+            "text": "Morphine Sulfate 2 mg IV PRN every 4 hrs Severe chest pain"
+          },
+          {
+            "type": "Active",
+            "text": "0.9% Sodium Chloride 500 mL IV bolus Once Hypotension"
+          }
+        ],
+        "history_physical": {
+          "chief_complaint": "Sudden onset severe dyspnea, sharp pleuritic chest pain, and feeling of impending doom.",
+          "hpi": "Patient is a 68-year-old female, 3 days post-operative from an uncomplicated right total hip arthroplasty. This morning, while ambulating with assistance, she suddenly developed severe shortness of breath, sharp pain in her right chest that worsens with inspiration, and a profound sense of anxiety, stating 'I feel like something terrible is going to happen.' She became diaphoretic and required immediate assistance back to bed. Denies cough, fever, or chills. Pain is rated 8/10.",
+          "pmh": [
+            "Osteoarthritis (bilateral hips)",
+            "Hypertension (controlled with medication)",
+            "Hyperlipidemia",
+            "Previous Deep Vein Thrombosis (DVT) 5 years ago (left calf) - managed with anticoagulation for 6 months."
+          ],
+          "medications": [
+            "Lisinopril 10 mg PO daily",
+            "Atorvastatin 20 mg PO daily",
+            "Oxycodone 5 mg PO every 4-6 hours PRN pain",
+            "Enoxaparin 40 mg SubQ daily (DVT prophylaxis)"
+          ],
+          "allergies": "Penicillin (rash)",
+          "physical_examination": {
+            "heent": "Normocephalic, atraumatic. Pupils equal, round, reactive to light and accommodation. Mucous membranes moist. No jugular venous distension.",
+            "respiratory": "Tachypneic, shallow respirations. Clear to auscultation bilaterally, no adventitious sounds (crackles, wheezes, rhonchi). Increased work of breathing.",
+            "neurological": "Alert and oriented to person, place, and time. Follows commands. Cranial nerves II-XII intact. Motor strength 5/5 in all extremities. Sensory intact.",
+            "genitourinary": "No suprapubic tenderness. Foley catheter in place, clear yellow urine output.",
+            "cardiovascular": "Tachycardic, regular rhythm. S1S2 audible, no murmurs, rubs, or gallops. Peripheral pulses 2+ bilaterally in upper extremities. Lower extremity pulses 1+ in right foot, 2+ in left foot.",
+            "musculoskeletal": "Right hip incision site clean, dry, and intact, no erythema or drainage. Mild edema noted in right lower extremity, no warmth or tenderness to palpation in calves. Full range of motion in left lower extremity, limited by pain in right hip.",
+            "gastrointestinal": "Abdomen soft, non-tender, non-distended. Normoactive bowel sounds in all four quadrants. No hepatosplenomegaly.",
+            "general_appearance": "68-year-old female, appears acutely distressed, anxious, and diaphoretic. Sitting upright, leaning forward, using accessory muscles to breathe.",
+            "vital_signs_on_presentation": "HR 118, RR 32, BP 98/60, SpO2 88% on room air, Temp 37.1°C, Pain 8/10."
+          },
+          "social_history": {
+            "drug_use": "Denied",
+            "occupation": "Retired teacher",
+            "alcohol_use": "Occasional social use",
+            "tobacco_use": "Denied",
+            "support_system": "Distant relatives, relies on friends for errands.",
+            "living_situation": "Lives alone in a second-floor apartment with no elevator access, which may pose challenges for post-operative mobility and follow-up care. Limited local family support."
+          },
+          "review_of_systems": {
+            "general": "Anxious, diaphoretic, feeling of impending doom.",
+            "respiratory": "Severe dyspnea, sharp pleuritic chest pain, no cough or sputum.",
+            "neurological": "Alert and oriented x3, no focal deficits, reports anxiety.",
+            "genitourinary": "Voiding without difficulty, clear urine.",
+            "cardiovascular": "Reports palpitations, no known history of arrhythmias.",
+            "musculoskeletal": "Right hip incision site pain, denies new pain in other joints.",
+            "gastrointestinal": "No nausea, vomiting, or diarrhea. Bowel sounds present."
+          },
+          "patient_demographics": {
+            "age": 68,
+            "gender": "Female",
+            "admission_date": "2023-10-23"
+          },
+          "impression": "Acute Pulmonary Embolism (PE) suspected, likely secondary to Deep Vein Thrombosis (DVT) post total hip arthroplasty.",
+          "family_history": {
+            "father": "Deceased, Stroke (age 78)",
+            "mother": "Deceased, Myocardial Infarction (age 72)",
+            "siblings": "One sister, alive, history of hypertension."
+          },
+          "surgical_history": [
+            "Right Total Hip Arthroplasty (3 days prior)",
+            "Appendectomy (age 25)"
+          ],
+          "past_medical_history": [
+            "Osteoarthritis (bilateral hips)",
+            "Hypertension (controlled with medication)",
+            "Hyperlipidemia",
+            "Previous Deep Vein Thrombosis (DVT) 5 years ago (left calf) - managed with anticoagulation for 6 months."
+          ],
+          "history_of_present_illness": "Patient is a 68-year-old female, 3 days post-operative from an uncomplicated right total hip arthroplasty. This morning, while ambulating with assistance, she suddenly developed severe shortness of breath, sharp pain in her right chest that worsens with inspiration, and a profound sense of anxiety, stating 'I feel like something terrible is going to happen.' She became diaphoretic and required immediate assistance back to bed. Denies cough, fever, or chills. Pain is rated 8/10."
+        },
+        "computedVitals": [
+          {
+            "k": "T",
+            "v": "98.8°F / 37.1°C",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): 36.5–37.5°C / 97.7–99.5°F\n  Infant (<1yr): 36.5–37.5°C / 97.7–99.5°F\n  Child (1–11): 36.5–37.5°C / 97.7–99.5°F\n  Adolescent (12–17): 36.5–37.3°C / 97.7–99.1°F\n  Adult (18–64): 36.5–37.3°C / 97.7–99.1°F\n▸ Older Adult (65+): 36.0–37.2°C / 96.8–99.0°F",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "HR",
+            "v": "108",
+            "abn": true,
+            "level": "warn",
+            "status": "review",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 120–160/min\n  Infant (<1yr): 100–160/min\n  Child (1–11): 70–120/min\n  Adolescent (12–17): 60–100/min\n  Adult (18–64): 60–100/min\n▸ Older Adult (65+): 60–100/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "RR",
+            "v": "26",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 30–60/min\n  Infant (<1yr): 25–50/min\n  Child (1–11): 18–30/min\n  Adolescent (12–17): 12–20/min\n  Adult (18–64): 12–20/min\n▸ Older Adult (65+): 12–20/min",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BP",
+            "v": "106/68",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 60–90/40–60 mmHg\n  Infant (<1yr): 70–100/50–70 mmHg\n  Child (1–11): 80–110/50–75 mmHg\n  Adolescent (12–17): 90–120/60–80 mmHg\n  Adult (18–64): 90/60–120/80 mmHg\n▸ Older Adult (65+): 90/60–140/90 mmHg",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "SpO₂",
+            "v": "95%",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 90–95% (1st min) → 95–100%\n  Infant (<1yr): 95–100%\n  Child (1–11): 95–100%\n  Adolescent (12–17): 95–100%\n  Adult (18–64): 95–100%\n▸ Older Adult (65+): 94–100%",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "MAP",
+            "v": "81 mmHg",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented BP 106/68",
+            "reference": "  Neonate (<30d): 40–60 mmHg\n  Infant (<1yr): 50–70 mmHg\n  Child (1–11): 55–80 mmHg\n  Adolescent (12–17): 65–90 mmHg\n  Adult (18–64): 70–105 mmHg\n▸ Older Adult (65+): 70–105 mmHg\n\n* Calculated from documented BP.",
+            "message": "Calculated from documented components."
+          },
+          {
+            "k": "Pain",
+            "v": "8/10",
+            "abn": true,
+            "level": "critical",
+            "status": "priority",
+            "source": "stem/chart text",
+            "reference": "  Neonate (<30d): NIPS 0–7\n  Infant (<1yr): FLACC 0–10\n  Child (1–11): Wong-Baker / FLACC\n  Adolescent (12–17): NRS 0–10\n  Adult (18–64): NRS 0–10\n▸ Older Adult (65+): NRS 0–10",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Weight",
+            "v": "62 kg",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 2.5–4 kg\n  Infant (<1yr): 6–10 kg\n  Child (1–11): 10–40 kg\n  Adolescent (12–17): 40–70 kg\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "Height",
+            "v": "160 cm",
+            "abn": false,
+            "level": "ok",
+            "status": "documented",
+            "source": "structured chart",
+            "reference": "  Neonate (<30d): 45–55 cm\n  Infant (<1yr): 60–80 cm\n  Child (1–11): 80–150 cm\n  Adolescent (12–17): 150–180 cm\n  Adult (18–64): Patient-specific\n▸ Older Adult (65+): Patient-specific",
+            "message": "Patient-specific value displayed only because it is documented or extractable."
+          },
+          {
+            "k": "BMI",
+            "v": "24.2",
+            "abn": false,
+            "level": "ok",
+            "status": "calculated",
+            "source": "calculated from documented Weight and Height",
+            "reference": "  Neonate (<30d): N/A\n  Infant (<1yr): N/A\n  Child (1–11): CDC percentile\n  Adolescent (12–17): CDC percentile\n  Adult (18–64): 18.5–24.9\n▸ Older Adult (65+): 22–27 (adjusted)\n\n* Calculated from Weight and Height.",
+            "message": "Calculated from documented components."
+          }
+        ]
+      },
+      "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "structure": {
+        "type": "highlight",
+        "prompt": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+        "passage": "A 68 year old female, 3 days post-op from a total hip arthroplasty, suddenly develops severe dyspnea, sharp pleuritic chest pain, and a feeling of impending doom. Her vital signs are: HR 118, RR 32, BP 98/60, SpO2 88% on room air. She is anxious and diaphoretic. Lung sounds are clear. Which three actions should the nurse prioritize?",
+        "tokens": [
+          {
+            "id": "h0",
+            "text": "A 68 year old female, 3 days post-op from a total hip arthroplasty, suddenly develops severe dyspnea, sharp pleuritic chest pain, and a feeling of impending doom.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h1",
+            "text": "Her vital signs are: HR 118, RR 32, BP 98/60, SpO2 88% on room air.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h2",
+            "text": "She is anxious and diaphoretic.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h3",
+            "text": "Lung sounds are clear.",
+            "isHighlightable": true
+          },
+          {
+            "id": "h4",
+            "text": "Which three actions should the nurse prioritize?",
+            "isHighlightable": true
+          }
+        ],
+        "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up."
+      },
+      "media": [],
+      "rationale": {
+        "core_concept": "Acute Pulmonary Embolism (PE)",
+        "answer_analysis": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "golden_rule": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trap": "Treating background history and acute deterioration cues as equally urgent."
+      },
+      "mnemonic": {
+        "title": "PE CLOTS",
+        "content": "P: Pleuritic Chest Pain\nE: Extreme Dyspnea\nC: Cough/Cyanosis\nL: Low SpO2 (Hypoxemia)\nO: Overwhelmed (Anxiety/Apprehension)\nT: Tachycardia/Tachypnea\nS: Syncope/Sweating"
+      },
+      "answerKey": {
+        "type": "highlight",
+        "correctIds": [
+          "h0",
+          "h1"
+        ],
+        "correctSet": [
+          "h0",
+          "h1"
+        ],
+        "maxScore": 2,
+        "scoring": "0/1"
+      },
+      "metadata": {
+        "v69_repaired": true,
+        "v69_quality_issues": [],
+        "v69_final_issues": [],
+        "v242kContentStatus": "practice-ready",
+        "v242kContentReasons": [],
+        "v242kRepairs": [],
+        "v242m": {
+          "version": "v242M-first-class-content-repair-sprint1",
+          "status": "PASS_FIRST_CLASS",
+          "firstClassReady": true,
+          "reviewFlags": []
+        },
+        "v242n": {
+          "version": "v242N-sme-repair-sprint2-all-practice-ready-quality-gate",
+          "status": "QUARANTINE_REPUTATION_RISK",
+          "learnerReady": false,
+          "repairActions": [],
+          "hardBlockers": [
+            "clinical_focus_not_supported_by_prompt"
+          ],
+          "reviewFlags": [],
+          "clinicalFocus": "Acute Pulmonary Embolism (PE)",
+          "cjmmStep": "Generate Solutions",
+          "clientNeeds": "Physiological Integrity: Physiological Adaptation",
+          "patientDisplay": "Client"
+        },
+        "v242p": {
+          "version": "v242P-from-v242O-guideline-and-held-item-repair",
+          "status": "QUARANTINE_REPUTATION_RISK_P242",
+          "learnerReady": false,
+          "hardBlockers": [],
+          "reviewFlags": [],
+          "guidelineSensitiveBuckets": [],
+          "repairActions": [
+            "clinical_focus_retagged_from_existing_case_evidence"
+          ],
+          "detectedClinicalFocus": "Deep Vein Thrombosis / PE",
+          "clinicalFocusEvidenceScore": 1,
+          "noClinicalFactsInvented": true
+        }
+      },
+      "validForPractice": true,
+      "stem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "source_derivation": "v70_highlight_rebuilt_from_scenario",
+      "v242kPracticeReady": true,
+      "v242kContentStatus": "practice-ready",
+      "v242mReputationStatus": "PASS_FIRST_CLASS",
+      "v242mFirstClassReady": true,
+      "v242mReviewFlags": [],
+      "v242mRepairNotes": [
+        {
+          "method": "v242L type-quota reputation gate + basic safety screen",
+          "noClinicalFactsInvented": true
+        }
+      ],
+      "v242nDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242nReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242nLearnerReady": false,
+      "v242nRepairActions": [],
+      "v242nHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242nReviewFlags": [],
+      "v242nGuidelineSensitiveBuckets": [],
+      "v242nPatientDisplay": {
+        "displayName": "Client",
+        "age": "68",
+        "ageUnit": "years",
+        "gender": "F",
+        "location": "Intensive Care Unit"
+      },
+      "v242nTeachingFeedback": {
+        "keyReasoning": "The highlighted cues represent the most abnormal or time-sensitive findings in the scenario. Background history may matter, but priority highlighting should focus on deterioration, abnormal vital signs, acute neurologic/respiratory/circulatory changes, or safety threats.",
+        "clinicalPrinciple": "Highlight cues that change risk now; do not highlight every background detail.",
+        "trapToAvoid": "Treating background history and acute deterioration cues as equally urgent.",
+        "source": "existing item rationale fields only; no clinical facts invented"
+      },
+      "v242pVersion": "v242P-from-v242O-guideline-and-held-item-repair",
+      "v242pSourceBaseline": "v242O-clinical-coherence-triage-and-learner-gate",
+      "v242pReputationStatus": "QUARANTINE_REPUTATION_RISK_P242",
+      "v242pLearnerReady": false,
+      "v242pDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242pHardBlockers": [],
+      "v242pReviewFlags": [],
+      "v242pGuidelineSensitiveBuckets": [],
+      "v242pRepairActions": [
+        "clinical_focus_retagged_from_existing_case_evidence"
+      ],
+      "v242pDetectedClinicalFocus": "Deep Vein Thrombosis / PE",
+      "v242pClinicalFocusEvidenceScore": 1,
+      "v242pGateNote": "No new clinical facts invented; repaired metadata/gate status from existing prompt/index evidence only.",
+      "v242oDisplayStem": "Review the clinical scenario. Highlight the cues that require priority follow-up.",
+      "v242oReputationStatus": "QUARANTINE_REPUTATION_RISK",
+      "v242oLearnerReady": false,
+      "v242oHardBlockers": [
+        "clinical_focus_not_supported_by_prompt"
+      ],
+      "v242oReviewFlags": [],
+      "v242oGuidelineSensitiveBuckets": [],
+      "v242pOriginalClinicalFocus": "Acute Pulmonary Embolism (PE)",
+      "activeStatus": false,
+      "holdStatus": "STRUCTURAL_HOLD"
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Security &amp; Responsible Disclosure | NexusRN</title>
+<meta name="description" content="Security and responsible disclosure information for NexusRN Public Preview."/>
+<meta name="theme-color" content="#020617"/>
+<link rel="canonical" href="https://nexusrn.healthqualityleader.com/security.html"/>
+<link rel="manifest" href="/site.webmanifest"/>
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/nexusrn-icon-192.png"/>
+<link rel="apple-touch-icon" href="/assets/icons/nexusrn-icon-192.png"/>
+<meta property="og:site_name" content="NexusRN"/>
+<meta property="og:title" content="Security &amp; Responsible Disclosure | NexusRN"/>
+<meta property="og:description" content="Security and responsible disclosure information for NexusRN Public Preview."/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://nexusrn.healthqualityleader.com/security.html"/>
+<meta property="og:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Security &amp; Responsible Disclosure | NexusRN"/>
+<meta name="twitter:description" content="Security and responsible disclosure information for NexusRN Public Preview."/>
+<meta name="twitter:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png"/>
+<meta name="nexusrn-build" content="v235-go-live-audit-cleanup"/>
+<link rel="stylesheet" href="/assets/css/global-design.css" />
+</head>
+<body><main>
+<header class="top"><div><div class="brand">Nexus<span>RN</span></div><div class="sub">Public Preview</div></div><nav class="nav"><a class="btn" href="index.html">Home</a><a class="btn" href="public-demo/index.html">Public Demo</a><a class="btn" href="#" onclick="alert('Full app access is not enabled in this public preview. Try the guided demo to see how NexusRN works.'); return false;" style="opacity: 0.5;">Access Preview</a><a class="btn" href="contact.html">Contact</a></nav></header>
+<span class="eyebrow">Security</span><h1>Security &amp; Responsible Disclosure</h1>
+<p class="lead">NexusRN public-preview security posture and how to report issues.</p>
+
+<div class="card good"><h3>Current preview posture</h3><p>The public preview does not collect payment inside the app and does not provide production accounts. Visitors should not enter protected health information, patient identifiers, or confidential employer data.</p></div>
+<h2>Security controls in this public build</h2>
+<table class="table">
+<tr><th>Control</th><th>Status</th></tr>
+<tr><td>HTTPS</td><td>Served through the production domain with HSTS configured in Vercel.</td></tr>
+<tr><td>Security headers</td><td>Content-Type protection, referrer restriction, same-origin frame protection, Permissions-Policy, and transitional CSP are configured.</td></tr>
+<tr><td>Full source DB</td><td>The monolithic full DB is removed from the public deploy package; learner mode uses chunked public-preview data.</td></tr>
+<tr><td>Diagnostics</td><td>Public diagnostics pages with admin full-DB fetch capability are removed from the deploy package.</td></tr>
+</table>
+<h2>Report a security issue</h2><p>Email <a href="mailto:hossam@healthqualityleader.com">hossam@healthqualityleader.com</a> with the subject <span class="kbd">NexusRN security report</span>. Include the affected URL, browser, steps to reproduce, and impact. Do not access, copy, or disclose other users' data.</p>
+<h2>Before paid launch</h2><p>Accounts, payment webhooks, entitlement checks, audit logging, incident-response workflow, and privacy counsel review must be completed before public paid sales.</p>
+
+<footer><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="educational-disclaimer.html">Educational Disclaimer</a><a href="preview-limitations.html">Preview Limitations</a><a href="accessibility.html">Accessibility</a><a href="ngn-alignment.html">NGN Alignment</a><a href="contact.html">Contact</a><a href="cookie-policy.html">Cookie Policy</a><a href="acceptable-use.html">Acceptable Use</a><a href="copyright.html">Copyright</a><a href="security.html">Security</a><p>NexusRN is an independent educational preview. It is not affiliated with, sponsored by, or endorsed by NCSBN. It does not provide medical advice and does not guarantee NCLEX results.</p>  <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div></footer>
+</main></body></html>

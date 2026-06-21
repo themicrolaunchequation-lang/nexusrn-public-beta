@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'/>
+<meta name='viewport' content='width=device-width, initial-scale=1'/>
+<title>Contact &amp; Institutional Demo | NexusRN</title>
+<meta name='description' content='Contact and institutional demo request page for NexusRN Public Preview.'/>
+<meta name='theme-color' content='#020617'/>
+<link rel="stylesheet" href="/assets/css/global-design.css" />
+
+<link rel="canonical" href="https://nexusrn.healthqualityleader.com/contact.html" />
+<meta property="og:site_name" content="NexusRN" />
+<meta property="og:title" content="NexusRN by Health Quality Leader" />
+<meta property="og:description" content="NexusRN is an NCLEX NGN clinical judgment public preview with restricted demo practice, unfolding case previews, and Decision Lab learning tools." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://nexusrn.healthqualityleader.com/contact.html" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="NexusRN by Health Quality Leader" />
+<meta name="twitter:description" content="NexusRN is an NCLEX NGN clinical judgment public preview with restricted demo practice, unfolding case previews, and Decision Lab learning tools." />
+<meta name="application-name" content="NexusRN" />
+<meta name="apple-mobile-web-app-title" content="NexusRN" />
+
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="apple-touch-icon" href="/assets/icons/nexusrn-icon-192.png" />
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/nexusrn-icon-192.png" />
+<meta property="og:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png" />
+<meta name="twitter:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png" />
+<meta name="nexusrn-build" content="v246-commercial-readiness" />
+</head>
+<body><main><header class='top'><div><div class='brand'>Nexus<span>RN</span></div><div class='sub'>Public Preview</div></div><nav class='nav'><a class='btn' href='index.html'>Home</a><a class='btn' href='public-demo/index.html'>Public Demo</a><a class='btn' href='#' onclick="alert('Full app access is not enabled in this public preview. Try the guided demo to see how NexusRN works.'); return false;" style='opacity: 0.5;'>Access Preview</a><a class='btn' href='contact.html'>Contact</a></nav></header>
+<span class='eyebrow'>Contact</span><h1>Contact & Institutional Demo</h1>
+<p class='lead'>This page is the single public-preview contact destination for early-access, educator, training-center, and institutional inquiries.</p>
+
+<section class='grid'>
+<div class='card' id="demoCard">
+  <h3>Institutional demo request</h3>
+  <p class="muted" style="margin-bottom:24px;">For educators and nursing programs looking to pilot NexusRN.</p>
+  <div id="demoFormContainer">
+    <form id="demoForm" onsubmit="handleDemoSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="demoName">Full Name</label>
+        <input type="text" id="demoName" class="form-control" placeholder="Jane Doe" required>
+        <div class="error-message">Please enter your name.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demoEmail">Institutional Email</label>
+        <input type="email" id="demoEmail" class="form-control" placeholder="jane@university.edu" required>
+        <div class="error-message">Please enter a valid email address.</div>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demoInstitution">Institution</label>
+        <input type="text" id="demoInstitution" class="form-control" placeholder="University of..." required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="demoInterest">Primary Interest</label>
+        <select id="demoInterest" class="form-control" required>
+          <option value="" disabled selected>Select an option...</option>
+          <option value="private-beta">Private Beta Access</option>
+          <option value="institutional-pilot">Institutional Pilot</option>
+          <option value="live-demo">Live Guided Demo</option>
+        </select>
+      </div>
+      <button type="submit" class="btn primary" style="width:100%; font-size:16px;">Request Demo</button>
+    </form>
+  </div>
+  <div id="demoSuccess" class="success-state">
+    <div class="success-icon">✓</div>
+    <h3>Request Received</h3>
+    <p class="muted">Thank you for your interest! Our academic partnership team will reach out to the email provided within 1-2 business days to schedule your demo.</p>
+    <button type="button" class="btn" style="margin-top:16px;" onclick="resetDemo()">Submit Another</button>
+  </div>
+</div>
+
+<div class='card' id="supportCard">
+  <h3>Support request</h3>
+  <p class="muted" style="margin-bottom:24px;">For technical issues or feedback on the public preview.</p>
+  <div id="supportFormContainer">
+    <form id="supportForm" onsubmit="handleSupportSubmit(event)">
+      <div class="form-group">
+        <label class="form-label" for="supportEmail">Email Address</label>
+        <input type="email" id="supportEmail" class="form-control" placeholder="your@email.com" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="supportTopic">Topic</label>
+        <select id="supportTopic" class="form-control" required>
+          <option value="" disabled selected>What can we help with?</option>
+          <option value="bug">Report a Bug</option>
+          <option value="content">Content Feedback</option>
+          <option value="account">Account / Access Issue</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label class="form-label" for="supportMessage">Message Details</label>
+        <textarea id="supportMessage" class="form-control" placeholder="Please include URLs, item IDs, and expected vs actual behavior..." required></textarea>
+      </div>
+      <button type="submit" class="btn primary" style="width:100%; font-size:16px;">Send Message</button>
+    </form>
+  </div>
+  <div id="supportSuccess" class="success-state">
+    <div class="success-icon">✓</div>
+    <h3>Message Sent</h3>
+    <p class="muted">Your feedback is vital to improving NexusRN. Our support team has received your message.</p>
+    <button type="button" class="btn" style="margin-top:16px;" onclick="resetSupport()">Send Another</button>
+  </div>
+</div>
+</section>
+<p class='small' style="text-align:center; margin-top:20px;">You can also reach us directly at <a href="mailto:hossam@healthqualityleader.com">hossam@healthqualityleader.com</a>.</p>
+
+<script>
+  function handleDemoSubmit(e) {
+    e.preventDefault();
+    if(document.getElementById('demoForm').checkValidity()) {
+      document.getElementById('demoFormContainer').style.display = 'none';
+      document.getElementById('demoSuccess').classList.add('active');
+    }
+  }
+  function resetDemo() {
+    document.getElementById('demoForm').reset();
+    document.getElementById('demoSuccess').classList.remove('active');
+    document.getElementById('demoFormContainer').style.display = 'block';
+  }
+  function handleSupportSubmit(e) {
+    e.preventDefault();
+    if(document.getElementById('supportForm').checkValidity()) {
+      document.getElementById('supportFormContainer').style.display = 'none';
+      document.getElementById('supportSuccess').classList.add('active');
+    }
+  }
+  function resetSupport() {
+    document.getElementById('supportForm').reset();
+    document.getElementById('supportSuccess').classList.remove('active');
+    document.getElementById('supportFormContainer').style.display = 'block';
+  }
+</script>
+
+<footer><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="educational-disclaimer.html">Educational Disclaimer</a><a href="preview-limitations.html">Preview Limitations</a><a href="accessibility.html">Accessibility</a><a href="ngn-alignment.html">NGN Alignment</a><a href="contact.html">Contact</a><a href="cookie-policy.html">Cookie Policy</a><a href="acceptable-use.html">Acceptable Use</a><a href="copyright.html">Copyright</a><a href="security.html">Security</a><p>NexusRN is an independent educational preview. It is not affiliated with, sponsored by, or endorsed by NCSBN. It does not provide medical advice and does not guarantee NCLEX results.</p>  <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div></footer></main></body></html>
