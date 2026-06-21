@@ -5,7 +5,7 @@
     publishableKey: 'sb_publishable_Adrh6-0rsw_OSOfNhN9dgg_qzf7ZSCx',
     productionHost: 'nexusrn.healthqualityleader.com',
     authCallbackPath: '/auth-callback.html',
-    dollarTestHours: 48
+    dollarTestHours: 24
   };
   var TEST_ACCESS_KEY = 'nexusrn_beta_test_access';
   var client = null;
@@ -99,7 +99,7 @@
     if(!session || !session.user) throw new Error('Sign in before activating local test access.');
     var expiresAt = now() + CONFIG.dollarTestHours * 60 * 60 * 1000;
     var entitlement = {
-      version: 'fixed12-supabase-local-dollar-test',
+      version: 'fixed14-supabase-local-dollar-test-24h',
       source: 'stripe_1_access_test_manual_confirmation',
       userId: session.user.id,
       email: session.user.email || '',

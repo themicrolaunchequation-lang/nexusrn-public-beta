@@ -1,6 +1,6 @@
 # NEXUSRN FIXED13 GITHUB-READY COUNTER-AUDIT
 
-Decision: `CLEAN_APP_V12_REMOVE14_STRIP_NR_WORLDCLASS_READY_FIXED13_GITHUB_READY_READY_FOR_GITHUB_UPLOAD_AND_HOSSAM_BROWSER_RETEST`
+Decision: `REJECT_OR_REVIEW_REQUIRED`
 
 ## Core gates
 - active_standalone_count: `5086`
@@ -38,7 +38,7 @@ Decision: `CLEAN_APP_V12_REMOVE14_STRIP_NR_WORLDCLASS_READY_FIXED13_GITHUB_READY
 - dollar_test_24h_code: `True`
 - stripe_30_link_count: `8`
 - stripe_1_link_count: `10`
-- legacy_duration_leftovers: `[]`
+- dollar_test_48h_leftovers: `['NEXUSRN_WORLDCLASS_READY_FIXED13_GITHUB_READY_COUNTERAUDIT.md']`
 
 ## Safety checks
 - data_bank_changed_files_vs_FIXED12: `0`

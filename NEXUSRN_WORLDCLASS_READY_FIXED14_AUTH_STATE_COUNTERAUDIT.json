@@ -1,0 +1,35 @@
+{
+  "decision": "CLEAN_APP_V12_REMOVE14_STRIP_NR_WORLDCLASS_READY_FIXED14_AUTH_STATE_READY_FOR_GITHUB_PUSH_AND_VERCEL_RETEST",
+  "source": "FIXED13_GITHUB_READY",
+  "purpose": "Fix beta-access.html so Vercel page recognizes Supabase signed-in session; correct $1 local entitlement config to 24 hours.",
+  "checks": {
+    "beta_access_loads_supabase_sdk": true,
+    "beta_access_loads_auth_helper": true,
+    "beta_access_auth_status_panel": true,
+    "beta_access_signed_in_audit": true,
+    "checkout_requires_signin_when_no_session": true,
+    "nav_account_signout_present": true,
+    "dollar_test_24h_config": true,
+    "dollar_test_no_48h_config": true,
+    "service_role_absent": true
+  },
+  "content_counts": {
+    "active_standalone": 5086,
+    "unique_active_ids": 5086,
+    "duplicate_active_ids": 0,
+    "highlight_items": 140,
+    "unfolding_cases": 1056,
+    "unfolding_children": 6336
+  },
+  "syntax": {
+    "js_file_syntax_failures": 0,
+    "executable_inline_script_failures": 0,
+    "json_ld_inline_scripts_ignored": 3
+  },
+  "zip": {
+    "file": "CLEAN_APP_V12_REMOVE14_STRIP_NR_WORLDCLASS_READY_FIXED14_AUTH_STATE.zip",
+    "sha256": "EF926FE93D0EE35FC71CD4A6DF997AE1B87C7ABB86CACD29AA1F648C1D8CD151",
+    "size_bytes": 39178578,
+    "entries": 443
+  }
+}
