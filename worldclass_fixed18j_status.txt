@@ -1,0 +1,2 @@
+FIXED18J_TWO_DEEP_AUDITS_CLEAN
+App-side candidate after two additional deep audits. Live Vercel/Supabase/Stripe/custom-domain checks still required.

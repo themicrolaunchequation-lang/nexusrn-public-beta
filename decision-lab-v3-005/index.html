@@ -160,7 +160,7 @@ Error generating stack: `+s.message+`
     var back=document.getElementById('nexusV169BackDemo');
     if(back) back.addEventListener('click', function(){ try{ parent.postMessage({source:'NexusRNDecisionLab',action:'navigate',route:'public-demo'}, '*'); }catch(e){} });
     var unlock=document.getElementById('nexusV169UnlockDemo');
-    if(unlock) unlock.addEventListener('click', function(){ try{ parent.postMessage({source:'NexusRNDecisionLab',action:'navigate',route:'home',scrollTo:'pricing'}, '*'); }catch(e){} });
+    if(unlock) unlock.addEventListener('click', function(){ try{ parent.postMessage({source:'NexusRNDecisionLab',action:'navigate',route:'home',scrollTo:'beta-access'}, '*'); }catch(e){} });
   }
   var css=''+
   'html.nexus-public-demo-locked body{overflow:hidden!important;background:#020617!important;}'+
@@ -223,7 +223,7 @@ Error generating stack: `+s.message+`
     };
     if(action==='openDemoTarget' && targetMap[target]){ location.href=targetMap[target]; return; }
     if(action==='navigate' && route==='public-demo'){ location.href='../public-demo/index.html'; return; }
-    if(action==='navigate' && route==='home' && payload.scrollTo==='pricing'){ location.href='../pricing/index.html'; return; }
+    if(action==='navigate' && route==='home' && payload.scrollTo==='pricing'){ location.href='../beta-access.html'; return; }
     if(action==='navigate' && route==='home'){ location.href='../index.html'; return; }
   }
   function ensureNav(){
@@ -233,7 +233,7 @@ Error generating stack: `+s.message+`
     var nav=document.createElement('nav'); nav.id='nexusV173DecisionDemoNav'; nav.setAttribute('aria-label','Public Demo target navigation');
     var active=activeId();
     nav.innerHTML='<span class="demo-brand">Public Demo</span><button class="home" type="button" data-demo-home>← Demo List</button>'+ITEMS.map(function(x){return '<button type="button" data-demo-target="'+x[0]+'" class="'+(x[0]===active?'active':'')+'">'+x[1]+'</button>';}).join('')+'<button class="enroll" type="button" data-demo-enroll>Enroll Now</button>';
-    nav.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('button'); if(!b)return; ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation)ev.stopImmediatePropagation(); if(b.hasAttribute('data-demo-home')) return post('navigate',{route:'public-demo'}); if(b.hasAttribute('data-demo-enroll')) return post('navigate',{route:'home',scrollTo:'pricing'}); var t=b.getAttribute('data-demo-target'); if(t) return post('openDemoTarget',{target:t});},true);
+    nav.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('button'); if(!b)return; ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation)ev.stopImmediatePropagation(); if(b.hasAttribute('data-demo-home')) return post('navigate',{route:'public-demo'}); if(b.hasAttribute('data-demo-enroll')) return post('navigate',{route:'home',scrollTo:'beta-access'}); var t=b.getAttribute('data-demo-target'); if(t) return post('openDemoTarget',{target:t});},true);
     host.insertBefore(nav, host.firstChild);
   }
   function css(){ if(document.getElementById('nexusV173DecisionDemoStyle')) return; var st=document.createElement('style'); st.id='nexusV173DecisionDemoStyle'; st.textContent=''+
@@ -288,7 +288,7 @@ Error generating stack: `+s.message+`
     };
     if(action==='openDemoTarget' && targetMap[target]){ location.href=targetMap[target]; return; }
     if(action==='navigate' && route==='public-demo'){ location.href='../public-demo/index.html'; return; }
-    if(action==='navigate' && route==='home' && payload.scrollTo==='pricing'){ location.href='../pricing/index.html'; return; }
+    if(action==='navigate' && route==='home' && payload.scrollTo==='pricing'){ location.href='../beta-access.html'; return; }
     if(action==='navigate' && route==='home'){ location.href='../index.html'; return; }
   }
   function addStyle(){
@@ -325,7 +325,7 @@ Error generating stack: `+s.message+`
     if(!nav){
       nav=document.createElement('nav'); nav.id='nexusV175DecisionDemoNav'; nav.setAttribute('aria-label','Public Demo restricted navigation');
       nav.innerHTML='<span class="demo-brand">Public Demo</span><button class="home" type="button" data-demo-home>← Demo List</button><span class="slice-note">Unlocked slice: '+sliceTitle+'</span>'+ITEMS.map(function(x){return '<button type="button" data-demo-target="'+x[0]+'" class="'+(x[0]===sliceId?'active':'')+'">'+x[1]+'</button>';}).join('')+'<button class="enroll" type="button" data-demo-enroll>Enroll Now</button>';
-      nav.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('button'); if(!b)return; ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation)ev.stopImmediatePropagation(); if(b.hasAttribute('data-demo-home')) return post('navigate',{route:'public-demo'}); if(b.hasAttribute('data-demo-enroll')) return post('navigate',{route:'home',scrollTo:'pricing'}); var t=b.getAttribute('data-demo-target'); if(t) return post('openDemoTarget',{target:t});},true);
+      nav.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('button'); if(!b)return; ev.preventDefault(); ev.stopPropagation(); if(ev.stopImmediatePropagation)ev.stopImmediatePropagation(); if(b.hasAttribute('data-demo-home')) return post('navigate',{route:'public-demo'}); if(b.hasAttribute('data-demo-enroll')) return post('navigate',{route:'home',scrollTo:'beta-access'}); var t=b.getAttribute('data-demo-target'); if(t) return post('openDemoTarget',{target:t});},true);
       document.body.insertBefore(nav, document.body.firstChild);
     }
     var wm=document.getElementById('nexusV175DecisionWatermark');

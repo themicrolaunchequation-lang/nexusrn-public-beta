@@ -27,7 +27,7 @@
 <meta name="twitter:image" content="https://nexusrn.healthqualityleader.com/assets/icons/nexusrn-icon-512.png" />
 <meta name="nexusrn-build" content="v246-commercial-readiness" />
 </head>
-<body><main><header class='top'><div><div class='brand'>Nexus<span>RN</span></div><div class='sub'>Public Preview</div></div><nav class='nav'><a class='btn' href='index.html'>Home</a><a class='btn' href='public-demo/index.html'>Public Demo</a><a class='btn' href='#' onclick="alert('Full app access is not enabled in this public preview. Try the guided demo to see how NexusRN works.'); return false;" style='opacity: 0.5;'>Access Preview</a><a class='btn' href='contact.html'>Contact</a></nav></header>
+<body><main><header class='top'><div><div class='brand'>Nexus<span>RN</span></div><div class='sub'>Public Preview</div></div><nav class='nav'><a class='btn' href='index.html'>Home</a><a class='btn' href='public-demo/index.html'>Public Demo</a><a class='btn' href='beta-access.html'>Join Beta</a><a class='btn' href='contact.html'>Contact</a></nav></header>
 <span class='eyebrow'>Contact</span><h1>Contact & Institutional Demo</h1>
 <p class='lead'>This page is the single public-preview contact destination for early-access, educator, training-center, and institutional inquiries.</p>
 
@@ -105,7 +105,7 @@
   </div>
 </div>
 </section>
-<p class='small' style="text-align:center; margin-top:20px;">You can also reach us directly at <a href="mailto:hossam@healthqualityleader.com">hossam@healthqualityleader.com</a>.</p>
+<p class='small' style="text-align:center; margin-top:20px;">You can also reach us directly at <a href="mailto:lilianhossamfahmi@gmail.com">lilianhossamfahmi@gmail.com</a>.</p>
 
 <script>
   function handleDemoSubmit(e) {
@@ -134,4 +134,57 @@
   }
 </script>
 
-<footer><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="educational-disclaimer.html">Educational Disclaimer</a><a href="preview-limitations.html">Preview Limitations</a><a href="accessibility.html">Accessibility</a><a href="ngn-alignment.html">NGN Alignment</a><a href="contact.html">Contact</a><a href="cookie-policy.html">Cookie Policy</a><a href="acceptable-use.html">Acceptable Use</a><a href="copyright.html">Copyright</a><a href="security.html">Security</a><p>NexusRN is an independent educational preview. It is not affiliated with, sponsored by, or endorsed by NCSBN. It does not provide medical advice and does not guarantee NCLEX results.</p>  <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div></footer></main></body></html>
+<footer><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="educational-disclaimer.html">Educational Disclaimer</a><a href="preview-limitations.html">Preview Limitations</a><a href="accessibility.html">Accessibility</a><a href="ngn-alignment.html">NGN Alignment</a><a href="contact.html">Contact</a><a href="cookie-policy.html">Cookie Policy</a><a href="acceptable-use.html">Acceptable Use</a><a href="copyright.html">Copyright</a><a href="security.html">Security</a><p>NexusRN is an independent educational preview. It is not affiliated with, sponsored by, or endorsed by NCSBN. It does not provide medical advice and does not guarantee NCLEX results.</p>  <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div></footer></main>
+<script id="nexusrn-contact-mailto-routing">
+(function(){
+  "use strict";
+  var CONTACT_EMAIL = "lilianhossamfahmi@gmail.com";
+
+  function fieldLabel(el) {
+    var id = el.getAttribute("id");
+    if (id) {
+      var label = document.querySelector('label[for="' + id + '"]');
+      if (label) return label.textContent.trim();
+    }
+    return (el.getAttribute("name") || el.getAttribute("placeholder") || el.tagName || "Field").trim();
+  }
+
+  function collectForm(form) {
+    var lines = [];
+    var fields = form.querySelectorAll("input, select, textarea");
+    fields.forEach(function(el) {
+      if (!el.name && !el.id && !el.placeholder) return;
+      if ((el.type || "").toLowerCase() === "submit") return;
+      if ((el.type || "").toLowerCase() === "button") return;
+      var value = (el.value || "").trim();
+      if (!value) return;
+      lines.push(fieldLabel(el) + ": " + value);
+    });
+    if (!lines.length) lines.push("Contact request submitted from NexusRN contact page.");
+    lines.push("");
+    lines.push("Page: " + window.location.href);
+    return lines.join("\n");
+  }
+
+  document.addEventListener("submit", function(e) {
+    var form = e.target;
+    if (!form || form.tagName !== "FORM") return;
+    e.preventDefault();
+    e.stopPropagation();
+
+    var subject = "NexusRN contact request";
+    var heading = form.closest(".card, section, div");
+    if (heading) {
+      var h = heading.querySelector("h1,h2,h3");
+      if (h && h.textContent.trim()) subject = "NexusRN - " + h.textContent.trim();
+    }
+
+    var body = collectForm(form);
+    window.location.href = "mailto:" + CONTACT_EMAIL +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(body);
+  }, true);
+})();
+</script>
+
+</body></html>

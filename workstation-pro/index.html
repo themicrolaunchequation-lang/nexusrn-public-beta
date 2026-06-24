@@ -1,6 +1,27 @@
 <!doctype html>
 <html lang="en">
 <head>
+
+<script id="nexus-final-workstation-entitlement-gate">
+(function(){
+  'use strict';
+  var q = new URLSearchParams(location.search || '');
+  var publicDemo = q.get('publicDemo') === '1';
+
+  window.NEXUS_WORKSTATION_GATE_DECISION = {
+    version:'safe-final-workstation-gate-v2',
+    path:location.pathname,
+    publicDemo:publicDemo,
+    decision: publicDemo ? 'allow-public-demo' : 'redirect-beta-access'
+  };
+
+  if(publicDemo) return;
+
+  location.replace('../beta-access.html?from=workstation-pro');
+})();
+</script>
+
+
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="nexusrn-build" content="v243I-asset-rendering-sandbox-phase-8-of-8" />
@@ -17,7 +38,7 @@
     var q=new URLSearchParams(location.search||'');
     var isPublicDemo=q.get('publicDemo')==='1' || /publicDemo=1/i.test(location.search);
     var isLocal=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname||'');
-    var isBetaTest=q.get('betaTestAccess')==='1';
+    var isBetaTest=q.get('legacy-disabled-route')==='1';
     if(isPublicDemo) return;
     if(isLocal && !isBetaTest) return; // allow local QA full-route testing without pretending production authorization
     function safeRedirect(path){ location.href=path; }
@@ -28,7 +49,7 @@
         if(!session || !session.user){ safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search)); return; }
         if(isBetaTest){
           var test=window.NEXUSRN_SUPABASE.activeTestAccessForSession(session);
-          if(!test){ safeRedirect('../beta-test-access.html'); }
+          if(!test){ safeRedirect('../beta-access.html'); }
         }
       }catch(e){
         if(!isLocal) safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search));

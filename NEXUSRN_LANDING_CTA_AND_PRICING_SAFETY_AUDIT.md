@@ -11,7 +11,7 @@
 
 This safety audit verifies the containment of all public-facing buttons, upgrade components, plans, and CTA elements in the root landing page ([index.html](file:///e:/NexusRN-v243I-asset-rendering-sandbox-phase-8-of-8/NEXUSRN-CLEAN-PRODUCTION-APP-V12/index.html)) and its static subpages. 
 
-All development-only terminology (such as "renderer lab," "isolated from practice," and "production default candidate") has been completely removed. In addition, the bottom "Workstation Pro Lab" card has been deactivated. Unrestricted links pointing to `workstation-pro/index.html` or the full Practice bank has been redirected or gated behind a premium informational preview modal overlay.
+All development-only terminology (such as "retired internal preview wording," "isolated from practice," and "retired internal candidate wording") has been completely removed. In addition, the bottom "Workstation Pro Lab" card has been deactivated. Unrestricted links pointing to `workstation-pro/index.html` or the full Practice bank has been redirected or gated behind a premium informational preview modal overlay.
 
 ---
 
@@ -45,7 +45,7 @@ Below is the detailed list of every pricing, upgrade, and membership CTA audited
 
 ### 4. Bottom "Workstation Pro Lab" Card
 * **Original Text:**  
-  *Kicker:* `New renderer lab · isolated from Practice`  
+  *Kicker:* `New retired internal preview wording · isolated from Practice`  
   *Title:* `Preview the Workstation Pro item viewer safely`  
   *Body:* `Built from the external EHR workstation design as a separate route. It loads the v242Q learner-ready chunked bank, but does not skin or mutate the stable native Practice modal.`  
   *Button:* `Open Workstation Pro Lab →`

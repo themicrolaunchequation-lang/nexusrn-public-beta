@@ -33,20 +33,20 @@
       <span class="nx-kicker">Next action</span>
       <h2 style="font-size:30px;margin:16px 0 12px">Already paid?</h2>
       <p class="nx-note" style="font-size:15px;color:#cbd5e1">Check the email used during Stripe checkout. If instructions have not arrived, contact support and include the checkout email.</p>
-      <div class="nx-nav" style="margin-top:20px"><a class="nx-btn primary" href="contact.html">Contact Support</a><a class="nx-btn" href="beta-access.html">Join Beta</a><a class="nx-btn" href="beta-test-access.html">Test Access</a><a class="nx-btn" href="public-demo/index.html">Try Public Demo</a></div>
+      <div class="nx-nav" style="margin-top:20px"><a class="nx-btn primary" href="contact.html">Contact Support</a><a class="nx-btn" href="beta-access.html">Join Beta</a><a class="nx-btn" href="beta-access.html">Test Access</a><a class="nx-btn" href="public-demo/index.html">Try Public Demo</a></div>
     </aside>
   </section>
 
-  <section class="nx-card" id="nx-local-access-test-panel" style="margin-top:26px;display:none">
-    <span class="nx-kicker">Local $1 access test</span>
+  <section class="nx-card" id="nx-local-beta-access-panel" style="margin-top:26px;display:none">
+    <span class="nx-kicker">Local beta access</span>
     <h2 style="font-size:30px;margin:16px 0 12px">Test access is active in this browser</h2>
     <p class="nx-note" style="font-size:15px;color:#cbd5e1">This is a localhost-only access-flow test after the $1 Stripe checkout. It lets you test the sign-in/access route without claiming production authorization.</p>
     <div class="nx-nav" style="margin-top:18px">
-      <a class="nx-btn primary" href="workstation-pro/index.html?betaTestAccess=1" id="open-beta-workspace-test">Open Beta Workspace Test</a>
-      <a class="nx-btn" href="beta-test-access.html">Manage Test Access</a>
+      <a class="nx-btn primary" href="beta-access.html?from=beta-sign-in" id="continue-beta-access">Continue to Beta Access</a>
+      <a class="nx-btn" href="beta-access.html">Manage Test Access</a>
       <a class="nx-btn" href="public-demo/index.html">Try Public Demo</a>
     </div>
-    <p class="nx-note" id="nx-test-access-expiry"></p>
+    <p class="nx-note" id="nx-beta-access-expiry"></p>
   </section>
   <footer class="nx-footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><span>No password form is shown because secure authentication requires a real backend/auth provider.</span></footer>
 </main>
@@ -58,14 +58,14 @@
   function readState(){ try{return JSON.parse(localStorage.getItem(KEY)||'null');}catch(e){return null;} }
   function activeState(){ var s=readState(); return s && s.expiresAt && Date.now()<s.expiresAt ? s : null; }
   function fmt(t){ try{return new Date(t).toLocaleString();}catch(e){return String(t);} }
-  var panel=document.getElementById('nx-local-access-test-panel');
-  var exp=document.getElementById('nx-test-access-expiry');
+  var panel=document.getElementById('nx-local-beta-access-panel');
+  var exp=document.getElementById('nx-beta-access-expiry');
   var s=activeState();
   if(panel && s && isLocal()){
     panel.style.display='block';
     if(exp) exp.textContent='Local test access expires: '+fmt(s.expiresAt)+'. Production access still requires backend/webhook entitlement.';
   }
-  window.NEXUS_BETA_SIGNIN_TEST_AUDIT=function(){ return {version:'fixed10-beta-signin-test-access', local:isLocal(), testAccessActive:!!(s&&isLocal()), authBackendPresent:false, productionAuthorization:false}; };
+  window.NEXUS_BETA_SIGNIN_TEST_AUDIT=function(){ return {version:'fixed10-beta-signin-beta-access', local:isLocal(), testAccessActive:!!(s&&isLocal()), authBackendPresent:false, productionAuthorization:false}; };
 })();
 </script>
 </body>
