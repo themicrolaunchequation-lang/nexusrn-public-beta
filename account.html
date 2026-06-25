@@ -18,41 +18,128 @@
       <span class="nx-kicker">Signed-in account</span>
       <h1 class="nx-title">Beta account status</h1>
       <p class="nx-lead">This page verifies Supabase sign-in and shows whether your beta entitlement is active in this browser.</p>
-      <div class="nx-status" id="account-status">Loading account…</div>
+      <div class="nx-status" id="account-status">Loading accountâ€¦</div>
       <div class="nx-nav" style="margin-top:18px"><a class="nx-btn" href="beta-access.html">Beta Access</a><a class="nx-btn" href="beta-access.html">Beta Access</a><a class="nx-btn" href="contact.html">Contact Support</a></div>
     </article>
     <aside class="nx-card">
       <span class="nx-kicker">Access gate</span>
       <h2 style="font-size:30px;margin:16px 0 12px">Workspace access</h2>
       <p class="nx-note" style="font-size:15px;color:#cbd5e1">Production entitlement is activated through the beta onboarding/payment workflow. If access is not active after payment, contact support.</p>
-      <div id="access-panel" class="nx-status">Checking access…</div>
-      <div class="nx-nav" style="margin-top:18px"><a class="nx-btn primary disabled" id="workspace-link" href="#">Go to Beta Access</a><a class="nx-btn" href="public-demo/index.html">Try Public Demo</a></div>
+      <div id="access-panel" class="nx-status">Checking accessâ€¦</div>
+      <div class="nx-nav" style="margin-top:18px"><a class="nx-btn primary disabled" id="workspace-link" href="workstation-pro/index.html">Open Workstation Pro</a><a class="nx-btn" href="public-demo/index.html">Try Public Demo</a></div>
     </aside>
   </section>
-  <footer class="nx-footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Security</a><span>For automated production access, connect Stripe webhook fulfillment to Supabase entitlements.</span></footer>
+  <footer class="nx-footer"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="security.html">Security</a><span>Paid beta access is verified through Stripe webhook fulfillment and Supabase entitlements.</span></footer>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="assets/js/nexusrn-supabase-auth.js"></script>
 <script>
 (async function(){
-  var accountStatus=document.getElementById('account-status');
-  var accessPanel=document.getElementById('access-panel');
-  var link=document.getElementById('workspace-link');
-  function status(el,msg,cls){ el.textContent=msg; el.className='nx-status '+(cls||''); }
-  try{
-    var session=await NEXUSRN_SUPABASE.getSession();
-    if(!session || !session.user){ location.href='auth-sign-in.html?returnTo=account.html'; return; }
-    status(accountStatus,'Signed in as: '+session.user.email+'\nUser ID: '+session.user.id,'good');
-    var test=NEXUSRN_SUPABASE.activeTestAccessForSession(session);
-    if(test){
-      status(accessPanel,'Beta access is active for this signed-in user.\nExpires: '+NEXUSRN_SUPABASE.formatDate(test.expiresAt)+'\nAccess is tied to beta entitlement/onboarding status.','good');
-      link.href='beta-access.html?from=account'; link.classList.remove('disabled');
-    }else{
-      status(accessPanel,'No active beta entitlement found for this signed-in user. Use the Beta Access page to complete checkout/onboarding.','bad');
-      link.addEventListener('click', function(e){ e.preventDefault(); location.href='beta-access.html'; });
+  var accountStatus = document.getElementById('account-status');
+  var accessPanel = document.getElementById('access-panel');
+  var link = document.getElementById('workspace-link');
+
+  function status(el, msg, cls){
+    if(!el) return;
+    el.textContent = msg;
+    el.className = 'nx-status ' + (cls || '');
+  }
+
+  function fmtDate(iso){
+    try { return new Date(iso).toLocaleString(); }
+    catch(e){ return String(iso || ''); }
+  }
+
+  function allowWorkspace(entitlement){
+    link.textContent = 'Open Workstation Pro';
+    link.href = 'workstation-pro/index.html';
+    link.classList.remove('disabled');
+    link.onclick = null;
+
+    window.NEXUS_ACCOUNT_ENTITLEMENT_DECISION = {
+      version: 'account-paid-entitlement-v1',
+      decision: 'active-paid-entitlement',
+      entitlement: entitlement || null
+    };
+  }
+
+  function blockWorkspace(reason){
+    link.textContent = 'Go to Beta Access';
+    link.href = 'beta-access.html';
+    link.classList.remove('disabled');
+    link.onclick = function(e){
+      e.preventDefault();
+      location.href = 'beta-access.html';
+    };
+
+    window.NEXUS_ACCOUNT_ENTITLEMENT_DECISION = {
+      version: 'account-paid-entitlement-v1',
+      decision: 'no-active-entitlement',
+      reason: reason || ''
+    };
+  }
+
+  try {
+    var session = await NEXUSRN_SUPABASE.getSession();
+
+    if(!session || !session.user){
+      location.href = 'auth-sign-in.html?returnTo=account.html';
+      return;
     }
-  }catch(e){ status(accountStatus,'Account check failed: '+NEXUSRN_SUPABASE.statusText(e),'bad'); }
-  document.getElementById('signout-btn').addEventListener('click', async function(){ await NEXUSRN_SUPABASE.signOut(); location.href='index.html'; });
+
+    status(
+      accountStatus,
+      'Signed in as: ' + session.user.email + '\nUser ID: ' + session.user.id,
+      'good'
+    );
+
+    var entitlement = null;
+
+    if(typeof NEXUSRN_SUPABASE.getActiveEntitlementForSession === 'function'){
+      entitlement = await NEXUSRN_SUPABASE.getActiveEntitlementForSession(session);
+    }
+
+    if(entitlement){
+      status(
+        accessPanel,
+        'Active beta entitlement found.\n' +
+        'Email: ' + (entitlement.email || session.user.email || '') + '\n' +
+        'Plan: ' + (entitlement.planCode || entitlement.plan_code || 'beta_3_months') + '\n' +
+        'Status: active\n' +
+        'Expires: ' + fmtDate(entitlement.expiresAt || entitlement.expires_at),
+        'good'
+      );
+
+      allowWorkspace(entitlement);
+    } else {
+      status(
+        accessPanel,
+        'No active beta entitlement found for this signed-in user. Use the Beta Access page to complete checkout.',
+        'bad'
+      );
+
+      blockWorkspace('no active entitlement row returned');
+    }
+  } catch(e) {
+    status(
+      accountStatus,
+      'Account check failed: ' + NEXUSRN_SUPABASE.statusText(e),
+      'bad'
+    );
+
+    status(
+      accessPanel,
+      'Entitlement check failed. Try signing out and signing in again, or contact support.',
+      'bad'
+    );
+
+    blockWorkspace(e && e.message ? e.message : String(e));
+  }
+
+  document.getElementById('signout-btn').addEventListener('click', async function(){
+    await NEXUSRN_SUPABASE.signOut();
+    location.href = 'index.html';
+  });
 })();
 </script>
 
