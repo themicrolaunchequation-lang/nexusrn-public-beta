@@ -807,7 +807,7 @@ window.addEventListener('load', function() {
   function installStrip(){
     if(document.getElementById('nexus-fixed8-auth-strip')) return;
     var strip=document.createElement('div'); strip.id='nexus-fixed8-auth-strip'; strip.setAttribute('role','navigation'); strip.setAttribute('aria-label','NexusRN account and beta access');
-    strip.innerHTML='<div class="nx8-inner"><div class="nx8-copy"><strong>Public Demo is free.</strong> Paid beta uses account/onboarding workflow before checkout.</div><div class="nx8-actions"><a href="public-demo/index.html">Try Public Demo</a><a class="primary" href="beta-access.html">Join Beta</a><a href="beta-sign-in.html">Sign In</a></div></div>';
+    strip.innerHTML='<div class="nx8-inner"><div class="nx8-copy"><strong>Public Demo is free.</strong> Paid beta uses account/onboarding workflow before checkout.</div><div class="nx8-actions"><a href="public-demo/index.html">Try Public Demo</a><a class="primary" href="beta-access.html">Join Beta</a><a href="auth-sign-in.html">Sign In</a></div></div>';
     document.body.insertBefore(strip, document.body.firstChild);
   }
   function normalizeButtons(){
@@ -826,7 +826,7 @@ window.addEventListener('load', function() {
       var t=(a.textContent||'').trim();
       if(!IS_BETA_ACCESS && href.indexOf('buy.stripe.com')>-1){ a.setAttribute('href','beta-access.html'); a.removeAttribute('target'); a.removeAttribute('rel'); }
       if(/Get Full Access Now|Join Beta|Create Account|Sign Up/i.test(t) && href.indexOf('buy.stripe.com')===-1 && !/beta-access\.html/i.test(href)) a.setAttribute('href','beta-access.html');
-      if(/Sign In/i.test(t) && !/beta-sign-in\.html/i.test(href)) a.setAttribute('href','beta-sign-in.html');
+      if(/Sign In/i.test(t) && !/auth-sign-in\.html/i.test(href)) a.setAttribute('href','auth-sign-in.html');
     });
   }
   document.addEventListener('click',function(e){
@@ -834,13 +834,13 @@ window.addEventListener('load', function() {
     var text=(el.textContent||'').trim(); var href=el.getAttribute('href')||'';
     if(!IS_BETA_ACCESS && href.indexOf('buy.stripe.com')>-1){ e.preventDefault(); e.stopPropagation(); location.href=route('beta-access.html'); return; }
     if(/^(Get Full Access Now|Join Beta|Create Account|Sign Up|Start Beta Checkout)$/i.test(text) && !IS_BETA_ACCESS){ e.preventDefault(); e.stopPropagation(); location.href=route('beta-access.html'); return; }
-    if(/^Sign In$/i.test(text)){ e.preventDefault(); e.stopPropagation(); location.href=route('beta-sign-in.html'); return; }
+    if(/^Sign In$/i.test(text)){ e.preventDefault(); e.stopPropagation(); location.href=route('auth-sign-in.html'); return; }
     if(/^(Start Practicing Now|Start Practicing NGN Cases|Try Public Demo)$/i.test(text) && !href){ e.preventDefault(); e.stopPropagation(); location.href=route('public-demo/index.html'); return; }
   },true);
   function init(){installStrip(); normalizeButtons(); setTimeout(normalizeButtons,600); setTimeout(normalizeButtons,1500); setTimeout(normalizeButtons,3000);}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
   window.NEXUS_FIXED8_AUTH_PAYMENT_AUDIT=function(){
-    return {version:VERSION,authStripPresent:!!document.getElementById('nexus-fixed8-auth-strip'),betaAccessPage:'beta-access.html',signInPage:'beta-sign-in.html',publicDemoNoSignup:true,directStripeFromLandingBlocked:!IS_BETA_ACCESS,acceptance:'PASS_FIXED8_AUTH_PAYMENT_WORKFLOW'};
+    return {version:VERSION,authStripPresent:!!document.getElementById('nexus-fixed8-auth-strip'),betaAccessPage:'beta-access.html',signInPage:'auth-sign-in.html',publicDemoNoSignup:true,directStripeFromLandingBlocked:!IS_BETA_ACCESS,acceptance:'PASS_FIXED8_AUTH_PAYMENT_WORKFLOW'};
   };
 })();
 </script>
@@ -1253,6 +1253,7 @@ window.addEventListener('load', function() {
 </style>
 </body>
 </html>
+
 
 
 
