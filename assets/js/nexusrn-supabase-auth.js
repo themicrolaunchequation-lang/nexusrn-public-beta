@@ -1,4 +1,4 @@
-(function(){
+﻿(function(){
   'use strict';
   var CONFIG = {
     url: 'https://yzlrekjjvenxzpenyily.supabase.co',
@@ -8,6 +8,7 @@
     dollarTestHours: 48
   };
   var TEST_ACCESS_KEY = 'nexusrn_beta_test_access';
+  var VERIFIED_ENTITLEMENT_KEY = 'nexusrn_verified_entitlement';
   var client = null;
 
   function isLocalHost(){
@@ -85,6 +86,69 @@
   function clearTestAccess(){
     window.localStorage.removeItem(TEST_ACCESS_KEY);
   }
+
+  function readVerifiedEntitlement(){
+    var s = safeJsonParse(window.localStorage.getItem(VERIFIED_ENTITLEMENT_KEY));
+    if(!s || !s.expiresAt) return null;
+    if(now() >= Date.parse(s.expiresAt)) {
+      clearVerifiedEntitlement();
+      return null;
+    }
+    return s;
+  }
+
+  function clearVerifiedEntitlement(){
+    window.localStorage.removeItem(VERIFIED_ENTITLEMENT_KEY);
+  }
+
+  function storeVerifiedEntitlement(row, session){
+    if(!row) return null;
+    var entitlement = {
+      version: 'fixed13-paid-entitlement-supabase',
+      source: 'supabase_nexusrn_entitlements',
+      id: row.id || '',
+      userId: session && session.user ? session.user.id : null,
+      email: row.email || (session && session.user ? session.user.email : ''),
+      status: row.status || '',
+      planCode: row.plan_code || '',
+      expiresAt: row.expires_at || '',
+      checkedAt: new Date().toISOString()
+    };
+    window.localStorage.setItem(VERIFIED_ENTITLEMENT_KEY, JSON.stringify(entitlement));
+    return entitlement;
+  }
+
+  async function getActiveEntitlementForSession(session){
+    session = session || await getSession();
+    if(!session || !session.user) return null;
+
+    var email = (session.user.email || '').toLowerCase();
+    if(!email) return null;
+
+    var sb = initClient();
+    var res = await sb
+      .from('nexusrn_entitlements')
+      .select('id,email,status,plan_code,source,expires_at,created_at,updated_at')
+      .eq('status', 'active')
+      .gt('expires_at', new Date().toISOString())
+      .ilike('email', email)
+      .order('expires_at', { ascending: false })
+      .limit(1);
+
+    if(res.error) throw res.error;
+
+    var row = res.data && res.data.length ? res.data[0] : null;
+    if(!row) {
+      clearVerifiedEntitlement();
+      return null;
+    }
+
+    return storeVerifiedEntitlement(row, session);
+  }
+
+  async function hasActiveEntitlement(session){
+    return !!(await getActiveEntitlementForSession(session));
+  }
   function activeTestAccessForSession(session){
     var s = readTestAccess();
     if(!s || !s.expiresAt || now() >= Number(s.expiresAt)) return null;
@@ -127,7 +191,7 @@
   }
 
   window.NEXUSRN_SUPABASE = {
-    config: Object.assign({}, CONFIG, { publishableKey: CONFIG.publishableKey.slice(0,18) + '…' }),
+    config: Object.assign({}, CONFIG, { publishableKey: CONFIG.publishableKey.slice(0,18) + 'â€¦' }),
     initClient: initClient,
     getSession: getSession,
     getUser: getUser,
@@ -139,6 +203,10 @@
     activeTestAccessForSession: activeTestAccessForSession,
     activateLocalDollarTestAccess: activateLocalDollarTestAccess,
     clearTestAccess: clearTestAccess,
+    readVerifiedEntitlement: readVerifiedEntitlement,
+    clearVerifiedEntitlement: clearVerifiedEntitlement,
+    getActiveEntitlementForSession: getActiveEntitlementForSession,
+    hasActiveEntitlement: hasActiveEntitlement,
     isLocalHost: isLocalHost,
     isProductionHost: isProductionHost,
     authRedirectUrl: authRedirectUrl,
@@ -149,3 +217,4 @@
     testAccessKey: TEST_ACCESS_KEY
   };
 })();
+

@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en">
 <head>
 
@@ -9,15 +9,19 @@
   var publicDemo = q.get('publicDemo') === '1';
 
   window.NEXUS_WORKSTATION_GATE_DECISION = {
-    version:'safe-final-workstation-gate-v2',
+    version:'paid-entitlement-preflight-v1',
     path:location.pathname,
     publicDemo:publicDemo,
-    decision: publicDemo ? 'allow-public-demo' : 'redirect-beta-access'
+    decision: publicDemo ? 'allow-public-demo' : 'pending-entitlement-check'
   };
 
-  if(publicDemo) return;
-
-  location.replace('../beta-access.html?from=workstation-pro');
+  if(!publicDemo){
+    document.documentElement.className += ' nexus-entitlement-checking';
+    var style = document.createElement('style');
+    style.id = 'nexus-paid-entitlement-hide-until-verified';
+    style.textContent = 'html.nexus-entitlement-checking body{visibility:hidden}';
+    document.head.appendChild(style);
+  }
 })();
 </script>
 
@@ -25,7 +29,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="nexusrn-build" content="v243I-asset-rendering-sandbox-phase-8-of-8" />
-  <title>NexusRN · Workstation Pro</title>
+  <title>NexusRN Â· Workstation Pro</title>
   <link rel="stylesheet" href="../assets/css/nexusrn-workstation-pro-v242w.css" />
   <link rel="stylesheet" href="../assets/css/nexusrn-vitals-strip-micro-polish-07c-lite.css" data-batch="07C-LITE" />
   <link rel="stylesheet" href="../assets/css/nexusrn-matrix-micro-polish.css" data-batch="07D-MATRIX" />
@@ -34,29 +38,69 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="../assets/js/nexusrn-supabase-auth.js"></script>
   <script id="nexus-fixed12-workstation-auth-gate">
-  (function(){
-    var q=new URLSearchParams(location.search||'');
-    var isPublicDemo=q.get('publicDemo')==='1' || /publicDemo=1/i.test(location.search);
-    var isLocal=/^(localhost|127\.0\.0\.1|0\.0\.0\.0)$/i.test(location.hostname||'');
-    var isBetaTest=q.get('legacy-disabled-route')==='1';
-    if(isPublicDemo) return;
-    if(isLocal && !isBetaTest) return; // allow local QA full-route testing without pretending production authorization
-    function safeRedirect(path){ location.href=path; }
-    window.addEventListener('DOMContentLoaded', async function(){
-      try{
-        if(!window.NEXUSRN_SUPABASE){ return; }
-        var session=await window.NEXUSRN_SUPABASE.getSession();
-        if(!session || !session.user){ safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search)); return; }
-        if(isBetaTest){
-          var test=window.NEXUSRN_SUPABASE.activeTestAccessForSession(session);
-          if(!test){ safeRedirect('../beta-access.html'); }
-        }
-      }catch(e){
-        if(!isLocal) safeRedirect('../auth-sign-in.html?returnTo='+encodeURIComponent('workstation-pro/index.html'+location.search));
+(function(){
+  'use strict';
+
+  var q = new URLSearchParams(location.search || '');
+  var isPublicDemo = q.get('publicDemo') === '1' || /publicDemo=1/i.test(location.search || '');
+
+  function allow(reason, entitlement){
+    document.documentElement.classList.remove('nexus-entitlement-checking');
+    document.documentElement.classList.add('nexus-entitlement-allowed');
+    window.NEXUS_WORKSTATION_GATE_DECISION = {
+      version:'paid-entitlement-gate-v1',
+      path:location.pathname,
+      publicDemo:isPublicDemo,
+      decision:reason,
+      entitlement: entitlement || null
+    };
+  }
+
+  function redirectToSignIn(){
+    var ret = 'workstation-pro/index.html' + (location.search || '') + (location.hash || '');
+    location.replace('../auth-sign-in.html?returnTo=' + encodeURIComponent(ret));
+  }
+
+  function redirectToBeta(){
+    location.replace('../beta-access.html?from=workstation-pro');
+  }
+
+  if(isPublicDemo){
+    allow('allow-public-demo', null);
+    return;
+  }
+
+  window.addEventListener('DOMContentLoaded', async function(){
+    try {
+      if(!window.NEXUSRN_SUPABASE){
+        redirectToSignIn();
+        return;
       }
-    });
-  })();
-  </script>
+
+      var session = await window.NEXUSRN_SUPABASE.getSession();
+
+      if(!session || !session.user){
+        redirectToSignIn();
+        return;
+      }
+
+      var entitlement = await window.NEXUSRN_SUPABASE.getActiveEntitlementForSession(session);
+
+      if(entitlement){
+        allow('allow-paid-entitlement', entitlement);
+        return;
+      }
+
+      redirectToBeta();
+    } catch(e) {
+      try {
+        window.localStorage.setItem('nexusrn_entitlement_gate_last_error', String(e && e.message ? e.message : e));
+      } catch(ignore) {}
+      redirectToBeta();
+    }
+  });
+})();
+</script>
 </head>
 <body>
   <a class="ws-skip-link" href="#questionRenderer">Skip to question</a>
@@ -65,11 +109,11 @@
     <header class="ws-topbar">
       <a href="../index.html" class="ws-brand" style="text-decoration: none; color: inherit;">
         <span class="ws-logo animated-logo">N</span>
-        <span class="ws-brand-text">NexusRN · RN Workstation <span class="ws-pro-badge">PRO</span></span>
+        <span class="ws-brand-text">NexusRN Â· RN Workstation <span class="ws-pro-badge">PRO</span></span>
       </a>
       <nav class="ws-mode-pills" aria-label="Learning modes"></nav>
       <div class="ws-mode-summary">
-        <span id="wsModeSummaryText">Practice · Ready</span>
+        <span id="wsModeSummaryText">Practice Â· Ready</span>
         <button id="wsModeEdit" class="ws-mode-action" type="button">Edit</button>
         <button id="wsModeStart" class="ws-mode-action ws-mode-start" type="button">Start</button>
       </div>
@@ -86,7 +130,7 @@
         </div>
         <div class="ws-metrics-divider"></div>
         <div class="ws-metrics" id="wsMetrics">
-          <span>Loading bank…</span>
+          <span>Loading bankâ€¦</span>
         </div>
       </div>
       <div class="ws-selectors">
@@ -126,17 +170,17 @@
     <main class="ws-shell" id="workstationShell" role="main" aria-label="Workstation Pro answer engine candidate">
       <aside class="ws-patient-rail" id="patientRail">
         <div class="ws-avatar">--</div>
-        <div class="ws-mini-name">Loading…</div>
+        <div class="ws-mini-name">Loadingâ€¦</div>
         <div class="ws-mini-meta">Chunked DB</div>
         <div class="ws-rail-icons" aria-label="Chart areas" role="tablist" aria-orientation="vertical">
-          <button type="button" data-tab="overview" class="active" title="Overview (snap)">📋</button>
-          <button type="button" data-tab="history" title="History &amp; Physical">📜</button>
-          <button type="button" data-tab="notes" title="Nursing Notes">📝</button>
-          <button type="button" data-tab="vitals" title="Vitals">❤️</button>
-          <button type="button" data-tab="labs" title="Laboratory Results">🧪</button>
-          <button type="button" data-tab="io" title="Intake &amp; Output">💧</button>
-          <button type="button" data-tab="radiology" title="Radiology (Imaging)">☢️</button>
-          <button type="button" data-tab="orders" title="Provider Orders">🩺</button>
+          <button type="button" data-tab="overview" class="active" title="Overview (snap)">ðŸ“‹</button>
+          <button type="button" data-tab="history" title="History &amp; Physical">ðŸ“œ</button>
+          <button type="button" data-tab="notes" title="Nursing Notes">ðŸ“</button>
+          <button type="button" data-tab="vitals" title="Vitals">â¤ï¸</button>
+          <button type="button" data-tab="labs" title="Laboratory Results">ðŸ§ª</button>
+          <button type="button" data-tab="io" title="Intake &amp; Output">ðŸ’§</button>
+          <button type="button" data-tab="radiology" title="Radiology (Imaging)">â˜¢ï¸</button>
+          <button type="button" data-tab="orders" title="Provider Orders">ðŸ©º</button>
         </div>
       </aside>
 
@@ -163,7 +207,7 @@
             <div class="ws-question-head">
               <div>
                 <div class="ws-label">Clinical judgment task</div>
-                <h1 id="itemTitle">Loading item…</h1>
+                <h1 id="itemTitle">Loading itemâ€¦</h1>
               </div>
               <div class="ws-badges" id="itemBadges"></div>
             </div>
@@ -180,8 +224,8 @@
     </main>
 
     <footer class="ws-statusbar">
-      <span id="statusLeft">Initializing v243B performance/mobile beta renderer…</span>
-      <span id="statusRight">Native viewer preserved · no MutationObserver modal skin</span>
+      <span id="statusLeft">Initializing v243B performance/mobile beta rendererâ€¦</span>
+      <span id="statusRight">Native viewer preserved Â· no MutationObserver modal skin</span>
       <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div>
 </footer>
   </div>
@@ -195,3 +239,4 @@
   <script src="../assets/js/workstation-pro/nexusrn-mode-pills.js"></script>
 </body>
 </html>
+
