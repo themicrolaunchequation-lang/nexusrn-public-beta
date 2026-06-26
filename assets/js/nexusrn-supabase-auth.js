@@ -1,9 +1,9 @@
-﻿(function(){
+(function(){
   'use strict';
   var CONFIG = {
     url: 'https://yzlrekjjvenxzpenyily.supabase.co',
     publishableKey: 'sb_publishable_Adrh6-0rsw_OSOfNhN9dgg_qzf7ZSCx',
-    productionHost: 'nexusrn.healthqualityleader.com',
+    productionHost: 'healthqualityleader.com',
     authCallbackPath: '/auth-callback.html',
     dollarTestHours: 48
   };
