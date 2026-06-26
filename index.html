@@ -740,20 +740,20 @@ function showSafeModal() {
 document.addEventListener('click', function(e) {
   var target = e.target.closest('a, button');
   if (!target) return;
-  
+
   var text = (target.textContent || '').trim();
   var href = target.getAttribute('href') || '';
-  
+
   // Intercept pricing, upgrade, and full access CTAs
-  if ((text === 'Get Full Access Now' || text === 'Join Beta' || href.indexOf('pricing') > -1) && href.indexOf('buy.stripe.com') === -1) {
+  if ((text === 'Get Full Access Now' || href.indexOf('pricing') > -1) && href.indexOf('buy.stripe.com') === -1) {
     e.preventDefault();
     e.stopPropagation();
     showSafeModal();
     return;
   }
-  
+
   // Intercept full-bank routes
-  if (href.indexOf('practice/index.html') > -1 || href.indexOf('workstation-pro') > -1 || href.indexOf('workstation-default') > -1) {
+  if (href.indexOf('practice/index.html') > -1 || href.indexOf('workstation-default') > -1) {
     e.preventDefault();
     e.stopPropagation();
     window.location.href = 'public-demo/index.html';
