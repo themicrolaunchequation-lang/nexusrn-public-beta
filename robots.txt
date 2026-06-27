@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://nexusrn.healthqualityleader.com/sitemap.xml
+
+Sitemap: https://healthqualityleader.com/sitemap.xml

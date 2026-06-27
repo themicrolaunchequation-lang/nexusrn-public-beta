@@ -563,22 +563,48 @@ Error generating stack: `+l.message+`
 (function() {
   setTimeout(function fixLinks() {
     var links = document.querySelectorAll('a[href]');
-    var safeTargets = {
-      'workstation-pro': 'public-demo/index.html',
-      'workstation-pro/': 'public-demo/index.html',
-      'workstation-pro/index.html': 'public-demo/index.html',
-      '/workstation-pro/': 'public-demo/index.html',
-      '/workstation-pro/index.html': 'public-demo/index.html'
-    };
+
+    var protectedPaths = [
+      'workstation-pro',
+      'workstation-pro/',
+      'workstation-pro/index.html',
+      '/workstation-pro',
+      '/workstation-pro/',
+      '/workstation-pro/index.html',
+      'beta-access.html',
+      '/beta-access.html',
+      'account.html',
+      '/account.html',
+      'auth-sign-in.html',
+      '/auth-sign-in.html',
+      'auth-sign-up.html',
+      '/auth-sign-up.html'
+    ];
+
     var removePatterns = [
       'pricing'
     ];
+
     links.forEach(function(a) {
       var href = a.getAttribute('href') || '';
-      if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) return;
-      var safe = safeTargets[href.replace(/^\//, '')];
-      if (safe) { a.setAttribute('href', safe); return; }
-      var isBroken = removePatterns.some(function(p) { return href.toLowerCase().indexOf(p) > -1; });
+      var normalizedHref = href.replace(/^\//, '');
+
+      if (href.startsWith('#') || href.startsWith('http') || href.startsWith('mailto:')) {
+        return;
+      }
+
+      if (
+        protectedPaths.indexOf(href) > -1 ||
+        protectedPaths.indexOf(normalizedHref) > -1 ||
+        href.indexOf('workstation-pro') > -1
+      ) {
+        return;
+      }
+
+      var isBroken = removePatterns.some(function(p) {
+        return href.toLowerCase().indexOf(p) > -1;
+      });
+
       if (isBroken) {
         var span = document.createElement('span');
         span.textContent = a.textContent;
@@ -586,15 +612,21 @@ Error generating stack: `+l.message+`
         span.className = a.className;
         span.style.cursor = 'default';
         span.style.opacity = '0.5';
-        if (a.parentNode) a.parentNode.replaceChild(span, a);
+
+        if (a.parentNode) {
+          a.parentNode.replaceChild(span, a);
+        }
+
         return;
       }
+
       if (!href.startsWith('http') && !href.startsWith('#') && !href.startsWith('mailto:')) {
         if (href.indexOf('.') === -1 && href.indexOf('/') > -1) {
           a.setAttribute('href', 'public-demo/index.html');
         }
       }
     });
+
     document.querySelectorAll('[onclick]').forEach(function(el) {
       if (el.getAttribute('onclick').indexOf('Disabled') > -1) {
         el.removeAttribute('onclick');
@@ -606,6 +638,7 @@ Error generating stack: `+l.message+`
   }, 500);
 })();
 </script>
+
 
 <style>
 /* Safe Preview Info Modal Styles */
