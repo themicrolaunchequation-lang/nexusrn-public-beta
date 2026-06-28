@@ -36,7 +36,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <!-- NexusRN SEO fallback flash guard -->
+    <style id="nexus-seo-fallback-flash-guard">
+      html.nexus-js-enabled #root > .nexus-seo-fallback {
+        display: none !important;
+      }
+      html.nexus-js-enabled #root {
+        min-height: 100vh;
+        background: #020617;
+      }
+    </style>
+    <script>
+      document.documentElement.classList.add('nexus-js-enabled');
+    </script>
     <!-- JSON-LD Structured Data: Organization -->
     <script type="application/ld+json">
     {
@@ -255,7 +267,7 @@ Error generating stack: `+l.message+`
 </head>
   <body class="bg-[#0b1329] text-slate-100 font-['Plus_Jakarta_Sans',sans-serif] antialiased selection:bg-teal-500 selection:text-slate-900">
     <div id="root">
-      <main style="max-width:920px;margin:0 auto;padding:40px 20px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#e2e8f0;">
+      <main class="nexus-seo-fallback" style="max-width:920px;margin:0 auto;padding:40px 20px;font-family:'Plus Jakarta Sans',system-ui,sans-serif;color:#e2e8f0;">
         <h1 style="font-size:40px;line-height:1.1;font-weight:800;margin:0 0 16px;">NCLEX NGN Practice: Clinical Judgment, Unfolding Cases &amp; EHR Questions</h1>
         <p style="font-size:18px;line-height:1.6;color:#cbd5e1;max-width:760px;">Master Next Generation NCLEX clinical judgment with realistic unfolding case studies, bow-tie and matrix items, and EHR-style patient files — each with detailed rationales mapped to the six clinical-judgment steps. Start with free NGN sample questions, no account required.</p>
         <p style="margin:24px 0;">
