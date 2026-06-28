@@ -2,6 +2,32 @@
   "version": 2,
   "cleanUrls": false,
   "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "nexusrn.com" }],
+      "destination": "https://healthqualityleader.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.nexusrn.com" }],
+      "destination": "https://healthqualityleader.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "nexusrn.healthqualityleader.com" }],
+      "destination": "https://healthqualityleader.com/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "www.healthqualityleader.com" }],
+      "destination": "https://healthqualityleader.com/:path*",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
