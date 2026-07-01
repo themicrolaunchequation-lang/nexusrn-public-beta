@@ -40,11 +40,11 @@
   function flattenText(v){
     if(v==null) return '';
     if(typeof v==='string'||typeof v==='number'||typeof v==='boolean') return String(v);
-    if(Array.isArray(v)) return v.map(flattenText).filter(Boolean).join(' · ');
+    if(Array.isArray(v)) return v.map(flattenText).filter(Boolean).join(' Â· ');
     if(typeof v==='object') return Object.keys(v).map(function(k){
       var val=flattenText(v[k]);
       return val?title(k)+': '+val:'';
-    }).filter(Boolean).join(' · ');
+    }).filter(Boolean).join(' Â· ');
     return String(v);
   }
   function getBaseDateForItem(item) {
@@ -158,11 +158,11 @@
     if(points.length<2) return '';
     var min=Math.min.apply(null,points), max=Math.max.apply(null,points); if(max===min){max+=1;min-=1;}
     var w=620,h=170,pad=28; var d=points.map(function(v,i){var x=pad+(w-pad*2)*(i/(points.length-1)); var y=h-pad-(h-pad*2)*((v-min)/(max-min)); return (i?'L':'M')+x.toFixed(1)+' '+y.toFixed(1);}).join(' ');
-    var dots=points.map(function(v,i){var x=pad+(w-pad*2)*(i/(points.length-1)); var y=h-pad-(h-pad*2)*((v-min)/(max-min)); return '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4"><title>'+esc((labels&&labels[i]?labels[i]+' · ':'')+v+(unit||''))+'</title></circle>';}).join('');
+    var dots=points.map(function(v,i){var x=pad+(w-pad*2)*(i/(points.length-1)); var y=h-pad-(h-pad*2)*((v-min)/(max-min)); return '<circle cx="'+x.toFixed(1)+'" cy="'+y.toFixed(1)+'" r="4"><title>'+esc((labels&&labels[i]?labels[i]+' Â· ':'')+v+(unit||''))+'</title></circle>';}).join('');
     return '<div class="ws-trend-chart"><svg viewBox="0 0 '+w+' '+h+'" role="img" aria-label="Trend chart"><path class="grid" d="M28 28H592M28 85H592M28 142H592"></path><path class="axis" d="M28 20V142H600"></path><path class="line" d="'+d+'"></path>'+dots+'<text x="32" y="18">'+esc(max+(unit||''))+'</text><text x="32" y="160">'+esc(min+(unit||''))+'</text></svg></div>';
   }
   /* --- Multi-series trend chart for vital sign rendering --- */
-  var TREND_COLORS={HR:'#ef4444',hr:'#ef4444',pulse:'#ef4444',SBP:'#3b82f6',DBP:'#60a5fa',BP:'#3b82f6',bp:'#3b82f6',RR:'#f59e0b',rr:'#f59e0b',SpO2:'#10b981',spo2:'#10b981','SpO₂':'#10b981',Temp:'#8b5cf6',temp:'#8b5cf6','Temp (C)':'#8b5cf6','Temp (F)':'#8b5cf6',Potassium:'#ec4899','Potassium (mEq/L)':'#ec4899','Glucose (mg/dL)':'#f97316',Glucose:'#f97316','ECG Rhythm':'#6366f1'};
+  var TREND_COLORS={HR:'#ef4444',hr:'#ef4444',pulse:'#ef4444',SBP:'#3b82f6',DBP:'#60a5fa',BP:'#3b82f6',bp:'#3b82f6',RR:'#f59e0b',rr:'#f59e0b',SpO2:'#10b981',spo2:'#10b981','SpOâ‚‚':'#10b981',Temp:'#8b5cf6',temp:'#8b5cf6','Temp (C)':'#8b5cf6','Temp (F)':'#8b5cf6',Potassium:'#ec4899','Potassium (mEq/L)':'#ec4899','Glucose (mg/dL)':'#f97316',Glucose:'#f97316','ECG Rhythm':'#6366f1'};
   function trendColor(label){return TREND_COLORS[label]||TREND_COLORS[label.toLowerCase()]||'#64748b';}
   function svgMultiSeriesChart(series,timeLabels){
     /* series = [{label,values:[num],unit}], timeLabels = ['08:00','10:00',...] */
@@ -411,7 +411,7 @@
             if (idx > 0) {
               tokens.push({
                 id: 'separator_' + idx,
-                text: ' • ',
+                text: ' â€¢ ',
                 isHighlightable: false
               });
             }
@@ -810,10 +810,10 @@
         if (currentMode() === 'unfolding' && t !== 'unfolding-case') return '';
         var count=(state.casesByType.get(t)||[]).length; 
         var label = t === 'unfolding-case' ? 'Legacy Unfolding Case (Admin QA)' : (t === 'unfolding-6q' ? 'Unfolding 6Q Clinical Case' : title(t)); 
-        return '<option value="'+esc(t)+'">'+esc(label)+' · '+count+' cases</option>';
+        return '<option value="'+esc(t)+'">'+esc(label)+' Â· '+count+' cases</option>';
       }).join('');
     } else {
-      typeSelect.innerHTML=state.types.map(function(t){var count=(state.productionItemsByType.get(t)||[]).length; var suffix=state.publicDemoMode?' · demo item':(' · '+count+' items'); return '<option value="'+esc(t)+'">'+esc(title(t))+esc(suffix)+'</option>';}).join('');
+      typeSelect.innerHTML=state.types.map(function(t){var count=(state.productionItemsByType.get(t)||[]).length; var suffix=state.publicDemoMode?' Â· demo item':(' Â· '+count+' items'); return '<option value="'+esc(t)+'">'+esc(title(t))+esc(suffix)+'</option>';}).join('');
     }
   }
   function fillSelectors(){
@@ -892,14 +892,14 @@
     chooseId(item.caseId || item.id);
   }
   async function loadUnfoldingCase(caseLite){
-    setStatus('Loading unfolding case…','');
+    setStatus('Loading unfolding caseâ€¦','');
     state.currentIndex=caseLite; state.answers={}; state.submitted=false; $('#scorePanel').hidden=true;
 
     /* --- Resolve full case data --- */
     var fullCase = null;
 
     /* If caseLite IS already the full case (unfolding-6q mode stores entire case objects
-       in state.casesByType), use it directly — no need to re-fetch the 22 MB master JSON */
+       in state.casesByType), use it directly â€” no need to re-fetch the 22 MB master JSON */
     var alreadyFull = (caseLite.items || caseLite.questions || caseLite.timeline) && (caseLite.ehr || (caseLite.items && caseLite.items[0] && caseLite.items[0].structure) || (caseLite.questions && caseLite.questions[0] && caseLite.questions[0].structure));
     if(alreadyFull){
       fullCase = caseLite;
@@ -934,7 +934,7 @@
       renderAll();
       /* Also render case timeline nav at bottom */
       renderCaseTimeline(timeline, target);
-      setStatus('Loaded case: '+(fullCase.title||fullCase.caseId),'Unfolding Clinical Case · '+timeline.length+' items');
+      setStatus('Loaded case: '+(fullCase.title||fullCase.caseId),'Unfolding Clinical Case Â· '+timeline.length+' items');
     } else {
       setStatus('No items in case','');
     }
@@ -972,11 +972,11 @@
     
     var actionbar = $('.ws-actionbar');
     if(actionbar) {
-      if(!$('#wsPrevBtn')) actionbar.insertAdjacentHTML('afterbegin', '<button id="wsPrevBtn" type="button" class="secondary ws-nav-btn">← Previous Item</button>');
+      if(!$('#wsPrevBtn')) actionbar.insertAdjacentHTML('afterbegin', '<button id="wsPrevBtn" type="button" class="secondary ws-nav-btn">â† Previous Item</button>');
       if(!$('#wsNextBtn')) {
          var resetBtn = $('#resetBtn');
-         if(resetBtn) resetBtn.insertAdjacentHTML('afterend', '<button id="wsNextBtn" type="button" class="secondary ws-nav-btn">Next Item →</button>');
-         else actionbar.insertAdjacentHTML('beforeend', '<button id="wsNextBtn" type="button" class="secondary ws-nav-btn">Next Item →</button>');
+         if(resetBtn) resetBtn.insertAdjacentHTML('afterend', '<button id="wsNextBtn" type="button" class="secondary ws-nav-btn">Next Item â†’</button>');
+         else actionbar.insertAdjacentHTML('beforeend', '<button id="wsNextBtn" type="button" class="secondary ws-nav-btn">Next Item â†’</button>');
       }
       $('#wsPrevBtn').disabled = (activeIdx <= 0);
       $('#wsNextBtn').disabled = (activeIdx >= timeline.length - 1);
@@ -1052,7 +1052,7 @@
   }
 
   async function loadFullItem(lite){
-    setStatus('Loading chunk for '+(lite.format||'item')+'…','Chunked DB preserved · fetching one small chunk');
+    setStatus('Loading chunk for '+(lite.format||'item')+'â€¦','Chunked DB preserved Â· fetching one small chunk');
     state.currentIndex=lite; state.answers={}; state.submitted=false; $('#scorePanel').hidden=true;
     var chunk=await fetchJson('../'+lite.chunk);
     var arr=getArr(chunk).filter(function(x){ return x && x.id; });
@@ -1163,7 +1163,7 @@
   function rationaleOf(item){
     var r=item.rationale;
     if(!r) return 'Rationale not available in this preview record.';
-    if(typeof r==='string') return '<div class="ws-rat-section explanation"><h4>📝 Explanation</h4><div class="ws-rat-body">' + formatMarkdownAndLists(r) + '</div></div>';
+    if(typeof r==='string') return '<div class="ws-rat-section explanation"><h4>ðŸ“ Explanation</h4><div class="ws-rat-body">' + formatMarkdownAndLists(r) + '</div></div>';
     function flat(v){
       if(v==null) return '';
       if(typeof v==='string' || typeof v==='number' || typeof v==='boolean') return String(v);
@@ -1190,14 +1190,14 @@
         var cls = k.replace(/_/g, '-');
         var cleanTitle = title(k);
         var icon = '';
-        if (k === 'answer_analysis') icon = '📊 ';
-        else if (k === 'core_concept') icon = '💡 ';
-        else if (k === 'golden_rule') icon = '✨ ';
-        else if (k === 'trap' || k === 'common_trap') { icon = '⚠️ '; cleanTitle = 'Trap to Avoid'; }
-        else if (k === 'teaching' || k === 'teaching_point') { icon = '👩‍🏫 '; cleanTitle = 'Teaching Point'; }
-        else if (k === 'safety_rationale') { icon = '🛡️ '; cleanTitle = 'Safety Rationale'; }
-        else if (k === 'summary') { icon = '📝 '; cleanTitle = 'Summary'; }
-        else icon = '📝 ';
+        if (k === 'answer_analysis') icon = 'ðŸ“Š ';
+        else if (k === 'core_concept') icon = 'ðŸ’¡ ';
+        else if (k === 'golden_rule') icon = 'âœ¨ ';
+        else if (k === 'trap' || k === 'common_trap') { icon = 'âš ï¸ '; cleanTitle = 'Trap to Avoid'; }
+        else if (k === 'teaching' || k === 'teaching_point') { icon = 'ðŸ‘©â€ðŸ« '; cleanTitle = 'Teaching Point'; }
+        else if (k === 'safety_rationale') { icon = 'ðŸ›¡ï¸ '; cleanTitle = 'Safety Rationale'; }
+        else if (k === 'summary') { icon = 'ðŸ“ '; cleanTitle = 'Summary'; }
+        else icon = 'ðŸ“ ';
         
         html += '<div class="ws-rat-section ' + cls + '">' +
           '<h4>' + icon + esc(cleanTitle) + '</h4>' +
@@ -1238,7 +1238,7 @@
   function vitalValueFromObject(row,key){
     if(!row || typeof row!=='object') return '';
     var aliases={
-      T:['t','temp','temperature'], HR:['hr','heart_rate','heart rate','pulse'], RR:['rr','respiratory_rate','respiratory rate'], BP:['bp','blood_pressure','blood pressure'], 'SpO₂':['spo2','sp_o2','oxygen_saturation','oxygen saturation','o2sat','o2 sat','pulse_ox'], MAP:['map'], Pain:['pain','pain score','pain level','pain scale'], Weight:['wt','weight'], Height:['ht','height'], BMI:['bmi','body mass index']
+      T:['t','temp','temperature'], HR:['hr','heart_rate','heart rate','pulse'], RR:['rr','respiratory_rate','respiratory rate'], BP:['bp','blood_pressure','blood pressure'], 'SpOâ‚‚':['spo2','sp_o2','oxygen_saturation','oxygen saturation','o2sat','o2 sat','pulse_ox'], MAP:['map'], Pain:['pain','pain score','pain level','pain scale'], Weight:['wt','weight'], Height:['ht','height'], BMI:['bmi','body mass index']
     }[key]||[];
     for(var i=0;i<aliases.length;i++){
       var a=aliases[i];
@@ -1260,10 +1260,10 @@
     }
     var flat=flattenText(row);
     if(key==='BP'){var mbp=flat.match(/(\d{2,3}\s*\/\s*\d{2,3})/); if(mbp) return mbp[1];}
-    if(key==='SpO₂'){var ms=flat.match(/(?:SpO2|SpO₂|oxygen saturation|O2 sat|O₂ sat|pulse ox)[^0-9]{0,12}([0-9]{2,3}%?)/i); if(ms) return ms[1];}
+    if(key==='SpOâ‚‚'){var ms=flat.match(/(?:SpO2|SpOâ‚‚|oxygen saturation|O2 sat|Oâ‚‚ sat|pulse ox)[^0-9]{0,12}([0-9]{2,3}%?)/i); if(ms) return ms[1];}
     if(key==='HR'){var mh=flat.match(/(?:\bHR\b|\bHeart Rate\b|\bpulse\b)[^0-9]{0,12}([0-9]{2,3})\b/i); if(mh) return mh[1];}
     if(key==='RR'){var mr=flat.match(/(?:\bRR\b|\bRespiratory Rate\b)[^0-9]{0,12}([0-9]{1,3})\b/i); if(mr) return mr[1];}
-    if(key==='T'){var mt=flat.match(/(?:\bT\b|\bTemp(?:erature)?\b)[^0-9]{0,12}([0-9]{2,3}(?:\.[0-9])?\s?°?\s?[CF]?)/i); if(mt) return mt[1];}
+    if(key==='T'){var mt=flat.match(/(?:\bT\b|\bTemp(?:erature)?\b)[^0-9]{0,12}([0-9]{2,3}(?:\.[0-9])?\s?Â°?\s?[CF]?)/i); if(mt) return mt[1];}
     if(key==='MAP'){var mm=flat.match(/\bMAP\b[^0-9]{0,12}([0-9]{2,3})\b/i); if(mm) return mm[1];}
     if(key==='Pain'){var mp=flat.match(/(?:\bPain\b|\bpain score\b|\bpain level\b)[^0-9]{0,12}([0-9]{1,2}(?:\/10)?)/i); if(mp) return mp[1];}
     if(key==='Weight'){var mw=flat.match(/(?:\bWeight\b|\bWt\b)[^0-9]{0,12}([0-9]{2,3}(?:\.[0-9])?\s*(?:kg|lbs?))/i); if(mw) return mw[1];}
@@ -1278,11 +1278,11 @@
   function parseVitalsFromText(item){
     var s=allSourceText(item);
     var specs=[
-      ['T',[/(?:\bT\b|Temp(?:erature)?)\s*[:=]?\s*([0-9]{2,3}(?:\.[0-9])?\s?°?\s?[CF]?)/i, /temperature\s+(?:is|of|shows)?\s*([0-9]{2,3}(?:\.[0-9])?\s?°?\s?[CF]?)/i]],
+      ['T',[/(?:\bT\b|Temp(?:erature)?)\s*[:=]?\s*([0-9]{2,3}(?:\.[0-9])?\s?Â°?\s?[CF]?)/i, /temperature\s+(?:is|of|shows)?\s*([0-9]{2,3}(?:\.[0-9])?\s?Â°?\s?[CF]?)/i]],
       ['HR',[/(?:\bHR\b|Heart Rate|heart rate|pulse)\s*[:=]?\s*([0-9]{2,3})\b/i, /(?:tachycardic|rate of)\s*([0-9]{2,3})\b/i]],
       ['RR',[/(?:\bRR\b|Respiratory Rate|respiratory rate)\s*[:=]?\s*([0-9]{1,3})\b/i]],
       ['BP',[/(?:\bBP\b|Blood Pressure|blood pressure)\s*[:=]?\s*([0-9]{2,3}\/[0-9]{2,3})/i, /\b([0-9]{2,3}\/[0-9]{2,3})\s*(?:mmHg|mm Hg)?\b/i]],
-      ['SpO₂',[/(?:SpO2|SpO₂|oxygen saturation|O2 sat|O₂ sat|pulse ox)\s*[:=]?(?:\s*of)?\s*([0-9]{2,3}%)/i]],
+      ['SpOâ‚‚',[/(?:SpO2|SpOâ‚‚|oxygen saturation|O2 sat|Oâ‚‚ sat|pulse ox)\s*[:=]?(?:\s*of)?\s*([0-9]{2,3}%)/i]],
       ['MAP',[/\bMAP\s*[:=]?\s*([0-9]{2,3})\b/i]],
       ['Pain',[/(?:Pain|pain score|pain level)[^0-9]{0,12}([0-9]{1,2}(?:\/10)?)/i]],
       ['Weight',[/(?:Weight|Wt)[^0-9]{0,12}([0-9]{2,3}(?:\.[0-9])?\s*(?:kg|lbs?))/i]],
@@ -1295,7 +1295,7 @@
   function normalizeVitalLabel(k,v){
     if(!v) return '';
     var val=String(v).trim();
-    if(k==='SpO₂' && /^\d+$/.test(val)) val+='%';
+    if(k==='SpOâ‚‚' && /^\d+$/.test(val)) val+='%';
     if(k==='T'){
       if(val.indexOf('/')===-1){
         var n=parseFloat(val.replace(/[^0-9.]/g,''));
@@ -1303,10 +1303,10 @@
           var isF=/F/i.test(val)||n>45;
           if(isF){
             var c=(n-32)*5/9;
-            val=n.toFixed(1)+'°F / '+c.toFixed(1)+'°C';
+            val=n.toFixed(1)+'Â°F / '+c.toFixed(1)+'Â°C';
           } else {
             var f=n*9/5+32;
-            val=f.toFixed(1)+'°F / '+n.toFixed(1)+'°C';
+            val=f.toFixed(1)+'Â°F / '+n.toFixed(1)+'Â°C';
           }
         }
       }
@@ -1355,25 +1355,25 @@
     return 'adult';
   }
   var VITAL_REFS={
-    T:{neonate:'36.5–37.5°C / 97.7–99.5°F',infant:'36.5–37.5°C / 97.7–99.5°F',child:'36.5–37.5°C / 97.7–99.5°F',adolescent:'36.5–37.3°C / 97.7–99.1°F',adult:'36.5–37.3°C / 97.7–99.1°F',older:'36.0–37.2°C / 96.8–99.0°F'},
-    HR:{neonate:'120–160/min',infant:'100–160/min',child:'70–120/min',adolescent:'60–100/min',adult:'60–100/min',older:'60–100/min'},
-    RR:{neonate:'30–60/min',infant:'25–50/min',child:'18–30/min',adolescent:'12–20/min',adult:'12–20/min',older:'12–20/min'},
-    BP:{neonate:'60–90/40–60 mmHg',infant:'70–100/50–70 mmHg',child:'80–110/50–75 mmHg',adolescent:'90–120/60–80 mmHg',adult:'90/60–120/80 mmHg',older:'90/60–140/90 mmHg'},
-    'SpO₂':{neonate:'90–95% (1st min) → 95–100%',infant:'95–100%',child:'95–100%',adolescent:'95–100%',adult:'95–100%',older:'94–100%'},
-    MAP:{neonate:'40–60 mmHg',infant:'50–70 mmHg',child:'55–80 mmHg',adolescent:'65–90 mmHg',adult:'70–105 mmHg',older:'70–105 mmHg'},
-    Pain:{neonate:'NIPS 0–7',infant:'FLACC 0–10',child:'Wong-Baker / FLACC',adolescent:'NRS 0–10',adult:'NRS 0–10',older:'NRS 0–10'},
-    Weight:{neonate:'2.5–4 kg',infant:'6–10 kg',child:'10–40 kg',adolescent:'40–70 kg',adult:'Patient-specific',older:'Patient-specific'},
-    Height:{neonate:'45–55 cm',infant:'60–80 cm',child:'80–150 cm',adolescent:'150–180 cm',adult:'Patient-specific',older:'Patient-specific'},
-    BMI:{neonate:'N/A',infant:'N/A',child:'CDC percentile',adolescent:'CDC percentile',adult:'18.5–24.9',older:'22–27 (adjusted)'}
+    T:{neonate:'36.5â€“37.5Â°C / 97.7â€“99.5Â°F',infant:'36.5â€“37.5Â°C / 97.7â€“99.5Â°F',child:'36.5â€“37.5Â°C / 97.7â€“99.5Â°F',adolescent:'36.5â€“37.3Â°C / 97.7â€“99.1Â°F',adult:'36.5â€“37.3Â°C / 97.7â€“99.1Â°F',older:'36.0â€“37.2Â°C / 96.8â€“99.0Â°F'},
+    HR:{neonate:'120â€“160/min',infant:'100â€“160/min',child:'70â€“120/min',adolescent:'60â€“100/min',adult:'60â€“100/min',older:'60â€“100/min'},
+    RR:{neonate:'30â€“60/min',infant:'25â€“50/min',child:'18â€“30/min',adolescent:'12â€“20/min',adult:'12â€“20/min',older:'12â€“20/min'},
+    BP:{neonate:'60â€“90/40â€“60 mmHg',infant:'70â€“100/50â€“70 mmHg',child:'80â€“110/50â€“75 mmHg',adolescent:'90â€“120/60â€“80 mmHg',adult:'90/60â€“120/80 mmHg',older:'90/60â€“140/90 mmHg'},
+    'SpOâ‚‚':{neonate:'90â€“95% (1st min) â†’ 95â€“100%',infant:'95â€“100%',child:'95â€“100%',adolescent:'95â€“100%',adult:'95â€“100%',older:'94â€“100%'},
+    MAP:{neonate:'40â€“60 mmHg',infant:'50â€“70 mmHg',child:'55â€“80 mmHg',adolescent:'65â€“90 mmHg',adult:'70â€“105 mmHg',older:'70â€“105 mmHg'},
+    Pain:{neonate:'NIPS 0â€“7',infant:'FLACC 0â€“10',child:'Wong-Baker / FLACC',adolescent:'NRS 0â€“10',adult:'NRS 0â€“10',older:'NRS 0â€“10'},
+    Weight:{neonate:'2.5â€“4 kg',infant:'6â€“10 kg',child:'10â€“40 kg',adolescent:'40â€“70 kg',adult:'Patient-specific',older:'Patient-specific'},
+    Height:{neonate:'45â€“55 cm',infant:'60â€“80 cm',child:'80â€“150 cm',adolescent:'150â€“180 cm',adult:'Patient-specific',older:'Patient-specific'},
+    BMI:{neonate:'N/A',infant:'N/A',child:'CDC percentile',adolescent:'CDC percentile',adult:'18.5â€“24.9',older:'22â€“27 (adjusted)'}
   };
-  var AGE_LABELS={neonate:'Neonate (<30d)',infant:'Infant (<1yr)',child:'Child (1–11)',adolescent:'Adolescent (12–17)',adult:'Adult (18–64)',older:'Older Adult (65+)'};
+  var AGE_LABELS={neonate:'Neonate (<30d)',infant:'Infant (<1yr)',child:'Child (1â€“11)',adolescent:'Adolescent (12â€“17)',adult:'Adult (18â€“64)',older:'Older Adult (65+)'};
   var AGE_ORDER=['neonate','infant','child','adolescent','adult','older'];
   function referenceForVital(k,ag){
     var table=VITAL_REFS[k];
     if(!table) return 'Reference guide only; not patient-specific data.';
     var active=ag||'adult';
     var lines=AGE_ORDER.map(function(g){
-      var prefix=(g===active)?'▸ ':'  ';
+      var prefix=(g===active)?'â–¸ ':'  ';
       return prefix+AGE_LABELS[g]+': '+table[g];
     });
     var baseText=lines.join('\n');
@@ -1382,7 +1382,7 @@
     return baseText;
   }
   function noDataPhraseForVital(k){
-    if(k==='SpO₂') return 'SpO₂ not charted in primary record.';
+    if(k==='SpOâ‚‚') return 'SpOâ‚‚ not charted in primary record.';
     if(k==='MAP') return 'MAP not calculable (blood pressure not charted).';
     if(k==='BMI') return 'BMI not calculable (requires weight and height).';
     if(k==='Pain') return 'Pain level not assessed.';
@@ -1452,7 +1452,7 @@
       }
       return {label:'documented',level:'ok'};
     }
-    if(k==='SpO₂'){
+    if(k==='SpOâ‚‚'){
       var critLo = ag === 'neonate' ? 88 : (ag === 'older' ? 90 : 92);
       var warnLo = ag === 'neonate' ? 90 : 95;
       if (n <= critLo) return {label:'priority',level:'critical'};
@@ -1497,8 +1497,8 @@
           msg = v.k + ' not charted in primary record.';
         } else if (msg.indexOf('not assessed at this time to prevent assumption') > -1) {
           msg = 'Pain level not assessed.';
-        } else if (msg.indexOf('SpO₂ not charted') > -1) {
-          msg = 'SpO₂ not charted in primary record.';
+        } else if (msg.indexOf('SpOâ‚‚ not charted') > -1) {
+          msg = 'SpOâ‚‚ not charted in primary record.';
         } else if (msg.indexOf('BMI not calculable') > -1) {
           msg = 'BMI not calculable (requires weight and height).';
         }
@@ -1509,7 +1509,7 @@
       });
     }
     var ag=ageGroupFromPatient(item);
-    var keys=['T','HR','RR','BP','SpO₂','MAP','Pain','Weight','Height','BMI'], fromText=parseVitalsFromText(item), rows=extractVitalRowsFromEhr(item);
+    var keys=['T','HR','RR','BP','SpOâ‚‚','MAP','Pain','Weight','Height','BMI'], fromText=parseVitalsFromText(item), rows=extractVitalRowsFromEhr(item);
     var out={}, bpForMap='', wtForBmi='', htForBmi='';
     var vitalTime = getCohesiveVitalTime(rows, item);
     keys.forEach(function(k){
@@ -1574,10 +1574,10 @@
   function derivedLabs(){
     var s=allSourceText(state.current), rows=[];
     var patterns=[
-      ['WBC',/\bWBC\s*(?:is|=|:)?\s*([0-9.]+\s*(?:K|k|x10\^?3)?\/?(?:µL|uL|mcL)?)/i],
+      ['WBC',/\bWBC\s*(?:is|=|:)?\s*([0-9.]+\s*(?:K|k|x10\^?3)?\/?(?:ÂµL|uL|mcL)?)/i],
       ['Hemoglobin',/\b(?:Hgb|hemoglobin)\s*(?:is|=|:)?\s*([0-9.]+\s*g\/dL)/i],
       ['Hematocrit',/\b(?:Hct|hematocrit)\s*(?:is|=|:)?\s*([0-9.]+\s*%)/i],
-      ['Platelets',/\bplatelets?\s*(?:is|=|:)?\s*([0-9,]+\s*(?:K|k)?\/?(?:µL|uL|mcL)?)/i],
+      ['Platelets',/\bplatelets?\s*(?:is|=|:)?\s*([0-9,]+\s*(?:K|k)?\/?(?:ÂµL|uL|mcL)?)/i],
       ['Glucose',/\b(?:blood glucose|glucose|sugar)\s*(?:is|=|:|of)?\s*([0-9]{2,3}\s*mg\/dL)/i],
       ['Troponin',/\btroponin\s*(?:I|T)?\s*(?:is|=|:)?\s*([<>]?[0-9.]+\s*ng\/mL)/i],
       ['Lactate',/\blactate\s*(?:is|=|:)?\s*([0-9.]+\s*mmol\/L)/i],
@@ -1591,12 +1591,12 @@
     var s=allSourceText(state.current), rows=[];
     var rx=[];
     var seen={};
-    [/\b(?:administer|give|start|initiate|infuse|hold|prepare|obtain|monitor|notify|apply|place|elevate)\b[^.·\n]{0,130}(?:\.|$)?/ig].forEach(function(re){
+    [/\b(?:administer|give|start|initiate|infuse|hold|prepare|obtain|monitor|notify|apply|place|elevate)\b[^.Â·\n]{0,130}(?:\.|$)?/ig].forEach(function(re){
       var m;
       while((m=re.exec(s)) && rx.length<6){
         var val=m[0].trim();
         if(val.endsWith('.')) val=val.slice(0,-1).trim();
-        val=val.replace(/^[:\s·]+|[:\s·]+$/g, '').trim();
+        val=val.replace(/^[:\sÂ·]+|[:\sÂ·]+$/g, '').trim();
         var lowVal=val.toLowerCase();
         if(val.length < 10) continue;
         if(lowVal.indexOf('person, place')>-1 || lowVal.indexOf('place, and time')>-1){
@@ -1616,12 +1616,12 @@
     var s=allSourceText(state.current), rows=[];
     var refs=[];
     var seen={};
-    [/\b(?:CT|MRI|x-?ray|ultrasound|angiogram|radiograph|imaging|chest x-?ray|CTA|CXR)\b[^.·\n]{0,150}(?:\.|$)?/ig].forEach(function(re){
+    [/\b(?:CT|MRI|x-?ray|ultrasound|angiogram|radiograph|imaging|chest x-?ray|CTA|CXR)\b[^.Â·\n]{0,150}(?:\.|$)?/ig].forEach(function(re){
       var m;
       while((m=re.exec(s)) && refs.length<5){
         var val=m[0].trim();
         if(val.endsWith('.')) val=val.slice(0,-1).trim();
-        val=val.replace(/^[:\s·]+|[:\s·]+$/g, '').trim();
+        val=val.replace(/^[:\sÂ·]+|[:\sÂ·]+$/g, '').trim();
         var low=val.toLowerCase().replace(/[^a-z0-9]/g, '');
         if(!low || seen[low]) continue;
         seen[low]=true;
@@ -1655,7 +1655,7 @@
       s=String(s).trim();
       /* Reject section headers, exam findings, and very short/long captures */
       if(s.length<2 || s.length>60) return false;
-      if(/^[·•\-\s]/.test(s)) return false;
+      if(/^[Â·â€¢\-\s]/.test(s)) return false;
       if(/\b(?:physical exam|respiratory|cardiovascular|neurolog|assessment|examination|history|chief complaint|vital|lab|radiology)\b/i.test(s)) return false;
       if(/^\s*(?:to|is|are|was|the|a|an|in|of|and|or|but|has|had|with)\s/i.test(s)) return false;
       return true;
@@ -1708,11 +1708,11 @@
       }
     }
 
-    return warnings.map(function(w){return '<div style="background:#fffbeb;border:1px solid #f59e0b;color:#92400e;padding:8px 12px;border-radius:8px;margin-bottom:10px;font-size:12px;line-height:1.4;">⚠️ ' + w + '</div>';}).join('');
+    return warnings.map(function(w){return '<div style="background:#fffbeb;border:1px solid #f59e0b;color:#92400e;padding:8px 12px;border-radius:8px;margin-bottom:10px;font-size:12px;line-height:1.4;">âš ï¸ ' + w + '</div>';}).join('');
   }
   function hasActualAllergies(allergiesStr) {
     var s = String(allergiesStr || '').trim().toLowerCase();
-    if (!s || s === '-' || s === '--' || s === '—' || s === 'n/a') return false;
+    if (!s || s === '-' || s === '--' || s === 'â€”' || s === 'n/a') return false;
     var negatives = ['nka', 'nkda', 'no known', 'no active', 'no documented', 'none', 'no allergies', 'no medication allergies', 'no drug allergies', 'no food allergies'];
     for (var i = 0; i < negatives.length; i++) {
       if (s.indexOf(negatives[i]) > -1) return false;
@@ -1849,7 +1849,7 @@
       // Smooth sinusoidal respiration sweep
       pathData = 'M0,15 C10,5 15,5 25,15 C35,25 40,25 50,15 C60,5 65,5 75,15 C85,25 90,25 100,15';
       className = 'ws-wave-rr';
-    } else if (k === 'SpO₂' || k === 'SPO₂') {
+    } else if (k === 'SpOâ‚‚' || k === 'SPOâ‚‚') {
       // High-fidelity PPG oximetry sweep with dicrotic notch
       pathData = 'M0,15 L5,15 C8,15 12,3 15,3 C18,3 20,11 22,11 C23,11 24,9 25,9 C27,9 30,15 35,15 L50,15 L55,15 C58,15 62,3 65,3 C68,3 70,11 72,11 C73,11 74,9 75,9 C77,9 80,15 85,15 L100,15';
       className = 'ws-wave-spo2';
@@ -1877,7 +1877,7 @@
       railAvatar.innerHTML = avatarHtml;
     }
     $('#patientRail .ws-mini-name').textContent=p.name;
-    $('#patientRail .ws-mini-meta').textContent=p.age+' · '+p.gender;
+    $('#patientRail .ws-mini-meta').textContent=p.age+' Â· '+p.gender;
     
     var vitals=extractVitals(item);
     var safetyWarnings = detectClinicalContradictions(item);
@@ -1889,7 +1889,7 @@
         '<div class="ws-demographics-text">' +
           '<div class="ws-patient-header-row">' +
             '<span class="ws-patient-name">' + esc(p.name) + '</span>' +
-            '<span class="ws-patient-meta">' + esc(p.age) + ' · ' + esc(p.gender) + ' · ' + esc(p.location) + '</span>' +
+            '<span class="ws-patient-meta">' + esc(p.age) + ' Â· ' + esc(p.gender) + ' Â· ' + esc(p.location) + '</span>' +
           '</div>' +
           '<div class="ws-patient-dx-row">' +
             '<span class="ws-dx-label">Dx</span>' +
@@ -1897,7 +1897,7 @@
           '</div>' +
           '<div class="ws-patient-infographics">' +
             '<div class="ws-infographic-item ws-info-mrn">' +
-              '<span class="ws-info-icon">🆔</span>' +
+              '<span class="ws-info-icon">ðŸ†”</span>' +
               '<span class="ws-info-label">MRN:</span> ' +
               '<span class="ws-info-val">' + esc(getMRNForCase(item)) + '</span>' +
             '</div>' +
@@ -1905,12 +1905,12 @@
         '</div>' +
         '<div class="ws-demographics-side">' +
           '<div class="ws-infographic-item ws-info-allergies' + (hasActualAllergies(p.allergies) ? ' has-allergy' : '') + '">' +
-            '<span class="ws-info-icon">⚠️</span>' +
+            '<span class="ws-info-icon">âš ï¸</span>' +
             '<span class="ws-info-label">Allergies:</span> ' +
             '<span class="ws-info-val">' + allergiesHtml + '</span>' +
           '</div>' +
           '<div class="ws-infographic-item ws-info-code">' +
-            '<span class="ws-info-icon">🩺</span>' +
+            '<span class="ws-info-icon">ðŸ©º</span>' +
             '<span class="ws-info-label">Code Status:</span> ' +
             '<span class="ws-info-val">' + esc(p.code) + '</span>' +
           '</div>' +
@@ -1930,7 +1930,7 @@
     $$('.ws-tabs button,#patientRail button').forEach(function(b){b.classList.toggle('active',b.dataset.tab===tab);});
     var html='';
     if(tab==='overview'){
-      html='<div class="ws-chart-hero"><div><h3>Client chart</h3><b>'+esc(p.name)+'</b><p>'+esc(p.age)+' · '+esc(p.gender)+' · '+esc(p.location)+'</p></div><div><span class="ws-mini-badge">Focus</span><p>'+esc(item.clinical_focus||'—')+'</p></div><div><span class="ws-mini-badge">Needs</span><p>'+esc(item.client_needs||'—')+'</p></div></div><div class="ws-card"><h3>Current cue</h3><p class="ws-note">'+esc(stemOf(item))+'</p></div>'+renderClinicalMap()+renderMediaNeedPanel();
+      html='<div class="ws-chart-hero"><div><h3>Client chart</h3><b>'+esc(p.name)+'</b><p>'+esc(p.age)+' Â· '+esc(p.gender)+' Â· '+esc(p.location)+'</p></div><div><span class="ws-mini-badge">Focus</span><p>'+esc(item.clinical_focus||'â€”')+'</p></div><div><span class="ws-mini-badge">Needs</span><p>'+esc(item.client_needs||'â€”')+'</p></div></div><div class="ws-card"><h3>Current cue</h3><p class="ws-note">'+esc(stemOf(item))+'</p></div>'+renderClinicalMap()+renderMediaNeedPanel();
     } else if(['history','notes','labs','vitals','orders','radiology','io'].indexOf(tab)>-1){ html=renderList(tab); }
     else if(tab==='raw'){
       var rawDate = formatLocalString(new Date());
@@ -1941,13 +1941,13 @@
   function renderCompletenessStrip(){
     var snap=dataCompletenessSnapshot();
     var vit=evidenceVitals(state.current);
-    var spo2=vit.find(function(v){return v.k==='SpO₂';});
+    var spo2=vit.find(function(v){return v.k==='SpOâ‚‚';});
     var map=vit.find(function(v){return v.k==='MAP';});
     var cells=[
       ['H&P',snap.history?'structured':'derived'],
       ['Nursing Notes',snap.notes?'structured':'derived'],
       ['Vitals',snap.vitals?'structured':'composed'],
-      ['SpO₂',spo2&&spo2.v!=='Not charted'?'documented':'not charted'],
+      ['SpOâ‚‚',spo2&&spo2.v!=='Not charted'?'documented':'not charted'],
       ['MAP',map&&map.status==='calculated'?'calculated':(map&&map.v!=='Not charted'?'documented':'not calculable')],
       ['Labs',snap.labs?'structured':(snap.derivedLabs?'derived':'not charted')],
       ['Radiology',snap.radiology?'structured':'availability panel'],
@@ -1957,7 +1957,7 @@
   }
   function renderClinicalMap(){
     var f=text((state.current&&state.current.clinical_focus)||'Clinical judgment').split('/').slice(0,3);
-    var icons = ['🎯', '🔬', '🛡️'];
+    var icons = ['ðŸŽ¯', 'ðŸ”¬', 'ðŸ›¡ï¸'];
     return '<div class="ws-clinical-map">'+f.map(function(x,i){return '<div><span>'+(icons[i%3])+'</span><b>'+esc(text(x)||'Clinical cue')+'</b><small>chart-supported lens</small></div>';}).join('')+'</div>';
   }
   function hasAny(hay,words){
@@ -1974,21 +1974,21 @@
     item=item||state.current||{};
     var f=normalizeType(item.format||((item.structure||{}).type)||''), low=allSourceText(item).toLowerCase(), out=[];
     var serial=rxCount(low,/\b(?:time|hour|hr|day|shift|trend|serial|recheck|repeat|q\s?\d+h|after\s+\d+|over\s+\d+)\b/g);
-    var vitalLabNumbers=rxCount(low,/\b(?:bp|hr|rr|spo2|spo₂|temperature|temp|glucose|wbc|hgb|hematocrit|platelet|creatinine|bun|potassium|lactate|troponin|inr|aptt|ph|paco2|hco3)\b[^.]{0,28}\d/g);
+    var vitalLabNumbers=rxCount(low,/\b(?:bp|hr|rr|spo2|spoâ‚‚|temperature|temp|glucose|wbc|hgb|hematocrit|platelet|creatinine|bun|potassium|lactate|troponin|inr|aptt|ph|paco2|hco3)\b[^.]{0,28}\d/g);
     var trendScore=(/trend/.test(f)?4:0)+(serial?2:0)+(vitalLabNumbers>=2?3:0)+(hasAny(low,['deteriorat','worsen','improv','response to','evaluate outcomes','reassessment'])?2:0);
-    if(trendScore>=5) out.push(scoreMediaNeed('Interactive trend chart',trendScore,['serial/time cues: '+serial,'vital/lab numeric cues: '+vitalLabNumbers,/trend/.test(f)?'Trend item type':'','deterioration/response language detected'],trendScore>=7?'Badly needed · generate algorithmic SVG from documented numbers':'Useful if numeric series is confirmed',trendScore>=7?'A':'B','trend'));
+    if(trendScore>=5) out.push(scoreMediaNeed('Interactive trend chart',trendScore,['serial/time cues: '+serial,'vital/lab numeric cues: '+vitalLabNumbers,/trend/.test(f)?'Trend item type':'','deterioration/response language detected'],trendScore>=7?'Badly needed Â· generate algorithmic SVG from documented numbers':'Useful if numeric series is confirmed',trendScore>=7?'A':'B','trend'));
     var ecgScore=(hasAny(low,['ecg','ekg','st elevation','st depression','atrial fibrillation','a-fib','afib','svt','ventricular tachycardia','v-tach','vtach','ventricular fibrillation','v-fib','vfib','asystole','pea','heart block','bradycardia','tachyarrhythmia','dysrhythmia','arrhythmia'])?5:0)+(hasAny(low,['hyperkalemia','potassium'])&&hasAny(low,['peaked t','wide qrs','ecg','ekg'])?3:0)+(hasAny(low,['chest pain','myocardial infarction','acute coronary','acs'])&&hasAny(low,['ecg','ekg','st '])?2:0);
-    if(ecgScore>=5) out.push(scoreMediaNeed('ECG strip template',ecgScore,['rhythm/ECG cue detected','template only until verified against case text'],ecgScore>=7?'Badly needed · use verified SVG rhythm template':'Queue for rhythm-template validation',ecgScore>=7?'A':'B','ecg'));
+    if(ecgScore>=5) out.push(scoreMediaNeed('ECG strip template',ecgScore,['rhythm/ECG cue detected','template only until verified against case text'],ecgScore>=7?'Badly needed Â· use verified SVG rhythm template':'Queue for rhythm-template validation',ecgScore>=7?'A':'B','ecg'));
     var fhrScore=hasAny(low,['fetal heart','fhr','deceleration','late decel','variable decel','early decel','variability','tachysystole','uterine contraction','category iii','category ii'])?7:0;
-    if(fhrScore) out.push(scoreMediaNeed('FHR tracing template',fhrScore,['fetal monitoring cue detected'],'Badly needed · use verified SVG FHR/contraction template only after pattern confirmation','A','fhr'));
+    if(fhrScore) out.push(scoreMediaNeed('FHR tracing template',fhrScore,['fetal monitoring cue detected'],'Badly needed Â· use verified SVG FHR/contraction template only after pattern confirmation','A','fhr'));
     var abgScore=(hasAny(low,['abg','arterial blood gas','paco2','pao2','hco3','bicarbonate'])?4:0)+(rxCount(low,/\bpH\s*[:=]?\s*7\.\d+/ig)?3:0)+(hasAny(low,['respiratory acidosis','respiratory alkalosis','metabolic acidosis','metabolic alkalosis'])?2:0);
-    if(abgScore>=4) out.push(scoreMediaNeed('ABG acid-base map',abgScore,['ABG/acid-base cue detected'],abgScore>=7?'Badly needed · generate map from documented ABG values':'Useful if values are present','A','abg'));
+    if(abgScore>=4) out.push(scoreMediaNeed('ABG acid-base map',abgScore,['ABG/acid-base cue detected'],abgScore>=7?'Badly needed Â· generate map from documented ABG values':'Useful if values are present','A','abg'));
     var marScore=(hasAny(low,['insulin','heparin','warfarin','digoxin','lithium','opioid','morphine','hydromorphone','fentanyl','blood transfusion','packed red blood cells','vancomycin','aminoglycoside','gentamicin','magnesium sulfate','oxytocin','pitocin','tpn','chemotherapy'])?4:0)+(hasAny(low,['dose','units','infusion','rate','hold','administer','medication administration','reassess pain','sedation'])?2:0)+(/calculation/.test(f)?2:0);
-    if(marScore>=4) out.push(scoreMediaNeed('MAR / medication-safety card',marScore,['medication/high-alert cue detected'],marScore>=7?'Badly needed · build HTML MAR card from existing meds/orders/options':'Useful medication context card',marScore>=7?'A':'B','mar'));
+    if(marScore>=4) out.push(scoreMediaNeed('MAR / medication-safety card',marScore,['medication/high-alert cue detected'],marScore>=7?'Badly needed Â· build HTML MAR card from existing meds/orders/options':'Useful medication context card',marScore>=7?'A':'B','mar'));
     var ioScore=(hasAny(low,['intake and output','i&o','urine output','fluid balance','daily weight','dehydration','fluid volume','heart failure','renal failure','kidney failure','burn','third spacing','edema','diuresis'])?4:0)+(hasAny(low,['ml/hr','ml/kg/hr','output','foley'])?2:0);
-    if(ioScore>=4) out.push(scoreMediaNeed('I&O / fluid-balance chart',ioScore,['fluid-balance cue detected'],ioScore>=7?'Badly needed · generate bar chart only from documented I&O/weight values':'Useful if fluid values exist',ioScore>=7?'A':'B','io'));
-    var oxyScore=(hasAny(low,['spo2','spo₂','oxygen saturation','pulse ox','oxygen','nasal cannula','nonrebreather','ventilator','intubated','tracheostomy','trach','cpap','bipap','ards','respiratory distress','wheezing','stridor','suction'])?4:0)+(hasAny(low,['abg','paco2','pao2','work of breathing','cyanosis'])?2:0);
-    if(oxyScore>=5) out.push(scoreMediaNeed('Oxygenation / airway support visual',oxyScore,['oxygenation/airway cue detected'],oxyScore>=7?'Badly needed · use device ladder/ABG support if evidence exists':'Useful support visual',oxyScore>=7?'A':'B','oxygenation'));
+    if(ioScore>=4) out.push(scoreMediaNeed('I&O / fluid-balance chart',ioScore,['fluid-balance cue detected'],ioScore>=7?'Badly needed Â· generate bar chart only from documented I&O/weight values':'Useful if fluid values exist',ioScore>=7?'A':'B','io'));
+    var oxyScore=(hasAny(low,['spo2','spoâ‚‚','oxygen saturation','pulse ox','oxygen','nasal cannula','nonrebreather','ventilator','intubated','tracheostomy','trach','cpap','bipap','ards','respiratory distress','wheezing','stridor','suction'])?4:0)+(hasAny(low,['abg','paco2','pao2','work of breathing','cyanosis'])?2:0);
+    if(oxyScore>=5) out.push(scoreMediaNeed('Oxygenation / airway support visual',oxyScore,['oxygenation/airway cue detected'],oxyScore>=7?'Badly needed Â· use device ladder/ABG support if evidence exists':'Useful support visual',oxyScore>=7?'A':'B','oxygenation'));
     var radScore=(hasAny(low,['ct scan','computed tomography','mri','x-ray','xray','cxr','chest x-ray','ultrasound','cta','angiogram','radiology report','imaging shows','imaging reveals'])?5:0)+(hasAny(low,['pneumothorax','fracture','stroke','hemorrhage','appendicitis','bowel obstruction','tube placement','pulmonary edema'])?1:0);
     if(radScore>=5) out.push(scoreMediaNeed('Radiology report/image panel',radScore,['explicit imaging cue detected'],radScore>=7?'Badly needed if image/report interpretation affects answer':'Queue report card first; image only if required','B','radiology'));
     var woundScore=hasAny(low,['pressure injury','pressure ulcer','wound','burn','stoma','ostomy','incision','dehiscence','drainage','iv infiltration','extravasation','rash','lesion','skin breakdown','central line','picc','chest tube','catheter','tracheostomy site'])?5:0;
@@ -2005,18 +2005,18 @@
     var specs=[
       ['HR','/min',/(?:\bHR\b|heart rate|pulse)\s*(?:is|=|:)?\s*(\d{2,3})\b/ig],
       ['RR','/min',/(?:\bRR\b|respiratory rate)\s*(?:is|=|:)?\s*(\d{1,3})\b/ig],
-      ['SpO₂','%',/(?:SpO2|SpO₂|oxygen saturation|O2 sat|O₂ sat|pulse ox)\s*(?:is|=|:|of)?\s*(\d{2,3})%?/ig],
-      ['Temp','°',/(?:\bT\b|temperature|temp)\s*(?:is|=|:)?\s*(\d{2,3}(?:\.\d)?)/ig],
+      ['SpOâ‚‚','%',/(?:SpO2|SpOâ‚‚|oxygen saturation|O2 sat|Oâ‚‚ sat|pulse ox)\s*(?:is|=|:|of)?\s*(\d{2,3})%?/ig],
+      ['Temp','Â°',/(?:\bT\b|temperature|temp)\s*(?:is|=|:)?\s*(\d{2,3}(?:\.\d)?)/ig],
       ['Glucose','mg/dL',/(?:blood glucose|glucose)\s*(?:is|=|:|of)?\s*(\d{2,3})\s*mg\/dL/ig],
       ['WBC','',/\bWBC\s*(?:is|=|:)?\s*(\d{1,2}(?:\.\d)?)/ig],
       ['Hgb','g/dL',/(?:Hgb|hemoglobin)\s*(?:is|=|:)?\s*(\d{1,2}(?:\.\d)?)/ig],
-      ['K⁺','mEq/L',/(?:K\+|potassium)\s*(?:is|=|:)?\s*(\d(?:\.\d)?)/ig],
+      ['Kâº','mEq/L',/(?:K\+|potassium)\s*(?:is|=|:)?\s*(\d(?:\.\d)?)/ig],
       ['Creatinine','mg/dL',/creatinine\s*(?:is|=|:)?\s*(\d(?:\.\d)?)/ig],
       ['Lactate','mmol/L',/lactate\s*(?:is|=|:)?\s*(\d(?:\.\d)?)/ig],
       ['Troponin','ng/mL',/troponin\s*(?:I|T)?\s*(?:is|=|:)?\s*([<>]?\d(?:\.\d+)?)/ig],
       ['pH','',/\bpH\s*(?:is|=|:)?\s*(7\.\d{1,2})/ig],
-      ['PaCO₂','mmHg',/PaCO2|PaCO₂/ig],
-      ['HCO₃','mEq/L',/HCO3|HCO₃|bicarbonate/ig]
+      ['PaCOâ‚‚','mmHg',/PaCO2|PaCOâ‚‚/ig],
+      ['HCOâ‚ƒ','mEq/L',/HCO3|HCOâ‚ƒ|bicarbonate/ig]
     ];
     specs.forEach(function(sp){var m, guard=0; while((m=sp[2].exec(s)) && guard++<8){var raw=m[1]||m[0]; var n=parseFloat(String(raw).replace(/[^0-9.\-]/g,'')); if(isFinite(n)) out.push({label:sp[0],value:n,unit:sp[1],source:'documented/extracted text'});}});
     var bpRe=/(?:\bBP\b|blood pressure)\s*(?:is|=|:)?\s*(\d{2,3})\s*\/\s*(\d{2,3})|\b(\d{2,3})\s*\/\s*(\d{2,3})\s*(?:mmHg|mm Hg)\b/ig, mbp;
@@ -2032,7 +2032,7 @@
     if(!best) return '';
     var labels=best.items.map(function(x,i){return 'Cue '+(i+1);});
     var chart=svgLineChart(best.items.map(function(x){return x.value;}),labels,best.items[0].unit||'');
-    return '<div class="ws-algo-card wide"><span>Algorithmic trend · evidence only</span><b>'+esc(best.label)+' series</b>'+chart+'<p>Generated only from repeated documented/extracted '+esc(best.label)+' values. No values were invented.</p></div>';
+    return '<div class="ws-algo-card wide"><span>Algorithmic trend Â· evidence only</span><b>'+esc(best.label)+' series</b>'+chart+'<p>Generated only from repeated documented/extracted '+esc(best.label)+' values. No values were invented.</p></div>';
   }
   function renderPerfusionVisual(){
     var vit=evidenceVitals(state.current), bp=vit.find(function(v){return v.k==='BP';})||{}, map=vit.find(function(v){return v.k==='MAP';})||{};
@@ -2054,7 +2054,7 @@
     if(!needed) return '';
     var rows=extractMedicationCues();
     if(!rows.length) return '<div class="ws-algo-card"><span>Medication safety visual</span><b>MAR not charted</b><p>Medication context was suggested by the classifier, but no safe medication/order cue was extractable. No MAR row was invented.</p></div>';
-    return '<div class="ws-algo-card wide"><span>Medication safety card · not a new MAR</span><b>Existing med/action cues</b><div class="ws-mini-mar">'+rows.map(function(r,i){return '<div><strong>'+esc(r.name||('Cue '+(i+1)))+'</strong><p>'+esc(valueOfRow(r))+'</p><small>'+esc(r.source||'visible evidence')+'</small></div>';}).join('')+'</div></div>';
+    return '<div class="ws-algo-card wide"><span>Medication safety card Â· not a new MAR</span><b>Existing med/action cues</b><div class="ws-mini-mar">'+rows.map(function(r,i){return '<div><strong>'+esc(r.name||('Cue '+(i+1)))+'</strong><p>'+esc(valueOfRow(r))+'</p><small>'+esc(r.source||'visible evidence')+'</small></div>';}).join('')+'</div></div>';
   }
   function extractIOValues(){
     var s=allSourceText(state.current), rows=[];
@@ -2071,7 +2071,7 @@
     return '<div class="ws-algo-card wide"><span>I&O / fluid-balance chart</span><b>Documented fluid cues</b><div class="ws-io-bars">'+rows.map(function(r){var w=max?Math.max(8,Math.round((r.value/max)*100)):10; return '<div><label>'+esc(r.name)+'</label><i style="width:'+w+'%"></i><strong>'+esc(r.value+' '+r.unit)+'</strong></div>';}).join('')+'</div><p>Bars use only documented/extracted values.</p></div>';
   }
   function extractAbg(){
-    var s=allSourceText(state.current), ph=(s.match(/\bpH\s*(?:is|=|:)?\s*(7\.\d{1,2})/i)||[])[1], paco2=(s.match(/PaCO2|PaCO₂/i)&&((s.match(/(?:PaCO2|PaCO₂)\s*(?:is|=|:)?\s*(\d{2,3})/i)||[])[1])), hco3=(s.match(/(?:HCO3|HCO₃|bicarbonate)\s*(?:is|=|:)?\s*(\d{1,2})/i)||[])[1];
+    var s=allSourceText(state.current), ph=(s.match(/\bpH\s*(?:is|=|:)?\s*(7\.\d{1,2})/i)||[])[1], paco2=(s.match(/PaCO2|PaCOâ‚‚/i)&&((s.match(/(?:PaCO2|PaCOâ‚‚)\s*(?:is|=|:)?\s*(\d{2,3})/i)||[])[1])), hco3=(s.match(/(?:HCO3|HCOâ‚ƒ|bicarbonate)\s*(?:is|=|:)?\s*(\d{1,2})/i)||[])[1];
     return {pH:ph,PaCO2:paco2,HCO3:hco3};
   }
   function renderAbgVisual(){
@@ -2079,14 +2079,14 @@
     if(!a.pH && !a.PaCO2 && !a.HCO3) return '';
     var p=parseFloat(a.pH), acid=isFinite(p)&&p<7.35, alk=isFinite(p)&&p>7.45;
     var label=acid?'Acidotic pH':(alk?'Alkalotic pH':(a.pH?'pH in expected range':'ABG values partial'));
-    return '<div class="ws-algo-card abg"><span>ABG acid-base map</span><b>'+esc(label)+'</b><div class="ws-abg-map"><div><span>pH</span><strong>'+esc(a.pH||'not charted')+'</strong></div><div><span>PaCO₂</span><strong>'+esc(a.PaCO2||'not charted')+'</strong></div><div><span>HCO₃</span><strong>'+esc(a.HCO3||'not charted')+'</strong></div></div><p>ABG map uses documented/extracted values only; missing values are not inferred.</p></div>';
+    return '<div class="ws-algo-card abg"><span>ABG acid-base map</span><b>'+esc(label)+'</b><div class="ws-abg-map"><div><span>pH</span><strong>'+esc(a.pH||'not charted')+'</strong></div><div><span>PaCOâ‚‚</span><strong>'+esc(a.PaCO2||'not charted')+'</strong></div><div><span>HCOâ‚ƒ</span><strong>'+esc(a.HCO3||'not charted')+'</strong></div></div><p>ABG map uses documented/extracted values only; missing values are not inferred.</p></div>';
   }
   function renderOxygenationVisual(){
     var cls=classifyMediaNeeds(state.current), needed=(cls.needs||[]).some(function(x){return x.kind==='oxygenation';});
     if(!needed) return '';
-    var vit=evidenceVitals(state.current), spo2=vit.find(function(v){return v.k==='SpO₂';})||{}, s=allSourceText(state.current).toLowerCase();
+    var vit=evidenceVitals(state.current), spo2=vit.find(function(v){return v.k==='SpOâ‚‚';})||{}, s=allSourceText(state.current).toLowerCase();
     var device=(s.match(/nasal cannula|nonrebreather|venturi|simple mask|cpap|bipap|ventilator|tracheostomy|room air/i)||[])[0]||'device not charted';
-    return '<div class="ws-algo-card"><span>Oxygenation support card</span><b>SpO₂ '+esc(spo2.v||'Not charted')+'</b><p>Oxygen device: '+esc(device)+'. '+esc(spo2.message||'No oxygen saturation value is provided.')+'</p></div>';
+    return '<div class="ws-algo-card"><span>Oxygenation support card</span><b>SpOâ‚‚ '+esc(spo2.v||'Not charted')+'</b><p>Oxygen device: '+esc(device)+'. '+esc(spo2.message||'No oxygen saturation value is provided.')+'</p></div>';
   }
   function renderAlgorithmicVisualsPanel(){
     var cues=numericCues(state.current), cls=classifyMediaNeeds(state.current), pieces=[];
@@ -2153,7 +2153,7 @@
   function renderGuidedPreviewQueuePanel(){
     var q=guidedEvidencePreview(state.current);
     var cards=q.candidates.length?q.candidates.map(function(c){
-      return '<div class="ws-validation-card '+esc(c.status)+'"><span>'+esc(title(c.kind)+' · '+title(c.status))+'</span><b>'+esc(c.label)+'</b><p>'+esc(c.reason)+'</p><small>'+esc((c.evidence&&c.evidence.length?c.evidence.join(' · '):'No strong sentence evidence captured.'))+'</small><em>'+esc(c.template||'manifest mapping required')+'</em></div>';
+      return '<div class="ws-validation-card '+esc(c.status)+'"><span>'+esc(title(c.kind)+' Â· '+title(c.status))+'</span><b>'+esc(c.label)+'</b><p>'+esc(c.reason)+'</p><small>'+esc((c.evidence&&c.evidence.length?c.evidence.join(' Â· '):'No strong sentence evidence captured.'))+'</small><em>'+esc(c.template||'manifest mapping required')+'</em></div>';
     }).join(''):'<div class="ws-validation-card no-media"><span>No dedicated media</span><b>Chart cards are enough</b><p>This item does not have strong evidence for ECG, FHR, radiology, wound/device, or neuro image/template assignment.</p><small>No media is generated and no external asset is requested.</small></div>';
     return '<section class="ws-validation-panel" aria-label="ECG FHR radiology Guided Preview queue"><div class="ws-media-head"><div><span class="ws-mini-badge">v243H validation</span><h3>Media evidence validation queue</h3><p>Strict queue for ECG/FHR/radiology/wound/device/neuro assets. This panel validates whether a reusable template or external asset may be requested; it does not generate media.</p></div><strong>'+esc(title(q.verdict))+'</strong></div><div class="ws-validation-grid">'+cards+'</div><div class="ws-validation-foot"><b>Guardrail:</b> external media can be mapped only with a manifest entry, alt text, source label, and no new clinical facts.</div></section>';
   }
@@ -2258,8 +2258,8 @@
 
   function renderExternalMediaManifestPanel(){
     var q=guidedEvidencePreview(state.current), status=externalManifestIntakeStatusSync();
-    var candidateKinds=(q.candidates||[]).map(function(c){return title(c.kind)+' · '+title(c.status);});
-    return '<section class="ws-external-media-panel" aria-label="External media manifest intake"><div class="ws-media-head"><div><span class="ws-mini-badge">v243H1 manifest intake</span><h3>External media manifest mapping layer</h3><p>This layer validates your future ZIP/manifest from the external agent. v243I adds an isolated Guided Preview route for preview-only rendering after a valid manifest; production question routes still do not render external media.</p></div><strong>intake ready</strong></div><div class="ws-validation-grid"><div class="ws-validation-card needs-review"><span>Current item queue</span><b>'+esc(q.verdict?title(q.verdict):'No dedicated media')+'</b><p>'+esc(candidateKinds.length?candidateKinds.join(' · '):'Chart cards are enough for this item.')+'</p><small>Manifest mapping must match these evidence-validated kinds before any asset can appear.</small></div><div class="ws-validation-card no-media"><span>Required manifest fields</span><b>'+esc(status.requiredFields.length)+' required fields</b><p>'+esc(status.requiredFields.join(', '))+'</p><small>Blocked in H1: image hotspot, audio hotspot, highlight, scoring regions, external URLs, patient identifiers.</small></div></div><div class="ws-validation-foot"><b>v243I guardrail:</b> external media can be previewed only inside the isolated Guided Preview route after manifest validation. Production routes keep metadata-only mapping; hotspot scoring remains off.<p><a href="'+esc(v243iSandboxHref())+'">Open isolated Guided Preview</a></p></div></section>';
+    var candidateKinds=(q.candidates||[]).map(function(c){return title(c.kind)+' Â· '+title(c.status);});
+    return '<section class="ws-external-media-panel" aria-label="External media manifest intake"><div class="ws-media-head"><div><span class="ws-mini-badge">v243H1 manifest intake</span><h3>External media manifest mapping layer</h3><p>This layer validates your future ZIP/manifest from the external agent. v243I adds an isolated Guided Preview route for preview-only rendering after a valid manifest; production question routes still do not render external media.</p></div><strong>intake ready</strong></div><div class="ws-validation-grid"><div class="ws-validation-card needs-review"><span>Current item queue</span><b>'+esc(q.verdict?title(q.verdict):'No dedicated media')+'</b><p>'+esc(candidateKinds.length?candidateKinds.join(' Â· '):'Chart cards are enough for this item.')+'</p><small>Manifest mapping must match these evidence-validated kinds before any asset can appear.</small></div><div class="ws-validation-card no-media"><span>Required manifest fields</span><b>'+esc(status.requiredFields.length)+' required fields</b><p>'+esc(status.requiredFields.join(', '))+'</p><small>Blocked in H1: image hotspot, audio hotspot, highlight, scoring regions, external URLs, patient identifiers.</small></div></div><div class="ws-validation-foot"><b>v243I guardrail:</b> external media can be previewed only inside the isolated Guided Preview route after manifest validation. Production routes keep metadata-only mapping; hotspot scoring remains off.<p><a href="'+esc(v243iSandboxHref())+'">Open isolated Guided Preview</a></p></div></section>';
   }
   function renderMediaNeedPanel(){
     return '';
@@ -2300,9 +2300,9 @@
       rowsHtml += '<tr>' +
         '<td>' + esc(timeStr) + '</td>' +
         '<td>' + esc(row.intakeRoute || 'Oral/IV') + '</td>' +
-        '<td>' + esc(intakeVal ? intakeVal + ' mL' : '—') + '</td>' +
+        '<td>' + esc(intakeVal ? intakeVal + ' mL' : 'â€”') + '</td>' +
         '<td>' + esc(row.outputRoute || 'Urine') + '</td>' +
-        '<td>' + esc(outputVal ? outputVal + ' mL' : '—') + '</td>' +
+        '<td>' + esc(outputVal ? outputVal + ' mL' : 'â€”') + '</td>' +
         '<td class="' + (balance >= 0 ? 'pos' : 'neg') + '">' + esc((balance >= 0 ? '+' : '') + balance + ' mL') + '</td>' +
         '</tr>';
     });
@@ -2326,9 +2326,9 @@
       rows.push({
         time: '08:00',
         intake: matchIntake ? matchIntake[1] : '0',
-        intakeRoute: matchIntake ? 'Documented Intake' : '—',
+        intakeRoute: matchIntake ? 'Documented Intake' : 'â€”',
         output: matchOutput ? matchOutput[1] : '0',
-        outputRoute: matchOutput ? 'Documented Output' : '—'
+        outputRoute: matchOutput ? 'Documented Output' : 'â€”'
       });
     }
     return rows;
@@ -2364,10 +2364,10 @@
     if (n.indexOf('calcium') > -1 || n === 'ca' || n === 'ca++') return '9.0 - 10.5 mg/dL';
     if (n.indexOf('magnesium') > -1 || n === 'mg' || n === 'mg++') return '1.3 - 2.1 mEq/L';
     if (n.indexOf('phosphorus') > -1 || n === 'p' || n === 'po4') return '3.0 - 4.5 mg/dL';
-    if (n.indexOf('wbc') > -1 || n.indexOf('white blood cell') > -1) return '5,000 - 10,000/mm³';
+    if (n.indexOf('wbc') > -1 || n.indexOf('white blood cell') > -1) return '5,000 - 10,000/mmÂ³';
     if (n.indexOf('hemoglobin') > -1 || n.indexOf('hgb') > -1) return 'Male: 14 - 18 g/dL, Female: 12 - 16 g/dL';
     if (n.indexOf('hematocrit') > -1 || n.indexOf('hct') > -1) return 'Male: 42% - 52%, Female: 37% - 47%';
-    if (n.indexOf('platelet') > -1 || n === 'plt') return '150,000 - 400,000/mm³';
+    if (n.indexOf('platelet') > -1 || n === 'plt') return '150,000 - 400,000/mmÂ³';
     if (n.indexOf('bun') > -1 || n.indexOf('urea') > -1) return '10 - 20 mg/dL';
     if (n.indexOf('creatinine') > -1) return 'Male: 0.6 - 1.2 mg/dL, Female: 0.5 - 1.1 mg/dL';
     if (n.indexOf('specific gravity') > -1) return '1.005 - 1.030';
@@ -2410,7 +2410,7 @@
       var timeStr = (x.time || x.date) ? formatSmartDateTime(x.time || x.date, i, 2) : unifiedTimeStr;
       var ref = x.reference || referenceForLab(label) || '';
       var refHtml = ref ? '<span class="ws-data-reference" style="display: block; font-size: 11px; color: #64748b; margin-top: 4px; font-weight: 500;">Ref: ' + esc(ref) + '</span>' : '';
-      return '<div class="ws-data-card '+sev+'"><span>'+esc(heading||'Data')+' · '+esc(timeStr)+'</span><b>'+esc(label)+'</b><p>'+esc(val)+'</p>'+refHtml+(sev?'<em>'+esc(sev==='critical'?'high priority':'review')+'</em>':'')+'</div>';
+      return '<div class="ws-data-card '+sev+'"><span>'+esc(heading||'Data')+' Â· '+esc(timeStr)+'</span><b>'+esc(label)+'</b><p>'+esc(val)+'</p>'+refHtml+(sev?'<em>'+esc(sev==='critical'?'high priority':'review')+'</em>':'')+'</div>';
     }).join('')+'</div>';
   }
   function renderOrders(data,derived){
@@ -2437,7 +2437,7 @@
         d.setMinutes(d.getMinutes() + 10 + i * 10);
         timeStr = formatLocalString(d);
       }
-      return '<div class="ws-order"><span>'+esc(x.name||('Order '+(i+1)))+' · '+esc(timeStr)+'</span><p>'+esc(valueOfRow(x))+'</p>'+'</div>';
+      return '<div class="ws-order"><span>'+esc(x.name||('Order '+(i+1)))+' Â· '+esc(timeStr)+'</span><p>'+esc(valueOfRow(x))+'</p>'+'</div>';
     }).join('')+'</div>';
   }
   function renderRadiology(data,derived){
@@ -2537,10 +2537,10 @@
         '</div>' +
         '<div class="ws-rad-controls">' +
           '<button class="ws-rad-btn" onclick="var img=this.closest(\'.ws-rad-viewport\').querySelector(\'.ws-rad-img\'); img.classList.toggle(\'zoomed\'); this.classList.toggle(\'active\');">' +
-            '🔍 Toggle Zoom' +
+            'ðŸ” Toggle Zoom' +
           '</button>' +
           '<button class="ws-rad-btn" onclick="var canvas=this.closest(\'.ws-rad-viewport\').querySelector(\'.ws-rad-overlay-canvas\'); canvas.classList.toggle(\'active\'); this.classList.toggle(\'active\');">' +
-            '✨ Annotate Finding' +
+            'âœ¨ Annotate Finding' +
           '</button>' +
         '</div>' +
       '</div>';
@@ -2590,7 +2590,7 @@
         if(uniqueHistory.length > 1){
           historyHtml = '<div class="ws-vital-history"><span>History:</span> ' + uniqueHistory.map(function(h){
             return esc(h.val) + ' <small>(' + esc(h.time) + ')</small>';
-          }).join(' → ') + '</div>';
+          }).join(' â†’ ') + '</div>';
         }
       }
       return '<div class="ws-vital-tile '+esc(v.level)+'"><span>'+esc(v.k)+'</span><b>'+esc(v.v)+'</b>'+historyHtml+'<small>'+esc(timeStr)+'</small><pre class="ws-vital-refs">'+esc(v.reference)+'</pre>'+(v.message?'<p>'+esc(v.message)+'</p>':'')+'</div>';
@@ -2614,7 +2614,7 @@
     var isUnfolding = item && item.__caseTimeline && item.__caseFull;
     if (isUnfolding) {
         var idx = item.__caseTimeline.findIndex(function(q){return q===item || q.id===item.id;});
-        $('#itemTitle').textContent = (item.__caseFull.title || 'Unfolding Clinical Case') + ' — Question ' + (idx + 1) + ' of ' + item.__caseTimeline.length;
+        $('#itemTitle').textContent = (item.__caseFull.title || 'Unfolding Clinical Case') + ' â€” Question ' + (idx + 1) + ' of ' + item.__caseTimeline.length;
     } else {
         $('#itemTitle').textContent = title(item.originalFormat || f);
     }
@@ -2706,7 +2706,7 @@
     rows.forEach(function(r){
       var opts=r.columns||st.columns||[];
       var selectId = 'blank_' + esc(r.id);
-      var select='<select id="'+selectId+'" name="blank_'+esc(r.id)+'" data-blank="'+esc(r.id)+'" aria-label="'+esc(r.action||r.text||r.label||r.cue||r.hypothesis||r.finding||r.id||'')+'"><option value="">Select…</option>'+opts.map(function(o){
+      var select='<select id="'+selectId+'" name="blank_'+esc(r.id)+'" data-blank="'+esc(r.id)+'" aria-label="'+esc(r.action||r.text||r.label||r.cue||r.hypothesis||r.finding||r.id||'')+'"><option value="">Selectâ€¦</option>'+opts.map(function(o){
         var val=typeof o==='object'?o.id:o;
         var txt=typeof o==='object'?o.text:o;
         return '<option value="'+esc(val)+'">'+esc(txt)+'</option>';
@@ -2721,15 +2721,15 @@
     Object.keys(blanks).forEach(function(k){
       var b=blanks[k], opts=b.options||[];
       var selectId = 'blank_' + esc(k);
-      var sel='<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" aria-label="'+esc(k)+'"><option value="">Select…</option>'+opts.map(function(o){var v=typeof o==='object'?o.id:o; var t=typeof o==='object'?o.text:o; return '<option value="'+esc(v)+'">'+esc(t)+'</option>';}).join('')+'</select>';
+      var sel='<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" aria-label="'+esc(k)+'"><option value="">Selectâ€¦</option>'+opts.map(function(o){var v=typeof o==='object'?o.id:o; var t=typeof o==='object'?o.text:o; return '<option value="'+esc(v)+'">'+esc(t)+'</option>';}).join('')+'</select>';
       var kk=escapeRegExp(k);
       textHtml=textHtml.replace(new RegExp('\\['+kk+'\\]|{{'+kk+'}}|'+kk,'g'),sel);
     });
     if(Object.keys(blanks).length) return '<div class="ws-dropdown-text">'+textHtml+'</div>';
     var opts=optionsOf(st); if(!opts.length) return '<div class="ws-empty">No dropdown option structure available.</div>';
-    return '<div class="ws-card"><h3><label for="caseDropdownFallback">Case dropdown lab</label></h3><p class="ws-note">This chunk stores the dropdown choices as option records. The lab renders them as a dropdown to preserve the intended interaction.</p><select id="caseDropdownFallback" name="caseDropdownFallback" data-case-dropdown="1"><option value="">Select the safest response…</option>'+opts.map(function(o){return '<option value="'+esc(o.id)+'">'+esc(o.id)+' · '+esc(o.text)+'</option>';}).join('')+'</select></div>';
+    return '<div class="ws-card"><h3><label for="caseDropdownFallback">Case dropdown lab</label></h3><p class="ws-note">This chunk stores the dropdown choices as option records. The lab renders them as a dropdown to preserve the intended interaction.</p><select id="caseDropdownFallback" name="caseDropdownFallback" data-case-dropdown="1"><option value="">Select the safest responseâ€¦</option>'+opts.map(function(o){return '<option value="'+esc(o.id)+'">'+esc(o.id)+' Â· '+esc(o.text)+'</option>';}).join('')+'</select></div>';
   }
-  function renderOrdered(st){var opts=optionsOf(st); return '<div class="ws-card"><h3>Ordered response lab</h3><p class="ws-note">Use the controls to move actions into the safest order.</p></div><div id="orderList">'+opts.map(function(o,i){return '<div class="ws-option" data-id="'+esc(o.id)+'"><span class="ws-option-id">'+esc(i+1)+'</span><span>'+esc(o.text)+'</span><button type="button" data-move="up">↑</button><button type="button" data-move="down">↓</button></div>';}).join('')+'</div>';}
+  function renderOrdered(st){var opts=optionsOf(st); return '<div class="ws-card"><h3>Ordered response lab</h3><p class="ws-note">Use the controls to move actions into the safest order.</p></div><div id="orderList">'+opts.map(function(o,i){return '<div class="ws-option" data-id="'+esc(o.id)+'"><span class="ws-option-id">'+esc(i+1)+'</span><span>'+esc(o.text)+'</span><button type="button" data-move="up">â†‘</button><button type="button" data-move="down">â†“</button></div>';}).join('')+'</div>';}
   function renderTrend(st){
     var item = state.current;
     var isGraph = item.format === 'trend_graph' || item.format === 'trend_graph_chart' ||
@@ -2773,7 +2773,7 @@
         Object.keys(blanks).forEach(function(k){
           var b = blanks[k], opts = b.options || [];
           var selectId = 'blank_' + esc(k);
-          var sel = '<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" aria-label="'+esc(k)+'"><option value="">Select…</option>'+opts.map(function(o){
+          var sel = '<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" aria-label="'+esc(k)+'"><option value="">Selectâ€¦</option>'+opts.map(function(o){
             var v = typeof o==='object'?o.id:o;
             var t = typeof o==='object'?o.text:o;
             return '<option value="'+esc(v)+'">'+esc(t)+'</option>';
@@ -2791,7 +2791,7 @@
           var labelText = label.label || k;
           
           var selectId = 'blank_' + esc(k);
-          var sel = '<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" style="width:100%; padding:10px; border:1px solid #cbd8e5; border-radius:8px; background:#fff;"><option value="">Select…</option>'+opts.map(function(o){
+          var sel = '<select id="'+selectId+'" name="blank_'+esc(k)+'" data-blank="'+esc(k)+'" style="width:100%; padding:10px; border:1px solid #cbd8e5; border-radius:8px; background:#fff;"><option value="">Selectâ€¦</option>'+opts.map(function(o){
             var v = typeof o==='object'?o.id:o;
             var t = typeof o==='object'?o.text:o;
             return '<option value="'+esc(v)+'">'+esc(t)+'</option>';
@@ -2929,9 +2929,9 @@
       var id=String(el.dataset.id||el.value||'');
       var isUser = ua.indexOf(id)>-1;
       var isCorrect = ca.indexOf(id)>-1;
-      if(isCorrect && isUser) addFeedbackBadge(el, 'ok', '✓ Your correct selection');
-      else if(isUser && !isCorrect) addFeedbackBadge(el, 'err', '✕ Your selection');
-      else if(isCorrect && !isUser) addFeedbackBadge(el, 'missed', 'Correct answer — not selected');
+      if(isCorrect && isUser) addFeedbackBadge(el, 'ok', 'âœ“ Your correct selection');
+      else if(isUser && !isCorrect) addFeedbackBadge(el, 'err', 'âœ• Your selection');
+      else if(isCorrect && !isUser) addFeedbackBadge(el, 'missed', 'Correct answer â€” not selected');
     });
   }
   function applyAnswerFeedback(resp){
@@ -2952,35 +2952,38 @@
           var val = String(inp.value), cell = inp.closest('.ws-matrix-choice') || inp.parentElement;
           var cSel = isCorrArr ? corr.indexOf(val)>-1 : (corr !== undefined && val === String(corr));
           var uSel = isUserArr ? user.indexOf(val)>-1 : (user !== null && user !== undefined && val === String(user));
-          if(cSel && uSel) addFeedbackBadge(cell, 'ok', '✓ Your correct selection');
-          else if(uSel && !cSel) addFeedbackBadge(cell, 'err', '✕ Your selection');
-          else if(cSel && !uSel) addFeedbackBadge(cell, 'missed', 'Correct answer — not selected');
+          if(cSel && uSel) addFeedbackBadge(cell, 'ok', 'âœ“ Your correct selection');
+          else if(uSel && !cSel) addFeedbackBadge(cell, 'err', 'âœ• Your selection');
+          else if(cSel && !uSel) addFeedbackBadge(cell, 'missed', 'Correct answer â€” not selected');
         });
       });
     } else if(/multiple-choice|single-best|trend|calculation/.test(f) && !/matrix|multiple-response|trend-graph/.test(f)) {
       markOptionItems('.ws-option', resp.ids, k.correctIds);
     } else if(/multiple-response|sata|bowtie|hotspot|image|audio/.test(f)) {
-      markOptionItems('.ws-option, .ws-bow-option, .ws-hotspot button', resp.ids, k.correctIds);
+      var feedbackCorrectIds = /bowtie/.test(f)
+        ? (k.correctIds||[]).concat(k.correctCondition||[], k.correctActions||[], k.correctParameters||[])
+        : k.correctIds;
+      markOptionItems('.ws-option, .ws-bow-option, .ws-hotspot button', resp.ids, feedbackCorrectIds);
     } else if(/cloze|dropdown|drop-down|trend-graph/.test(f)) {
       var cm2=k.correctMap||{};
       $$('select[data-blank]').forEach(function(sel){
         var corr=String(cm2[sel.dataset.blank]||(k.correctIds||[])[0]||'');
         var ok=String(sel.value)===corr;
         var wrap=sel.parentElement||sel;
-        addFeedbackBadge(wrap, ok?'ok':'err', ok?'✓ Your correct selection':'✕ Correct: '+corr);
+        addFeedbackBadge(wrap, ok?'ok':'err', ok?'âœ“ Your correct selection':'âœ• Correct: '+corr);
       });
       var s = $('#caseDropdownFallback');
       if(s){
          var corr2 = k.correctIds||[];
          var ok2 = corr2.indexOf(String(resp.ids[0]))>-1;
-         addFeedbackBadge(s.parentElement||s, ok2?'ok':'err', ok2?'✓ Your correct selection':'✕ Correct: '+(corr2).join(', '));
+         addFeedbackBadge(s.parentElement||s, ok2?'ok':'err', ok2?'âœ“ Your correct selection':'âœ• Correct: '+(corr2).join(', '));
       }
     } else if(/ordered/.test(f)){
       var correctOrd=k.correctOrder||[];
       $$('#orderList .ws-option').forEach(function(el, i){
         var id=String(el.dataset.id||'');
-        if(correctOrd[i]===id) addFeedbackBadge(el, 'ok', '✓ Correct position');
-        else addFeedbackBadge(el, 'err', '✕ Correct position: '+(correctOrd.indexOf(id)+1));
+        if(correctOrd[i]===id) addFeedbackBadge(el, 'ok', 'âœ“ Correct position');
+        else addFeedbackBadge(el, 'err', 'âœ• Correct position: '+(correctOrd.indexOf(id)+1));
       });
     } else if(/highlight/.test(f)){
       var corrHl=k.correctIds||k.correctIndexes||k.correctWords||[];
@@ -2990,13 +2993,13 @@
         var isCorrect=corrHl.indexOf(val)>-1;
         if(isCorrect && isUser) {
           el.classList.add('v79-answer-ok', 'ok');
-          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#10b981;">✓</i>');
+          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#10b981;">âœ“</i>');
         } else if(isUser && !isCorrect) {
           el.classList.add('v79-answer-err', 'err');
-          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#e11d48;">✕</i>');
+          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#e11d48;">âœ•</i>');
         } else if(isCorrect && !isUser) {
           el.classList.add('v79-answer-missed', 'missed');
-          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#2563eb;">✓ missed</i>');
+          el.insertAdjacentHTML('beforeend', '<i class="ws-hl-icon" style="font-style:normal; font-weight:900; margin-left:4px; color:#2563eb;">âœ“ missed</i>');
         }
       });
     }
@@ -3081,7 +3084,7 @@
     state.current={id:'held-'+f,format:f,clinical_focus:title(f)+' renderer hold',client_needs:'Renderer governance',structure:{stem:title(f)+' items are held from Workstation Pro production-candidate testing until dedicated media and accessibility work is complete.'},answerKey:{},rationale:'Renderer held by v242X governance.'};
     state.viewModel=viewModelFromItem(state.current);
     renderStoryboard(); renderChart();
-    $('#itemTitle').textContent=title(f)+' — Held';
+    $('#itemTitle').textContent=title(f)+' â€” Held';
     $('#itemBadges').innerHTML='<span>Renderer held</span><span>Excluded from default selector</span>';
     $('#questionRenderer').innerHTML=renderHeldRendererNotice(f);
     $('#scorePanel').hidden=true;
@@ -3123,7 +3126,7 @@
     if (!state.publicDemoMode) return;
     document.title = "NexusRN Public Demo";
     var brandText = $('.ws-brand-text');
-    if (brandText) brandText.textContent = "NexusRN · Public Demo";
+    if (brandText) brandText.textContent = "NexusRN Â· Public Demo";
     var safeBanner = $('.ws-safe-banner');
     if (safeBanner) {
       safeBanner.innerHTML = "<b>Public Preview Mode.</b> This workspace loads only curated guided preview samples.";
@@ -3168,12 +3171,12 @@
       
       var currentItem = state.current;
       var demoType = 'Guided Sample';
-      var sampleTitle = 'Loading…';
+      var sampleTitle = 'Loadingâ€¦';
       
       if (currentItem) {
         if (currentMode().indexOf('unfolding') > -1) {
           demoType = 'Flagship Case Study';
-          sampleTitle = currentItem.title || 'Sofia Martinez — DKA & Cerebral Edema';
+          sampleTitle = currentItem.title || 'Sofia Martinez â€” DKA & Cerebral Edema';
         } else {
           demoType = title(currentItem.format);
           sampleTitle = currentItem.clinical_focus || currentItem.prompt || 'Clinical Sample';
@@ -3186,7 +3189,7 @@
           '<span class="ws-demo-meta-title" style="font-size:14px; font-weight:700; color:#f8fafc; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; max-width:450px;">' + esc(sampleTitle) + '</span>' +
         '</div>' +
         '<div class="ws-demo-badge-wrapper" style="margin-left:auto;">' +
-          '<span class="ws-public-demo-badge" style="background:#0f766e; color:#ffffff; font-size:12px; font-weight:800; padding:6px 12px; border-radius:20px; box-shadow:0 0 10px rgba(15,118,110,0.4); white-space:nowrap; display:flex; align-items:center; gap:6px;">🔒 Guided Sample — full-bank browsing disabled</span>' +
+          '<span class="ws-public-demo-badge" style="background:#0f766e; color:#ffffff; font-size:12px; font-weight:800; padding:6px 12px; border-radius:20px; box-shadow:0 0 10px rgba(15,118,110,0.4); white-space:nowrap; display:flex; align-items:center; gap:6px;">ðŸ”’ Guided Sample â€” full-bank browsing disabled</span>' +
         '</div>';
         
       controlDeck.appendChild(meta);
@@ -3337,10 +3340,10 @@
   window.NEXUS_V243F1_CHART_EVIDENCE_COMPOSER_AUDIT=function(){
     var snap=dataCompletenessSnapshot();
     var vit=evidenceVitals(state.current);
-    var spo2=vit.find(function(v){return v.k==='SpO₂';})||{};
+    var spo2=vit.find(function(v){return v.k==='SpOâ‚‚';})||{};
     var map=vit.find(function(v){return v.k==='MAP';})||{};
     var hardBlankPanel=!!document.querySelector('.ws-empty') && !document.querySelector('.ws-smart-empty');
-    var result={version:'v243F1-chart-evidence-composer-hp-vitals-workstation-preview',phase:{current:8,total:8,name:'Chart Evidence Composer + H&P + safer vitals'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,chartTab:state.tab,structured:snap,historyPhysicalTabPresent:!!document.querySelector('[data-tab=history]'),historyPhysicalInViewModel:!!(state.viewModel&&state.viewModel.chartTabs&&state.viewModel.chartTabs.history),historyPhysicalStructuredCount:snap.history||0,spO2:{value:spo2.v,status:spo2.status,source:spo2.source,reference:spo2.reference},map:{value:map.v,status:map.status,source:map.source,reference:map.reference},vitalsReferenceLayerPresent:!!document.querySelector('.ws-vital-tile em'),notChartedValuesLabeled:vit.filter(function(v){return v.v==='Not charted';}).every(function(v){return /not charted|not calculable/i.test(v.message||v.status||'');}),dashOnlyVitalValuesPresent:vit.some(function(v){return /^[-–—]+$/.test(String(v.v||''));}),hardBlankPanelPresent:hardBlankPanel,nativePracticeTouched:false};
+    var result={version:'v243F1-chart-evidence-composer-hp-vitals-workstation-preview',phase:{current:8,total:8,name:'Chart Evidence Composer + H&P + safer vitals'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,chartTab:state.tab,structured:snap,historyPhysicalTabPresent:!!document.querySelector('[data-tab=history]'),historyPhysicalInViewModel:!!(state.viewModel&&state.viewModel.chartTabs&&state.viewModel.chartTabs.history),historyPhysicalStructuredCount:snap.history||0,spO2:{value:spo2.v,status:spo2.status,source:spo2.source,reference:spo2.reference},map:{value:map.v,status:map.status,source:map.source,reference:map.reference},vitalsReferenceLayerPresent:!!document.querySelector('.ws-vital-tile em'),notChartedValuesLabeled:vit.filter(function(v){return v.v==='Not charted';}).every(function(v){return /not charted|not calculable/i.test(v.message||v.status||'');}),dashOnlyVitalValuesPresent:vit.some(function(v){return /^[-â€“â€”]+$/.test(String(v.v||''));}),hardBlankPanelPresent:hardBlankPanel,nativePracticeTouched:false};
     result.acceptance=(result.historyPhysicalTabPresent && !!state.current && !result.dashOnlyVitalValuesPresent && result.notChartedValuesLabeled && !hardBlankPanel)?'PASS_V243F1_CHART_EVIDENCE_COMPOSER_HP_VITALS_PHASE_8_OF_8':'CHECK_V243F1_CHART_EVIDENCE_COMPOSER_HP_VITALS_PHASE_8_OF_8';
     return result;
   };
@@ -3358,7 +3361,7 @@
   window.NEXUS_V243G_ALGORITHMIC_VISUALS_AUDIT=function(){
     var cls=classifyMediaNeeds(state.current), cues=numericCues(state.current), panel=!!document.querySelector('.ws-algo-panel'), generated=!!document.querySelector('.ws-algo-card'), unsafe=!!document.querySelector('img[data-generated-media],audio[data-generated-media],canvas[data-generated-media]');
     var deferred=(cls.needs||[]).filter(function(x){return /ecg|fhr|radiology|diagram|neuro/.test(x.kind);}).map(function(x){return x.kind;});
-    var result={version:'v243G-algorithmic-visuals-batch1-workstation-preview',phase:{current:8,total:8,name:'Algorithmic visuals batch 1 · safe evidence only'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,currentClassification:cls,numericCueCount:cues.length,algorithmicVisualPanelPresent:panel,algorithmicVisualsGeneratedForCurrentItem:generated,unsafeMediaGenerated:unsafe,deferredMediaStillHeld:deferred,heldRendererTypes:['image-hotspot','audio-hotspot','highlight'],nativePracticeTouched:false,allowedVisuals:['MAP/perfusion card','safe same-measure trend chart','MAR medication-safety card','I&O fluid-balance card','ABG map','oxygenation support card']};
+    var result={version:'v243G-algorithmic-visuals-batch1-workstation-preview',phase:{current:8,total:8,name:'Algorithmic visuals batch 1 Â· safe evidence only'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,currentClassification:cls,numericCueCount:cues.length,algorithmicVisualPanelPresent:panel,algorithmicVisualsGeneratedForCurrentItem:generated,unsafeMediaGenerated:unsafe,deferredMediaStillHeld:deferred,heldRendererTypes:['image-hotspot','audio-hotspot','highlight'],nativePracticeTouched:false,allowedVisuals:['MAP/perfusion card','safe same-measure trend chart','MAR medication-safety card','I&O fluid-balance card','ABG map','oxygenation support card']};
     result.acceptance=(!!state.current && panel && !unsafe)?'PASS_V243G_ALGORITHMIC_VISUALS_BATCH1_PHASE_8_OF_8':'CHECK_V243G_ALGORITHMIC_VISUALS_BATCH1_PHASE_8_OF_8';
     return result;
   };
@@ -3375,7 +3378,7 @@
     var generated=!!document.querySelector('.ws-ecg-strip,.ws-fhr-strip,.ws-radiology-production-image,.ws-generated-clinical-photo');
     var sample=(state.productionReady||[]).slice(0,400).map(guidedEvidencePreview);
     var counts=sample.reduce(function(m,x){m[x.verdict]=(m[x.verdict]||0)+1; return m;},{});
-    var result={version:'v243H-media-evidence-validation-queue-workstation-preview',phase:{current:8,total:8,name:'Media evidence validation queue · no generation'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,currentValidation:q,sampleSize:sample.length,sampleVerdictCounts:counts,validationPanelPresent:panel,mediaGenerationStarted:generated,unsafeMediaGenerated:generated,heldMediaTypesStillHeld:['ECG strips','FHR tracings','Radiology images','Wound/device images','Image Hotspot','Audio Hotspot','Highlight'],nativePracticeTouched:false,next:'v243H1 may map external/reusable templates only after manifest validation'};
+    var result={version:'v243H-media-evidence-validation-queue-workstation-preview',phase:{current:8,total:8,name:'Media evidence validation queue Â· no generation'},route:location.pathname.replace(/^\//,''),loadedItemId:state.current&&state.current.id,currentValidation:q,sampleSize:sample.length,sampleVerdictCounts:counts,validationPanelPresent:panel,mediaGenerationStarted:generated,unsafeMediaGenerated:generated,heldMediaTypesStillHeld:['ECG strips','FHR tracings','Radiology images','Wound/device images','Image Hotspot','Audio Hotspot','Highlight'],nativePracticeTouched:false,next:'v243H1 may map external/reusable templates only after manifest validation'};
     result.acceptance=(!!state.current && panel && !generated && q && q.mediaGenerationStarted===false)?'PASS_V243H_MEDIA_EVIDENCE_VALIDATION_QUEUE_PHASE_8_OF_8':'CHECK_V243H_MEDIA_EVIDENCE_VALIDATION_QUEUE_PHASE_8_OF_8';
     return result;
   };
@@ -3401,7 +3404,7 @@
     result.acceptance=(!status.unsafePreviewNodesOnThisRoute && !status.hotspotMappingStarted && !status.usedForScoring && (/^PASS/i.test(String((h1&&h1.acceptance)||''))))?'PASS_V243I_ASSET_RENDERING_SANDBOX_PHASE_8_OF_8':'CHECK_V243I_ASSET_RENDERING_SANDBOX_PHASE_8_OF_8';
     return result;
   };
-  window.NEXUS_PHASE_STATUS=function(){return {current:8,total:8,label:'v243I asset rendering sandbox · preview route only',previous:'v243H1 external media manifest intake',next:'v243I1 media manifest ZIP intake after user supplies assets'};};
+  window.NEXUS_PHASE_STATUS=function(){return {current:8,total:8,label:'v243I asset rendering sandbox Â· preview route only',previous:'v243H1 external media manifest intake',next:'v243I1 media manifest ZIP intake after user supplies assets'};};
   
   window.NEXUS_WORKSTATION_PRO = {
     state: state,
@@ -3434,7 +3437,9 @@
     } else if (/ordered|trend|bow|dropdown|cloze|case-dropdown/.test(f)) {
       ncsbnText = 'NCSBN NGN 0/1 Scoring Model: 1 point awarded per correct selection/blank.';
     } else {
-      var k4 = key.correctIds || [];
+      var k4 = /bowtie/.test(f)
+        ? (key.correctIds||[]).concat(key.correctCondition||[], key.correctActions||[], key.correctParameters||[])
+        : (key.correctIds || []);
       if (k4.length > 1) {
         ncsbnText = 'NCSBN NGN +/- Scoring Model: +1 point per correct selection, -1 point per incorrect selection (Total score cannot be less than 0).';
       } else {
@@ -3444,7 +3449,7 @@
 
     var html = '<div class="ws-modal-overlay" onclick="document.body.removeChild(this)">' +
                '<div class="ws-modal-content ws-glass-modal" onclick="event.stopPropagation()">' +
-               '<div class="ws-modal-header"><h3>Score Breakdown Details</h3><button class="ws-modal-close" onclick="document.body.removeChild(this.parentElement.parentElement.parentElement)">✕</button></div>' +
+               '<div class="ws-modal-header"><h3>Score Breakdown Details</h3><button class="ws-modal-close" onclick="document.body.removeChild(this.parentElement.parentElement.parentElement)">âœ•</button></div>' +
                '<div class="ws-modal-body">';
     
     html += '<div class="ws-score-hero"><strong>Total Score:</strong> <span class="' + (s.correct===s.max?'pass':'fail') + '">' + s.correct + ' / ' + s.max + '</span></div>';
@@ -3458,7 +3463,7 @@
       Object.keys(cm).forEach(function(k){
         var rowText = matrixRowDisplayLabel(vm,k);
         var correctAns = matrixColDisplayLabel(vm,cm[k]);
-        var userAns = respMap[k] ? matrixColDisplayLabel(vm,respMap[k]) : '—';
+        var userAns = respMap[k] ? matrixColDisplayLabel(vm,respMap[k]) : 'â€”';
         var pts = 0;
         if (f === 'matrix-multiple-response' || f === 'matrix-multiple-response-mmr') {
            var cArr = Array.isArray(cm[k]) ? cm[k] : [cm[k]];
@@ -3472,7 +3477,9 @@
       });
       html += '</tbody></table>';
     } else {
-      var k4 = key.correctIds || key.correctOrder || [];
+      var k4 = /bowtie/.test(f)
+        ? (key.correctIds||[]).concat(key.correctCondition||[], key.correctActions||[], key.correctParameters||[])
+        : (key.correctIds || key.correctOrder || []);
       var got = s.got || [];
       var penalty = '';
       if(got.length > k4.length) penalty = '<p class="ws-penalty-note">Over-selection penalty applied: ' + (got.length - k4.length) + ' deduction(s).</p>';
@@ -3488,3 +3495,4 @@
 
   document.addEventListener('DOMContentLoaded',init);
 })();
+

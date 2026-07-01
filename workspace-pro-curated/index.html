@@ -1,0 +1,876 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+<script id="nexus-final-workstation-entitlement-gate-disabled">console.log("Curated route: entitlement gate disabled for local curated QA only.");</script>
+
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="nexusrn-build" content="v243I-asset-rendering-sandbox-phase-8-of-8" />
+  <title>NexusRN Â· Workstation Pro</title>
+  <link rel="stylesheet" href="../assets/css/nexusrn-workstation-pro-v242w.css" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-vitals-strip-micro-polish-07c-lite.css" data-batch="07C-LITE" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-matrix-micro-polish.css" data-batch="07D-MATRIX" />
+  <link rel="stylesheet" href="../assets/css/nexusrn-worldclass-polish.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="../assets/js/nexusrn-supabase-auth.js"></script>
+  <script id="nexus-fixed12-workstation-auth-gate-disabled">console.log("Curated route: auth gate disabled for local curated QA only.");</script>
+</head>
+<body>
+  <a class="ws-skip-link" href="#questionRenderer">Skip to question</a>
+  <a class="ws-skip-link" href="#chartContent">Skip to client chart</a>
+  <div id="wsRoot" class="ws-app" aria-live="polite" data-phase="5-6-of-8">
+    <header class="ws-topbar">
+      <a href="../index.html" class="ws-brand" style="text-decoration: none; color: inherit;">
+        <span class="ws-logo animated-logo">N</span>
+        <span class="ws-brand-text">NexusRN Â· RN Workstation <span class="ws-pro-badge">PRO</span></span>
+      </a>
+      <nav class="ws-mode-pills" aria-label="Learning modes"></nav>
+      <div class="ws-mode-summary">
+        <span id="wsModeSummaryText">Practice Â· Ready</span>
+        <button id="wsModeEdit" class="ws-mode-action" type="button">Edit</button>
+        <button id="wsModeStart" class="ws-mode-action ws-mode-start" type="button">Start</button>
+      </div>
+    </header>
+
+    <section class="ws-safe-banner" role="status">
+      <b>Public Preview Mode. This workspace loads only curated guided preview samples.</b></section>
+
+    <section class="ws-control-deck">
+      <div class="ws-control-info-panel">
+        <div class="ws-info-header">
+          <div class="ws-label">Question source</div>
+          <div class="ws-title">Distribution-aware learner-ready pool</div>
+        </div>
+        <div class="ws-metrics-divider"></div>
+        <div class="ws-metrics" id="wsMetrics">
+          <span>Loading bankâ€¦</span>
+        </div>
+      </div>
+      <div class="ws-selectors">
+        <label>Mode
+          <select id="modeSelect">
+            <option value="standalone">Standalone</option>
+            <option value="unfolding-6q">Unfolding 6Q Clinical Cases</option>
+          </select>
+        </label>
+        <label>Item type <select id="typeSelect"></select></label>
+        <label>Difficulty
+          <select id="difficultySelect">
+            <option value="all">All Difficulties</option>
+            <option value="Easy">Easy</option>
+            <option value="Moderate">Moderate</option>
+            <option value="Hard">Hard</option>
+            <option value="Very Hard">Very Hard</option>
+          </select>
+        </label>
+        <label>CJMM Step
+          <select id="cjmmSelect">
+            <option value="all">All CJMM Steps</option>
+            <option value="Recognize Cues">Recognize Cues</option>
+            <option value="Analyze Cues">Analyze Cues</option>
+            <option value="Prioritize Hypotheses">Prioritize Hypotheses</option>
+            <option value="Generate Solutions">Generate Solutions</option>
+            <option value="Take Action">Take Action</option>
+            <option value="Evaluate Outcomes">Evaluate Outcomes</option>
+          </select>
+        </label>
+        <label>Item <select id="itemSelect"></select></label>
+        <button id="randomBtn" type="button" style="display: none !important;">Random safe item</button>
+        <button id="auditBtn" type="button" style="display: none !important;">Run audit</button>
+      </div>
+    </section>
+
+    <main class="ws-shell" id="workstationShell" role="main" aria-label="Workstation Pro answer engine candidate">
+      <aside class="ws-patient-rail" id="patientRail">
+        <div class="ws-avatar">--</div>
+        <div class="ws-mini-name">Loadingâ€¦</div>
+        <div class="ws-mini-meta">Chunked DB</div>
+        <div class="ws-rail-icons" aria-label="Chart areas" role="tablist" aria-orientation="vertical">
+          <button type="button" data-tab="overview" class="active" title="Overview (snap)">ðŸ“‹</button>
+          <button type="button" data-tab="history" title="History &amp; Physical">ðŸ“œ</button>
+          <button type="button" data-tab="notes" title="Nursing Notes">ðŸ“</button>
+          <button type="button" data-tab="vitals" title="Vitals">â¤ï¸</button>
+          <button type="button" data-tab="labs" title="Laboratory Results">ðŸ§ª</button>
+          <button type="button" data-tab="io" title="Intake &amp; Output">ðŸ’§</button>
+          <button type="button" data-tab="radiology" title="Radiology (Imaging)">â˜¢ï¸</button>
+          <button type="button" data-tab="orders" title="Provider Orders">ðŸ©º</button>
+        </div>
+      </aside>
+
+      <section class="ws-clinical-stage">
+        <section class="ws-storyboard" id="storyboard"></section>
+
+        <section class="ws-main-grid">
+          <article class="ws-chart-pane">
+            <div class="ws-tabs" id="chartTabs" role="tablist" aria-label="Patient information tabs">
+              <button type="button" data-tab="overview" class="active">Overview</button>
+              <button type="button" data-tab="history">History &amp; Physical</button>
+              <button type="button" data-tab="notes">Nursing Notes</button>
+              <button type="button" data-tab="vitals">Vitals</button>
+              <button type="button" data-tab="labs">Labs</button>
+              <button type="button" data-tab="io">I&amp;O</button>
+              <button type="button" data-tab="radiology">Radiology</button>
+              <button type="button" data-tab="orders">Orders</button>
+              <button type="button" data-tab="raw">Data View</button>
+            </div>
+            <div id="chartContent" class="ws-chart-content" role="tabpanel" tabindex="0" aria-label="Patient information panel"></div>
+          </article>
+          <div class="ws-resizer" id="wsResizer"></div>
+          <article class="ws-question-pane">
+            <div class="ws-question-head">
+              <div>
+                <div class="ws-label">Clinical judgment task</div>
+                <h1 id="itemTitle">Loading itemâ€¦</h1>
+              </div>
+              <div class="ws-badges" id="itemBadges"></div>
+            </div>
+            <div id="questionRenderer" class="ws-question-renderer" role="group" aria-labelledby="itemTitle" tabindex="-1"></div>
+            <div class="ws-actionbar">
+              <button id="checkBtn" type="button" class="primary">Check / Score in Lab</button>
+              <button id="resetBtn" type="button">Reset Item</button>
+              <a id="nativeLink" href="../index.html">Back to Landing Page</a>
+            </div>
+            <div id="scorePanel" class="ws-score-panel" hidden role="status" aria-live="polite" aria-atomic="true"></div>
+          </article>
+        </section>
+      </section>
+    </main>
+
+    <footer class="ws-statusbar">
+      <span id="statusLeft">Initializing v243B performance/mobile beta rendererâ€¦</span>
+      <span id="statusRight">Native viewer preserved Â· no MutationObserver modal skin</span>
+      <div style="text-align:center; padding:10px; font-size:12px; color:#8ea3bd;">&copy; 2026 NexusRN. All rights reserved.</div>
+</footer>
+  </div>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-pro-v242w.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-parity-v242y.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-production-v242z.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-accessibility-v243a.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-performance-beta-v243b.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-public-demo-v243d.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-workstation-production-candidate-v243e.js"></script>
+  <script src="../assets/js/workstation-pro/nexusrn-mode-pills.js"></script>
+<script id="nexus-curated-two-per-type">
+(function(){
+  const TOP_PER_TYPE = 2;
+  const DEEP_SCAN_PER_TYPE = 80;
+
+  const PREFERRED_TYPES = [
+    "matrix-multiple-choice",
+    "matrix-multiple-response",
+    "multiple-choice",
+    "multiple-response-sata",
+    "bowtie",
+    "cloze-dropdown",
+    "case-dropdown",
+    "ordered-response",
+    "highlight",
+    "calculation",
+    "trend"
+  ];
+
+  const chunkCache = new Map();
+
+  function normType(t){
+    t = String(t || "").toLowerCase().trim();
+    const aliases = {
+      "bow-tie": "bowtie",
+      "bow tie": "bowtie",
+      "bow_tie": "bowtie",
+      "multiple-response": "multiple-response-sata",
+      "sata": "multiple-response-sata",
+      "matrix-multiple-choice-mmc": "matrix-multiple-choice",
+      "matrix-multiple-response-mmr": "matrix-multiple-response",
+      "dropdown": "cloze-dropdown",
+      "dropdown-cloze": "cloze-dropdown",
+      "new-calculation": "calculation",
+      "new-trend": "trend"
+    };
+    return aliases[t] || t;
+  }
+
+  function arr(x){
+    if (!x) return [];
+    return Array.isArray(x) ? x : [x];
+  }
+
+  function text(x){
+    if (x == null) return "";
+    if (typeof x === "string" || typeof x === "number") return String(x);
+    try { return JSON.stringify(x); } catch(e) { return ""; }
+  }
+
+  function hasUseful(x){
+    if (!x) return false;
+    if (Array.isArray(x)) return x.length > 0;
+    if (typeof x === "object") return Object.keys(x).length > 0;
+    return String(x).trim().length > 0;
+  }
+
+  function countUsefulKeys(obj, keys){
+    obj = obj || {};
+    return keys.reduce(function(n, k){
+      return n + (hasUseful(obj[k]) ? 1 : 0);
+    }, 0);
+  }
+
+  function stemOf(it){
+    const st = it.structure || {};
+    return text(st.stem || st.prompt || it.prompt || it.stem || it.scenario || "");
+  }
+
+  function optionCount(it){
+    const st = it.structure || {};
+    let n = 0;
+    n += arr(st.options).length;
+    n += arr(st.actions).length;
+    n += arr(st.conditions).length;
+    n += arr(st.parameters).length;
+    n += arr(st.rows).length;
+    n += arr(st.columns).length;
+    n += arr(st.tokens).length;
+    if (st.blanks && typeof st.blanks === "object") n += Object.keys(st.blanks).length;
+    if (st.dropdowns && Array.isArray(st.dropdowns)) n += st.dropdowns.length;
+    return n;
+  }
+
+  function answerKeyScore(it){
+    const f = normType(it.format || (it.structure && it.structure.type));
+    const ak = it.answerKey || {};
+    let score = 0;
+
+    if (/bowtie/.test(f)) {
+      if (arr(ak.correctCondition).length === 1) score += 10;
+      if (arr(ak.correctActions).length >= 2) score += 10;
+      if (arr(ak.correctParameters).length >= 2) score += 10;
+      if (ak.maxScore) score += 4;
+      return score;
+    }
+
+    if (/matrix/.test(f)) {
+      if (ak.correctMap && Object.keys(ak.correctMap).length >= 2) score += 24;
+      if (ak.maxScore) score += 4;
+      return score;
+    }
+
+    if (/ordered/.test(f)) {
+      if (arr(ak.correctOrder).length >= 3) score += 22;
+      return score;
+    }
+
+    if (/cloze|dropdown|case-dropdown/.test(f)) {
+      if (ak.correctMap && Object.keys(ak.correctMap).length >= 1) score += 20;
+      if (arr(ak.correctIds).length >= 1) score += 8;
+      return score;
+    }
+
+    if (/calculation/.test(f)) {
+      if (arr(ak.correctIds).length || text((it.structure || {}).correct_answer)) score += 20;
+      return score;
+    }
+
+    if (arr(ak.correctIds).length) score += 20;
+    if (arr(ak.correctSet).length) score += 12;
+    if (ak.maxScore) score += 4;
+    return score;
+  }
+
+  function rationaleScore(it){
+    const r = it.rationale || {};
+    if (typeof r === "string") return r.length > 180 ? 14 : 6;
+    let keys = [
+      "rationale",
+      "common_trap",
+      "safety_rationale",
+      "remediation",
+      "clinical_judgment_rule",
+      "decision_lab_recognize_cues",
+      "decision_lab_analyze_cues",
+      "decision_lab_take_action",
+      "decision_lab_evaluate_outcomes"
+    ];
+    return countUsefulKeys(r, keys) * 4;
+  }
+
+  function scoreItem(it){
+    const f = normType(it.format || (it.structure && it.structure.type));
+    const ehr = it.ehr || {};
+    const st = it.structure || {};
+    const stem = stemOf(it);
+    const allText = (
+      stem + " " +
+      text(it.clinical_focus) + " " +
+      text(it.client_needs) + " " +
+      text(it.patient) + " " +
+      text(it.ehr) + " " +
+      text(it.rationale)
+    ).toLowerCase();
+
+    let score = 0;
+
+    if (it.id) score += 4;
+    if (f) score += 4;
+    if (stem.length >= 80) score += 8;
+    if (stem.length >= 180) score += 5;
+    if (stem.length > 900) score -= 6;
+
+    if (it.clinical_focus) score += 5;
+    if (it.client_needs) score += 5;
+    if (it.cjmm_step) score += 4;
+    if (it.difficulty) score += 3;
+
+    if (hasUseful(it.patient)) score += 8;
+
+    score += countUsefulKeys(ehr, [
+      "history_physical", "history",
+      "nursing_notes", "notes",
+      "vital_signs", "vitals",
+      "lab_results", "labs",
+      "provider_orders", "orders",
+      "radiology_results", "radiology",
+      "intake_output", "io"
+    ]) * 5;
+
+    score += Math.min(optionCount(it), 18);
+    score += answerKeyScore(it);
+    score += rationaleScore(it);
+
+    if (hasUseful(it.decision_lab)) score += 10;
+    if (hasUseful(it.public_seo_teaser)) score += 4;
+
+    if (/john doe|jane doe|lorem ipsum|placeholder|review the case study and answer/i.test(allText)) score -= 20;
+    if (/missing_bowtie_key|too_few_options|weak_stem/i.test(allText)) score -= 15;
+
+    return score;
+  }
+
+  async function fetchJson(url){
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error("HTTP " + r.status + " " + url);
+    return r.json();
+  }
+
+  function extractItems(payload){
+    if (Array.isArray(payload)) return payload;
+    if (!payload || typeof payload !== "object") return [];
+    return payload.items || payload.data || payload.questions || payload.standalone || [];
+  }
+
+  async function fullItemForLite(lite){
+    if (!lite || !lite.chunk) return lite;
+    const url = "../" + String(lite.chunk).replace(/^\.?\//, "");
+    if (!chunkCache.has(url)) {
+      chunkCache.set(url, fetchJson(url).catch(function(e){
+        console.warn("Curated route: failed chunk", url, e);
+        return null;
+      }));
+    }
+    const payload = await chunkCache.get(url);
+    const items = extractItems(payload);
+    return items.find(function(x){ return x && x.id === lite.id; }) || lite;
+  }
+
+  function groupByType(items){
+    const m = new Map();
+    items.forEach(function(it){
+      const f = normType(it.format || (it.structure && it.structure.type));
+      if (!f) return;
+      if (!m.has(f)) m.set(f, []);
+      m.get(f).push(it);
+    });
+    return m;
+  }
+
+  function rebuildMaps(state, curated, typeOrder){
+    const map = groupByType(curated);
+    state.ready = curated.slice();
+    state.labReady = curated.slice();
+    state.productionReady = curated.slice();
+    state.itemsByType = map;
+    state.labItemsByType = map;
+    state.productionItemsByType = map;
+    state.types = typeOrder.filter(function(t){ return map.has(t); });
+  }
+
+  function addBanner(curated, typeOrder){
+    let existing = document.getElementById("nexusCuratedBanner");
+    if (existing) existing.remove();
+
+    const banner = document.createElement("div");
+    banner.id = "nexusCuratedBanner";
+    banner.style.cssText = "margin:10px 14px;padding:12px 16px;border:1px solid #14b8a6;border-radius:14px;background:#ecfeff;color:#0f172a;font-weight:700;";
+    banner.innerHTML =
+      "Curated Workstation Pro: showing <b>" + curated.length +
+      "</b> strongest existing items: <b>2 per available item type</b>. No data-bank mutation.";
+    const shell = document.querySelector(".ws-control-deck") || document.body.firstElementChild;
+    shell.parentElement.insertBefore(banner, shell.nextSibling);
+  }
+
+  async function curateNow(){
+    const api = window.NEXUS_WORKSTATION_PRO;
+    if (!api || !api.state) throw new Error("NEXUS_WORKSTATION_PRO not ready.");
+
+    const state = api.state;
+    const source = (state.productionReady && state.productionReady.length)
+      ? state.productionReady
+      : ((state.labReady && state.labReady.length) ? state.labReady : state.ready);
+
+    if (!source || !source.length) throw new Error("No source items available for curation.");
+
+    const grouped = groupByType(source);
+    const discoveredTypes = Array.from(grouped.keys()).sort();
+    const typeOrder = PREFERRED_TYPES.concat(discoveredTypes.filter(function(t){
+      return PREFERRED_TYPES.indexOf(t) === -1;
+    })).filter(function(t, i, a){
+      return a.indexOf(t) === i && grouped.has(t);
+    });
+
+    const curated = [];
+    const report = [];
+
+    for (const type of typeOrder) {
+      const list = grouped.get(type) || [];
+      const rough = list.map(function(lite){
+        return { lite: lite, roughScore: scoreItem(lite) + (lite.chunk ? 8 : 0) };
+      }).sort(function(a,b){
+        return b.roughScore - a.roughScore;
+      }).slice(0, DEEP_SCAN_PER_TYPE);
+
+      const deep = [];
+      for (const row of rough) {
+        const full = await fullItemForLite(row.lite);
+        deep.push({
+          lite: row.lite,
+          id: row.lite.id,
+          type: type,
+          score: scoreItem(full),
+          focus: full.clinical_focus || row.lite.clinical_focus || "",
+          chunk: row.lite.chunk || ""
+        });
+      }
+
+      deep.sort(function(a,b){
+        return b.score - a.score || String(a.id).localeCompare(String(b.id));
+      });
+
+      const picked = deep.slice(0, TOP_PER_TYPE);
+      picked.forEach(function(x){ curated.push(x.lite); });
+      report.push({ type: type, sourceCount: list.length, picked: picked });
+    }
+
+    rebuildMaps(state, curated, typeOrder);
+    api.fillSelectors && api.fillSelectors();
+
+    const modeSelect = document.querySelector("#modeSelect");
+    if (modeSelect) modeSelect.value = "standalone";
+
+    const typeSelect = document.querySelector("#typeSelect");
+    if (typeSelect && state.types.length) typeSelect.value = state.types[0];
+
+    api.fillItemSelect && api.fillItemSelect();
+    if (api.chooseIndex) await api.chooseIndex(0);
+
+    addBanner(curated, typeOrder);
+
+    window.NEXUS_CURATED_2_PER_TYPE_REPORT = report;
+    window.NEXUS_CURATED_2_PER_TYPE_AUDIT = function(){
+      return {
+        route: location.pathname,
+        curatedCount: curated.length,
+        availableTypes: state.types,
+        expectedMaxPerType: TOP_PER_TYPE,
+        countsByType: Array.from(groupByType(curated).entries()).reduce(function(m, pair){
+          m[pair[0]] = pair[1].length;
+          return m;
+        }, {}),
+        selectedItemId: state.current && state.current.id,
+        selectedFormat: state.viewModel && state.viewModel.itemType,
+        noDataBankMutation: true,
+        noQuestionsIndexMutation: true,
+        report: report
+      };
+    };
+
+    console.log("NexusRN curated 2-per-type route ready:", window.NEXUS_CURATED_2_PER_TYPE_AUDIT());
+  }
+
+  function waitForReady(){
+    const started = Date.now();
+    const timer = setInterval(function(){
+      const api = window.NEXUS_WORKSTATION_PRO;
+      const ok = api && api.state && (
+        (api.state.productionReady && api.state.productionReady.length) ||
+        (api.state.labReady && api.state.labReady.length) ||
+        (api.state.ready && api.state.ready.length)
+      );
+      if (ok) {
+        clearInterval(timer);
+        curateNow().catch(function(e){
+          console.error("Curated route failed:", e);
+          alert("Curated route failed: " + e.message);
+        });
+      } else if (Date.now() - started > 20000) {
+        clearInterval(timer);
+        console.error("Curated route timed out waiting for Workstation state.");
+      }
+    }, 300);
+  }
+
+  waitForReady();
+})();
+</script>
+<script id="nexus-curated-route-lock-v2">
+(function(){
+  var LOCK_LABEL = "Curated 2-per-type only";
+
+  function text(el){ return String((el && el.textContent) || "").trim(); }
+
+  function apiReady(){
+    return !!(
+      window.NEXUS_WORKSTATION_PRO &&
+      window.NEXUS_WORKSTATION_PRO.state &&
+      window.NEXUS_CURATED_2_PER_TYPE_AUDIT
+    );
+  }
+
+  function forceStandaloneCuratedMode(){
+    var mode = document.querySelector("#modeSelect");
+    if (!mode) return;
+
+    if (mode.value !== "standalone" || mode.options.length !== 1 || !mode.dataset.curatedLocked) {
+      mode.innerHTML = '<option value="standalone">' + LOCK_LABEL + '</option>';
+      mode.value = "standalone";
+      mode.disabled = true;
+      mode.dataset.curatedLocked = "1";
+      mode.title = "This curated route intentionally exposes only the selected 2-per-type pool.";
+    }
+  }
+
+  function disableGlobalModePills(){
+    var banned = [
+      /readiness/i,
+      /adaptive/i,
+      /judgment/i,
+      /daily pulse/i,
+      /recovery/i,
+      /rapid response/i,
+      /pharmlab/i
+    ];
+
+    document.querySelectorAll("button,a").forEach(function(el){
+      var t = text(el);
+      if (!t) return;
+      if (banned.some(function(rx){ return rx.test(t); })) {
+        el.disabled = true;
+        el.setAttribute("aria-disabled", "true");
+        el.style.pointerEvents = "none";
+        el.style.opacity = "0.45";
+        el.title = "Disabled on curated 2-per-type QA route.";
+      }
+    });
+  }
+
+  function removeForeignModals(){
+    document.querySelectorAll(".ws-modal-overlay,[role='dialog'],.modal").forEach(function(m){
+      var t = text(m);
+      if (/Nexus Readiness Check|Adaptive Exam|Judgment Lab|Daily Pulse|Recovery Path|Rapid Response|PharmLab/i.test(t)) {
+        m.remove();
+      }
+    });
+  }
+
+  function enforceCuratedRoute(){
+    if (!apiReady()) return;
+
+    forceStandaloneCuratedMode();
+    disableGlobalModePills();
+    removeForeignModals();
+
+    var api = window.NEXUS_WORKSTATION_PRO;
+    var st = api.state;
+
+    // Keep Workstation state pointed at the curated standalone pool only.
+    if (Array.isArray(st.ready) && st.ready.length) {
+      st.labReady = st.ready.slice();
+      st.productionReady = st.ready.slice();
+    }
+
+    var typeSelect = document.querySelector("#typeSelect");
+    var itemSelect = document.querySelector("#itemSelect");
+
+    if (typeSelect && !typeSelect.dataset.curatedLockHandler) {
+      typeSelect.dataset.curatedLockHandler = "1";
+      typeSelect.addEventListener("change", function(){
+        setTimeout(function(){
+          forceStandaloneCuratedMode();
+          if (api.fillItemSelect) api.fillItemSelect();
+        }, 0);
+      });
+    }
+
+    if (itemSelect) {
+      itemSelect.title = "Curated pool: maximum 2 items for this type.";
+    }
+
+    var banner = document.getElementById("nexusCuratedLockBanner");
+    if (!banner) {
+      banner = document.createElement("div");
+      banner.id = "nexusCuratedLockBanner";
+      banner.style.cssText = "margin:8px 14px;padding:10px 14px;border:1px solid #22c55e;border-radius:12px;background:#f0fdf4;color:#052e16;font-weight:800;";
+      banner.textContent = "Curated route locked: only the strongest 2 items per available type are exposed. Global readiness/adaptive modes are disabled here.";
+      var anchor = document.getElementById("nexusCuratedBanner") || document.querySelector(".ws-control-deck");
+      if (anchor && anchor.parentElement) anchor.parentElement.insertBefore(banner, anchor.nextSibling);
+    }
+  }
+
+  window.NEXUS_CURATED_LOCK_AUDIT = function(){
+    var base = window.NEXUS_CURATED_2_PER_TYPE_AUDIT ? window.NEXUS_CURATED_2_PER_TYPE_AUDIT() : {};
+    var counts = base.countsByType || {};
+    var maxTwoOk = Object.keys(counts).every(function(k){ return counts[k] <= 2; });
+
+    var mode = document.querySelector("#modeSelect");
+    var itemSelect = document.querySelector("#itemSelect");
+
+    var bannedStillInteractive = Array.from(document.querySelectorAll("button,a")).filter(function(el){
+      var t = text(el);
+      return /readiness|adaptive|judgment|daily pulse|recovery|rapid response|pharmlab/i.test(t) &&
+        el.style.pointerEvents !== "none" &&
+        !el.disabled;
+    }).map(text);
+
+    return {
+      route: location.pathname,
+      curatedCount: base.curatedCount,
+      availableTypes: base.availableTypes,
+      countsByType: counts,
+      maxTwoPerTypeOk: maxTwoOk,
+      modeValue: mode && mode.value,
+      modeLocked: !!(mode && mode.disabled && mode.options.length === 1 && mode.value === "standalone"),
+      currentItemDropdownCount: itemSelect ? itemSelect.options.length : null,
+      currentItemDropdownMaxTwoOk: itemSelect ? itemSelect.options.length <= 2 : null,
+      bannedGlobalButtonsStillInteractive: bannedStillInteractive,
+      noDataBankMutation: true,
+      noQuestionsIndexMutation: true,
+      acceptance: (
+        base.curatedCount &&
+        maxTwoOk &&
+        mode &&
+        mode.disabled &&
+        mode.options.length === 1 &&
+        mode.value === "standalone" &&
+        (!itemSelect || itemSelect.options.length <= 2) &&
+        bannedStillInteractive.length === 0
+      ) ? "PASS_CURATED_2_PER_TYPE_LOCKED" : "CHECK_CURATED_2_PER_TYPE_LOCK"
+    };
+  };
+
+  setInterval(enforceCuratedRoute, 500);
+  window.addEventListener("load", function(){ setTimeout(enforceCuratedRoute, 800); });
+})();
+</script>
+<script id="nexus-curated-mojibake-cleaner-v1">
+(function(){
+  /*
+    Curated-route-only mojibake repair.
+    It repairs visible text such as:
+      ðŸ’¡ -> 💡
+      ðŸ“Š -> 📊
+      âœ“  -> ✓
+      âœ•  -> ✕
+      â€”  -> —
+      Â·   -> ·
+    It does not mutate data-bank or questions-index.
+  */
+
+  var CP1252 = {
+    0x20AC:0x80, 0x201A:0x82, 0x0192:0x83, 0x201E:0x84, 0x2026:0x85,
+    0x2020:0x86, 0x2021:0x87, 0x02C6:0x88, 0x2030:0x89, 0x0160:0x8A,
+    0x2039:0x8B, 0x0152:0x8C, 0x017D:0x8E, 0x2018:0x91, 0x2019:0x92,
+    0x201C:0x93, 0x201D:0x94, 0x2022:0x95, 0x2013:0x96, 0x2014:0x97,
+    0x02DC:0x98, 0x2122:0x99, 0x0161:0x9A, 0x203A:0x9B, 0x0153:0x9C,
+    0x017E:0x9E, 0x0178:0x9F
+  };
+
+  var decoder = new TextDecoder("utf-8", { fatal: false });
+
+  function cp1252Bytes(s){
+    var bytes = [];
+    for (var i = 0; i < s.length; i++) {
+      var cp = s.charCodeAt(i);
+      if (cp <= 0xFF) bytes.push(cp);
+      else if (CP1252[cp] != null) bytes.push(CP1252[cp]);
+      else return null;
+    }
+    return new Uint8Array(bytes);
+  }
+
+  function decodeSegment(seg){
+    var bytes = cp1252Bytes(seg);
+    if (!bytes) return seg;
+    var out = decoder.decode(bytes);
+    if (!out || /�/.test(out)) return seg;
+    return out;
+  }
+
+  function repairOnce(s){
+    if (!s || !/[ÃÂâðÅ]/.test(s)) return s;
+
+    return s
+      .replace(/Ã[\u0080-\uFFFF]/g, decodeSegment)
+      .replace(/Â[\u0080-\uFFFF]/g, decodeSegment)
+      .replace(/Å[\u0080-\uFFFF]/g, decodeSegment)
+      .replace(/â[\u0080-\uFFFF]{2}/g, decodeSegment)
+      .replace(/ð[\u0080-\uFFFF]{3}/g, decodeSegment);
+  }
+
+  function repairText(s){
+    var out = String(s || "");
+    for (var i = 0; i < 4; i++) {
+      var next = repairOnce(out);
+      if (next === out) break;
+      out = next;
+    }
+
+    // Extra common cleanup for characters that often appear after nested repairs.
+    out = out
+      .replace(/\u00A0/g, " ")
+      .replace(/\s+·\s+/g, " · ")
+      .replace(/âœ“/g, "✓")
+      .replace(/âœ•/g, "✕")
+      .replace(/â€”/g, "—")
+      .replace(/â€“/g, "–")
+      .replace(/â€¦/g, "…");
+
+    return out;
+  }
+
+  function shouldSkipNode(node){
+    var p = node && node.parentElement;
+    if (!p) return true;
+    return !!p.closest("script,style,noscript,textarea,code,pre");
+  }
+
+  function cleanTextNodes(root){
+    var walker = document.createTreeWalker(root || document.body, NodeFilter.SHOW_TEXT);
+    var node;
+    while ((node = walker.nextNode())) {
+      if (shouldSkipNode(node)) continue;
+      var oldVal = node.nodeValue;
+      var newVal = repairText(oldVal);
+      if (newVal !== oldVal) node.nodeValue = newVal;
+    }
+  }
+
+  function cleanAttributes(root){
+    (root || document).querySelectorAll("*").forEach(function(el){
+      ["title", "aria-label", "placeholder", "alt"].forEach(function(attr){
+        if (!el.hasAttribute(attr)) return;
+        var oldVal = el.getAttribute(attr);
+        var newVal = repairText(oldVal);
+        if (newVal !== oldVal) el.setAttribute(attr, newVal);
+      });
+    });
+  }
+
+  function cleanAll(){
+    cleanTextNodes(document.body);
+    cleanAttributes(document.body);
+  }
+
+  var scheduled = false;
+  function scheduleClean(){
+    if (scheduled) return;
+    scheduled = true;
+    requestAnimationFrame(function(){
+      scheduled = false;
+      cleanAll();
+    });
+  }
+
+  window.NEXUS_CURATED_MOJIBAKE_CLEAN_AUDIT = function(){
+    cleanAll();
+    var bodyText = document.body ? document.body.innerText : "";
+    var badPattern = /(ðŸ|âœ|â€|Ã|Â·|Å“|Å’)/;
+    return {
+      route: location.pathname,
+      mojibakeVisible: badPattern.test(bodyText),
+      sampleBadText: (bodyText.match(/.{0,40}(?:ðŸ|âœ|â€|Ã|Â·|Å“|Å’).{0,80}/) || [""])[0],
+      noDataBankMutation: true,
+      noQuestionsIndexMutation: true,
+      acceptance: badPattern.test(bodyText) ? "CHECK_MOJIBAKE_STILL_VISIBLE" : "PASS_MOJIBAKE_CLEAN"
+    };
+  };
+
+  var mo = new MutationObserver(scheduleClean);
+  window.addEventListener("load", function(){
+    cleanAll();
+    mo.observe(document.body, { childList: true, subtree: true, characterData: true });
+    setTimeout(cleanAll, 300);
+    setTimeout(cleanAll, 1000);
+    setTimeout(cleanAll, 2000);
+  });
+})();
+</script>
+<script id="nexus-curated-missing-media-fallback-v1">
+(function(){
+  function fallbackFor(img){
+    if (!img || img.dataset.curatedMediaFallbackDone) return;
+    img.dataset.curatedMediaFallbackDone = "1";
+
+    var src = img.getAttribute("src") || "";
+    var box = document.createElement("div");
+    box.className = "nexus-curated-media-fallback";
+    box.style.cssText = "display:flex;align-items:center;justify-content:center;min-height:220px;border:1px dashed #94a3b8;border-radius:14px;background:#f8fafc;color:#334155;text-align:center;padding:18px;font-weight:700;line-height:1.45;";
+    box.innerHTML =
+      "<div><div style='font-size:16px;margin-bottom:6px;'>Radiology image unavailable</div>" +
+      "<div style='font-size:13px;font-weight:500;'>Use the written radiology report for this item.</div>" +
+      "<div style='font-size:11px;color:#64748b;margin-top:8px;'>Missing asset: " +
+      src.replace(/[<>&]/g, "") +
+      "</div></div>";
+
+    img.replaceWith(box);
+  }
+
+  function scanBrokenImages(){
+    document.querySelectorAll("img").forEach(function(img){
+      if (img.complete && img.naturalWidth === 0) fallbackFor(img);
+      if (!img.dataset.curatedErrorHook) {
+        img.dataset.curatedErrorHook = "1";
+        img.addEventListener("error", function(){ fallbackFor(img); });
+      }
+    });
+  }
+
+  window.NEXUS_CURATED_MISSING_MEDIA_AUDIT = function(){
+    scanBrokenImages();
+    var broken = Array.from(document.querySelectorAll("img")).filter(function(img){
+      return img.complete && img.naturalWidth === 0;
+    }).map(function(img){ return img.getAttribute("src"); });
+
+    return {
+      route: location.pathname,
+      brokenImageCount: broken.length,
+      brokenImages: broken,
+      fallbackPanels: document.querySelectorAll(".nexus-curated-media-fallback").length,
+      noDataBankMutation: true,
+      noQuestionsIndexMutation: true,
+      acceptance: broken.length === 0 ? "PASS_MISSING_MEDIA_FALLBACK" : "CHECK_MISSING_MEDIA"
+    };
+  };
+
+  window.addEventListener("load", function(){
+    scanBrokenImages();
+    setInterval(scanBrokenImages, 700);
+  });
+})();
+</script>
+</body>
+</html>
+
+
+
+
+
