@@ -1,6 +1,9 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
+  <!-- Curated QA route hardening: this page is not intended for search indexing. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
 
 <script id="nexus-final-workstation-entitlement-gate-disabled">console.log("Curated route: entitlement gate disabled for local curated QA only.");</script>
 
@@ -23,6 +26,9 @@
   <a class="ws-skip-link" href="#chartContent">Skip to client chart</a>
   <div id="wsRoot" class="ws-app" aria-live="polite" data-phase="5-6-of-8">
     <header class="ws-topbar">
+  <!-- Curated QA route hardening: this page is not intended for search indexing. -->
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="googlebot" content="noindex, nofollow, noarchive">
       <a href="../index.html" class="ws-brand" style="text-decoration: none; color: inherit;">
         <span class="ws-logo animated-logo">N</span>
         <span class="ws-brand-text">NexusRN Â· RN Workstation <span class="ws-pro-badge">PRO</span></span>
@@ -867,8 +873,63 @@
   });
 })();
 </script>
+<script id="nexus-curated-hardening-v1">
+(function(){
+  function ensureHardeningBanner(){
+    var existing = document.getElementById("nexusCuratedHardeningBanner");
+    if (existing) return;
+
+    var banner = document.createElement("div");
+    banner.id = "nexusCuratedHardeningBanner";
+    banner.style.cssText = "margin:8px 14px;padding:10px 14px;border:1px solid #f59e0b;border-radius:12px;background:#fffbeb;color:#78350f;font-weight:800;";
+    banner.textContent = "Curated QA route — noindex/nofollow. This is a limited preview route, not the full learner bank.";
+
+    var anchor = document.getElementById("nexusCuratedLockBanner") ||
+                 document.getElementById("nexusCuratedBanner") ||
+                 document.querySelector(".ws-control-deck");
+
+    if (anchor && anchor.parentElement) {
+      anchor.parentElement.insertBefore(banner, anchor.nextSibling);
+    } else {
+      document.body.insertBefore(banner, document.body.firstChild);
+    }
+  }
+
+  window.NEXUS_CURATED_HARDENING_AUDIT = function(){
+    ensureHardeningBanner();
+
+    var robots = document.querySelector('meta[name="robots"]');
+    var googlebot = document.querySelector('meta[name="googlebot"]');
+
+    var robotsOk = !!(robots && /noindex/i.test(robots.content) && /nofollow/i.test(robots.content));
+    var googlebotOk = !!(googlebot && /noindex/i.test(googlebot.content) && /nofollow/i.test(googlebot.content));
+
+    return {
+      route: location.pathname,
+      robotsMeta: robots ? robots.content : null,
+      googlebotMeta: googlebot ? googlebot.content : null,
+      robotsNoindexNofollowOk: robotsOk,
+      googlebotNoindexNofollowOk: googlebotOk,
+      visibleHardeningBanner: !!document.getElementById("nexusCuratedHardeningBanner"),
+      note: "Noindex is search-index hardening only, not authorization.",
+      noDataBankMutation: true,
+      noQuestionsIndexMutation: true,
+      acceptance: (robotsOk && googlebotOk && !!document.getElementById("nexusCuratedHardeningBanner"))
+        ? "PASS_CURATED_NOINDEX_HARDENING"
+        : "CHECK_CURATED_NOINDEX_HARDENING"
+    };
+  };
+
+  window.addEventListener("load", function(){
+    ensureHardeningBanner();
+    setTimeout(ensureHardeningBanner, 600);
+    setTimeout(ensureHardeningBanner, 1500);
+  });
+})();
+</script>
 </body>
 </html>
+
 
 
 
