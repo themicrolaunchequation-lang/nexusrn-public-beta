@@ -2672,7 +2672,8 @@
     var rows=st.rows||st.options||[]; var cols=st.columns||[]; if(!rows.length||!cols.length) return renderOptions(st,'checkbox');
     var head='<div class="ws-matrix-head"><div class="ws-matrix-cell">Finding / action</div>'+cols.map(function(c){var cText=typeof c==='string'?c:(c.text||c.id||''); return '<div class="ws-matrix-cell">'+esc(cText)+'</div>';}).join('')+'</div>';
     var body=rows.map(function(r){
-      var left='<div class="ws-matrix-cell"><b>'+esc(r.id||'')+'</b> '+esc(r.text||r.label||r.cue||r.hypothesis||r.action||r.finding||'')+'</div>';
+      var rowLabel = r.text || r.label || r.cue || r.hypothesis || r.action || r.finding || r.id || '';
+      var left='<div class="ws-matrix-cell">'+esc(rowLabel)+'</div>';
       var isMulti = /matrix[-_ ]multiple[-_ ]response/i.test(st.type || (state.current && (state.current.responseFormat || state.current.format)) || (state.viewModel && state.viewModel.itemType) || '');
       var inputType = isMulti ? 'checkbox' : 'radio';
       var cells=cols.map(function(c, ci){
@@ -3000,6 +3001,30 @@
       });
     }
   }
+  function matrixRowDisplayLabel(vm,rowId){
+    var st=(vm&&vm.structure)||{}, rows=st.rows||st.options||[];
+    var rid=String(rowId||'');
+    var found=rows.find(function(r){return String((r&&r.id)||'')===rid;});
+    return found ? (found.text || found.label || found.cue || found.hypothesis || found.action || found.finding || found.id || rid) : rid;
+  }
+  function matrixColDisplayLabel(vm,colId){
+    if(Array.isArray(colId)) return colId.map(function(x){return matrixColDisplayLabel(vm,x);}).join(', ');
+    var st=(vm&&vm.structure)||{}, cols=st.columns||[];
+    var cid=String(colId||'');
+    var found=cols.find(function(c){
+      var id=(typeof c==='string') ? c : ((c&&c.id)||'');
+      return String(id)===cid;
+    });
+    if(!found) return cid;
+    return (typeof found==='string') ? found : (found.text || found.label || found.title || found.id || cid);
+  }
+  function scoreDisplayGot(s,vm){
+    if(!s || !s.response || !s.response.map || !/matrix/.test((vm&&vm.itemType)||'')) return (s&&s.got)||[];
+    return Object.keys(s.response.map||{}).map(function(k){
+      return matrixRowDisplayLabel(vm,k)+': '+matrixColDisplayLabel(vm,s.response.map[k]);
+    });
+  }
+
   function showScore(){
     if (state.current && $('#itemSelect').value !== (state.current.caseId || state.current.id)) {
        console.error("ASSERTION FAILED: selectedDropdownValue ("+$('#itemSelect').value+") !== loadedItem.id ("+(state.current.caseId||state.current.id)+")");
@@ -3041,7 +3066,7 @@
     } else {
       scoreHeader = '<div class="ws-score-row-flex">' +
         '<div class="ws-score-badge ' + (pass ? 'ok' : 'crit') + '"><b>Score:</b> ' + esc(s.correct) + ' / ' + esc(s.max) + '</div>' +
-        '<div class="ws-score-badge user-resp"><b>Response:</b> ' + esc((s.got||[]).filter(Boolean).join(' | ') || 'None') + '</div>' +
+        '<div class="ws-score-badge user-resp"><b>Response:</b> ' + esc((scoreDisplayGot(s,state.viewModel)||[]).filter(Boolean).join(' | ') || 'None') + '</div>' +
         '<button type="button" class="ws-btn ws-score-breakdown-btn" onclick="window.showScoreBreakdownModal && window.showScoreBreakdownModal()">Score Breakdown</button>' +
       '</div>';
       setTimeout(function(){ applyAnswerFeedback(s.response); }, 0);
@@ -3431,8 +3456,9 @@
       var respMap = s.response.map || {};
       html += '<table class="ws-table ws-breakdown-table"><thead><tr><th>Finding / Row</th><th>Your Response</th><th>Correct Answer</th><th>Pts</th></tr></thead><tbody>';
       Object.keys(cm).forEach(function(k){
-        var correctAns = Array.isArray(cm[k]) ? cm[k].join(', ') : cm[k];
-        var userAns = Array.isArray(respMap[k]) ? respMap[k].join(', ') : (respMap[k] || '—');
+        var rowText = matrixRowDisplayLabel(vm,k);
+        var correctAns = matrixColDisplayLabel(vm,cm[k]);
+        var userAns = respMap[k] ? matrixColDisplayLabel(vm,respMap[k]) : '—';
         var pts = 0;
         if (f === 'matrix-multiple-response' || f === 'matrix-multiple-response-mmr') {
            var cArr = Array.isArray(cm[k]) ? cm[k] : [cm[k]];
@@ -3442,7 +3468,7 @@
            if (cm[k] === respMap[k]) pts = 1;
         }
         var trClass = pts > 0 ? 'ok-row' : 'err-row';
-        html += '<tr class="'+trClass+'"><td>'+esc(k)+'</td><td><span class="badge '+trClass+'">'+esc(userAns)+'</span></td><td>'+esc(correctAns)+'</td><td><b>'+pts+'</b>/1</td></tr>';
+        html += '<tr class="'+trClass+'"><td>'+esc(rowText)+'</td><td><span class="badge '+trClass+'">'+esc(userAns)+'</span></td><td>'+esc(correctAns)+'</td><td><b>'+pts+'</b>/1</td></tr>';
       });
       html += '</tbody></table>';
     } else {
