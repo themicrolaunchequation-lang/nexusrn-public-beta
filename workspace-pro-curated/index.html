@@ -432,11 +432,21 @@
     return items.find(function(x){ return x && x.id === lite.id; }) || lite;
   }
 
+  // NEXUS_CURATED_HIDE_CLOZE_DROPDOWN_TYPE_V1
+  // Route-level type suppression only. Does not mutate data-bank, questions-index, item content, scoring, rationales, answer keys, EHR data, or media paths.
+  const CURATED_ROUTE_HIDDEN_TYPES = new Set([
+    "cloze-dropdown"
+  ]);
+
+  function isCuratedRouteHiddenType(type){
+    return CURATED_ROUTE_HIDDEN_TYPES.has(normType(type));
+  }
   function groupByType(items){
     const m = new Map();
     items.forEach(function(it){
       const f = normType(it.format || (it.structure && it.structure.type));
       if (!f) return;
+      if (isCuratedRouteHiddenType(f)) return;
       if (!m.has(f)) m.set(f, []);
       m.get(f).push(it);
     });
@@ -1029,7 +1039,7 @@
     banners.forEach(function (el, index) {
       if (index === 0) {
         el.classList.add("nexus-curated-compact-note");
-        el.textContent = "Curated QA route - 24 items - 2 per type - no data-bank mutation - noindex";
+        el.textContent = "Curated QA route - 22 items - 11 types - 2 per type - no data-bank mutation - noindex";
       } else {
         el.classList.add("nexus-curated-extra-note-hidden");
       }
