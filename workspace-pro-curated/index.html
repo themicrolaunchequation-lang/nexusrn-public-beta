@@ -52,7 +52,26 @@
   .nexus-curated-extra-note-hidden {
     display: none !important;
   }
-</style>
+
+  /* NEXUS_CURATED_LIVE_TIMEOUT_GUARD_V1 */
+  html.nexus-curated-blocked body > *:not(#nexusCuratedBlockedOverlay) {
+    visibility: hidden !important;
+  }
+
+  html.nexus-curated-blocked #nexusCuratedBlockedOverlay {
+    visibility: visible !important;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1020;
+    color: #ffffff;
+    font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-align: center;
+    padding: 24px;
+  }</style>
 <!-- /NEXUS_CURATED_FAIL_CLOSED_BOOT_V1 -->
   <!-- Curated QA route hardening: this page is not intended for search indexing. -->
   <meta name="robots" content="noindex, nofollow, noarchive">
@@ -993,7 +1012,7 @@
 <!-- NEXUS_CURATED_FAIL_CLOSED_RELEASE_V1 -->
 <script>
 (function () {
-  var MAX_WAIT_MS = 15000;
+  var MAX_WAIT_MS = 60000;
   var startedAt = Date.now();
 
   function getSelectedTypeText() {
@@ -1059,15 +1078,21 @@
     document.documentElement.classList.remove("nexus-curated-failclosed");
     document.documentElement.classList.add("nexus-curated-blocked");
 
-    document.body.innerHTML =
-      '<main style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0b1020;color:white;font:700 18px system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;padding:24px;text-align:center;">' +
+    var overlay = document.getElementById("nexusCuratedBlockedOverlay");
+    if (!overlay) {
+      overlay = document.createElement("main");
+      overlay.id = "nexusCuratedBlockedOverlay";
+      overlay.setAttribute("role", "status");
+      overlay.setAttribute("aria-live", "polite");
+      document.body.appendChild(overlay);
+    }
+
+    overlay.innerHTML =
       '<div>' +
       '<div style="font-size:22px;margin-bottom:10px;">Curated route blocked</div>' +
       '<div>The curated lock did not pass, so the full Workstation Pro pool was not displayed.</div>' +
-      '</div>' +
-      '</main>';
+      '</div>';
   }
-
   window.NEXUS_CURATED_FAILCLOSED_AUDIT = function () {
     return {
       acceptance: document.documentElement.classList.contains("nexus-curated-ready")
