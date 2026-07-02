@@ -1,6 +1,59 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
+<meta charset="utf-8">
+<!-- NEXUS_CURATED_FAIL_CLOSED_BOOT_V1 -->
+<script>
+(function () {
+  document.documentElement.classList.add("nexus-curated-failclosed");
+
+  window.NEXUS_CURATED_FAILCLOSED_AUDIT = window.NEXUS_CURATED_FAILCLOSED_AUDIT || function () {
+    return {
+      acceptance: document.documentElement.classList.contains("nexus-curated-ready")
+        ? "PASS_CURATED_FAIL_CLOSED_READY"
+        : document.documentElement.classList.contains("nexus-curated-blocked")
+          ? "PASS_CURATED_FAIL_CLOSED_BLOCKED"
+          : "PENDING_CURATED_FAIL_CLOSED",
+      note: "Fail-closed boot guard loaded. Waiting for curated lock release."
+    };
+  };
+})();
+</script>
+<style>
+  html.nexus-curated-failclosed body > * {
+    visibility: hidden !important;
+  }
+
+  html.nexus-curated-failclosed body::before {
+    content: "Loading curated Workstation Pro route...";
+    visibility: visible !important;
+    position: fixed;
+    inset: 0;
+    z-index: 2147483647;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0b1020;
+    color: #ffffff;
+    font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    text-align: center;
+    padding: 24px;
+  }
+
+  .nexus-curated-compact-note {
+    margin: 6px 8px !important;
+    padding: 8px 12px !important;
+    min-height: 0 !important;
+    border-radius: 8px !important;
+    font-size: 12px !important;
+    line-height: 1.25 !important;
+  }
+
+  .nexus-curated-extra-note-hidden {
+    display: none !important;
+  }
+</style>
+<!-- /NEXUS_CURATED_FAIL_CLOSED_BOOT_V1 -->
   <!-- Curated QA route hardening: this page is not intended for search indexing. -->
   <meta name="robots" content="noindex, nofollow, noarchive">
   <meta name="googlebot" content="noindex, nofollow, noarchive">
@@ -8,7 +61,7 @@
 <script id="nexus-final-workstation-entitlement-gate-disabled">console.log("Curated route: entitlement gate disabled for local curated QA only.");</script>
 
 
-  <meta charset="utf-8" />
+
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="nexusrn-build" content="v243I-asset-rendering-sandbox-phase-8-of-8" />
   <title>NexusRN Â· Workstation Pro</title>
@@ -927,6 +980,122 @@
   });
 })();
 </script>
+<!-- NEXUS_CURATED_FAIL_CLOSED_RELEASE_V1 -->
+<script>
+(function () {
+  var MAX_WAIT_MS = 15000;
+  var startedAt = Date.now();
+
+  function getSelectedTypeText() {
+    var typeSelect = document.querySelector("#typeSelect");
+    if (!typeSelect || !typeSelect.selectedOptions || !typeSelect.selectedOptions[0]) return "";
+    return typeSelect.selectedOptions[0].textContent || "";
+  }
+
+  function getItemDropdownCount() {
+    var itemSelect = document.querySelector("#itemSelect");
+    if (!itemSelect || !itemSelect.options) return 0;
+    return itemSelect.options.length || 0;
+  }
+
+  function curatedLockPasses() {
+    try {
+      if (typeof window.NEXUS_CURATED_LOCK_AUDIT !== "function") return false;
+      var audit = window.NEXUS_CURATED_LOCK_AUDIT();
+      return !!audit && audit.acceptance === "PASS_CURATED_2_PER_TYPE_LOCKED";
+    } catch (err) {
+      return false;
+    }
+  }
+
+  function looksLikeFullPoolIsVisible() {
+    var typeText = getSelectedTypeText();
+    return /(?:408\s+items|\b\d{2,}\s+items\b|full\s+pool)/i.test(typeText);
+  }
+
+  function compactCuratedNotices() {
+    var nodes = Array.prototype.slice.call(document.querySelectorAll("body *"));
+
+    var banners = nodes.filter(function (el) {
+      var text = (el.textContent || "").replace(/\s+/g, " ").trim();
+      if (text.length > 280) return false;
+      return (
+        /^Curated Workstation Pro:/i.test(text) ||
+        /^Curated route locked:/i.test(text) ||
+        /^Curated QA route/i.test(text)
+      );
+    });
+
+    banners.forEach(function (el, index) {
+      if (index === 0) {
+        el.classList.add("nexus-curated-compact-note");
+        el.textContent = "Curated QA route - 24 items - 2 per type - no data-bank mutation - noindex";
+      } else {
+        el.classList.add("nexus-curated-extra-note-hidden");
+      }
+    });
+  }
+
+  function revealCuratedRoute() {
+    compactCuratedNotices();
+    document.documentElement.classList.remove("nexus-curated-failclosed");
+    document.documentElement.classList.add("nexus-curated-ready");
+    setTimeout(compactCuratedNotices, 100);
+    setTimeout(compactCuratedNotices, 500);
+    setTimeout(compactCuratedNotices, 1500);
+  }
+
+  function blockUnsafeRoute() {
+    document.documentElement.classList.remove("nexus-curated-failclosed");
+    document.documentElement.classList.add("nexus-curated-blocked");
+
+    document.body.innerHTML =
+      '<main style="min-height:100vh;display:flex;align-items:center;justify-content:center;background:#0b1020;color:white;font:700 18px system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;padding:24px;text-align:center;">' +
+      '<div>' +
+      '<div style="font-size:22px;margin-bottom:10px;">Curated route blocked</div>' +
+      '<div>The curated lock did not pass, so the full Workstation Pro pool was not displayed.</div>' +
+      '</div>' +
+      '</main>';
+  }
+
+  window.NEXUS_CURATED_FAILCLOSED_AUDIT = function () {
+    return {
+      acceptance: document.documentElement.classList.contains("nexus-curated-ready")
+        ? "PASS_CURATED_FAIL_CLOSED_READY"
+        : document.documentElement.classList.contains("nexus-curated-blocked")
+          ? "PASS_CURATED_FAIL_CLOSED_BLOCKED"
+          : "PENDING_CURATED_FAIL_CLOSED",
+      lockPasses: curatedLockPasses(),
+      itemDropdownCount: getItemDropdownCount(),
+      typeText: getSelectedTypeText(),
+      fullPoolVisible: looksLikeFullPoolIsVisible()
+    };
+  };
+
+  var timer = setInterval(function () {
+    if (curatedLockPasses()) {
+      compactCuratedNotices();
+    }
+
+    if (
+      curatedLockPasses() &&
+      getItemDropdownCount() > 0 &&
+      getItemDropdownCount() <= 2 &&
+      !looksLikeFullPoolIsVisible()
+    ) {
+      clearInterval(timer);
+      revealCuratedRoute();
+      return;
+    }
+
+    if (Date.now() - startedAt > MAX_WAIT_MS) {
+      clearInterval(timer);
+      blockUnsafeRoute();
+    }
+  }, 50);
+})();
+</script>
+<!-- /NEXUS_CURATED_FAIL_CLOSED_RELEASE_V1 -->
 </body>
 </html>
 
