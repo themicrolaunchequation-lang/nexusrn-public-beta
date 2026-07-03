@@ -1068,12 +1068,18 @@
   function revealCuratedRoute() {
     compactCuratedNotices();
     document.documentElement.classList.remove("nexus-curated-failclosed");
+    document.documentElement.classList.remove("nexus-curated-blocked");
     document.documentElement.classList.add("nexus-curated-ready");
+
+    var overlay = document.getElementById("nexusCuratedBlockedOverlay");
+    if (overlay) {
+      overlay.remove();
+    }
+
     setTimeout(compactCuratedNotices, 100);
     setTimeout(compactCuratedNotices, 500);
     setTimeout(compactCuratedNotices, 1500);
   }
-
   function blockUnsafeRoute() {
     document.documentElement.classList.remove("nexus-curated-failclosed");
     document.documentElement.classList.add("nexus-curated-blocked");
@@ -1107,6 +1113,40 @@
     };
   };
 
+  // NEXUS_CURATED_LIVE_RELEASE_PREDICATE_V1
+  // Allows production to release after the curated builder proves the route is capped,
+  // even if the older lock audit has not settled yet.
+  var originalCuratedLockPasses = curatedLockPasses;
+  curatedLockPasses = function () {
+    try {
+      var base = window.NEXUS_CURATED_2_PER_TYPE_AUDIT
+        ? window.NEXUS_CURATED_2_PER_TYPE_AUDIT()
+        : null;
+
+      var counts = base && base.countsByType ? base.countsByType : {};
+      var keys = Object.keys(counts);
+      var max = Number((base && base.expectedMaxPerType) || 2);
+
+      var allCountsSafe = keys.length > 0 && keys.every(function (k) {
+        var n = Number(counts[k] || 0);
+        return n > 0 && n <= max;
+      });
+
+      var hasCloze = !!(base &&
+        Array.isArray(base.availableTypes) &&
+        base.availableTypes.indexOf("cloze-dropdown") !== -1);
+
+      if (base && base.curatedCount > 0 && allCountsSafe && !hasCloze) {
+        return true;
+      }
+    } catch (e) {}
+
+    try {
+      return originalCuratedLockPasses();
+    } catch (e) {
+      return false;
+    }
+  };
   var timer = setInterval(function () {
     if (curatedLockPasses()) {
       compactCuratedNotices();
@@ -1123,8 +1163,7 @@
       return;
     }
 
-    if (Date.now() - startedAt > MAX_WAIT_MS) {
-      clearInterval(timer);
+    if (Date.now() - startedAt > MAX_WAIT_MS && !document.documentElement.classList.contains("nexus-curated-blocked")) {
       blockUnsafeRoute();
     }
   }, 50);
