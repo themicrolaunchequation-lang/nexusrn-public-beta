@@ -7,6 +7,47 @@
 (function () {
   document.documentElement.classList.add("nexus-curated-failclosed");
 
+  // NEXUS_CURATED_LOADING_POLISH_V1
+  function ensureCuratedBootOverlay() {
+    if (!document.body || document.getElementById("nexusCuratedBootOverlay")) return;
+
+    var overlay = document.createElement("main");
+    overlay.id = "nexusCuratedBootOverlay";
+    overlay.setAttribute("role", "status");
+    overlay.setAttribute("aria-live", "polite");
+    overlay.setAttribute("aria-label", "Preparing your curated Workstation");
+
+    overlay.innerHTML =
+      '<section class="nexus-boot-card" aria-label="Curated Workstation loading status">' +
+        '<div class="nexus-boot-orbit" aria-hidden="true">' +
+          '<div class="nexus-boot-mark">N</div>' +
+          '<div class="nexus-boot-wordmark">Nexus<span>RN</span></div>' +
+        '</div>' +
+        '<div class="nexus-boot-copy">' +
+          '<h1>Preparing your curated Workstation</h1>' +
+          '<p>Loading case data, calibrating item types, and verifying route integrity.</p>' +
+        '</div>' +
+        '<div class="nexus-boot-progress" role="progressbar" aria-label="Curated route preparation" aria-valuemin="0" aria-valuemax="100" aria-valuetext="Preparing curated Workstation">' +
+          '<span></span>' +
+        '</div>' +
+        '<ol class="nexus-boot-steps" aria-label="Loading steps">' +
+          '<li class="is-complete"><b>Loading pool</b><em>Completed</em></li>' +
+          '<li class="is-active"><b>Curating items</b><em>In progress</em></li>' +
+          '<li><b>Preparing interface</b><em>Pending</em></li>' +
+        '</ol>' +
+      '</section>';
+
+    document.body.appendChild(overlay);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", ensureCuratedBootOverlay);
+  } else {
+    ensureCuratedBootOverlay();
+  }
+  setTimeout(ensureCuratedBootOverlay, 50);
+  setTimeout(ensureCuratedBootOverlay, 250);
+
   window.NEXUS_CURATED_FAILCLOSED_AUDIT = window.NEXUS_CURATED_FAILCLOSED_AUDIT || function () {
     return {
       acceptance: document.documentElement.classList.contains("nexus-curated-ready")
@@ -71,7 +112,375 @@
     font: 700 18px system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     text-align: center;
     padding: 24px;
-  }</style>
+  }
+
+
+
+  /* NEXUS_CURATED_LOADING_POLISH_V1 */
+  html.nexus-curated-failclosed body > #nexusCuratedBootOverlay {
+    visibility: visible !important;
+  }
+
+  html.nexus-curated-failclosed body::before {
+    content: "" !important;
+    visibility: visible !important;
+    position: fixed !important;
+    inset: 0 !important;
+    z-index: 999998 !important;
+    display: block !important;
+    background:
+      radial-gradient(circle at 50% 24%, rgba(125, 211, 252, 0.22), transparent 26%),
+      radial-gradient(circle at 18% 70%, rgba(45, 212, 191, 0.10), transparent 24%),
+      radial-gradient(circle at 82% 68%, rgba(14, 165, 233, 0.10), transparent 24%),
+      linear-gradient(180deg, #0b2338 0%, #0f2f45 46%, #0b1f31 100%) !important;
+  }
+
+  html.nexus-curated-failclosed #nexusCuratedBootOverlay {
+    visibility: visible !important;
+    position: fixed;
+    inset: 0;
+    z-index: 1000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    color: #f8fafc;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    overflow: hidden;
+  }
+
+  html.nexus-curated-failclosed #nexusCuratedBootOverlay::before,
+  html.nexus-curated-failclosed #nexusCuratedBootOverlay::after {
+    content: "";
+    position: absolute;
+    top: 56%;
+    width: min(25vw, 280px);
+    height: 2px;
+    opacity: 0.48;
+    background:
+      linear-gradient(90deg,
+        transparent 0%,
+        rgba(125, 211, 252, 0.20) 12%,
+        rgba(34, 211, 238, 0.82) 28%,
+        rgba(125, 211, 252, 0.20) 44%,
+        transparent 100%);
+    filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.35));
+  }
+
+  html.nexus-curated-failclosed #nexusCuratedBootOverlay::before {
+    left: 9vw;
+    clip-path: polygon(0 50%, 28% 50%, 33% 50%, 36% 15%, 39% 82%, 43% 50%, 52% 50%, 56% 28%, 60% 72%, 64% 50%, 100% 50%);
+    animation: nexusEcgBlink 2.4s ease-in-out infinite;
+  }
+
+  html.nexus-curated-failclosed #nexusCuratedBootOverlay::after {
+    right: 9vw;
+    clip-path: polygon(0 50%, 36% 50%, 40% 50%, 44% 20%, 48% 84%, 52% 50%, 59% 50%, 63% 34%, 67% 70%, 71% 50%, 100% 50%);
+    animation: nexusEcgBlink 2.4s ease-in-out infinite 0.45s;
+  }
+
+  .nexus-boot-card {
+    position: relative;
+    width: min(620px, 92vw);
+    padding: 30px 32px 28px;
+    border: 1px solid rgba(186, 230, 253, 0.22);
+    border-radius: 22px;
+    background:
+      linear-gradient(180deg, rgba(15, 44, 68, 0.88), rgba(9, 28, 46, 0.82));
+    box-shadow:
+      0 22px 64px rgba(3, 7, 18, 0.34),
+      inset 0 1px 0 rgba(255, 255, 255, 0.07);
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+
+  .nexus-boot-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    pointer-events: none;
+    background:
+      linear-gradient(180deg, rgba(186, 230, 253, 0.08), transparent 22%),
+      linear-gradient(90deg, transparent, rgba(34, 211, 238, 0.05), transparent);
+  }
+
+  .nexus-boot-card > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .nexus-boot-orbit {
+    position: relative;
+    width: 104px;
+    height: 104px;
+    margin: 0 auto 18px;
+    border-radius: 999px;
+    display: grid;
+    place-items: center;
+    background: radial-gradient(circle, rgba(186, 230, 253, 0.20), rgba(11, 31, 49, 0.94) 72%);
+    box-shadow:
+      inset 0 0 18px rgba(125, 211, 252, 0.13),
+      0 0 18px rgba(34, 211, 238, 0.10);
+  }
+
+  .nexus-boot-orbit::before,
+  .nexus-boot-orbit::after {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    border-top-color: rgba(103, 232, 249, 0.90);
+    border-right-color: rgba(14, 165, 233, 0.28);
+    animation: nexusBootSpin 4.4s linear infinite;
+  }
+
+  .nexus-boot-orbit::after {
+    inset: -15px;
+    border-top-color: rgba(186, 230, 253, 0.20);
+    border-right-color: rgba(45, 212, 191, 0.20);
+    animation-duration: 8.8s;
+    animation-direction: reverse;
+  }
+
+  .nexus-boot-mark {
+    font-size: 42px;
+    line-height: 1;
+    font-weight: 950;
+    letter-spacing: -0.08em;
+    background: linear-gradient(135deg, #cffafe 0%, #38bdf8 34%, #ffffff 54%, #67e8f9 76%, #0ea5e9 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    filter: drop-shadow(0 0 10px rgba(125, 211, 252, 0.30));
+  }
+
+  .nexus-boot-wordmark {
+    position: absolute;
+    top: 69px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(248, 250, 252, 0.82);
+  }
+
+  .nexus-boot-wordmark span {
+    color: #67e8f9;
+  }
+
+  .nexus-boot-copy h1 {
+    margin: 0;
+    font-size: clamp(22px, 2.4vw, 29px);
+    line-height: 1.14;
+    letter-spacing: -0.03em;
+    font-weight: 800;
+  }
+
+  .nexus-boot-copy p {
+    margin: 11px auto 22px;
+    max-width: 500px;
+    color: rgba(226, 232, 240, 0.76);
+    font-size: 14px;
+    line-height: 1.45;
+  }
+
+  .nexus-boot-progress {
+    position: relative;
+    width: min(500px, 100%);
+    height: 10px;
+    margin: 0 auto 24px;
+    border-radius: 999px;
+    background:
+      linear-gradient(180deg, rgba(15, 48, 70, 0.98), rgba(8, 28, 45, 0.98));
+    overflow: hidden;
+    box-shadow:
+      inset 0 0 10px rgba(2, 6, 23, 0.45),
+      0 0 0 1px rgba(186, 230, 253, 0.13);
+  }
+
+  .nexus-boot-progress::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(125, 211, 252, 0.10), rgba(186, 230, 253, 0.22), rgba(125, 211, 252, 0.10));
+    opacity: 0.72;
+  }
+
+  .nexus-boot-progress span {
+    display: none;
+  }
+
+  .nexus-boot-progress::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 42%;
+    border-radius: 999px;
+    background:
+      linear-gradient(90deg,
+        transparent 0%,
+        rgba(34, 211, 238, 0.20) 14%,
+        #67e8f9 42%,
+        #ffffff 52%,
+        #22d3ee 64%,
+        rgba(14, 165, 233, 0.18) 86%,
+        transparent 100%);
+    box-shadow:
+      0 0 16px rgba(125, 211, 252, 0.62),
+      0 0 32px rgba(34, 211, 238, 0.28);
+    transform: translateX(-125%);
+    animation: nexusClinicalBarSweep 1.15s linear infinite;
+    will-change: transform;
+  }
+
+  @keyframes nexusClinicalBarSweep {
+    0% {
+      transform: translateX(-125%);
+      opacity: 0.35;
+    }
+    15% {
+      opacity: 1;
+    }
+    85% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateX(255%);
+      opacity: 0.35;
+    }
+  }
+
+  .nexus-boot-steps {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nexus-boot-steps li {
+    position: relative;
+    display: grid;
+    justify-items: center;
+    gap: 5px;
+    color: rgba(226, 232, 240, 0.66);
+    font-size: 12px;
+  }
+
+  .nexus-boot-steps li::before {
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 999px;
+    border: 2px solid rgba(203, 213, 225, 0.42);
+    background: rgba(12, 35, 54, 0.88);
+  }
+
+  .nexus-boot-steps li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: calc(50% + 18px);
+    width: calc(100% - 36px);
+    height: 1px;
+    background: rgba(125, 211, 252, 0.20);
+  }
+
+  .nexus-boot-steps li.is-complete::before {
+    border-color: #67e8f9;
+    background:
+      radial-gradient(circle at 50% 50%, #f0fdff 0 22%, #67e8f9 24% 100%);
+    box-shadow: 0 0 10px rgba(125, 211, 252, 0.30);
+  }
+
+  .nexus-boot-steps li.is-complete::after {
+    background: linear-gradient(90deg, rgba(103, 232, 249, 0.50), rgba(125, 211, 252, 0.16));
+  }
+
+  .nexus-boot-steps li.is-active::before {
+    border-color: #bae6fd;
+    background:
+      radial-gradient(circle, #ffffff 0 26%, #67e8f9 30% 66%, rgba(12, 35, 54, 0.96) 70%);
+    box-shadow: 0 0 14px rgba(125, 211, 252, 0.42);
+    animation: nexusBootPulse 1.55s ease-in-out infinite;
+  }
+
+  .nexus-boot-steps b {
+    color: rgba(248, 250, 252, 0.92);
+    font-weight: 700;
+  }
+
+  .nexus-boot-steps em {
+    font-style: normal;
+    color: rgba(203, 213, 225, 0.80);
+  }
+
+  .nexus-boot-steps .is-complete em,
+  .nexus-boot-steps .is-active em {
+    color: #67e8f9;
+  }
+
+  @keyframes nexusBootSpin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes nexusBootPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.10); opacity: 0.88; }
+  }
+
+  @keyframes nexusBootBarLoad {
+    0% { transform: translateX(-115%); opacity: 0.35; }
+    18% { opacity: 1; }
+    82% { opacity: 1; }
+    100% { transform: translateX(295%); opacity: 0.35; }
+  }
+
+  @keyframes nexusEcgBlink {
+    0%, 100% { opacity: 0.26; }
+    50% { opacity: 0.54; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nexus-boot-orbit::before,
+    .nexus-boot-orbit::after,
+    .nexus-boot-progress span,
+    .nexus-boot-steps li.is-active::before,
+    html.nexus-curated-failclosed #nexusCuratedBootOverlay::before,
+    html.nexus-curated-failclosed #nexusCuratedBootOverlay::after {
+      animation: none !important;
+    }
+
+    .nexus-boot-progress span {
+      transform: translateX(90%);
+      opacity: 0.78;
+    }
+  }
+
+  @media (max-width: 720px) {
+    .nexus-boot-card {
+      padding: 28px 20px 24px;
+    }
+
+    .nexus-boot-steps {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .nexus-boot-steps li:not(:last-child)::after {
+      display: none;
+    }
+
+    html.nexus-curated-failclosed #nexusCuratedBootOverlay::before,
+    html.nexus-curated-failclosed #nexusCuratedBootOverlay::after {
+      display: none;
+    }
+  }
+</style>
 <!-- /NEXUS_CURATED_FAIL_CLOSED_BOOT_V1 -->
   <!-- Curated QA route hardening: this page is not intended for search indexing. -->
   <meta name="robots" content="noindex, nofollow, noarchive">
@@ -1066,6 +1475,11 @@
   }
 
   function revealCuratedRoute() {
+    var bootOverlay = document.getElementById("nexusCuratedBootOverlay");
+    if (bootOverlay) {
+      bootOverlay.remove();
+    }
+
     compactCuratedNotices();
     document.documentElement.classList.remove("nexus-curated-failclosed");
     document.documentElement.classList.remove("nexus-curated-blocked");
