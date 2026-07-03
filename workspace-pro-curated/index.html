@@ -527,18 +527,18 @@
         return b.roughScore - a.roughScore;
       }).slice(0, DEEP_SCAN_PER_TYPE);
 
-      const deep = [];
-      for (const row of rough) {
+      // NEXUS_CURATED_PARALLEL_DEEP_SCAN_V1
+      const deep = await Promise.all(rough.map(async function(row){
         const full = await fullItemForLite(row.lite);
-        deep.push({
+        return {
           lite: row.lite,
           id: row.lite.id,
           type: type,
           score: scoreItem(full),
           focus: full.clinical_focus || row.lite.clinical_focus || "",
           chunk: row.lite.chunk || ""
-        });
-      }
+        };
+      }));
 
       deep.sort(function(a,b){
         return b.score - a.score || String(a.id).localeCompare(String(b.id));
