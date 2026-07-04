@@ -1,0 +1,10 @@
+/*
+  Exact DOM-confirmed target:
+  hide only duplicate action links inside the top auth strip.
+  Does not affect the real landing header buttons.
+*/
+#nexus-fixed8-auth-strip .nx8-actions {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
