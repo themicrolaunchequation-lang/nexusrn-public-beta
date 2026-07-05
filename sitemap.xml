@@ -10,6 +10,12 @@
   <url><loc>https://healthqualityleader.com/terms.html</loc></url>
 
   <url>
+    <loc>https://healthqualityleader.com/nclex-ngn-study-hub/</loc>
+    <lastmod>2026-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.92</priority>
+  </url>
+  <url>
     <loc>https://healthqualityleader.com/free-2026-nclex-ngn-practice-demo/</loc>
     <lastmod>2026-07-05</lastmod>
     <changefreq>weekly</changefreq>
@@ -34,6 +40,3 @@
     <priority>0.88</priority>
   </url>
 </urlset>
-
-
-

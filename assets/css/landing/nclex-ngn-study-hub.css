@@ -1,0 +1,254 @@
+﻿:root {
+  color-scheme: light;
+  --bg: #f7fbff;
+  --panel: #ffffff;
+  --ink: #122033;
+  --muted: #526274;
+  --line: #dbe7f3;
+  --blue: #0b66d8;
+  --blue-dark: #084fa7;
+  --soft: #eaf4ff;
+  --green-soft: #eafaf3;
+  --shadow: 0 18px 45px rgba(22, 44, 70, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(11, 102, 216, 0.11), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 42%, #ffffff 100%);
+  color: var(--ink);
+  line-height: 1.65;
+}
+
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
+.hero {
+  padding: 64px 28px;
+  border: 1px solid var(--line);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.86);
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.35rem, 6vw, 5rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.lede {
+  max-width: 780px;
+  margin: 24px auto 0;
+  color: var(--muted);
+  font-size: 1.16rem;
+}
+
+.hero-actions,
+.final-cta {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 800;
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--blue);
+}
+
+.panel,
+.faq,
+.final-cta {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: var(--panel);
+  box-shadow: 0 12px 28px rgba(22, 44, 70, 0.06);
+}
+
+.study-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.card {
+  min-height: 100%;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 12px 28px rgba(22, 44, 70, 0.06);
+}
+
+.step {
+  display: inline-grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  background: var(--soft);
+  color: var(--blue);
+  font-weight: 900;
+}
+
+.card p,
+.panel p,
+.faq p {
+  color: var(--muted);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 24px;
+  align-items: start;
+}
+
+ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+li + li {
+  margin-top: 8px;
+}
+
+.callout {
+  padding: 22px;
+  border-radius: 22px;
+  background: var(--green-soft);
+  border: 1px solid #ccefe0;
+}
+
+.reference-links {
+  display: grid;
+  gap: 12px;
+}
+
+.reference-links a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fbfdff;
+}
+
+details {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fbfdff;
+  padding: 16px 18px;
+}
+
+details + details {
+  margin-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 850;
+}
+
+summary + p {
+  margin-top: 12px;
+}
+
+.final-cta {
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #ffffff, #eef7ff);
+}
+
+.final-cta p {
+  max-width: 680px;
+  color: var(--muted);
+}
+
+@media (max-width: 920px) {
+  .study-grid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 44px 20px;
+  }
+
+  main {
+    width: min(100% - 24px, 1120px);
+    padding-top: 28px;
+  }
+}
