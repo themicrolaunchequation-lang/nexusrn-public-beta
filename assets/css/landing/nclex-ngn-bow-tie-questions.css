@@ -1,0 +1,266 @@
+﻿:root {
+  color-scheme: light;
+  --bg: #f7fbff;
+  --panel: #ffffff;
+  --ink: #122033;
+  --muted: #526274;
+  --line: #dbe7f3;
+  --blue: #0b66d8;
+  --blue-dark: #084fa7;
+  --soft: #eaf4ff;
+  --amber-soft: #fff6df;
+  --green-soft: #eafaf3;
+  --shadow: 0 18px 45px rgba(22, 44, 70, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(11, 102, 216, 0.11), transparent 34rem),
+    linear-gradient(180deg, #ffffff 0%, var(--bg) 42%, #ffffff 100%);
+  color: var(--ink);
+  line-height: 1.68;
+}
+
+main {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 48px 0 72px;
+}
+
+a {
+  color: var(--blue);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--blue-dark);
+  text-decoration: underline;
+}
+
+.hero,
+.panel,
+.sample,
+.faq {
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow);
+}
+
+.hero {
+  padding: 58px 28px;
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: var(--blue);
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 5.8vw, 4.8rem);
+  line-height: 0.98;
+  letter-spacing: -0.055em;
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: clamp(1.45rem, 3vw, 2.25rem);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+
+h3 {
+  margin: 0 0 10px;
+  font-size: 1.08rem;
+}
+
+p {
+  margin: 0 0 18px;
+}
+
+.lede {
+  max-width: 780px;
+  margin: 24px auto 0;
+  color: var(--muted);
+  font-size: 1.14rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 13px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  font-weight: 850;
+}
+
+.button.primary {
+  background: var(--blue);
+  color: #ffffff;
+  border-color: var(--blue);
+}
+
+.button.secondary {
+  background: #ffffff;
+  color: var(--blue);
+}
+
+.panel,
+.sample,
+.faq {
+  margin-top: 28px;
+  padding: 28px;
+}
+
+.panel p,
+.sample p,
+.faq p,
+li {
+  color: var(--muted);
+}
+
+.bowtie-map {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 18px;
+  margin-top: 28px;
+}
+
+.bowtie-map article,
+.answer-grid > div,
+.mistake-grid article {
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(22, 44, 70, 0.06);
+}
+
+.bowtie-map span {
+  display: inline-block;
+  margin-bottom: 10px;
+  color: var(--blue);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.bowtie-map .center {
+  background: var(--soft);
+}
+
+.steps {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.steps li + li {
+  margin-top: 10px;
+}
+
+.disclaimer {
+  padding: 12px 14px;
+  border-radius: 16px;
+  background: var(--amber-soft);
+  border: 1px solid #f1d88a;
+}
+
+.scenario {
+  margin-top: 18px;
+  padding: 20px;
+  border-radius: 22px;
+  border: 1px solid var(--line);
+  background: #fbfdff;
+}
+
+.answer-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 18px;
+}
+
+.answer-grid > div:first-child {
+  background: var(--green-soft);
+}
+
+.mistake-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.reference-links {
+  display: grid;
+  gap: 12px;
+}
+
+.reference-links a {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fbfdff;
+}
+
+details {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: #fbfdff;
+  padding: 16px 18px;
+}
+
+details + details {
+  margin-top: 12px;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 850;
+}
+
+summary + p {
+  margin-top: 12px;
+}
+
+@media (max-width: 900px) {
+  .bowtie-map,
+  .answer-grid,
+  .mistake-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 42px 20px;
+  }
+
+  main {
+    width: min(100% - 24px, 1120px);
+    padding-top: 28px;
+  }
+}
