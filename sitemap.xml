@@ -39,4 +39,23 @@
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
   </url>
+  <url>
+    <loc>https://healthqualityleader.com/about-nexusrn/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.74</priority>
+  </url>
+  <url>
+    <loc>https://healthqualityleader.com/nclex-editorial-review-policy/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
+  <url>
+    <loc>https://healthqualityleader.com/nclex-sources-and-independence/</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.72</priority>
+  </url>
 </urlset>
+
