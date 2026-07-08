@@ -28,3 +28,4 @@ yarn-error.log*
 
 # Temporary archives generated outside repo source
 *.zip
+supabase/.temp/
