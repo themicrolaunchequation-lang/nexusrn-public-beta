@@ -210,7 +210,55 @@
     content.setAttribute("aria-hidden", "true");
   }
 
-  function revealVerifiedContent(result) {
+  function fireGoogleAdsPurchase(result) {
+  const transactionId =
+    String(result.transaction_id || "");
+
+  const storageKey =
+    "nexusrn_google_ads_purchase_" + transactionId;
+
+  try {
+    if (window.localStorage.getItem(storageKey) === "1") {
+      window.NEXUS_GOOGLE_ADS_PURCHASE = Object.freeze({
+        sent: false,
+        duplicate_blocked: true
+      });
+
+      return;
+    }
+  } catch (error) {
+    // Google Ads transaction_id remains the primary deduplication key.
+  }
+
+  if (typeof window.gtag !== "function") {
+    window.NEXUS_GOOGLE_ADS_PURCHASE = Object.freeze({
+      sent: false,
+      duplicate_blocked: false,
+      reason: "gtag_unavailable"
+    });
+
+    return;
+  }
+
+  window.gtag("event", "conversion", {
+    send_to: "AW-17212162627/dWFVCKXftMwcEMOEs49A",
+    value: 112.50,
+    currency: "SAR",
+    transaction_id: transactionId
+  });
+
+  try {
+    window.localStorage.setItem(storageKey, "1");
+  } catch (error) {
+    // Google Ads can still deduplicate using transaction_id.
+  }
+
+  window.NEXUS_GOOGLE_ADS_PURCHASE = Object.freeze({
+    sent: true,
+    duplicate_blocked: false
+  });
+}
+function revealVerifiedContent(result) {
     window.NEXUS_VERIFIED_PURCHASE = Object.freeze({
       verified: true,
       transaction_id: result.transaction_id,
@@ -320,6 +368,7 @@
       }
 
       revealVerifiedContent(result);
+  fireGoogleAdsPurchase(result);
     } catch (error) {
       const timedOut =
         error instanceof DOMException &&
