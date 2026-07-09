@@ -126,6 +126,39 @@ Deno.serve(async (request: Request): Promise<Response> => {
         ? session.payment_link
         : session.payment_link?.id ?? null;
 
+    const paymentIntentId =
+      typeof session.payment_intent === "string"
+        ? session.payment_intent
+        : session.payment_intent?.id ?? null;
+
+    const paymentIntent = paymentIntentId
+      ? await stripe.paymentIntents.retrieve(paymentIntentId, {
+          expand: ["latest_charge"],
+        })
+      : null;
+
+    const latestCharge =
+      paymentIntent &&
+      typeof paymentIntent.latest_charge !== "string"
+        ? paymentIntent.latest_charge
+        : null;
+
+    const refunds = latestCharge
+      ? await stripe.refunds.list({
+          charge: latestCharge.id,
+          limit: 100,
+        })
+      : null;
+
+    const hasBlockingRefund =
+      refunds === null ||
+      refunds.has_more === true ||
+      refunds.data.some(
+        (refund: { status: string | null }) =>
+          refund.status !== "failed" &&
+          refund.status !== "canceled",
+      );
+
     const verified =
       session.livemode === EXPECTED_LIVEMODE &&
       session.mode === EXPECTED_MODE &&
@@ -133,7 +166,25 @@ Deno.serve(async (request: Request): Promise<Response> => {
       session.payment_status === "paid" &&
       session.amount_total === EXPECTED_AMOUNT_TOTAL &&
       session.currency?.toLowerCase() === EXPECTED_CURRENCY &&
-      paymentLinkId === expectedPaymentLinkId;
+      paymentLinkId === expectedPaymentLinkId &&
+      paymentIntent !== null &&
+      paymentIntent.livemode === EXPECTED_LIVEMODE &&
+      paymentIntent.status === "succeeded" &&
+      paymentIntent.amount === EXPECTED_AMOUNT_TOTAL &&
+      paymentIntent.amount_received === EXPECTED_AMOUNT_TOTAL &&
+      paymentIntent.currency.toLowerCase() === EXPECTED_CURRENCY &&
+      latestCharge !== null &&
+      latestCharge.livemode === EXPECTED_LIVEMODE &&
+      latestCharge.status === "succeeded" &&
+      latestCharge.paid === true &&
+      latestCharge.captured === true &&
+      latestCharge.disputed === false &&
+      latestCharge.amount === EXPECTED_AMOUNT_TOTAL &&
+      latestCharge.amount_captured === EXPECTED_AMOUNT_TOTAL &&
+      latestCharge.amount_refunded === 0 &&
+      latestCharge.refunded === false &&
+      latestCharge.currency.toLowerCase() === EXPECTED_CURRENCY &&
+      hasBlockingRefund === false;
 
     if (!verified) {
       return jsonResponse({ verified: false });
