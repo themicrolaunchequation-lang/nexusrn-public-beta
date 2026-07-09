@@ -1,4 +1,4 @@
-import Stripe from "https://esm.sh/stripe@14.25.0?target=deno";
+import Stripe from "https://esm.sh/stripe@18.0.0?target=deno";
 
 const ALLOWED_ORIGIN = "https://healthqualityleader.com";
 
@@ -113,7 +113,7 @@ Deno.serve(async (request: Request): Promise<Response> => {
   }
 
   const stripe = new Stripe(stripeSecretKey, {
-    apiVersion: "2024-06-20",
+    apiVersion: "2025-03-31.basil",
     httpClient: Stripe.createFetchHttpClient(),
   });
 
