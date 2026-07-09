@@ -1,4 +1,4 @@
-import Stripe from "https://esm.sh/stripe@18.0.0?target=deno";
+import Stripe from "https://esm.sh/stripe@18.0.0?target=denonext";
 
 const ALLOWED_ORIGIN = "https://healthqualityleader.com";
 
